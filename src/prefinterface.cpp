@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -92,7 +92,7 @@ void PrefInterface::createLanguageCombo() {
 	// Language combo
 	QDir translation_dir = Paths::translationPath();
 	QStringList languages = translation_dir.entryList( QStringList() << "*.qm");
-	QRegExp rx_lang("smplayer_(.*)\\.qm");
+	QRegExp rx_lang("smplayer2_(.*)\\.qm");
 	language_combo->clear();
 	language_combo->addItem( tr("<Autodetect>") );
 	for (int n=0; n < languages.count(); n++) {
@@ -509,7 +509,7 @@ void PrefInterface::createHelp() {
 
 	setWhatsThis(save_size_check, tr("Remember position and size"),
         tr("If you check this option, the position and size of the main "
-           "window will be saved and restored when you run SMPlayer again.") );
+           "window will be saved and restored when you run SMPlayer2 again.") );
 
 	setWhatsThis(recents_max_items_spin, tr("Recent files"),
         tr("Select the maximum number of items that will be shown in the "
@@ -533,7 +533,7 @@ void PrefInterface::createHelp() {
            "more simple GUI, without toolbar and a control bar with few "
            "buttons.<br>"
            "<b>Note:</b> this option will take effect the next "
-           "time you run SMPlayer.") );
+           "time you run SMPlayer2.") );
 
 	setWhatsThis(changeFontButton, tr("Default font"),
         tr("You can change here the application's font.") );
@@ -567,17 +567,17 @@ void PrefInterface::createHelp() {
 	addSectionTitle(tr("Instances"));
 
 	setWhatsThis(single_instance_check, 
-        tr("Use only one running instance of SMPlayer"),
+        tr("Use only one running instance of SMPlayer2"),
         tr("Check this option if you want to use an already running instance "
-           "of SMPlayer when opening other files.") );
+           "of SMPlayer2 when opening other files.") );
 
 	setWhatsThis(automatic_port_button, tr("Automatic port"),
-        tr("SMPlayer needs to listen to a port to receive commands from other "
+        tr("SMPlayer2 needs to listen to a port to receive commands from other "
            "instances. If you select this option, a port will be "
            "automatically chosen.") );
 
 	setWhatsThis(server_port_spin, tr("Manual port"),
-        tr("SMPlayer needs to listen to a port to receive commands from other "
+        tr("SMPlayer2 needs to listen to a port to receive commands from other "
            "instances. You can change the port in case the default one is "
            "used by another application.") );
 

@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2008 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -17,7 +17,7 @@
 */
 
 #include "test.h"
-#include "smplayercorelib.h"
+#include "smplayer2corelib.h"
 #include "helper.h"
 #include "global.h"
 #include <QAction>
@@ -31,9 +31,9 @@
 Gui::Gui( QWidget * parent, Qt::WindowFlags flags ) 
 	: QMainWindow(parent, flags)
 {
-	smplayerlib = new SmplayerCoreLib(this);
-	core = smplayerlib->core();
-	setCentralWidget(smplayerlib->mplayerWindow());
+	smplayer2lib = new SmplayerCoreLib(this);
+	core = smplayer2lib->core();
+	setCentralWidget(smplayer2lib->mplayerWindow());
 
 	QAction * openAct = new QAction( tr("&Open..."), this);
 	connect( openAct, SIGNAL(triggered()), this, SLOT(open()) );

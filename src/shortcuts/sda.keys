@@ -76,12 +76,12 @@ frame_counter	F
 motion_vectors	G
 show_preferences	F2
 show_mplayer_log	F9
-show_smplayer_log	F10
+show_smplayer2_log	F10
 faq	
 cl_options	F1
 tips	
 about_qt	
-about_smplayer	
+about_smplayer2	
 play_next	Down
 play_prev	Up
 move_up	Ctrl+Up

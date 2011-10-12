@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 #include <QFile>
 #include <QTime>
 
-#include "smplayer.h"
+#include "smplayer2.h"
 #include "global.h"
 #include "helper.h"
 #include "paths.h"
@@ -51,7 +51,7 @@ void myMessageOutput( QtMsgType type, const char *msg ) {
 	static QRegExp rx_log;
 
 	if (pref) {
-		if (!pref->log_smplayer) return;
+		if (!pref->log_smplayer2) return;
 		rx_log.setPattern(pref->log_filter);
 	} else {
 		rx_log.setPattern(".*");
@@ -109,11 +109,11 @@ void myMessageOutput( QtMsgType type, const char *msg ) {
 	}
 
 	if (pref) {
-		if (pref->save_smplayer_log) {
+		if (pref->save_smplayer2_log) {
 			// Save log to file
 			if (!output_log.isOpen()) {
 				// FIXME: the config path may not be initialized if USE_LOCKS is not defined
-				output_log.setFileName( Paths::configPath() + "/smplayer_log.txt" );
+				output_log.setFileName( Paths::configPath() + "/smplayer2_log.txt" );
 				output_log.open(QIODevice::WriteOnly);
 			}
 			if (output_log.isOpen()) {
@@ -131,7 +131,7 @@ bool create_lock(QFile * f, QxtFileLock * lock) {
 	bool success = false;
 	if (f->open(QIODevice::ReadWrite)) {
 	 	if (lock->lock()) {
-			f->write("smplayer lock file");
+			f->write("smplayer2 lock file");
 			success = true;
 		}
 	}
@@ -176,11 +176,11 @@ int main( int argc, char ** argv )
 #ifdef PORTABLE_APP
 	config_path = a.applicationDirPath();
 #else
-	// If a smplayer.ini exists in the app path, will use that path
+	// If a smplayer2.ini exists in the app path, will use that path
 	// for the config file by default
-	if (QFile::exists( a.applicationDirPath() + "/smplayer.ini" ) ) {
+	if (QFile::exists( a.applicationDirPath() + "/smplayer2.ini" ) ) {
 		config_path = a.applicationDirPath();
-		qDebug("main: using existing %s", QString(config_path + "/smplayer.ini").toUtf8().data());
+		qDebug("main: using existing %s", QString(config_path + "/smplayer2.ini").toUtf8().data());
 	}
 #endif
 
@@ -195,7 +195,7 @@ int main( int argc, char ** argv )
 			args.removeAt(pos-1);
 		} else {
 			printf("Error: expected parameter for -config-path\r\n");
-			return SMPlayer::ErrorArgument;
+			return SMPlayer2::ErrorArgument;
 		}
 	}
 
@@ -205,7 +205,7 @@ int main( int argc, char ** argv )
 	//setIniPath will be set later in global_init, but we need it here
 	if (!config_path.isEmpty()) Paths::setConfigPath(config_path);
 
-	QString lock_file = Paths::iniPath() + "/smplayer_init.lock";
+	QString lock_file = Paths::iniPath() + "/smplayer2_init.lock";
 	qDebug("main: lock_file: %s", lock_file.toUtf8().data());
 
 #if USE_QXT_LOCKS
@@ -245,7 +245,7 @@ int main( int argc, char ** argv )
 		// Create lock file
 		QFile f(lock_file);
 		if (f.open(QIODevice::WriteOnly)) {
-			f.write("smplayer lock file");
+			f.write("smplayer2 lock file");
 			f.close();
 		} else {
 			qWarning("main: can't open %s for writing", lock_file.toUtf8().data());
@@ -255,9 +255,9 @@ int main( int argc, char ** argv )
 #endif // USE_QXT_LOCKS
 #endif // USE_LOCKS
 
-	SMPlayer * smplayer = new SMPlayer(config_path);
-	SMPlayer::ExitCode c = smplayer->processArgs( args );
-	if (c != SMPlayer::NoExit) {
+	SMPlayer2 * smplayer2 = new SMPlayer2(config_path);
+	SMPlayer2::ExitCode c = smplayer2->processArgs( args );
+	if (c != SMPlayer2::NoExit) {
 #if USE_LOCKS
 #if USE_QXT_LOCKS
 		clean_lock(&f, &write_lock);
@@ -268,9 +268,9 @@ int main( int argc, char ** argv )
 		return c;
 	}
 
-	basegui_instance = smplayer->gui();
-	a.connect(smplayer->gui(), SIGNAL(quitSolicited()), &a, SLOT(quit()));
-	smplayer->start();
+	basegui_instance = smplayer2->gui();
+	a.connect(smplayer2->gui(), SIGNAL(quitSolicited()), &a, SLOT(quit()));
+	smplayer2->start();
 
 #if USE_LOCKS
 #if USE_QXT_LOCKS
@@ -283,7 +283,7 @@ int main( int argc, char ** argv )
 	int r = a.exec();
 
 	basegui_instance = 0;
-	delete smplayer;
+	delete smplayer2;
 
 	if (output_log.isOpen()) output_log.close();
 

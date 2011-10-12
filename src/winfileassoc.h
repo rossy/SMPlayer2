@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -31,7 +31,7 @@ class WinFileAssoc
 {
 protected:
 	QString m_ClassId; //Application ClassId
-	QString m_ClassId2; //The ClassId created by explorer if user selects 'Open With...', usually smplayer.exe
+	QString m_ClassId2; //The ClassId created by explorer if user selects 'Open With...', usually smplayer2.exe
 	QString m_AppName;
 
 protected:
@@ -40,8 +40,8 @@ protected:
 	bool VistaGetDefaultApps(const QStringList &extensions, QStringList& registeredExt);
 	int  VistaSetAppsAsDefault(const QStringList& extensions);
 public:
-	WinFileAssoc(const QString ClassId = "MPlayerFileVideo", const QString AppName="SMPlayer");
-	//Checks the registry to see which extensions are registered with SMPlayer
+	WinFileAssoc(const QString ClassId = "MPlayerFileVideo", const QString AppName="SMPlayer2");
+	//Checks the registry to see which extensions are registered with SMPlayer2
 	bool GetRegisteredExtensions(const QStringList& extensionsToCheck, QStringList& registeredExtensions);
 
 	int CreateFileAssociations(const QStringList& fileExtensions); 

@@ -10,7 +10,7 @@
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>About SMPlayer</string>
+   <string>About SMPlayer2</string>
   </property>
   <layout class="QVBoxLayout" >
    <property name="margin" >

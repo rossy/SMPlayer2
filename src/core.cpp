@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -1488,7 +1488,7 @@ void Core::startMplayer( QString file, double seek ) {
 	proc->addArgument("-priority");
 	proc->addArgument( p );
 	SetPriorityClass(GetCurrentProcess(), app_p);
-	qDebug("Core::startMplayer: priority of smplayer process set to %d", app_p);
+	qDebug("Core::startMplayer: priority of smplayer2 process set to %d", app_p);
 	#endif
 
 	if (pref->frame_drop) {

@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -240,10 +240,10 @@ void Preferences::reset() {
     mplayer_additional_audio_filters="";
 
 	log_mplayer = true;
-	log_smplayer = true;
+	log_smplayer2 = true;
 	log_filter = ".*";
 	verbose_log = false;
-	save_smplayer_log = false;
+	save_smplayer2_log = false;
 
     //mplayer log autosaving
     autosave_mplayer_log = false;
@@ -424,7 +424,7 @@ void Preferences::reset() {
        ********* */
 
 #ifdef Q_OS_WIN
-	// Some people reported smplayer doesn't start with this option enabled
+	// Some people reported smplayer2 doesn't start with this option enabled
 	// So now it's disabled by default on Windows
 	use_single_instance = false; 
 #else
@@ -648,10 +648,10 @@ void Preferences::save() {
 	set->setValue("mplayer_additional_audio_filters", mplayer_additional_audio_filters);
 
 	set->setValue("log_mplayer", log_mplayer);
-	set->setValue("log_smplayer", log_smplayer);
+	set->setValue("log_smplayer2", log_smplayer2);
 	set->setValue("log_filter", log_filter);
 	set->setValue("verbose_log", verbose_log);
-	set->setValue("save_smplayer_log", save_smplayer_log);
+	set->setValue("save_smplayer2_log", save_smplayer2_log);
 
     //mplayer log autosaving
     set->setValue("autosave_mplayer_log", autosave_mplayer_log);
@@ -1068,10 +1068,10 @@ void Preferences::load() {
 	mplayer_additional_audio_filters = set->value("mplayer_additional_audio_filters", mplayer_additional_audio_filters).toString();
 
 	log_mplayer = set->value("log_mplayer", log_mplayer).toBool();
-	log_smplayer = set->value("log_smplayer", log_smplayer).toBool();
+	log_smplayer2 = set->value("log_smplayer2", log_smplayer2).toBool();
 	log_filter = set->value("log_filter", log_filter).toString();
 	verbose_log = set->value("verbose_log", verbose_log).toBool();
-	save_smplayer_log = set->value("save_smplayer_log", save_smplayer_log).toBool();
+	save_smplayer2_log = set->value("save_smplayer2_log", save_smplayer2_log).toBool();
 
     //mplayer log autosaving
     autosave_mplayer_log = set->value("autosave_mplayer_log", autosave_mplayer_log).toBool();

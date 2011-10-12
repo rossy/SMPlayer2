@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -39,7 +39,7 @@ public:
 	//! Forces to use a different path for the config files
 	static void setConfigPath(QString path);
 
-	//! Return the path where smplayer should save its config files
+	//! Return the path where smplayer2 should save its config files
 	static QString configPath();
 
 	//! Obsolete. Just returns configPath()

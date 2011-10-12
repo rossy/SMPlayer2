@@ -12,7 +12,7 @@ SOURCES = myslider.cpp timeslider.cpp test.cpp
 
 #SOURCES = test2.cpp
 
-LIBS += -L../corelib -L../corelib/release -lsmplayercore
+LIBS += -L../corelib -L../corelib/release -lsmplayer2core
 
 unix {
 	UI_DIR = .ui

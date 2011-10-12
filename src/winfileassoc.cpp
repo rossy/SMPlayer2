@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -21,7 +21,7 @@
 	Handles file associations in Windows Vista/XP/2000/NT/ME/98/95.
 	We assume that the code is run without administrator privileges, so the associations are done for current user only.
 	System-wide associations require writing to HKEY_CLASSES_ROOT and we don't want to get our hands dirty with that.
-	Each user on the computer can configure his own set of file associations for SMPlayer, which is extremely cool.
+	Each user on the computer can configure his own set of file associations for SMPlayer2, which is extremely cool.
 
 	Optionally, during uninstall, it would be a good idea to call RestoreFileAssociations for all media types so
 	that we can clean up the registry and restore the old associations for current user. 
@@ -73,7 +73,7 @@ int WinFileAssoc::CreateFileAssociations(const QStringList& fileExtensions)
 	if (!RegCR.contains(m_ClassId) && !RegCU.contains("Software/Classes/" + m_ClassId))
 	{
 		//If doesn't exist (user didn't run the setup program), try to create the ClassId for current user.
-		if (!CreateClassId(QApplication::applicationFilePath(), "SMPlayer Media Player"))
+		if (!CreateClassId(QApplication::applicationFilePath(), "SMPlayer2 Media Player"))
 			return 0; 
 	}
 	
@@ -168,7 +168,7 @@ bool WinFileAssoc::GetRegisteredExtensions( const QStringList& extensionsToCheck
 			else
 			if (CurAppId.size())
 			{
-				//If user uses Open With..., explorer creates it's own ClassId under Application, usually "smplayer.exe"
+				//If user uses Open With..., explorer creates it's own ClassId under Application, usually "smplayer2.exe"
 				bRegistered = (CurAppId == m_ClassId) || (0 == CurAppId.compare(m_ClassId2, Qt::CaseInsensitive)); 
 			}
 			else
@@ -302,7 +302,7 @@ bool WinFileAssoc::CreateClassId(const QString& executablePath, const QString& f
 	Reg.setValue(classId + "/shell/open/command/.", QString("\"%1\" \"%2\"").arg(appPath, "%1"));
 	Reg.setValue(classId + "/DefaultIcon/.", QString("\"%1\",1").arg(appPath));
 	//Add "Enqueue" command
-	Reg.setValue(classId + "/shell/enqueue/.", QObject::tr("Enqueue in SMPlayer"));
+	Reg.setValue(classId + "/shell/enqueue/.", QObject::tr("Enqueue in SMPlayer2"));
 	Reg.setValue(classId + "/shell/enqueue/command/.", QString("\"%1\" -add-to-playlist \"%2\"").arg(appPath, "%1"));
 	return true; 
 }
@@ -335,7 +335,7 @@ bool WinFileAssoc::RemoveClassId()
 
 //Windows Vista specific implementation
 //Add libole32.a library if compiling with mingw.
-//In smplayer.pro, under win32{ :
+//In smplayer2.pro, under win32{ :
 //	LIBS += libole32
 #ifdef WIN32
 #include <windows.h>

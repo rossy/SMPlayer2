@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -185,7 +185,7 @@ void PrefDrives::createHelp() {
 
 #if DVDNAV_SUPPORT
 	setWhatsThis(use_dvdnav_check, tr("Enable DVD menus"),
-		tr("If this option is checked, smplayer will play DVDs using "
+		tr("If this option is checked, smplayer2 will play DVDs using "
            "dvdnav. Requires a recent version of mplayer compiled with dvdnav "
            "support.") +"<br>" +
         tr("<b>Note 1</b>: cache will be disabled, this can affect performance.") +"<br>"+

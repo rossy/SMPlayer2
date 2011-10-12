@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -130,7 +130,7 @@ void PrefGeneral::retranslateStrings() {
 	preferred_desc->setText(
 		tr("Here you can type your preferred language for the audio "
            "and subtitle streams. When a media with multiple audio or "
-           "subtitle streams is found, SMPlayer will try to use your "
+           "subtitle streams is found, SMPlayer2 will try to use your "
            "preferred language. This only will work with media that offer "
            "info about the language of audio and subtitle streams, like DVDs "
            "or mkv files.<br>These fields accept regular expressions. "
@@ -789,19 +789,19 @@ void PrefGeneral::createHelp() {
 
 	setWhatsThis(mplayerbin_edit, tr("MPlayer executable"), 
 		tr("Here you must specify the mplayer "
-           "executable that SMPlayer will use.<br>"
-           "SMPlayer requires at least MPlayer 1.0rc1 (although a recent "
+           "executable that SMPlayer2 will use.<br>"
+           "SMPlayer2 requires at least MPlayer 1.0rc1 (although a recent "
            "revision from SVN is highly recommended).") + "<br><b>" +
-        tr("If this setting is wrong, SMPlayer won't be able to play "
+        tr("If this setting is wrong, SMPlayer2 won't be able to play "
            "anything!") + "</b>");
 
 	setWhatsThis(remember_all_check, tr("Remember settings"),
-		tr("Usually SMPlayer will remember the settings for each file you "
+		tr("Usually SMPlayer2 will remember the settings for each file you "
            "play (audio track selected, volume, filters...). Disable this "
            "option if you don't like this feature.") );
 
 	setWhatsThis(remember_time_check, tr("Remember time position"),
-		tr("If you check this option, SMPlayer will remember the last position "
+		tr("If you check this option, SMPlayer2 will remember the last position "
            "of the file when you open it again. This option works only with "
            "regular files (not with DVDs, CDs, URLs...).") );
 
@@ -809,7 +809,7 @@ void PrefGeneral::createHelp() {
 		tr("This option allows to change the way the file settings would be "
            "stored. The following options are available:") +"<ul><li>" + 
 		tr("<b>one ini file</b>: the settings for all played files will be "
-           "saved in a single ini file (%1)").arg(QString("<i>"+Paths::iniPath()+"/smplayer.ini</i>")) + "</li><li>" +
+           "saved in a single ini file (%1)").arg(QString("<i>"+Paths::iniPath()+"/smplayer2.ini</i>")) + "</li><li>" +
 		tr("<b>multiple ini files</b>: one ini file will be used for each played file. "
            "Those ini files will be saved in the folder %1").arg(QString("<i>"+Paths::iniPath()+"/file_settings</i>")) + "</li></ul>" +
 		tr("The latter method could be faster if there is info for a lot of files.") );
@@ -820,7 +820,7 @@ void PrefGeneral::createHelp() {
 
 	setWhatsThis(screenshot_edit, tr("Screenshots folder"),
 		tr("Here you can specify a folder where the screenshots taken by "
-           "SMPlayer will be stored. If the folder is not valid the "
+           "SMPlayer2 will be stored. If the folder is not valid the "
            "screenshot feature will be disabled.") );
 
 	setWhatsThis(close_on_finish_check, tr("Close when finished"),
@@ -913,10 +913,10 @@ void PrefGeneral::createHelp() {
            "audio files or when a file is paused."));
 
 	setWhatsThis(avoid_screensaver_check, tr("Avoid screensaver"),
-		tr("When this option is checked, SMPlayer will try to prevent the "
+		tr("When this option is checked, SMPlayer2 will try to prevent the "
            "screensaver to be shown when playing a video file. The screensaver "
            "will be allowed to be shown if playing an audio file or in pause "
-           "mode. This option only works if the SMPlayer window is in "
+           "mode. This option only works if the SMPlayer2 window is in "
 		   "the foreground."));
 #else
 	setWhatsThis(screensaver_check, tr("Disable screensaver"),
@@ -994,7 +994,7 @@ void PrefGeneral::createHelp() {
 
 	setWhatsThis(audio_lang_edit, tr("Preferred audio language"),
 		tr("Here you can type your preferred language for the audio streams. "
-           "When a media with multiple audio streams is found, SMPlayer will "
+           "When a media with multiple audio streams is found, SMPlayer2 will "
            "try to use your preferred language.<br>"
            "This only will work with media that offer info about the language "
            "of the audio streams, like DVDs or mkv files.<br>"
@@ -1004,7 +1004,7 @@ void PrefGeneral::createHelp() {
 
 	setWhatsThis(subtitle_lang_edit, tr("Preferred subtitle language"),
 		tr("Here you can type your preferred language for the subtitle stream. "
-           "When a media with multiple subtitle streams is found, SMPlayer will "
+           "When a media with multiple subtitle streams is found, SMPlayer2 will "
            "try to use your preferred language.<br>"
            "This only will work with media that offer info about the language "
            "of the subtitle streams, like DVDs or mkv files.<br>"

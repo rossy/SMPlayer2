@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -401,7 +401,7 @@ void DefaultGui::createStatusBar() {
 	statusBar()->addPermanentWidget( video_info_display );
 	statusBar()->addPermanentWidget( ab_section_display );
 
-    statusBar()->showMessage( tr("Welcome to SMPlayer") );
+    statusBar()->showMessage( tr("Welcome to SMPlayer2") );
 	statusBar()->addPermanentWidget( frame_display, 0 );
 	frame_display->setText( "0" );
 

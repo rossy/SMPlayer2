@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -28,7 +28,7 @@ class QTcpSocket;
 //! MyClient communicates with other running instances.
 
 /*!
- It can be used to know if there's another instance of smplayer running.
+ It can be used to know if there's another instance of smplayer2 running.
  It also allows to send the file(s) that the user wants to open to
  the other instance.
 */

@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -65,8 +65,8 @@ bool MyClient::openConnection() {
 	if (!socket->waitForConnected( timeout )) return false; // Can't connect
 
 	QString line = readLine();
-	if (!line.startsWith("SMPlayer")) return false;
-	qDebug("MyClient::sendFiles: connected to a SMPlayer instance!");
+	if (!line.startsWith("SMPlayer2")) return false;
+	qDebug("MyClient::sendFiles: connected to a SMPlayer2 instance!");
 
 	line = readLine(); // Read help message
 

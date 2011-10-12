@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -115,7 +115,7 @@ BaseGui::BaseGui( QWidget* parent, Qt::WindowFlags flags )
 	arg_close_on_finish = -1;
 	arg_start_in_fullscreen = -1;
 
-	setWindowTitle( "SMPlayer" );
+	setWindowTitle( "SMPlayer2" );
 
 	// Not created objects
 	server = 0;
@@ -159,7 +159,7 @@ BaseGui::BaseGui( QWidget* parent, Qt::WindowFlags flags )
 #endif
 
     mplayer_log_window = new LogWindow(0);
-	smplayer_log_window = new LogWindow(0);
+	smplayer2_log_window = new LogWindow(0);
 
 	createActions();
 	createMenus();
@@ -374,7 +374,7 @@ void BaseGui::remoteGetVolume(int *vol){
 BaseGui::~BaseGui() {
 	delete core; // delete before mplayerwindow, otherwise, segfault...
 	delete mplayer_log_window;
-	delete smplayer_log_window;
+	delete smplayer2_log_window;
 
 	delete tvlist;
 	delete radiolist;
@@ -816,7 +816,7 @@ void BaseGui::createActions() {
 	connect( showLogMplayerAct, SIGNAL(triggered()),
              this, SLOT(showMplayerLog()) );
 
-	showLogSmplayerAct = new MyAction( QKeySequence("Ctrl+S"), this, "show_smplayer_log" );
+	showLogSmplayerAct = new MyAction( QKeySequence("Ctrl+S"), this, "show_smplayer2_log" );
 	connect( showLogSmplayerAct, SIGNAL(triggered()),
              this, SLOT(showLog()) );
 
@@ -837,7 +837,7 @@ void BaseGui::createActions() {
 	connect( aboutQtAct, SIGNAL(triggered()),
              this, SLOT(helpAboutQt()) );
 
-	aboutThisAct = new MyAction( this, "about_smplayer" );
+	aboutThisAct = new MyAction( this, "about_smplayer2" );
 	connect( aboutThisAct, SIGNAL(triggered()),
              this, SLOT(helpAbout()) );
 
@@ -1604,14 +1604,14 @@ void BaseGui::retranslateStrings() {
 
 	// Submenu Logs
 	showLogMplayerAct->change( "MPlayer" );
-	showLogSmplayerAct->change( "SMPlayer" );
+	showLogSmplayerAct->change( "SMPlayer2" );
 
 	// Menu Help
 	showFAQAct->change( Images::icon("faq"), tr("&FAQ") );
 	showCLOptionsAct->change( Images::icon("cl_help"), tr("&Command line options") );
 	showTipsAct->change( Images::icon("tips"), tr("&Tips") );
 	aboutQtAct->change( QPixmap(":/icons-png/qt.png"), tr("About &Qt") );
-	aboutThisAct->change( Images::icon("logo_small"), tr("About &SMPlayer") );
+	aboutThisAct->change( Images::icon("logo_small"), tr("About &SMPlayer2") );
 
 	// Playlist
 	playNextAct->change( tr("&Next") );
@@ -1853,8 +1853,8 @@ void BaseGui::retranslateStrings() {
 	initializeMenus();
 
 	// Other things
-	mplayer_log_window->setWindowTitle( tr("SMPlayer - mplayer log") );
-	smplayer_log_window->setWindowTitle( tr("SMPlayer - smplayer log") );
+	mplayer_log_window->setWindowTitle( tr("SMPlayer2 - mplayer log") );
+	smplayer2_log_window->setWindowTitle( tr("SMPlayer2 - smplayer2 log") );
 
 	updateRecents();
 	updateWidgets();
@@ -2489,10 +2489,10 @@ void BaseGui::closeEvent( QCloseEvent * e )  {
 	qDebug("BaseGui::closeEvent");
 
 	qDebug("mplayer_log_window: %d x %d", mplayer_log_window->width(), mplayer_log_window->height() );
-	qDebug("smplayer_log_window: %d x %d", smplayer_log_window->width(), smplayer_log_window->height() );
+	qDebug("smplayer2_log_window: %d x %d", smplayer2_log_window->width(), smplayer2_log_window->height() );
 
 	mplayer_log_window->close();
-	smplayer_log_window->close();
+	smplayer2_log_window->close();
 	playlist->close();
 	equalizer->close();
 
@@ -2796,7 +2796,7 @@ void BaseGui::updateMediaInfo() {
 		if (file_dialog->isVisible()) setDataToFileProperties();
 	}
 
-	setWindowCaption( core->mdat.displayName() + " - SMPlayer" );
+	setWindowCaption( core->mdat.displayName() + " - SMPlayer2" );
 
 	emit videoInfoChanged(core->mdat.video_width, core->mdat.video_height, core->mdat.video_fps.toDouble());
 }
@@ -2870,10 +2870,10 @@ void BaseGui::recordMplayerLog(QString line) {
 }
 
 void BaseGui::recordSmplayerLog(QString line) {
-	if (pref->log_smplayer) {
+	if (pref->log_smplayer2) {
 		line.append("\n");
-		smplayer_log.append(line);
-		if (smplayer_log_window->isVisible()) smplayer_log_window->appendText(line);
+		smplayer2_log.append(line);
+		if (smplayer2_log_window->isVisible()) smplayer2_log_window->appendText(line);
 	}
 }
 
@@ -2910,8 +2910,8 @@ void BaseGui::showLog() {
 
 	exitFullscreenIfNeeded();
 
-	smplayer_log_window->setText( smplayer_log );
-    smplayer_log_window->show();
+	smplayer2_log_window->setText( smplayer2_log );
+    smplayer2_log_window->show();
 }
 
 
@@ -3394,7 +3394,7 @@ void BaseGui::openURL() {
 	/*
     bool ok;
     QString s = QInputDialog::getText(this, 
-            tr("SMPlayer - Enter URL"), tr("URL:"), QLineEdit::Normal,
+            tr("SMPlayer2 - Enter URL"), tr("URL:"), QLineEdit::Normal,
             pref->last_url, &ok );
 
     if ( ok && !s.isEmpty() ) {
@@ -3502,7 +3502,7 @@ void BaseGui::openFile(QString file) {
 }
 
 void BaseGui::configureDiscDevices() {
-	QMessageBox::information( this, tr("SMPlayer - Information"),
+	QMessageBox::information( this, tr("SMPlayer2 - Information"),
 			tr("The CDROM / DVD drives are not configured yet.\n"
 			   "The configuration dialog will be shown now, "
                "so you can do it."), QMessageBox::Ok);
@@ -3659,13 +3659,13 @@ void BaseGui::helpCLOptions() {
 	if (clhelp_window == 0) {
 		clhelp_window = new LogWindow(this);
 	}
-	clhelp_window->setWindowTitle( tr("SMPlayer command line options") );
+	clhelp_window->setWindowTitle( tr("SMPlayer2 command line options") );
 	clhelp_window->setHtml(CLHelp::help(true));
 	clhelp_window->show();
 }
 
 void BaseGui::helpTips() {
-	QDesktopServices::openUrl( QUrl("http://smplayer.berlios.de/forum/viewforum.php?f=12") );
+	QDesktopServices::openUrl( QUrl("http://smplayer2.berlios.de/forum/viewforum.php?f=12") );
 }
 
 void BaseGui::helpAbout() {
@@ -3680,7 +3680,7 @@ void BaseGui::helpAboutQt() {
 void BaseGui::showGotoDialog() {
 	TimeDialog d(this);
 	d.setLabel(tr("&Jump to:"));
-	d.setWindowTitle(tr("SMPlayer - Seek"));
+	d.setWindowTitle(tr("SMPlayer2 - Seek"));
 	d.setMaximumTime( (int) core->mdat.duration);
 	d.setTime( (int) core->mset.current_sec);
 	if (d.exec() == QDialog::Accepted) {
@@ -3690,7 +3690,7 @@ void BaseGui::showGotoDialog() {
 
 void BaseGui::showAudioDelayDialog() {
 	bool ok;
-	int delay = QInputDialog::getInteger(this, tr("SMPlayer - Audio delay"),
+	int delay = QInputDialog::getInteger(this, tr("SMPlayer2 - Audio delay"),
                                          tr("Audio delay (in milliseconds):"), core->mset.audio_delay, 
                                          -3600000, 3600000, 1, &ok);
 	if (ok) {
@@ -3700,7 +3700,7 @@ void BaseGui::showAudioDelayDialog() {
 
 void BaseGui::showSubDelayDialog() {
 	bool ok;
-	int delay = QInputDialog::getInteger(this, tr("SMPlayer - Subtitle delay"),
+	int delay = QInputDialog::getInteger(this, tr("SMPlayer2 - Subtitle delay"),
                                          tr("Subtitle delay (in milliseconds):"), core->mset.sub_delay, 
                                          -3600000, 3600000, 1, &ok);
 	if (ok) {
@@ -3970,7 +3970,7 @@ void BaseGui::displayWarningAboutOldMplayer() {
 	if (!pref->reported_mplayer_is_old) {
 		QMessageBox::warning(this, tr("Warning - Using old MPlayer"),
 			tr("The version of MPlayer (%1) installed on your system "
-               "is obsolete. SMPlayer can't work well with it: some "
+               "is obsolete. SMPlayer2 can't work well with it: some "
                "options won't work, subtitle selection may fail...")
                .arg(MplayerVersion::toString(pref->mplayer_detected_version)) +
             "<br><br>" + 
@@ -4150,7 +4150,7 @@ void BaseGui::displayState(Core::State state) {
 		case Core::Paused:	statusBar()->showMessage( tr("Pause") ); break;
 		case Core::Stopped:	statusBar()->showMessage( tr("Stop") , 2000); break;
 	}
-	if (state == Core::Stopped) setWindowCaption( "SMPlayer" );
+	if (state == Core::Stopped) setWindowCaption( "SMPlayer2" );
 
 #ifdef Q_OS_WIN
 	/* Disable screensaver by event */

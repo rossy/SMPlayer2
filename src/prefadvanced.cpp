@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -95,13 +95,13 @@ void PrefAdvanced::setData(Preferences * pref) {
 
 	setLogMplayer( pref->log_mplayer );
 	setMplayerLogVerbose( pref->verbose_log );
-	setLogSmplayer( pref->log_smplayer );
+	setLogSmplayer( pref->log_smplayer2 );
 	setLogFilter( pref->log_filter );
 
     setSaveMplayerLog( pref->autosave_mplayer_log );
     setMplayerLogName( pref->mplayer_log_saveto );
 
-	setSaveSmplayerLog( pref->save_smplayer_log );
+	setSaveSmplayerLog( pref->save_smplayer2_log );
 
 	setUseShortNames( pref->use_short_pathnames );
 }
@@ -148,12 +148,12 @@ void PrefAdvanced::getData(Preferences * pref) {
 #endif
 	pref->log_mplayer = logMplayer();
 	TEST_AND_SET( pref->verbose_log, mplayerLogVerbose() );
-	pref->log_smplayer = logSmplayer();
+	pref->log_smplayer2 = logSmplayer();
 	pref->log_filter = logFilter();
     pref->autosave_mplayer_log = saveMplayerLog();
     pref->mplayer_log_saveto = mplayerLogName();
 
-	pref->save_smplayer_log = saveSmplayerLog();
+	pref->save_smplayer2_log = saveSmplayerLog();
 
 	pref->use_short_pathnames = useShortNames();
 }
@@ -310,11 +310,11 @@ bool PrefAdvanced::mplayerLogVerbose() {
 }
 
 void PrefAdvanced::setLogSmplayer(bool b) {
-	log_smplayer_check->setChecked(b);
+	log_smplayer2_check->setChecked(b);
 }
 
 bool PrefAdvanced::logSmplayer() {
-	return log_smplayer_check->isChecked();
+	return log_smplayer2_check->isChecked();
 }
 
 void PrefAdvanced::setLogFilter(QString filter) {
@@ -343,11 +343,11 @@ QString PrefAdvanced::mplayerLogName() {
 }
 
 void PrefAdvanced::setSaveSmplayerLog(bool b) {
-	log_smplayer_save_check->setChecked(b);
+	log_smplayer2_save_check->setChecked(b);
 }
 
 bool PrefAdvanced::saveSmplayerLog(){
-    return log_smplayer_save_check->isChecked();
+    return log_smplayer2_save_check->isChecked();
 }
 
 
@@ -361,7 +361,7 @@ void PrefAdvanced::createHelp() {
 
 	setWhatsThis(mplayer_use_window_check, tr("Run MPlayer in its own window"),
         tr("If you check this option, the MPlayer video window won't be "
-           "embedded in SMPlayer's main window but instead it will use its "
+           "embedded in SMPlayer2's main window but instead it will use its "
            "own window. Note that mouse and keyboard events will be handled "
            "directly by MPlayer, that means key shortcuts and mouse clicks "
            "probably won't work as expected when the MPlayer window has the "
@@ -388,7 +388,7 @@ void PrefAdvanced::createHelp() {
 	setWhatsThis(shortnames_check, tr("Pass short filenames (8+3) to MPlayer"),
 		tr("Currently MPlayer can't open filenames which contains characters "
            "outside the local codepage. Checking this option will make "
-           "SMPlayer to pass to MPlayer the short version of the filenames, "
+           "SMPlayer2 to pass to MPlayer the short version of the filenames, "
            "and thus it will able to open them.") );
 #endif
 
@@ -442,19 +442,19 @@ void PrefAdvanced::createHelp() {
 
 	addSectionTitle(tr("Logs"));
 
-	setWhatsThis(log_smplayer_check, tr("Log SMPlayer output"),
-		tr("If this option is checked, SMPlayer will store the debugging "
-           "messages that SMPlayer outputs "
-           "(you can see the log in <b>Options -> View logs -> SMPlayer</b>). "
+	setWhatsThis(log_smplayer2_check, tr("Log SMPlayer2 output"),
+		tr("If this option is checked, SMPlayer2 will store the debugging "
+           "messages that SMPlayer2 outputs "
+           "(you can see the log in <b>Options -> View logs -> SMPlayer2</b>). "
            "This information can be very useful for the developer in case "
            "you find a bug." ) );
 
-	setWhatsThis(log_smplayer_save_check, tr("Save SMPlayer log to file"),
-		tr("If this option is checked, the SMPlayer log wil be recorded to %1")
-          .arg( "<i>"+ Paths::configPath() + "/smplayer_log.txt</i>" ) );
+	setWhatsThis(log_smplayer2_save_check, tr("Save SMPlayer2 log to file"),
+		tr("If this option is checked, the SMPlayer2 log wil be recorded to %1")
+          .arg( "<i>"+ Paths::configPath() + "/smplayer2_log.txt</i>" ) );
 
 	setWhatsThis(log_mplayer_check, tr("Log MPlayer output"),
-		tr("If checked, SMPlayer will store the output of MPlayer "
+		tr("If checked, SMPlayer2 will store the output of MPlayer "
            "(you can see it in <b>Options -> View logs -> MPlayer</b>). "
            "In case of problems this log can contain important information, "
            "so it's recommended to keep this option checked.") );
@@ -469,8 +469,8 @@ void PrefAdvanced::createHelp() {
  		tr("Enter here the path and filename that will be used to save the "
            "MPlayer log.") );
 
-	setWhatsThis(log_filter_edit, tr("Filter for SMPlayer logs"),
-		tr("This option allows to filter the SMPlayer messages that will "
+	setWhatsThis(log_filter_edit, tr("Filter for SMPlayer2 logs"),
+		tr("This option allows to filter the SMPlayer2 messages that will "
            "be stored in the log. Here you can write any regular expression.<br>"
            "For instance: <i>^Core::.*</i> will display only the lines "
            "starting with <i>Core::</i>") );

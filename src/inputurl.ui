@@ -10,7 +10,7 @@
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>SMPlayer - Enter URL</string>
+   <string>SMPlayer2 - Enter URL</string>
   </property>
   <layout class="QGridLayout" >
    <property name="margin" >

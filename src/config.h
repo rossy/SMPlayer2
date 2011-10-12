@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -103,7 +103,7 @@
 
 
 // DVDNAV_SUPPORT
-// if 1, smplayer will be compiled with support for mplayer's dvdnav
+// if 1, smplayer2 will be compiled with support for mplayer's dvdnav
 
 #define DVDNAV_SUPPORT 1
 
@@ -128,14 +128,14 @@
 #endif
 
 
-// If 1, smplayer will check if mplayer is old
+// If 1, smplayer2 will check if mplayer is old
 // and in that case it will report to the user
 #ifndef Q_OS_WIN
 #define REPORT_OLD_MPLAYER 1
 #endif
 
 
-// If 1, smplayer will add support for the mplayer slave command
+// If 1, smplayer2 will add support for the mplayer slave command
 // "panscan".
 
 #define USE_MPLAYER_PANSCAN 0

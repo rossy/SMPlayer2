@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -213,9 +213,9 @@ void PrefAssociations::createHelp() {
 		tr("Uncheck all file types in the list"));
 
 	setWhatsThis(listWidget, tr("List of file types"), 
-		tr("Check the media file extensions you would like SMPlayer to handle. "
+		tr("Check the media file extensions you would like SMPlayer2 to handle. "
 		   "When you click Apply, the checked files will be associated with "
-		   "SMPlayer. If you uncheck a media type, the file association will "
+		   "SMPlayer2. If you uncheck a media type, the file association will "
 		   "be restored.") +
         tr(" <b>Note:</b> (Restoration doesn't work on Windows Vista)."));
 }

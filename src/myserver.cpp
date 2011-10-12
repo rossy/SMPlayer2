@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -28,7 +28,7 @@ Connection::Connection(QTcpSocket * s)
 	//connect(s, SIGNAL(disconnected()), this, SLOT(deleteLater()));
 	connect(s, SIGNAL(readyRead()), this, SLOT(readData()));
 
-	sendText(QString("SMPlayer %1").arg(smplayerVersion()));
+	sendText(QString("SMPlayer2 %1").arg(smplayer2Version()));
 	sendText("Type help for a list of commands");
 }
 
@@ -66,7 +66,7 @@ void Connection::parseLine(QString str) {
 	QRegExp rx_setVol("^set volume ([0-9]+)");
 
 	if (str.toLower() == "hello") {
-		sendText(QString("Hello, this is SMPlayer %1").arg(smplayerVersion()));
+		sendText(QString("Hello, this is SMPlayer2 %1").arg(smplayer2Version()));
 	}
 	else
 	if (str.toLower() == "help") {

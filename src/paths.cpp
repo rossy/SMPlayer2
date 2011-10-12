@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -137,12 +137,12 @@ QString Paths::configPath() {
 		const char * XDG_CONFIG_HOME = getenv("XDG_CONFIG_HOME");
 		if (XDG_CONFIG_HOME!=NULL) {
 			qDebug("Paths::configPath: XDG_CONFIG_HOME: %s", XDG_CONFIG_HOME);
-			return QString(XDG_CONFIG_HOME) + "/smplayer";
+			return QString(XDG_CONFIG_HOME) + "/smplayer2";
 		} 
 		else
-		return QDir::homePath() + "/.config/smplayer";
+		return QDir::homePath() + "/.config/smplayer2";
 		#else
-		return QDir::homePath() + "/.smplayer";
+		return QDir::homePath() + "/.smplayer2";
 		#endif
 #endif
 	}

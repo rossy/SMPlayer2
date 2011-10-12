@@ -91,12 +91,12 @@ show_playlist	Ctrl+L
 show_file_properties	Ctrl+I
 show_preferences	Ctrl+P
 show_mplayer_log	Ctrl+M
-show_smplayer_log	Ctrl+S
+show_smplayer2_log	Ctrl+S
 faq	
 cl_options	
 tips	
 about_qt	
-about_smplayer	
+about_smplayer2	
 play_next	>
 play_prev	<
 move_up	Alt+Up

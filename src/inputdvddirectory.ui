@@ -10,7 +10,7 @@
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>SMPlayer - Play a DVD from a folder</string>
+   <string>SMPlayer2 - Play a DVD from a folder</string>
   </property>
   <property name="modal" >
    <bool>true</bool>

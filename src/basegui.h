@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -73,7 +73,7 @@ public:
 	//! Execute all the actions after the video has started to play
 	void runActionsLater(QString actions) { pending_actions_to_run = actions; };
 
-	//! Saves the line from the smplayer output
+	//! Saves the line from the smplayer2 output
 	void recordSmplayerLog(QString line);
 
 public slots:
@@ -642,7 +642,7 @@ protected:
 	QMenu * recentfiles_menu;
 
 	LogWindow * mplayer_log_window;
-	LogWindow * smplayer_log_window;
+	LogWindow * smplayer2_log_window;
 	LogWindow * clhelp_window;
 
 	PreferencesDialog *pref_dialog;
@@ -687,7 +687,7 @@ private:
 #endif
 
 	QString mplayer_log;
-	QString smplayer_log;
+	QString smplayer2_log;
 
 	bool ignore_show_hide_events;
 };

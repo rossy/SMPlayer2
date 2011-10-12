@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>SMPlayer - File properties</string>
+   <string>SMPlayer2 - File properties</string>
   </property>
   <property name="sizeGripEnabled" >
    <bool>true</bool>

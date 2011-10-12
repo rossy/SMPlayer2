@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>SMPlayer - Enter the MPlayer version</string>
+   <string>SMPlayer2 - Enter the MPlayer version</string>
   </property>
   <layout class="QVBoxLayout" >
    <property name="spacing" >
@@ -32,7 +32,7 @@
    <item>
     <widget class="QLabel" name="message" >
      <property name="text" >
-      <string>SMPlayer couldn't identify the MPlayer version you're using.</string>
+      <string>SMPlayer2 couldn't identify the MPlayer version you're using.</string>
      </property>
      <property name="wordWrap" >
       <bool>true</bool>

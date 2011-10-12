@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -49,8 +49,8 @@ About::About(QWidget * parent, Qt::WindowFlags f)
 	}
 
 	info->setText( 
-		"<b>SMPlayer</b> &copy; 2006-2010 Ricardo Villalba &lt;rvm@escomposlinux.org&gt;<br><br>"
-		"<b>" + tr("Version: %1").arg(smplayerVersion()) + "</b>" +
+		"<b>SMPlayer2</b> &copy; 2006-2010 Ricardo Villalba &lt;rvm@escomposlinux.org&gt;<br><br>"
+		"<b>" + tr("Version: %1").arg(smplayer2Version()) + "</b>" +
 #if PORTABLE_APP
                 " (" + tr("Portable Edition") + ")" +
 #endif
@@ -58,12 +58,12 @@ About::About(QWidget * parent, Qt::WindowFlags f)
         tr("Using Qt %1 (compiled with Qt %2)").arg(qVersion()).arg(QT_VERSION_STR) + "<br><br>" +
 		mplayer_version +
 		tr("Visit our web for updates:") +"<br>"+ 
-        link("http://smplayer.berlios.de") + "<br>" + 
-        link("http://smplayer.sf.net") + 
+        link("http://smplayer2.berlios.de") + "<br>" + 
+        link("http://smplayer2.sf.net") + 
         "<br><br>" +
-		tr("Get help in our forum:") +"<br>" + link("http://smplayer.berlios.de/forum") +
+		tr("Get help in our forum:") +"<br>" + link("http://smplayer2.berlios.de/forum") +
         "<br><br>" +
-		tr("You can support SMPlayer by making a donation.") +" "+
+		tr("You can support SMPlayer2 by making a donation.") +" "+
 		link("https://sourceforge.net/donate/index.php?group_id=185512", tr("More info"))
 		//link("http://www.qt-apps.org/content/donate.php?content=61041", tr("More info"))
 	);
@@ -93,7 +93,7 @@ About::About(QWidget * parent, Qt::WindowFlags f)
 	translators->setHtml( getTranslators() );
 
 	contributions->setText(
-        tr("SMPlayer logo by %1").arg("Charles Barcza &lt;kbarcza@blackpanther.hu&gt;") + "<br><br>" +
+        tr("SMPlayer2 logo by %1").arg("Charles Barcza &lt;kbarcza@blackpanther.hu&gt;") + "<br><br>" +
 		tr("The following people have contributed with patches "
 		   "(see the changelog for details):") +
 		"<pre>" +

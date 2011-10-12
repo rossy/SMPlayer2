@@ -585,14 +585,14 @@ Example: resample=44100:0:0,volnorm</string>
       </attribute>
       <layout class="QVBoxLayout" >
        <item>
-        <widget class="QCheckBox" name="log_smplayer_check" >
+        <widget class="QCheckBox" name="log_smplayer2_check" >
          <property name="text" >
-          <string>Log &amp;SMPlayer output</string>
+          <string>Log &amp;SMPlayer2 output</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QWidget" native="1" name="smplayer_log_container" >
+        <widget class="QWidget" native="1" name="smplayer2_log_container" >
          <property name="enabled" >
           <bool>false</bool>
          </property>
@@ -626,9 +626,9 @@ Example: resample=44100:0:0,volnorm</string>
            </spacer>
           </item>
           <item>
-           <widget class="QCheckBox" name="log_smplayer_save_check" >
+           <widget class="QCheckBox" name="log_smplayer2_save_check" >
             <property name="text" >
-             <string>Sa&amp;ve SMPlayer log to a file</string>
+             <string>Sa&amp;ve SMPlayer2 log to a file</string>
             </property>
            </widget>
           </item>
@@ -732,7 +732,7 @@ Example: resample=44100:0:0,volnorm</string>
        <item>
         <widget class="QLabel" name="textLabel2_10" >
          <property name="text" >
-          <string>&amp;Filter for SMPlayer logs:</string>
+          <string>&amp;Filter for SMPlayer2 logs:</string>
          </property>
          <property name="wordWrap" >
           <bool>false</bool>
@@ -792,8 +792,8 @@ Example: resample=44100:0:0,volnorm</string>
   <tabstop>mplayer_afilters_edit</tabstop>
   <tabstop>ipv4_button</tabstop>
   <tabstop>ipv6_button</tabstop>
-  <tabstop>log_smplayer_check</tabstop>
-  <tabstop>log_smplayer_save_check</tabstop>
+  <tabstop>log_smplayer2_check</tabstop>
+  <tabstop>log_smplayer2_save_check</tabstop>
   <tabstop>log_mplayer_check</tabstop>
   <tabstop>verbose_check</tabstop>
   <tabstop>log_mplayer_save_check</tabstop>
@@ -835,9 +835,9 @@ Example: resample=44100:0:0,volnorm</string>
    </hints>
   </connection>
   <connection>
-   <sender>log_smplayer_check</sender>
+   <sender>log_smplayer2_check</sender>
    <signal>toggled(bool)</signal>
-   <receiver>smplayer_log_container</receiver>
+   <receiver>smplayer2_log_container</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel" >

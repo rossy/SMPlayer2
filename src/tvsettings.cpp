@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -23,7 +23,7 @@
 
 TVSettings::TVSettings(QString directory) : FileSettingsBase(directory) 
 {
-	my_settings = new QSettings(directory + "/smplayer_tv.ini", QSettings::IniFormat);
+	my_settings = new QSettings(directory + "/smplayer2_tv.ini", QSettings::IniFormat);
 }
 
 TVSettings::~TVSettings() {

@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -59,5 +59,5 @@ void Translator::load(QString locale) {
 		loadCatalog(qt_trans, "qt", locale, qt_trans_path);
 	}
 #endif
-	loadCatalog(app_trans, "smplayer", locale, trans_path);
+	loadCatalog(app_trans, "smplayer2", locale, trans_path);
 }

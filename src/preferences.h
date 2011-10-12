@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -73,7 +73,7 @@ public:
 	bool use_screenshot;
 	QString screenshot_directory;
 
-	// SMPlayer will remember all media settings for all videos.
+	// SMPlayer2 will remember all media settings for all videos.
 	// This options allow to disable it:
 	bool dont_remember_media_settings; 	// Will not remember anything
 	bool dont_remember_time_pos;		// Will not remember time pos
@@ -237,10 +237,10 @@ public:
 
 	// Logs
 	bool log_mplayer;
-	bool log_smplayer;
+	bool log_smplayer2;
 	QString log_filter;
 	bool verbose_log;
-	bool save_smplayer_log;
+	bool save_smplayer2_log;
 
     //mplayer log autosaving
     bool autosave_mplayer_log;
@@ -259,7 +259,7 @@ public:
 	//! Preferred connection method: ipv4 or ipv6
 	bool prefer_ipv4;
 
-	//! Windows only. If true, smplayer will pass short filenames to mplayer.
+	//! Windows only. If true, smplayer2 will pass short filenames to mplayer.
 	//! To workaround a bug in mplayer.
 	bool use_short_pathnames; 
 
@@ -267,7 +267,7 @@ public:
 	//! mplayer. It seems that some graphic cards don't support those options.
 	bool change_video_equalizer_on_startup;
 
-	//! If true, smplayer will use the prefix pausing_keep_force to keep
+	//! If true, smplayer2 will use the prefix pausing_keep_force to keep
 	//! the pause on slave commands. This experimental prefix was added
 	//! in mplayer svn r27665.
 	bool use_pausing_keep_force;
@@ -290,7 +290,7 @@ public:
 	int resize_method; 	//!< Mainwindow resize method
 
 #if STYLE_SWITCHING
-	QString style; 	//!< SMPlayer look
+	QString style; 	//!< SMPlayer2 look
 #endif
 	bool show_motion_vectors;
 

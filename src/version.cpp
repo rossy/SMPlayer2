@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -22,6 +22,6 @@
 #define VERSION "UNKNOWN"
 #endif
 
-QString smplayerVersion() {
+QString smplayer2Version() {
 	return QString(VERSION);
 }

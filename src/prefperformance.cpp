@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -276,7 +276,7 @@ void PrefPerformance::createHelp() {
            "to switch the audio track (it might not work with some formats).<br> "
            "<b>No</b>: the MPlayer process will be restarted whenever you "
            "change the audio track.<br> "
-           "<b>Auto</b>: SMPlayer will decide what to do according to the "
+           "<b>Auto</b>: SMPlayer2 will decide what to do according to the "
            "MPlayer version." ) );
 
 #if !SMART_DVD_CHAPTERS

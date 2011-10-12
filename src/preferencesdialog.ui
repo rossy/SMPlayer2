@@ -10,7 +10,7 @@
    </rect>
   </property>
   <property name="windowTitle" >
-   <string>SMPlayer - Preferences</string>
+   <string>SMPlayer2 - Preferences</string>
   </property>
   <layout class="QGridLayout" >
    <property name="margin" >

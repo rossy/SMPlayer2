@@ -1,5 +1,5 @@
 
-#include "smplayercorelib.h"
+#include "smplayer2corelib.h"
 #include "global.h"
 #include "helper.h"
 #include "preferences.h"

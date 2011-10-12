@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -20,10 +20,10 @@
 #define _CONSTANTS_H_
 
 #define COMPANY "RVM"
-#define PROGRAM "smplayer"
+#define PROGRAM "smplayer2"
 
-#define IS_PLAYLIST_TAG "|smplayer:isplaylist"
-#define IS_PLAYLIST_TAG_RX "\\|smplayer\\:isplaylist$"
+#define IS_PLAYLIST_TAG "|smplayer2:isplaylist"
+#define IS_PLAYLIST_TAG_RX "\\|smplayer2\\:isplaylist$"
 
 #endif
 

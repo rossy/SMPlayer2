@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -109,13 +109,13 @@ void PrefPlaylist::createHelp() {
 	clearHelp();
 
 	setWhatsThis(auto_add_to_playlist_check, tr("Automatically add files to playlist"),
-		tr("If this option is enabled, every time a file is opened, SMPlayer "
+		tr("If this option is enabled, every time a file is opened, SMPlayer2 "
            "will first clear the playlist and then add the file to it. In "
            "case of DVDs, CDs and VCDs, all titles in the disc will be added "
            "to the playlist.") );
 
 	setWhatsThis(add_consecutive_files_check, tr("Add consecutive files"),
-		tr("If this option is enabled, SMPlayer will look for consecutive "
+		tr("If this option is enabled, SMPlayer2 will look for consecutive "
            "files (e.g. video_1.avi, video_2.avi...) and if found, they'll be "
            "added to the playlist.") );
 

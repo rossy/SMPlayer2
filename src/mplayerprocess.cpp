@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -409,7 +409,7 @@ void MplayerProcess::parseLine(QByteArray ba) {
 #endif
 
 		// The following things are not sent when the file has started to play
-		// (or if sent, smplayer will ignore anyway...)
+		// (or if sent, smplayer2 will ignore anyway...)
 		// So not process anymore, if video is playing to save some time
 		if (notified_mplayer_is_running) {
 			return;

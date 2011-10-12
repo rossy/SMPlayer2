@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -324,7 +324,7 @@ void Playlist::retranslateStrings() {
 
 	// Icon
 	setWindowIcon( Images::icon("logo", 64) );
-	setWindowTitle( tr( "SMPlayer - Playlist" ) );
+	setWindowTitle( tr( "SMPlayer2 - Playlist" ) );
 }
 
 void Playlist::list() {
@@ -722,7 +722,7 @@ bool Playlist::save_m3u(QString file) {
 		QString filename;
 
 		stream << "#EXTM3U" << "\n";
-		stream << "# Playlist created by SMPlayer " << smplayerVersion() << " \n";
+		stream << "# Playlist created by SMPlayer2 " << smplayer2Version() << " \n";
 
 		PlaylistItemList::iterator it;
 		for ( it = pl.begin(); it != pl.end(); ++it ) {

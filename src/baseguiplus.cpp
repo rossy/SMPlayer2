@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -64,7 +64,7 @@ BaseGuiPlus::BaseGuiPlus( QWidget * parent, Qt::WindowFlags flags )
 
 	tray = new QSystemTrayIcon( Images::icon("logo", 22), this );
 
-	tray->setToolTip( "SMPlayer" );
+	tray->setToolTip( "SMPlayer2" );
 	connect( tray, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), 
              this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
 
@@ -174,8 +174,8 @@ void BaseGuiPlus::closeWindow() {
 		if (core->state() == Core::Playing) core->stop();
 
 		if (pref->balloon_count > 0) {
-			tray->showMessage( "SMPlayer", 
-				tr("SMPlayer is still running here"), 
+			tray->showMessage( "SMPlayer2", 
+				tr("SMPlayer2 is still running here"), 
         	    QSystemTrayIcon::Information, 3000 );
 			pref->balloon_count--;
 		}

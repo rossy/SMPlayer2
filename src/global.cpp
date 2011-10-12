@@ -1,4 +1,4 @@
-/*  smplayer, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -50,7 +50,7 @@ void Global::global_init(const QString & config_path) {
 		settings = new QSettings(QSettings::IniFormat, QSettings::UserScope,
     	                         QString(COMPANY), QString(PROGRAM) );
 	} else {
-		QString filename = Paths::iniPath() + "/smplayer.ini";
+		QString filename = Paths::iniPath() + "/smplayer2.ini";
 		settings = new QSettings( filename, QSettings::IniFormat );
 		qDebug("global_init: config file: '%s'", filename.toUtf8().data());
 
