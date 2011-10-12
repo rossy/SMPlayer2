@@ -252,6 +252,7 @@ public slots:
 	void nextProgram();
 #endif
 	void changeTitle(int);
+	void changeChapter(int, bool);
 	void changeChapter(int);
 	void prevChapter();
 	void nextChapter();
@@ -362,6 +363,7 @@ protected slots:
 #endif
 #if DVDNAV_SUPPORT
 	void dvdTitleChanged(int);
+	void updateChapter(int chapter);
 	void durationChanged(double);
 	void askForInfo();
 	void dvdnavUpdateMousePos(QPoint);

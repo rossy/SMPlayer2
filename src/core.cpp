@@ -102,6 +102,9 @@ Core::Core( MplayerWindow *mpw, QWidget* parent )
 
 	connect( proc, SIGNAL(receivedCurrentFrame(int)),
              this, SIGNAL(showFrame(int)) );
+	
+	connect( proc, SIGNAL(receivedCurrentChapter(int)),
+			 this, SLOT(updateChapter(int)) );
 
 	connect( proc, SIGNAL(receivedPause()),
 			 this, SLOT(changePause()) );
@@ -3095,23 +3098,20 @@ void Core::changeTitle(int ID) {
 	}
 }
 
-void Core::changeChapter(int ID) {
-	qDebug("Core::changeChapter: ID: %d", ID);
-
-	if (ID != mset.current_chapter_id) {
-		//if (QFileInfo(mdat.filename).extension().lower()=="mkv") {
+void Core::changeChapter(int ID, bool relative) {
+	if (ID != mset.current_chapter_id || relative == true) {
 		if (mdat.type != TYPE_DVD) {
-			tellmp("seek_chapter " + QString::number(ID) +" 1");
-			mset.current_chapter_id = ID;
+			tellmp("seek_chapter " + QString::number(ID) + (relative ? " 0" : " 1"));
+			tellmp("get_property chapter");
 			updateWidgets();
 		} else {
 			if (pref->cache_for_dvds == 0) {
-				tellmp("seek_chapter " + QString::number(ID) +" 1");
-				mset.current_chapter_id = ID;
+				tellmp("seek_chapter " + QString::number(ID) + (relative ? " 0" : " 1"));
+				tellmp("get_property chapter");
 				updateWidgets();
 			} else {
 				stopMplayer();
-				mset.current_chapter_id = ID;
+				tellmp("get_property chapter");
 				//goToPos(0);
 				mset.current_sec = 0;
 				restartPlay();
@@ -3120,31 +3120,22 @@ void Core::changeChapter(int ID) {
 	}
 }
 
+void Core::changeChapter(int ID) {
+	qDebug("Core::changeChapter: ID: %d", ID);
+	
+	changeChapter(ID, false);
+}
+
 void Core::prevChapter() {
 	qDebug("Core::prevChapter");
 
-	int last_chapter = 0;
-
-	last_chapter = mdat.chapters - 1;
-
-	int ID = mset.current_chapter_id - 1;
-	if (ID < 0) {
-		ID = last_chapter;
-	}
-	changeChapter(ID);
+	changeChapter(-1, true);
 }
 
 void Core::nextChapter() {
 	qDebug("Core::nextChapter");
 
-	int last_chapter = 0;
-	last_chapter = mdat.chapters - 1;
-
-	int ID = mset.current_chapter_id + 1;
-	if (ID > last_chapter) {
-		ID = 0;
-	}
-	changeChapter(ID);
+	changeChapter(1, true);
 }
 
 void Core::changeAngle(int ID) {
@@ -3839,6 +3830,13 @@ QString Core::pausing_prefix() {
 	} else {
 		return "pausing_keep";
 	}
+}
+
+void Core::updateChapter(int chapter) {
+	qDebug("Core::updateChapter");
+	
+	mset.current_chapter_id = chapter;
+	updateWidgets();
 }
 
 #include "moc_core.cpp"

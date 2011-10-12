@@ -28,6 +28,7 @@
 #define NOTIFY_AUDIO_CHANGES 1
 
 class QStringList;
+class Core;
 
 class MplayerProcess : public MyProcess 
 {
@@ -48,6 +49,7 @@ signals:
 
 	void receivedCurrentSec(double sec);
 	void receivedCurrentFrame(int frame);
+	void receivedCurrentChapter(int chapter);
 	void receivedPause();
 	void receivedWindowResolution(int,int);
 	void receivedNoVideo();
@@ -101,8 +103,6 @@ private:
 	MediaData md;
 
 	int last_sub_id;
-
-	int mplayer_svn;
 
 #if NOTIFY_SUB_CHANGES
 	SubTracks subs;

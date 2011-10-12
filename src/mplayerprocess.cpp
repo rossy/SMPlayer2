@@ -48,7 +48,6 @@ MplayerProcess::MplayerProcess(QObject * parent) : MyProcess(parent)
 
 	notified_mplayer_is_running = false;
 	last_sub_id = -1;
-	mplayer_svn = -1; // Not found yet
 }
 
 MplayerProcess::~MplayerProcess() {
@@ -58,7 +57,6 @@ bool MplayerProcess::start() {
 	md.reset();
 	notified_mplayer_is_running = false;
 	last_sub_id = -1;
-	mplayer_svn = -1; // Not found yet
 	received_end_of_file = false;
 
 #if NOTIFY_SUB_CHANGES
@@ -111,6 +109,7 @@ static QRegExp rx_screenshot("^\\*\\*\\* screenshot '(.*)'");
 static QRegExp rx_endoffile("^Exiting... \\(End of file\\)|^ID_EXIT=EOF");
 static QRegExp rx_mkvchapters("\\[mkv\\] Chapter (\\d+) from");
 static QRegExp rx_mkvchapters_name("^ID_CHAPTER_(\\d+)_NAME=(.*)");
+static QRegExp rx_chapter("^ANS_chapter=(.*)");
 static QRegExp rx_aspect2("^Movie-Aspect is ([0-9,.]+):1");
 static QRegExp rx_fontcache("^\\[ass\\] Updating font cache|^\\[ass\\] Init");
 static QRegExp rx_scanning_font("Scanning file");
@@ -407,7 +406,11 @@ void MplayerProcess::parseLine(QByteArray ba) {
 			emit receivedTitleIsMovie();
 		}
 #endif
-
+		if (rx_chapter.indexIn(line) > -1) {
+			int id = rx_chapter.cap(1).toInt();
+			qDebug("MplayerProcess::parseLine: chapter: %d", id);
+			emit receivedCurrentChapter(id);
+		}
 		// The following things are not sent when the file has started to play
 		// (or if sent, smplayer2 will ignore anyway...)
 		// So not process anymore, if video is playing to save some time
@@ -478,7 +481,7 @@ void MplayerProcess::parseLine(QByteArray ba) {
 		else
 
 		// Matroshka chapters
-		if (rx_mkvchapters.indexIn(line)!=-1) {
+		if (rx_mkvchapters.indexIn(line) > -1) {
 			int c = rx_mkvchapters.cap(1).toInt();
 			qDebug("MplayerProcess::parseLine: mkv chapters: %d", c);
 			if ((c+1) > md.chapters) {
@@ -488,7 +491,7 @@ void MplayerProcess::parseLine(QByteArray ba) {
 		}
 		else
 
-		if (rx_mkvchapters_name.indexIn(line)!=-1) {
+		if (rx_mkvchapters_name.indexIn(line) > -1) {
             int id = rx_mkvchapters_name.cap(1).toInt();
             QString s = rx_mkvchapters_name.cap(2);
             qDebug("MplayerProcess::parseLine: mkv chapters: %d", id);
@@ -498,9 +501,8 @@ void MplayerProcess::parseLine(QByteArray ba) {
             if(!md.chapters_name.contains(id))
 				md.chapters_name.insert(id,s);
         }
-
 		else
-
+		
 		// VCD titles
 		if (rx_vcd.indexIn(line) > -1 ) {
 			int ID = rx_vcd.cap(1).toInt();
