@@ -1,2 +1,0 @@
-?package(smplayer):needs="X11" section="Apps/Graphics"\
-  title="smplayer" command="/usr/bin/smplayer"
