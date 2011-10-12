@@ -43,7 +43,8 @@ About::About(QWidget * parent, Qt::WindowFlags f)
 	license_icon->setPixmap( Images::icon("license" ) );
 
 	info->setText( 
-		"<b>SMPlayer2</b> &copy; 2006-2010 Ricardo Villalba &lt;rvm@escomposlinux.org&gt;<br><br>"
+		"<b>SMPlayer2</b> &copy; 2011 Martin Herkt &lt;lachs0r@srsfckn.biz&gt;<br>"
+		"based on SMPlayer &copy; 2006-2010 Ricardo Villalba &lt;rvm@escomposlinux.org&gt;<br>"
 		"<b>" + tr("Version: %1").arg(smplayer2Version()) + "</b>" +
 #if PORTABLE_APP
                 " (" + tr("Portable Edition") + ")" +
@@ -51,37 +52,17 @@ About::About(QWidget * parent, Qt::WindowFlags f)
         "<br>" +
         tr("Using Qt %1 (compiled with Qt %2)").arg(qVersion()).arg(QT_VERSION_STR) + "<br><br>" +
 		tr("Visit our web for updates:") +"<br>"+ 
-        link("http://smplayer2.berlios.de") + "<br>" + 
-        link("http://smplayer2.sf.net") + 
-        "<br><br>" +
-		tr("Get help in our forum:") +"<br>" + link("http://smplayer2.berlios.de/forum") +
-        "<br><br>" +
-		tr("You can support SMPlayer2 by making a donation.") +" "+
-		link("https://sourceforge.net/donate/index.php?group_id=185512", tr("More info"))
-		//link("http://www.qt-apps.org/content/donate.php?content=61041", tr("More info"))
+        link("http://smplayer2.srsfckn.biz") +"<br>"+
+		link("http://github.com/lachs0r/SMPlayer2")
 	);
 
 
-	QString license_file = Paths::doc("gpl.html", pref->language);
-	if (QFile::exists(license_file)) {
-		QFont fixed_font;
-		fixed_font.setStyleHint(QFont::TypeWriter);
-		fixed_font.setFamily("Courier");
-		license->setFont(fixed_font);
-
-		QFile f(license_file);
-		if (f.open(QIODevice::ReadOnly)) {
-			license->setText(QString::fromUtf8(f.readAll().constData()));
-		}
-		f.close();
-	} else {
-		license->setText(
-		"<i>" +
-		tr("This program is free software; you can redistribute it and/or modify "
-	    "it under the terms of the GNU General Public License as published by "
-	    "the Free Software Foundation; either version 2 of the License, or "
-  	    "(at your option) any later version.") + "</i>");
-	}
+	license->setText(
+	"<i>" +
+	tr("This program is free software; you can redistribute it and/or modify "
+	"it under the terms of the GNU General Public License as published by "
+	"the Free Software Foundation; either version 2 of the License, or "
+	"(at your option) any later version.") + "</i>");
 
 	translators->setHtml( getTranslators() );
 
@@ -91,20 +72,7 @@ About::About(QWidget * parent, Qt::WindowFlags f)
 		   "(see the changelog for details):") +
 		"<pre>" +
         QString(
-		"corentin1234 <corentin1234@hotmail.com>\n"
-		"Florin Braghis <florin@libertv.ro>\n"
-		"Francesco Cosoleto <cosoleto@users.sourceforge.net>\n"
-		"Glaydus <glaydus@gmail.com>\n"
-		"Kamil Dziobek <turbos11@gmail.com>\n"
-		"LoRd_MuldeR (http://forum.doom9.org/member.php?u=78667)\n"
-		"Matthias Petri <matt@endboss.org>\n"
-		"profoX <wesley@ubuntu.com>\n"
-		"redxii <redxii1234@gmail.com>\n"
-		"Sikon <sikon@users.sourceforge.net>\n"
-		"Simon <hackykid@users.sourceforge.net>\n"
-		"Stanislav Maslovski <s_i_m@users.sourceforge.net>\n"
-		"Tanguy Krotoff <tkrotoff@gmail.com>\n"
-		"Stivo <helifan@users.sourceforge.net>\n"
+		"Martin Herkt <lachs0r@srsfckn.biz>\n"
 		).replace("<", "&lt;").replace(">", "&gt;") + 
 		"</pre>" +
 		tr("If there's any omission, please report.")
