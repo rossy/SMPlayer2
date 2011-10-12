@@ -24,7 +24,6 @@
 #include "colorutils.h"
 #include "global.h"
 #include "preferences.h"
-#include "mplayerversion.h"
 
 #if USE_QPROCESS
 #include <QProcess>
@@ -75,7 +74,6 @@ void InfoReader::getInfo() {
 	vo_list.clear();
 	ao_list.clear();
 	demuxer_list.clear();
-	mplayer_svn = -1;
 
 	run("-identify -vo help -ao help -demuxer help -vc help -ac help");
 
@@ -201,10 +199,6 @@ void InfoReader::readLine(QByteArray ba) {
 		reading_type = VC;
 		waiting_for_key = FALSE;
 		qDebug("InfoReader::readLines: found key: vc");
-	}
-
-	if (line.startsWith("MPlayer ")) {
-		mplayer_svn = MplayerVersion::mplayerVersion(line);
 	}
 }
 

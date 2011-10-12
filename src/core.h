@@ -320,9 +320,6 @@ public slots:
                           QString prefix = QString::null);
 
 public:
-	//! Returns the number of the first chapter in 
-	//! files. In some versions of mplayer is 0, in others 1
-	static int firstChapter();
 #if !GENERIC_CHAPTER_SUPPORT
 	static int dvdFirstChapter();
 #endif
@@ -398,9 +395,6 @@ protected:
 
     void initializeMenus();
 	void updateWidgets();
-
-	//! Returns true if changing the subscale requires to restart mplayer
-	bool subscale_need_restart();
 
 signals:
 	void aboutToStartPlaying(); // Signal emited just before to start mplayer

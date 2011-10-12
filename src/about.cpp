@@ -22,7 +22,6 @@
 #include "global.h"
 #include "preferences.h"
 #include "paths.h"
-#include "mplayerversion.h"
 
 #include <QFile>
 
@@ -43,11 +42,6 @@ About::About(QWidget * parent, Qt::WindowFlags f)
 	translators_icon->setPixmap( Images::icon("translators" ) );
 	license_icon->setPixmap( Images::icon("license" ) );
 
-	QString mplayer_version;
-	if (pref->mplayer_detected_version > 0) {
-		mplayer_version = tr("Using MPlayer %1").arg(MplayerVersion::toString(pref->mplayer_detected_version)) + "<br><br>";
-	}
-
 	info->setText( 
 		"<b>SMPlayer2</b> &copy; 2006-2010 Ricardo Villalba &lt;rvm@escomposlinux.org&gt;<br><br>"
 		"<b>" + tr("Version: %1").arg(smplayer2Version()) + "</b>" +
@@ -56,7 +50,6 @@ About::About(QWidget * parent, Qt::WindowFlags f)
 #endif
         "<br>" +
         tr("Using Qt %1 (compiled with Qt %2)").arg(qVersion()).arg(QT_VERSION_STR) + "<br><br>" +
-		mplayer_version +
 		tr("Visit our web for updates:") +"<br>"+ 
         link("http://smplayer2.berlios.de") + "<br>" + 
         link("http://smplayer2.sf.net") + 

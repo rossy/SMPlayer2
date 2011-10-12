@@ -179,7 +179,6 @@ void PrefInterface::setData(Preferences * pref) {
 	setSeeking4(pref->seeking4);
 
 	setUpdateWhileDragging(pref->update_while_seeking);
-	setRelativeSeeking(pref->relative_seeking);
 
 	setDefaultFont(pref->default_font);
 
@@ -242,7 +241,6 @@ void PrefInterface::getData(Preferences * pref) {
 	pref->seeking4 = seeking4();
 
 	pref->update_while_seeking = updateWhileDragging();
-	pref->relative_seeking= relativeSeeking();
 
 	pref->default_font = defaultFont();
 
@@ -416,15 +414,6 @@ bool PrefInterface::updateWhileDragging() {
 	return (timeslider_behaviour_combo->currentIndex() == 0);
 }
 
-void PrefInterface::setRelativeSeeking(bool b) {
-	relative_seeking_button->setChecked(b);
-	absolute_seeking_button->setChecked(!b);
-}
-
-bool PrefInterface::relativeSeeking() {
-	return relative_seeking_button->isChecked();
-}
-
 void PrefInterface::setDefaultFont(QString font_desc) {
 	default_font_edit->setText(font_desc);
 }
@@ -558,11 +547,6 @@ void PrefInterface::createHelp() {
 
 	setWhatsThis(timeslider_behaviour_combo, tr("Behaviour of time slider"),
         tr("Select what to do when dragging the time slider.") );
-
-	setWhatsThis(seeking_method_group, tr("Seeking method"),
-		tr("Sets the method to be used when seeking with the slider. "
-           "Absolute seeking may be a little bit more accurate, while "
-           "relative seeking may work better with files with a wrong length.") );
 
 	addSectionTitle(tr("Instances"));
 

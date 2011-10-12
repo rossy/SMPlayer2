@@ -156,12 +156,9 @@ void Preferences::reset() {
 	priority = AboveNormal; // Option only for windows
 	frame_drop = true;
 	hard_frame_drop = false;
-	coreavc = false;
 	h264_skip_loop_filter = LoopEnabled;
 	HD_height = 720;
 
-	// MPlayer 1.0rc1 require restart, new versions don't
-	fast_audio_change = Detect;
 #if !SMART_DVD_CHAPTERS
 	fast_chapter_change = false;
 #endif
@@ -198,9 +195,6 @@ void Preferences::reset() {
 	sub_visibility = true;
 
 	subtitles_on_screenshots = false;
-
-	use_new_sub_commands = Detect;
-	change_sub_scale_should_restart = Detect;
 
 	fast_load_sub = true;
 
@@ -315,9 +309,6 @@ void Preferences::reset() {
 #if ENABLE_DELAYED_DRAGGING
 	time_slider_drag_delay = 100;
 #endif
-#if SEEKBAR_RESOLUTION
-	relative_seeking = false;
-#endif
 
 	language = "";
 	iconset = "";
@@ -409,14 +400,6 @@ void Preferences::reset() {
 
 	initial_audio_track = 1;
 	initial_subtitle_track = 1;
-
-
-    /* ************
-       MPlayer info
-       ************ */
-
-	mplayer_detected_version = -1; //None version parsed yet
-	mplayer_user_supplied_version = -1;
 
 
     /* *********
@@ -562,11 +545,9 @@ void Preferences::save() {
 	set->setValue("priority", priority);
 	set->setValue("frame_drop", frame_drop);
 	set->setValue("hard_frame_drop", hard_frame_drop);
-	set->setValue("coreavc", coreavc);
 	set->setValue("h264_skip_loop_filter", h264_skip_loop_filter);
 	set->setValue("HD_height", HD_height);
 
-	set->setValue("fast_audio_change", fast_audio_change);
 #if !SMART_DVD_CHAPTERS
 	set->setValue("fast_chapter_change", fast_chapter_change);
 #endif
@@ -607,9 +588,6 @@ void Preferences::save() {
 	set->setValue("sub_visibility", sub_visibility);
 
 	set->setValue("subtitles_on_screenshots", subtitles_on_screenshots);
-
-	set->setValue("use_new_sub_commands", use_new_sub_commands);
-	set->setValue("change_sub_scale_should_restart", change_sub_scale_should_restart);
 
 	set->setValue("fast_load_sub", fast_load_sub);
 
@@ -718,9 +696,6 @@ void Preferences::save() {
 #if ENABLE_DELAYED_DRAGGING
 	set->setValue("time_slider_drag_delay", time_slider_drag_delay);
 #endif
-#if SEEKBAR_RESOLUTION
-	set->setValue("relative_seeking", relative_seeking);
-#endif
 
 	set->setValue("language", language);
 	set->setValue("iconset", iconset);
@@ -816,17 +791,6 @@ void Preferences::save() {
 	set->setValue("initial_subtitle_track", initial_subtitle_track);
 
 	set->endGroup(); // defaults
-
-
-    /* ************
-       MPlayer info
-       ************ */
-
-	set->beginGroup( "mplayer_info");
-	set->setValue("mplayer_detected_version", mplayer_detected_version);
-	set->setValue("mplayer_user_supplied_version", mplayer_user_supplied_version);
-	set->endGroup(); // mplayer_info
-
 
     /* *********
        Instances
@@ -976,11 +940,9 @@ void Preferences::load() {
 	priority = set->value("priority", priority).toInt();
 	frame_drop = set->value("frame_drop", frame_drop).toBool();
 	hard_frame_drop = set->value("hard_frame_drop", hard_frame_drop).toBool();
-	coreavc = set->value("coreavc", coreavc).toBool();
 	h264_skip_loop_filter = (H264LoopFilter) set->value("h264_skip_loop_filter", h264_skip_loop_filter).toInt();
 	HD_height = set->value("HD_height", HD_height).toInt();
 
-	fast_audio_change = (OptionState) set->value("fast_audio_change", fast_audio_change).toInt();
 #if !SMART_DVD_CHAPTERS
 	fast_chapter_change = set->value("fast_chapter_change", fast_chapter_change).toBool();
 #endif
@@ -1022,9 +984,6 @@ void Preferences::load() {
 	sub_visibility = set->value("sub_visibility", sub_visibility).toBool();
 
 	subtitles_on_screenshots = set->value("subtitles_on_screenshots", subtitles_on_screenshots).toBool();
-
-	use_new_sub_commands = (OptionState) set->value("use_new_sub_commands", use_new_sub_commands).toInt();
-	change_sub_scale_should_restart = (OptionState) set->value("change_sub_scale_should_restart", change_sub_scale_should_restart).toInt();
 
 	fast_load_sub = set->value("fast_load_sub", fast_load_sub).toBool();
 
@@ -1137,9 +1096,6 @@ void Preferences::load() {
 #if ENABLE_DELAYED_DRAGGING
 	time_slider_drag_delay = set->value("time_slider_drag_delay", time_slider_drag_delay).toInt();
 #endif
-#if SEEKBAR_RESOLUTION
-	relative_seeking = set->value("relative_seeking", relative_seeking).toBool();
-#endif
 
 	language = set->value("language", language).toString();
 	iconset= set->value("iconset", iconset).toString();
@@ -1236,16 +1192,6 @@ void Preferences::load() {
 	initial_subtitle_track = set->value("initial_subtitle_track", initial_subtitle_track).toInt();
 
 	set->endGroup(); // defaults
-
-
-    /* ************
-       MPlayer info
-       ************ */
-
-	set->beginGroup( "mplayer_info");
-	mplayer_detected_version = set->value("mplayer_detected_version", mplayer_detected_version).toInt();
-	mplayer_user_supplied_version = set->value("mplayer_user_supplied_version", mplayer_user_supplied_version).toInt();
-	set->endGroup(); // mplayer_info
 
 
     /* *********

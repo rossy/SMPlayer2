@@ -32,7 +32,6 @@
 #include "preferences.h"
 #include "global.h"
 #include "config.h"
-#include "mplayerversion.h"
 #include "constants.h"
 #include "colorutils.h"
 #include "discname.h"
@@ -160,9 +159,6 @@ Core::Core( MplayerWindow *mpw, QWidget* parent )
 
 	connect( proc, SIGNAL(receivedStreamTitleAndUrl(QString,QString)),
              this, SLOT(streamTitleAndUrlChanged(QString,QString)) );
-
-	connect( proc, SIGNAL(failedToParseMplayerVersion(QString)),
-             this, SIGNAL(failedToParseMplayerVersion(QString)) );
 
 	connect( this, SIGNAL(mediaLoaded()), this, SLOT(checkIfVideoIsHD()), Qt::QueuedConnection );
 #if DELAYED_AUDIO_SETUP_ON_STARTUP
@@ -523,59 +519,6 @@ void Core::unloadAudioFile() {
 	}
 }
 
-/*
-void Core::openDVD( bool from_folder, QString directory) {
-	qDebug("Core::openDVD");
-
-	if (from_folder) {
-		if (!directory.isEmpty()) {
-			QFileInfo fi(directory);
-			if ( (fi.exists()) && (fi.isDir()) ) {
-				pref->dvd_directory = directory;
-				pref->play_dvd_from_hd = TRUE;
-				openDVD();
-			} else {
-				qDebug("Core::openDVD: directory '%s' is not valid", directory.toUtf8().data());
-			}
-		} else {
-			qDebug("Core::openDVD: directory is empty");
-		}
-	} else {
-		pref->play_dvd_from_hd = FALSE;
-		openDVD();
-	}
-}
-
-void Core::openDVD() {
-	openDVD(1);
-}
-
-void Core::openDVD(int title) {
-	qDebug("Core::openDVD: %d", title);
-
-	if (proc->isRunning()) {
-		stopMplayer();
-	}
-
-	// Save data of previous file:
-	saveMediaInfo();
-
-	mdat.reset();
-	mdat.filename = "dvd://" + QString::number(title);
-	mdat.type = TYPE_DVD;
-
-	mset.reset();
-
-	mset.current_title_id = title;
-	mset.current_chapter_id = 1;
-	mset.current_angle_id = 1;
-
-	initializeMenus();
-
-	initPlaying();
-}
-*/
-
 void Core::openVCD(int title) {
 	qDebug("Core::openVCD: %d", title);
 
@@ -674,11 +617,9 @@ void Core::openDVD(QString dvd_url) {
 	mset.reset();
 
 	mset.current_title_id = title;
-#if GENERIC_CHAPTER_SUPPORT
-	mset.current_chapter_id = firstChapter();
-#else
-	mset.current_chapter_id = dvdFirstChapter();
-#endif
+
+	mset.current_chapter_id = 0;
+
 	mset.current_angle_id = 1;
 
 	/* initializeMenus(); */
@@ -928,7 +869,7 @@ void Core::newMediaPlaying() {
 	if (mdat.mkv_chapters > 0) {
 #endif
 		// Just to show the first chapter checked in the menu
-		mset.current_chapter_id = firstChapter();
+		mset.current_chapter_id = 0;
 	}
 
 	mdat.initialized = TRUE;
@@ -1234,14 +1175,9 @@ void Core::fileReachedEnd() {
 void Core::goToPosition(int value) {
 	qDebug("Core::goToPosition: value: %d", value);
 
-	if (pref->relative_seeking) {
-		goToPos( (double) value / (SEEKBAR_RESOLUTION / 100) );
-	}
-	else {
-		if (mdat.duration > 0) {
-			int jump_time = (int) mdat.duration * value / SEEKBAR_RESOLUTION;
-			goToSec(jump_time);
-		}
+	if (mdat.duration > 0) {
+		int jump_time = (int) mdat.duration * value / SEEKBAR_RESOLUTION;
+		goToSec(jump_time);
 	}
 }
 
@@ -1278,8 +1214,6 @@ void Core::startMplayer( QString file, double seek ) {
 	}
 #endif
 #endif
-
-	bool is_mkv = (QFileInfo(file).suffix().toLower() == "mkv");
 
 	// DVD
 	QString dvd_folder;
@@ -1359,14 +1293,6 @@ void Core::startMplayer( QString file, double seek ) {
 			proc->addArgument("-vc");
 			proc->addArgument("ffh264vdpau,ffmpeg12vdpau,ffwmv3vdpau,ffvc1vdpau,");
 		}
-#endif	
-		else {
-			if (pref->coreavc) {
-				proc->addArgument("-vc");
-				proc->addArgument("coreserve,");
-			}
-		}
-#ifndef Q_OS_WIN
 	}
 #endif
 
@@ -1407,26 +1333,9 @@ void Core::startMplayer( QString file, double seek ) {
 	proc->addArgument("-identify");
 
 #if GENERIC_CHAPTER_SUPPORT
-	if (MplayerVersion::isMplayerAtLeast(27667)) {
-		// From r27667 the number of chapters can be obtained from ID_CHAPTERS
-		mset.current_chapter_id = 0; // Reset chapters
-	} else {
+    mset.current_chapter_id = 0; // Reset chapters
 #endif
-		// We need this to get info about mkv chapters
-		if (is_mkv) {
-			proc->addArgument("-msglevel");
-			proc->addArgument("demux=6");
 
-			// **** Reset chapter *** 
-			// Select first chapter, otherwise we cannot
-			// resume playback at the same point
-			// (time would be relative to chapter)
-			mset.current_chapter_id = 0;
-		}
-#if GENERIC_CHAPTER_SUPPORT
-	}
-#endif
-	
 	proc->addArgument("-slave");
 
 	if (!pref->vo.isEmpty()) {
@@ -1524,11 +1433,7 @@ void Core::startMplayer( QString file, double seek ) {
 #ifndef Q_OS_WIN
 	if (!pref->use_mplayer_window) {
 		proc->addArgument( "-input" );
-		if (MplayerVersion::isMplayerAtLeast(29058)) {
-			proc->addArgument( "nodefault-bindings:conf=/dev/null" );
-		} else {
-			proc->addArgument( "conf=" + Paths::dataPath() +"/input.conf" );
-		}
+        proc->addArgument( "nodefault-bindings:conf=/dev/null" );
 	}
 #endif
 
@@ -1664,9 +1569,7 @@ void Core::startMplayer( QString file, double seek ) {
 
 	if (mset.closed_caption_channel > 0) {
 		proc->addArgument("-subcc");
-		if (MplayerVersion::isMplayerAtLeast(32607)) {
-			proc->addArgument( QString::number( mset.closed_caption_channel ) );
-		}
+        proc->addArgument( QString::number( mset.closed_caption_channel ) );
 	}
 
 	if (pref->use_forced_subs_only) {
@@ -1780,23 +1683,16 @@ void Core::startMplayer( QString file, double seek ) {
 		}
 	}
 
-	// Set volume, requires mplayer svn r27872
-	bool use_volume_option = (MplayerVersion::isMplayerAtLeast(27872));
-
 	if (pref->global_volume) {
-		if (use_volume_option) {
-			proc->addArgument("-volume");
-			proc->addArgument( QString::number( pref->volume ) );
-		}
+		proc->addArgument("-volume");
+		proc->addArgument( QString::number( pref->volume ) );
 	} else {
-		if (use_volume_option) {
-			proc->addArgument("-volume");
-			// Note: mset.volume may not be right, it can be the volume of the previous video if
-			// playing a new one, but I think it's better to use anyway the current volume on
-			// startup than set it to 0 or something.
-			// The right volume will be set later, when the video starts to play.
-			proc->addArgument( QString::number( mset.volume ) );
-		}
+        proc->addArgument("-volume");
+        // Note: mset.volume may not be right, it can be the volume of the previous video if
+        // playing a new one, but I think it's better to use anyway the current volume on
+        // startup than set it to 0 or something.
+        // The right volume will be set later, when the video starts to play.
+        proc->addArgument( QString::number( mset.volume ) );
 	}
 
 
@@ -1819,12 +1715,7 @@ void Core::startMplayer( QString file, double seek ) {
 	if (mset.current_chapter_id > 0) {
 		proc->addArgument("-chapter");
 		int chapter = mset.current_chapter_id;
-		// Fix for older versions of mplayer:
-#if GENERIC_CHAPTER_SUPPORT
-		if ((mdat.type == TYPE_DVD) && (firstChapter() == 0)) chapter++;
-#else
-		if ((mdat.type == TYPE_DVD) && (dvdFirstChapter() == 0)) chapter++;
-#endif
+		if (mdat.type == TYPE_DVD) chapter++;
 		proc->addArgument( QString::number( chapter ) );
 	}
 
@@ -1898,15 +1789,7 @@ void Core::startMplayer( QString file, double seek ) {
 		if (pref->use_correct_pts == Preferences::Enabled) {
 			proc->addArgument("-correct-pts");
 		} else {
-			if (pref->mplayer_detected_version > 0) {
-				if (MplayerVersion::isMplayerAtLeast(26842)) {
-					proc->addArgument("-nocorrect-pts");
-				} else {
-					proc->addArgument("-no-correct-pts");
-				}
-			} else {
-				qDebug("Core::startMplayer: unknown version of mplayer, not passing -no(-)correct-pts");
-			}
+			proc->addArgument("-nocorrect-pts");
 		}
 	}
 
@@ -2059,7 +1942,9 @@ void Core::startMplayer( QString file, double seek ) {
 		proc->addArgument("screenshot");
 	}
 
+#ifndef Q_OS_WIN
 end_video_filters:
+#endif
 
 	// slices
 	if ((pref->use_slices) && (!force_noslices)) {
@@ -2099,11 +1984,7 @@ end_video_filters:
 		af += pref->filters->item("volnorm").filter();
 	}
 
-	bool use_scaletempo = (pref->use_scaletempo == Preferences::Enabled);
 	if (pref->use_scaletempo == Preferences::Detect) {
-		use_scaletempo = (MplayerVersion::isMplayerAtLeast(24924));
-	}
-	if (use_scaletempo) {
 		if (!af.isEmpty()) af += ",";
 		af += "scaletempo";
 	}
@@ -2376,15 +2257,10 @@ void Core::toggleRepeat(bool b) {
 	qDebug("Core::toggleRepeat: %d", b);
 	if ( mset.loop != b ) {
 		mset.loop = b;
-		if (MplayerVersion::isMplayerAtLeast(23747)) {
-			// Use slave command
-			int v = -1; // no loop
-			if (mset.loop) v = 0; // infinite loop
-			tellmp( QString("loop %1 1").arg(v) );
-		} else {
-			// Restart mplayer
-			if (proc->isRunning()) restartPlay();
-		}
+        // Use slave command
+        int v = -1; // no loop
+        if (mset.loop) v = 0; // infinite loop
+        tellmp( QString("loop %1 1").arg(v) );
 	}
 }
 
@@ -2426,12 +2302,8 @@ void Core::toggleKaraoke(bool b) {
 	qDebug("Core::toggleKaraoke: %d", b);
 	if (b != mset.karaoke_filter) {
 		mset.karaoke_filter = b;
-		if (MplayerVersion::isMplayerAtLeast(31030)) {
-			// Change filter without restarting
-			if (b) tellmp("af_add karaoke"); else tellmp("af_del karaoke");
-		} else {
-			restartPlay();
-		}
+        // Change filter without restarting
+        if (b) tellmp("af_add karaoke"); else tellmp("af_del karaoke");
 	}
 }
 
@@ -2443,12 +2315,8 @@ void Core::toggleExtrastereo(bool b) {
 	qDebug("Core::toggleExtrastereo: %d", b);
 	if (b != mset.extrastereo_filter) {
 		mset.extrastereo_filter = b;
-		if (MplayerVersion::isMplayerAtLeast(31030)) {
-			// Change filter without restarting
-			if (b) tellmp("af_add extrastereo"); else tellmp("af_del extrastereo");
-		} else {
-			restartPlay();
-		}
+		// Change filter without restarting
+		if (b) tellmp("af_add extrastereo"); else tellmp("af_del extrastereo");
 	}
 }
 
@@ -2460,13 +2328,9 @@ void Core::toggleVolnorm(bool b) {
 	qDebug("Core::toggleVolnorm: %d", b);
 	if (b != mset.volnorm_filter) {
 		mset.volnorm_filter = b;
-		if (MplayerVersion::isMplayerAtLeast(31030)) {
-			// Change filter without restarting
-			QString f = pref->filters->item("volnorm").filter();
-			if (b) tellmp("af_add " + f); else tellmp("af_del volnorm");
-		} else {
-			restartPlay();
-		}
+        // Change filter without restarting
+        QString f = pref->filters->item("volnorm").filter();
+        if (b) tellmp("af_add " + f); else tellmp("af_del volnorm");
 	}
 }
 
@@ -2847,46 +2711,22 @@ void Core::decSubPos() {
 	tellmp("sub_pos " + QString::number( mset.sub_pos ) + " 1");
 }
 
-bool Core::subscale_need_restart() {
-	bool need_restart = false;
-
-	need_restart = (pref->change_sub_scale_should_restart == Preferences::Enabled);
-	if (pref->change_sub_scale_should_restart == Preferences::Detect) {
-		if (pref->use_ass_subtitles) 
-			need_restart = (!MplayerVersion::isMplayerAtLeast(25843));
-		else
-			need_restart = (!MplayerVersion::isMplayerAtLeast(23745));
-	}
-	return need_restart;
-}
-
 void Core::changeSubScale(double value) {
 	qDebug("Core::changeSubScale: %f", value);
-
-	bool need_restart = subscale_need_restart();
 
 	if (value < 0) value = 0;
 
 	if (pref->use_ass_subtitles) {
 		if (value != mset.sub_scale_ass) {
 			mset.sub_scale_ass = value;
-			if (need_restart) {
-				restartPlay();
-			} else {
-				tellmp("sub_scale " + QString::number( mset.sub_scale_ass ) + " 1");
-			}
+			tellmp("sub_scale " + QString::number( mset.sub_scale_ass ) + " 1");
 			displayMessage( tr("Font scale: %1").arg(mset.sub_scale_ass) );
 		}
 	} else {
 		// No ass
 		if (value != mset.sub_scale) {
 			mset.sub_scale = value;
-			if (need_restart) {
-				restartPlay();
-			} else {
-				tellmp("sub_scale " + QString::number( mset.sub_scale ) + " 1");
-				
-			}
+			tellmp("sub_scale " + QString::number( mset.sub_scale ) + " 1");
 			displayMessage( tr("Font scale: %1").arg(mset.sub_scale) );
 		}
 	}
@@ -2898,7 +2738,6 @@ void Core::incSubScale() {
 	if (pref->use_ass_subtitles) {
 		changeSubScale( mset.sub_scale_ass + step );
 	} else {
-		if (subscale_need_restart()) step = 1;
 		changeSubScale( mset.sub_scale + step );
 	}
 }
@@ -2909,7 +2748,6 @@ void Core::decSubScale() {
 	if (pref->use_ass_subtitles) {
 		changeSubScale( mset.sub_scale_ass - step );
 	} else {
-		if (subscale_need_restart()) step = 1;
 		changeSubScale( mset.sub_scale - step );
 	}
 }
@@ -2941,8 +2779,7 @@ void Core::setAudioEqualizer(AudioEqualizerList values, bool restart) {
 
 	if (!restart) {
 		const char *command = "af_cmdline equalizer ";
-		if (!MplayerVersion::isMplayerAtLeast(32505))
-			command = "af_eq_set_bands ";
+		command = "af_eq_set_bands ";
 		tellmp( command + Helper::equalizerListToString(values) );
 	} else {
 		restartPlay();
@@ -3091,43 +2928,32 @@ void Core::changeSubtitle(int ID) {
 	
 	qDebug("Core::changeSubtitle: ID: %d", ID);
 
-	bool use_new_commands = (pref->use_new_sub_commands == Preferences::Enabled);
-	if (pref->use_new_sub_commands == Preferences::Detect) {
-		use_new_commands = (MplayerVersion::isMplayerAtLeast(25158));
-	}
-
-	if (!use_new_commands) {
-		// Old command sub_select
-		tellmp( "sub_select " + QString::number(ID) );
-	} else {
-		// New commands
-		int real_id = -1;
-		if (ID == -1) {
-			tellmp( "sub_source -1" );
-		} else {
-			bool valid_item = ( (ID >= 0) && (ID < mdat.subs.numItems()) );
-			if (!valid_item) qWarning("Core::changeSubtitle: ID: %d is not valid!", ID);
-			if ( (mdat.subs.numItems() > 0) && (valid_item) ) {
-				real_id = mdat.subs.itemAt(ID).ID();
-				switch (mdat.subs.itemAt(ID).type()) {
-					case SubData::Vob:
-						tellmp( "sub_vob " + QString::number(real_id) );
-						break;
-					case SubData::Sub:
-						tellmp( "sub_demux " + QString::number(real_id) );
-						break;
-					case SubData::File:
-						tellmp( "sub_file " + QString::number(real_id) );
-						break;
-					default: {
-						qWarning("Core::changeSubtitle: unknown type!");
-					}
-				}
-			} else {
-				qWarning("Core::changeSubtitle: subtitle list is empty!");
-			}
-		}
-	}
+    int real_id = -1;
+    if (ID == -1) {
+        tellmp( "sub_source -1" );
+    } else {
+        bool valid_item = ( (ID >= 0) && (ID < mdat.subs.numItems()) );
+        if (!valid_item) qWarning("Core::changeSubtitle: ID: %d is not valid!", ID);
+        if ( (mdat.subs.numItems() > 0) && (valid_item) ) {
+            real_id = mdat.subs.itemAt(ID).ID();
+            switch (mdat.subs.itemAt(ID).type()) {
+                case SubData::Vob:
+                    tellmp( "sub_vob " + QString::number(real_id) );
+                    break;
+                case SubData::Sub:
+                    tellmp( "sub_demux " + QString::number(real_id) );
+                    break;
+                case SubData::File:
+                    tellmp( "sub_file " + QString::number(real_id) );
+                    break;
+                default: {
+                    qWarning("Core::changeSubtitle: unknown type!");
+                }
+            }
+        } else {
+            qWarning("Core::changeSubtitle: subtitle list is empty!");
+        }
+    }
 
 	updateWidgets();
 }
@@ -3156,33 +2982,21 @@ void Core::changeAudio(int ID, bool allow_restart) {
 		mset.current_audio_id = ID;
 		qDebug("changeAudio: ID: %d", ID);
 
-		bool need_restart = false;
-		if (allow_restart) {
-			need_restart = (pref->fast_audio_change == Preferences::Disabled);
-			if (pref->fast_audio_change == Preferences::Detect) {
-				need_restart = (!MplayerVersion::isMplayerAtLeast(21441));
-			}
-		}
+		tellmp("switch_audio " + QString::number(ID) );
+		// Workaround for a mplayer problem in windows,
+		// volume is too loud after changing audio.
 
-		if (need_restart) {
-			restartPlay(); 
+		// Workaround too for a mplayer problem in linux,
+		// the volume is reduced if using -softvol-max.
+
+		if (pref->global_volume) {
+			setVolume( pref->volume, true);
+			if (pref->mute) mute(true);
 		} else {
-			tellmp("switch_audio " + QString::number(ID) );
-			// Workaround for a mplayer problem in windows,
-			// volume is too loud after changing audio.
-
-			// Workaround too for a mplayer problem in linux,
-			// the volume is reduced if using -softvol-max.
-
-			if (pref->global_volume) {
-				setVolume( pref->volume, true);
-				if (pref->mute) mute(true);
-			} else {
-				setVolume( mset.volume, true );
-				if (mset.mute) mute(true); // if muted, mute again
-			}
-			updateWidgets();
+			setVolume( mset.volume, true );
+			if (mset.mute) mute(true); // if muted, mute again
 		}
+		updateWidgets();
 	}
 }
 
@@ -3333,32 +3147,16 @@ void Core::changeChapter(int ID) {
 	}
 }
 
-int Core::firstChapter() {
-	if ( (MplayerVersion::isMplayerAtLeast(25391)) && 
-         (!MplayerVersion::isMplayerAtLeast(29407)) ) 
-		return 1;
-	else
-		return 0;
-}
-
-#if !GENERIC_CHAPTER_SUPPORT
-int Core::dvdFirstChapter() {
-	// TODO: check if the change really happens in the same version as mkv
-	return firstChapter();
-}
-#endif
-
 void Core::prevChapter() {
 	qDebug("Core::prevChapter");
 
 #if GENERIC_CHAPTER_SUPPORT
 	int last_chapter = 0;
-	int first_chapter = firstChapter();
 
-	last_chapter = mdat.chapters + firstChapter() - 1;
+	last_chapter = mdat.chapters - 1;
 
 	int ID = mset.current_chapter_id - 1;
-	if (ID < first_chapter) {
+	if (ID < 0) {
 		ID = last_chapter;
 	}
 	changeChapter(ID);
@@ -3366,19 +3164,16 @@ void Core::prevChapter() {
 	int last_chapter = 0;
 	bool matroshka = (mdat.mkv_chapters > 0);
 
-	int first_chapter = dvdFirstChapter();
-	if (matroshka) first_chapter = firstChapter();
-
 	// Matroshka chapters
-	if (matroshka) last_chapter = mdat.mkv_chapters + firstChapter() - 1;
+	if (matroshka) last_chapter = mdat.mkv_chapters - 1;
 	else
 	// DVD chapters
 	if (mset.current_title_id > 0) {
-		last_chapter = mdat.titles.item(mset.current_title_id).chapters() + dvdFirstChapter() -1;
+		last_chapter = mdat.titles.item(mset.current_title_id).chapters() - 1;
 	}
 
 	int ID = mset.current_chapter_id - 1;
-	if (ID < first_chapter) {
+	if (ID < 0) {
 		ID = last_chapter;
 	}
 	changeChapter(ID);
@@ -3390,11 +3185,11 @@ void Core::nextChapter() {
 
 #if GENERIC_CHAPTER_SUPPORT
 	int last_chapter = 0;
-	last_chapter = mdat.chapters + firstChapter() - 1;
+	last_chapter = mdat.chapters - 1;
 
 	int ID = mset.current_chapter_id + 1;
 	if (ID > last_chapter) {
-		ID = firstChapter();
+		ID = 0;
 	}
 	changeChapter(ID);
 #else
@@ -3402,16 +3197,16 @@ void Core::nextChapter() {
 	bool matroshka = (mdat.mkv_chapters > 0);
 
 	// Matroshka chapters
-	if (matroshka) last_chapter = mdat.mkv_chapters + firstChapter() - 1;
+	if (matroshka) last_chapter = mdat.mkv_chapters - 1;
 	else
 	// DVD chapters
 	if (mset.current_title_id > 0) {
-		last_chapter = mdat.titles.item(mset.current_title_id).chapters() + dvdFirstChapter() - 1;
+		last_chapter = mdat.titles.item(mset.current_title_id).chapters() - 1;
 	}
 
 	int ID = mset.current_chapter_id + 1;
 	if (ID > last_chapter) {
-		if (matroshka) ID = firstChapter(); else ID = dvdFirstChapter();
+		ID = 0;
 	}
 	changeChapter(ID);
 #endif
@@ -3805,15 +3600,7 @@ void Core::displayScreenshotName(QString filename) {
 	//QString text = tr("Screenshot saved as %1").arg(filename);
 	QString text = QString("Screenshot saved as %1").arg(filename);
 
-	if (MplayerVersion::isMplayerAtLeast(27665)) {
-		displayTextOnOSD(text, 3000, 1, "pausing_keep_force");
-	}
-	else
-	if (state() != Paused) {
-		// Dont' show the message on OSD while in pause, otherwise
-		// the video goes forward a frame.
-		displayTextOnOSD(text, 3000, 1, "pausing_keep");
-	}
+	displayTextOnOSD(text, 3000, 1, "pausing_keep_force");
 
 	emit showMessage(text);
 }
@@ -4144,8 +3931,7 @@ void Core::dvdTitleIsMovie() {
 QString Core::pausing_prefix() {
 	qDebug("Core::pausing_prefix");
 
-	if ( (pref->use_pausing_keep_force) && 
-         (MplayerVersion::isMplayerAtLeast(27665)) ) 
+	if (pref->use_pausing_keep_force)
 	{
 		return "pausing_keep_force";
 	} else {

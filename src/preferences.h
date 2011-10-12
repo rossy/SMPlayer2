@@ -151,11 +151,9 @@ public:
 	int priority;
 	bool frame_drop;
 	bool hard_frame_drop;
-	bool coreavc;
 	H264LoopFilter h264_skip_loop_filter;
 	int HD_height; //!< An HD is a video which height is equal or greater than this.
 
-	OptionState fast_audio_change; // If activated, not restart mplayer
 #if !SMART_DVD_CHAPTERS
 	bool fast_chapter_change;
 #endif
@@ -192,11 +190,6 @@ public:
 	bool sub_visibility;
 
 	bool subtitles_on_screenshots;
-
-	//! Use the new sub_vob, sub_demux and sub_file commands
-	//! instead of sub_select
-	OptionState use_new_sub_commands; 
-	OptionState change_sub_scale_should_restart;
 
 	//! If true, loading an external subtitle will be done
 	//! by using the sub_load slave command. Otherwise
@@ -317,11 +310,6 @@ public:
 #if ENABLE_DELAYED_DRAGGING	
 	int time_slider_drag_delay;
 #endif
-#if SEEKBAR_RESOLUTION
-	//! If true, seeking will be done using a
-	//! percentage (with fractions) instead of time.
-	bool relative_seeking;  
-#endif
 
 	QString language;
 	QString iconset;
@@ -363,10 +351,6 @@ public:
 #endif
 
 	bool report_mplayer_crashes;
-
-#if REPORT_OLD_MPLAYER
-	bool reported_mplayer_is_old;
-#endif
 
 	bool auto_add_to_playlist; //!< Add files to open to playlist
 	bool add_to_playlist_consecutive_files;
@@ -422,18 +406,6 @@ public:
 
 	int initial_audio_track;
 	int initial_subtitle_track;
-
-
-    /* ************
-       MPlayer info
-       ************ */
-
-	int mplayer_detected_version; 	//!< Latest version of mplayer parsed
-
-	//! Version of mplayer supplied by the user which will be used if
-	//! the version can't be parsed from mplayer output
-	int mplayer_user_supplied_version;
-
 
     /* *********
        Instances

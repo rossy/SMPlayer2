@@ -237,10 +237,6 @@ protected slots:
 	virtual void remoteGetChecked(QString, QString*);
 	virtual void remoteGetVolume(int*);
 
-	//! Called when core can't parse the mplayer version and there's no
-	//! version supplied by the user
-	void askForMplayerVersion(QString);
-
 	void showExitCodeFromMplayer(int exit_code);
 	void showErrorFromMplayer(QProcess::ProcessError);
 

@@ -82,12 +82,10 @@ void PrefPerformance::setData(Preferences * pref) {
 	setPriority( pref->priority );
 	setFrameDrop( pref->frame_drop );
 	setHardFrameDrop( pref->hard_frame_drop );
-	setCoreavcUsage( pref->coreavc );
 	setSkipLoop( pref->h264_skip_loop_filter );
 #if !SMART_DVD_CHAPTERS
 	setFastChapterSeeking( pref->fast_chapter_change );
 #endif
-	setFastAudioSwitching( pref->fast_audio_change );
 	setThreads( pref->threads );
 }
 
@@ -104,12 +102,10 @@ void PrefPerformance::getData(Preferences * pref) {
 	TEST_AND_SET(pref->priority, priority());
 	TEST_AND_SET(pref->frame_drop, frameDrop());
 	TEST_AND_SET(pref->hard_frame_drop, hardFrameDrop());
-	TEST_AND_SET(pref->coreavc, coreavcUsage())
 	TEST_AND_SET(pref->h264_skip_loop_filter, skipLoop());
 #if !SMART_DVD_CHAPTERS
 	TEST_AND_SET(pref->fast_chapter_change, fastChapterSeeking());
 #endif
-	pref->fast_audio_change = fastAudioSwitching();
 	TEST_AND_SET(pref->threads, threads());
 }
 
@@ -185,14 +181,6 @@ bool PrefPerformance::hardFrameDrop() {
 	return hardframedrop_check->isChecked();
 }
 
-void PrefPerformance::setCoreavcUsage(bool b) {
-	coreavc_check->setChecked(b);
-}
-
-bool PrefPerformance::coreavcUsage() {
-	return coreavc_check->isChecked();
-}
-
 void PrefPerformance::setSkipLoop(Preferences::H264LoopFilter value) {
 	loopfilter_combo->setCurrentIndex(loopfilter_combo->findData(value));
 }
@@ -210,14 +198,6 @@ bool PrefPerformance::fastChapterSeeking() {
 	return fast_chapter_check->isChecked();
 }
 #endif
-
-void PrefPerformance::setFastAudioSwitching(Preferences::OptionState value) {
-	fast_audio_combo->setState(value);
-}
-
-Preferences::OptionState PrefPerformance::fastAudioSwitching() {
-	return fast_audio_combo->state();
-}
 
 void PrefPerformance::setThreads(int v) {
 	threads_spin->setValue(v);
@@ -251,9 +231,6 @@ void PrefPerformance::createHelp() {
 		tr("Sets the number of threads to use for decoding. Only for "
            "MPEG-1/2 and H.264") );
 
-	setWhatsThis(coreavc_check, tr("Use CoreAVC if no other codec specified"),
-		tr("Try to use non-free CoreAVC codec with no other codec is specified and non-VDPAU video output selected. Requires MPlayer build with CoreAVC support."));
-
 	setWhatsThis(loopfilter_combo, tr("Skip loop filter"),
 		tr("This option allows to skips the loop filter (AKA deblocking) "
            "during H.264 decoding. "
@@ -269,15 +246,6 @@ void PrefPerformance::createHelp() {
            tr("<b>Skip only on HD videos</b>: the loop filter will be "
            "skipped only on videos which height is %1 or "
            "greater.").arg(pref->HD_height) +"<br>" );
-
-	setWhatsThis(fast_audio_combo, tr("Fast audio track switching"),
-		tr("Possible values:<br> "
-           "<b>Yes</b>: it will try the fastest method "
-           "to switch the audio track (it might not work with some formats).<br> "
-           "<b>No</b>: the MPlayer process will be restarted whenever you "
-           "change the audio track.<br> "
-           "<b>Auto</b>: SMPlayer2 will decide what to do according to the "
-           "MPlayer version." ) );
 
 #if !SMART_DVD_CHAPTERS
 	setWhatsThis(fast_chapter_check, tr("Fast seek to chapters in dvds"),

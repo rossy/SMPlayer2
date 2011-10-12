@@ -23,7 +23,6 @@
 
 #include "global.h"
 #include "preferences.h"
-#include "mplayerversion.h"
 #include "colorutils.h"
 
 using namespace Global;
@@ -418,15 +417,6 @@ void MplayerProcess::parseLine(QByteArray ba) {
 		// So not process anymore, if video is playing to save some time
 		if (notified_mplayer_is_running) {
 			return;
-		}
-
-		if ( (mplayer_svn == -1) && (line.startsWith("MPlayer ")) ) {
-			mplayer_svn = MplayerVersion::mplayerVersion(line);
-			qDebug("MplayerProcess::parseLine: MPlayer SVN: %d", mplayer_svn);
-			if (mplayer_svn <= 0) {
-				qWarning("MplayerProcess::parseLine: couldn't parse mplayer version!");
-				emit failedToParseMplayerVersion(line);
-			}
 		}
 
 #if !NOTIFY_SUB_CHANGES

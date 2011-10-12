@@ -30,7 +30,6 @@ HEADERS += guiconfig.h \
 	extensions.h \
 	desktopinfo.h \
 	myprocess.h \
-	mplayerversion.h \
 	mplayerprocess.h \
 	infoprovider.h \
 	mplayerwindow.h \
@@ -88,7 +87,6 @@ HEADERS += guiconfig.h \
 	myserver.h \
 	myclient.h \
 	filedialog.h \
-	inputmplayerversion.h \
 	about.h \
 	errordialog.h \
 	timedialog.h \
@@ -127,7 +125,6 @@ SOURCES	+= version.cpp \
 	extensions.cpp \
 	desktopinfo.cpp \
 	myprocess.cpp \
-	mplayerversion.cpp \
 	mplayerprocess.cpp \
 	infoprovider.cpp \
 	mplayerwindow.cpp \
@@ -184,7 +181,6 @@ SOURCES	+= version.cpp \
 	myserver.cpp \
 	myclient.cpp \
 	filedialog.cpp \
-	inputmplayerversion.cpp \
 	about.cpp \
 	errordialog.cpp \
 	timedialog.cpp \
@@ -221,7 +217,7 @@ FORMS = inputdvddirectory.ui logwindowbase.ui filepropertiesdialog.ui \
         preferencesdialog.ui prefgeneral.ui prefdrives.ui prefinterface.ui \
         prefperformance.ui prefinput.ui prefsubtitles.ui prefadvanced.ui \
         prefplaylist.ui preftv.ui favoriteeditor.ui \
-        about.ui inputmplayerversion.ui errordialog.ui timedialog.ui \
+        about.ui errordialog.ui timedialog.ui \
         filechooser.ui \
         findsubtitles/findsubtitleswindow.ui findsubtitles/findsubtitlesconfigdialog.ui \
         videopreview/videopreviewconfigdialog.ui
