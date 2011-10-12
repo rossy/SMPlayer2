@@ -29,35 +29,11 @@
 #define STYLE_SWITCHING 1
 
 
-// EXTERNAL_SLEEP
-// if 1, it will be used the function usleep() from unistd.h
-// instead of QThread::msleep()
-// It can be useful if your Qt doesn't have QThread support.
-// Note: not much test it
-// Note 2: not used anymore
-
-#define EXTERNAL_SLEEP 0
-
-
-// ENABLE_DELAYED_DRAGGING
-// if 1, sends the dragging position of the time slider
-// some ms later
-
-#define ENABLE_DELAYED_DRAGGING 1
-
-
 // SEEKBAR_RESOLUTION
 // if SEEKBAR_RESOLUTION is defined, it specified the
 // maximum value of the time slider
 
-#define SEEKBAR_RESOLUTION 1000
-
-
-// SMART_DVD_CHAPTERS
-// if set to 1, the slave command "chapter" will use if not using a cache,
-// otherwise mplayer will be restarted and -chapter will be used.
-
-#define SMART_DVD_CHAPTERS 1
+#define SEEKBAR_RESOLUTION 10000
 
 
 // ALLOW_TO_HIDE_VIDEO_WINDOW_ON_AUDIO_FILES
@@ -66,13 +42,6 @@
 // the config file
 
 #define ALLOW_TO_HIDE_VIDEO_WINDOW_ON_AUDIO_FILES 1
-
-
-// DELAYED_AUDIO_SETUP_ON_STARTUP
-// if 1, the audio track will be initialized later once the file
-// has begun to play
-
-#define DELAYED_AUDIO_SETUP_ON_STARTUP 0
 
 
 // CHECK_VIDEO_CODEC_FOR_NO_VIDEO
@@ -93,13 +62,6 @@
 // size hint or pref->gui_minimum_width.
 
 #define USE_MINIMUMSIZE 1
-
-
-// GENERIC_CHAPTER_SUPPORT
-// if 1, it will use a generic code for chapters which can be used
-// for all kind of videos, not only DVDs and mkv files.
-
-#define GENERIC_CHAPTER_SUPPORT 1
 
 
 // DVDNAV_SUPPORT
@@ -126,19 +88,5 @@
 #define OVERLAY_VO "directx"
 //#define OVERLAY_VO "xv"
 #endif
-
-
-// If 1, smplayer2 will check if mplayer is old
-// and in that case it will report to the user
-#ifndef Q_OS_WIN
-#define REPORT_OLD_MPLAYER 1
-#endif
-
-
-// If 1, smplayer2 will add support for the mplayer slave command
-// "panscan".
-
-#define USE_MPLAYER_PANSCAN 0
-
 
 #endif

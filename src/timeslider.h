@@ -33,28 +33,16 @@ public:
 public slots:
 	virtual void setPos(int); // Don't use setValue!
 	virtual int pos();
-#if ENABLE_DELAYED_DRAGGING
-	void setDragDelay(int);
-	int dragDelay();
-#endif
 
 signals:
 	void posChanged(int);
 	void draggingPos(int);
-#if ENABLE_DELAYED_DRAGGING
-	//! Emitted with a few ms of delay
-	void delayedDraggingPos(int);
-#endif
 
 protected slots:
 	void stopUpdate();
 	void resumeUpdate();
 	void mouseReleased();
 	void valueChanged_slot(int);
-#if ENABLE_DELAYED_DRAGGING
-	void checkDragging(int);
-	void sendDelayedPos();
-#endif
 
 	virtual void wheelEvent( QWheelEvent * e );
 
@@ -62,10 +50,6 @@ private:
 	bool dont_update;
 	int position;
 	
-#if ENABLE_DELAYED_DRAGGING
-	int last_pos_to_send;
-	QTimer * timer;
-#endif
 };
 
 #endif

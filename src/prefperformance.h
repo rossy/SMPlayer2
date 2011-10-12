@@ -75,11 +75,6 @@ protected:
 	void setSkipLoop(Preferences::H264LoopFilter value);
 	Preferences::H264LoopFilter skipLoop();
 
-#if !SMART_DVD_CHAPTERS
-	void setFastChapterSeeking(bool b);
-	bool fastChapterSeeking();
-#endif
-
 	void setFastAudioSwitching(Preferences::OptionState value);
 	Preferences::OptionState fastAudioSwitching();
 

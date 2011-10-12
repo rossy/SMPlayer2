@@ -154,10 +154,6 @@ public:
 	H264LoopFilter h264_skip_loop_filter;
 	int HD_height; //!< An HD is a video which height is equal or greater than this.
 
-#if !SMART_DVD_CHAPTERS
-	bool fast_chapter_change;
-#endif
-
 	int threads; //!< number of threads to use for decoding (-lavdopts threads <1-8>)
 
 	int cache_for_files;
@@ -307,9 +303,6 @@ public:
 	int seeking4; // For mouse wheel, by default 30s
 
 	bool update_while_seeking;
-#if ENABLE_DELAYED_DRAGGING	
-	int time_slider_drag_delay;
-#endif
 
 	QString language;
 	QString iconset;

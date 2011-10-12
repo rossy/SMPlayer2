@@ -74,16 +74,8 @@ public:
 
 	SubTracks subs;
 
-#if GENERIC_CHAPTER_SUPPORT
 	int chapters;
     QMap<int,QString> chapters_name;
-#else
-	//int chapters, angles; // for DVDs
-
-	// Matroshka chapters
-	int mkv_chapters;
-    QMap<int,QString> mkv_chapters_name;
-#endif
 
 	// Clip info
 	QString clip_name;

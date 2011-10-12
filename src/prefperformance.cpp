@@ -34,10 +34,6 @@ PrefPerformance::PrefPerformance(QWidget * parent, Qt::WindowFlags f)
 	priority_group->hide();
 #endif
 
-#if SMART_DVD_CHAPTERS
-	fast_chapter_check->hide();
-#endif
-
 	retranslateStrings();
 }
 
@@ -83,9 +79,6 @@ void PrefPerformance::setData(Preferences * pref) {
 	setFrameDrop( pref->frame_drop );
 	setHardFrameDrop( pref->hard_frame_drop );
 	setSkipLoop( pref->h264_skip_loop_filter );
-#if !SMART_DVD_CHAPTERS
-	setFastChapterSeeking( pref->fast_chapter_change );
-#endif
 	setThreads( pref->threads );
 }
 
@@ -103,9 +96,6 @@ void PrefPerformance::getData(Preferences * pref) {
 	TEST_AND_SET(pref->frame_drop, frameDrop());
 	TEST_AND_SET(pref->hard_frame_drop, hardFrameDrop());
 	TEST_AND_SET(pref->h264_skip_loop_filter, skipLoop());
-#if !SMART_DVD_CHAPTERS
-	TEST_AND_SET(pref->fast_chapter_change, fastChapterSeeking());
-#endif
 	TEST_AND_SET(pref->threads, threads());
 }
 
@@ -189,16 +179,6 @@ Preferences::H264LoopFilter PrefPerformance::skipLoop() {
 	return (Preferences::H264LoopFilter) loopfilter_combo->itemData(loopfilter_combo->currentIndex()).toInt();
 }
 
-#if !SMART_DVD_CHAPTERS
-void PrefPerformance::setFastChapterSeeking(bool b) {
-	fast_chapter_check->setChecked(b);
-}
-
-bool PrefPerformance::fastChapterSeeking() {
-	return fast_chapter_check->isChecked();
-}
-#endif
-
 void PrefPerformance::setThreads(int v) {
 	threads_spin->setValue(v);
 }
@@ -246,12 +226,6 @@ void PrefPerformance::createHelp() {
            tr("<b>Skip only on HD videos</b>: the loop filter will be "
            "skipped only on videos which height is %1 or "
            "greater.").arg(pref->HD_height) +"<br>" );
-
-#if !SMART_DVD_CHAPTERS
-	setWhatsThis(fast_chapter_check, tr("Fast seek to chapters in dvds"),
-		tr("If checked, it will try the fastest method to seek to chapters "
-           "but it might not work with some discs.") );
-#endif
 
 	addSectionTitle(tr("Cache"));
 

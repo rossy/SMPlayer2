@@ -237,13 +237,6 @@
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="fast_chapter_check">
-         <property name="text">
-          <string>Fast &amp;seek to chapters in dvds</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <spacer>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -521,7 +514,6 @@
   <tabstop>hardframedrop_check</tabstop>
   <tabstop>threads_spin</tabstop>
   <tabstop>loopfilter_combo</tabstop>
-  <tabstop>fast_chapter_check</tabstop>
   <tabstop>cache_files_spin</tabstop>
   <tabstop>cache_streams_spin</tabstop>
   <tabstop>cache_dvds_spin</tabstop>

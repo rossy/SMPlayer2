@@ -159,10 +159,6 @@ void Preferences::reset() {
 	h264_skip_loop_filter = LoopEnabled;
 	HD_height = 720;
 
-#if !SMART_DVD_CHAPTERS
-	fast_chapter_change = false;
-#endif
-
 	threads = 1;
 
 	cache_for_files = 0;
@@ -306,9 +302,6 @@ void Preferences::reset() {
 	seeking4 = 30;
 
 	update_while_seeking = false;
-#if ENABLE_DELAYED_DRAGGING
-	time_slider_drag_delay = 100;
-#endif
 
 	language = "";
 	iconset = "";
@@ -548,10 +541,6 @@ void Preferences::save() {
 	set->setValue("h264_skip_loop_filter", h264_skip_loop_filter);
 	set->setValue("HD_height", HD_height);
 
-#if !SMART_DVD_CHAPTERS
-	set->setValue("fast_chapter_change", fast_chapter_change);
-#endif
-
 	set->setValue("threads", threads);
 
 	set->setValue("cache_for_files", cache_for_files);
@@ -693,9 +682,6 @@ void Preferences::save() {
 	set->setValue("seeking4", seeking4);
 
 	set->setValue("update_while_seeking", update_while_seeking);
-#if ENABLE_DELAYED_DRAGGING
-	set->setValue("time_slider_drag_delay", time_slider_drag_delay);
-#endif
 
 	set->setValue("language", language);
 	set->setValue("iconset", iconset);
@@ -943,10 +929,6 @@ void Preferences::load() {
 	h264_skip_loop_filter = (H264LoopFilter) set->value("h264_skip_loop_filter", h264_skip_loop_filter).toInt();
 	HD_height = set->value("HD_height", HD_height).toInt();
 
-#if !SMART_DVD_CHAPTERS
-	fast_chapter_change = set->value("fast_chapter_change", fast_chapter_change).toBool();
-#endif
-
 	threads = set->value("threads", threads).toInt();
 
 	cache_for_files = set->value("cache_for_files", cache_for_files).toInt();
@@ -1093,9 +1075,6 @@ void Preferences::load() {
 	seeking4 = set->value("seeking4", seeking4).toInt();
 
 	update_while_seeking = set->value("update_while_seeking", update_while_seeking).toBool();
-#if ENABLE_DELAYED_DRAGGING
-	time_slider_drag_delay = set->value("time_slider_drag_delay", time_slider_drag_delay).toInt();
-#endif
 
 	language = set->value("language", language).toString();
 	iconset= set->value("iconset", iconset).toString();

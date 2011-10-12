@@ -878,13 +878,11 @@ void BaseGui::createActions() {
 	autoZoom235Act = new MyAction(Qt::SHIFT | Qt::Key_S, this, "zoom_235");
 	connect( autoZoom235Act, SIGNAL(triggered()), core, SLOT(autoZoomFor235()) );
 
-#if USE_MPLAYER_PANSCAN
 	incPanscanAct = new MyAction(Qt::SHIFT | Qt::Key_M, this, "inc_panscan");
 	connect( incPanscanAct, SIGNAL(triggered()), core, SLOT(incPanscan()) );
 
 	decPanscanAct = new MyAction(Qt::SHIFT | Qt::Key_N, this, "dec_panscan");
 	connect( decPanscanAct, SIGNAL(triggered()), core, SLOT(decPanscan()) );
-#endif
 
 
 	// Actions not in menus or buttons
@@ -1535,10 +1533,8 @@ void BaseGui::retranslateStrings() {
 	moveUpAct->change( tr("Move &up") );
 	moveDownAct->change( tr("Move &down") );
 
-#if USE_MPLAYER_PANSCAN
 	decPanscanAct->change( "Panscan -" );
 	incPanscanAct->change( "Panscan +" );
-#endif
 
 	// Submenu Filters
 	postProcessingAct->change( tr("&Postprocessing") );
@@ -2995,7 +2991,6 @@ void BaseGui::initializeMenus() {
 	}
 	titles_menu->addActions( titleGroup->actions() );
 
-#if GENERIC_CHAPTER_SUPPORT
 	chapterGroup->clear(true);
 	if (core->mdat.chapters > 0) {
 		for (n=0; n < core->mdat.chapters; n++) {
@@ -3009,32 +3004,6 @@ void BaseGui::initializeMenus() {
 		a->setEnabled(false);
 	}
 	chapters_menu->addActions( chapterGroup->actions() );
-#else
-	// DVD Chapters
-	chapterGroup->clear(true);
-	if ( (core->mdat.type == TYPE_DVD) && (core->mset.current_title_id > 0) ) {
-		for (n=0; n < core->mdat.titles.item(core->mset.current_title_id).chapters(); n++) {
-			QAction *a = new QAction(chapterGroup);
-			a->setCheckable(true);
-			a->setText( QString::number(n+1) );
-			a->setData( n + Core::dvdFirstChapter() );
-		}
-	} else {
-		// *** Matroshka chapters ***
-		if (core->mdat.mkv_chapters > 0) {
-			for (n=0; n < core->mdat.mkv_chapters; n++) {
-				QAction *a = new QAction(chapterGroup);
-				a->setCheckable(true);
-				a->setText(core->mdat.mkv_chapters_name[n]);
-				a->setData( n + Core::firstChapter() );
-			}
-		} else {
-			QAction * a = chapterGroup->addAction( tr("<empty>") );
-			a->setEnabled(false);
-		}
-	}
-	chapters_menu->addActions( chapterGroup->actions() );
-#endif
 
 	// Angles
 	angleGroup->clear(true);
@@ -4283,13 +4252,6 @@ void BaseGui::displayGotoTime(int t) {
 
 void BaseGui::goToPosOnDragging(int t) {
 	if (pref->update_while_seeking) {
-#if ENABLE_DELAYED_DRAGGING
-		#ifdef SEEKBAR_RESOLUTION
-		core->goToPosition(t);
-		#else
-		core->goToPos(t);
-		#endif
-#else
 		if ( ( t % 4 ) == 0 ) {
 			qDebug("BaseGui::goToPosOnDragging: %d", t);
 			#ifdef SEEKBAR_RESOLUTION
@@ -4298,7 +4260,6 @@ void BaseGui::goToPosOnDragging(int t) {
 			core->goToPos(t);
 			#endif
 		}
-#endif
 	}
 }
 

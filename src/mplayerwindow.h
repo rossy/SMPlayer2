@@ -40,7 +40,6 @@ class QTimer;
 #define ZOOM_STEP 0.05
 #define ZOOM_MIN 0.5
 
-#define DELAYED_RESIZE 0
 #define NEW_MOUSE_CHECK_POS 1
 
 //! Screen is a widget that hides the mouse cursor after some seconds if not moved.
@@ -173,11 +172,6 @@ public slots:
 	void incZoom();
 	void decZoom();
 
-#if DELAYED_RESIZE
-protected slots:
-	void resizeLater();
-#endif
-
 protected:
 	virtual void retranslateStrings();
 	virtual void changeEvent ( QEvent * event ) ;
@@ -220,9 +214,6 @@ protected:
 
 	bool allow_video_movement;
 
-#if DELAYED_RESIZE
-	QTimer * resize_timer;
-#endif
 };
 
 

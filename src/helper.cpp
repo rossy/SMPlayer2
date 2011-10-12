@@ -30,26 +30,8 @@
 #include <windows.h> // For the screensaver stuff
 #endif
 
-#if EXTERNAL_SLEEP
 #include <unistd.h>
-#else
-#include <qthread.h>
-#endif
 
-
-#if !EXTERNAL_SLEEP
-class Sleeper : public QThread
-{
-public:
-	static void sleep(unsigned long secs) {QThread::sleep(secs);}
-	static void msleep(unsigned long msecs) {
-		//qDebug("sleeping...");
-		QThread::msleep(msecs);
-		//qDebug("finished");
-	}
-	static void usleep(unsigned long usecs) {QThread::usleep(usecs);}
-};
-#endif
 
 /*
 QString Helper::dvdForPref(const QString & dvd_id, int title) {
@@ -126,13 +108,8 @@ void Helper::setScreensaverEnabled(bool b) {
 #endif
 
 void Helper::msleep(int ms) {
-#if EXTERNAL_SLEEP
 	//qDebug("Helper::msleep: %d (using usleep)", ms);
 	usleep(ms*1000);
-#else
-	//qDebug("Helper::msleep: %d (using QThread::msleep)", ms);
-	Sleeper::msleep( ms );
-#endif
 }
 
 QString Helper::changeSlashes(QString filename) {

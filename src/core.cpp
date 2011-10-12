@@ -161,9 +161,6 @@ Core::Core( MplayerWindow *mpw, QWidget* parent )
              this, SLOT(streamTitleAndUrlChanged(QString,QString)) );
 
 	connect( this, SIGNAL(mediaLoaded()), this, SLOT(checkIfVideoIsHD()), Qt::QueuedConnection );
-#if DELAYED_AUDIO_SETUP_ON_STARTUP
-	connect( this, SIGNAL(mediaLoaded()), this, SLOT(initAudioTrack()), Qt::QueuedConnection );
-#endif
 #if NOTIFY_SUB_CHANGES
 	connect( proc, SIGNAL(subtitleInfoChanged(const SubTracks &)), 
              this, SLOT(initSubtitleTrack(const SubTracks &)), Qt::QueuedConnection );
@@ -821,7 +818,7 @@ void Core::newMediaPlaying() {
 		changeVideo( mdat.videos.itemAt(0).ID(), false ); // Don't allow to restart
 	}
 
-#if !DELAYED_AUDIO_SETUP_ON_STARTUP && !NOTIFY_AUDIO_CHANGES
+#if !NOTIFY_AUDIO_CHANGES
 	// First audio if none selected
 	if ( (mset.current_audio_id == MediaSettings::NoneSelected) && 
          (mdat.audios.numItems() > 0) ) 
@@ -862,12 +859,7 @@ void Core::newMediaPlaying() {
 	}
 #endif
 
-#if GENERIC_CHAPTER_SUPPORT
 	if (mdat.chapters > 0) {
-#else
-	// mkv chapters
-	if (mdat.mkv_chapters > 0) {
-#endif
 		// Just to show the first chapter checked in the menu
 		mset.current_chapter_id = 0;
 	}
@@ -1262,14 +1254,6 @@ void Core::startMplayer( QString file, double seek ) {
 
 	if (pref->fullscreen && pref->use_mplayer_window) {
 		proc->addArgument("-fs");
-	} else {
-		// No mplayer fullscreen mode
-#if !USE_MPLAYER_PANSCAN
-		proc->addArgument("-nofs");
-#else
-		// The command 'panscan' requires -fs
-		proc->addArgument("-fs");
-#endif
 	}
 
 	proc->addArgument("-nomouseinput");
@@ -1332,9 +1316,7 @@ void Core::startMplayer( QString file, double seek ) {
 
 	proc->addArgument("-identify");
 
-#if GENERIC_CHAPTER_SUPPORT
     mset.current_chapter_id = 0; // Reset chapters
-#endif
 
 	proc->addArgument("-slave");
 
@@ -3118,21 +3100,12 @@ void Core::changeChapter(int ID) {
 
 	if (ID != mset.current_chapter_id) {
 		//if (QFileInfo(mdat.filename).extension().lower()=="mkv") {
-#if GENERIC_CHAPTER_SUPPORT
 		if (mdat.type != TYPE_DVD) {
-#else
-		if (mdat.mkv_chapters > 0) {
-			// mkv doesn't require to restart
-#endif
 			tellmp("seek_chapter " + QString::number(ID) +" 1");
 			mset.current_chapter_id = ID;
 			updateWidgets();
 		} else {
-#if SMART_DVD_CHAPTERS
 			if (pref->cache_for_dvds == 0) {
-#else
-			if (pref->fast_chapter_change) {
-#endif
 				tellmp("seek_chapter " + QString::number(ID) +" 1");
 				mset.current_chapter_id = ID;
 				updateWidgets();
@@ -3150,7 +3123,6 @@ void Core::changeChapter(int ID) {
 void Core::prevChapter() {
 	qDebug("Core::prevChapter");
 
-#if GENERIC_CHAPTER_SUPPORT
 	int last_chapter = 0;
 
 	last_chapter = mdat.chapters - 1;
@@ -3160,30 +3132,11 @@ void Core::prevChapter() {
 		ID = last_chapter;
 	}
 	changeChapter(ID);
-#else
-	int last_chapter = 0;
-	bool matroshka = (mdat.mkv_chapters > 0);
-
-	// Matroshka chapters
-	if (matroshka) last_chapter = mdat.mkv_chapters - 1;
-	else
-	// DVD chapters
-	if (mset.current_title_id > 0) {
-		last_chapter = mdat.titles.item(mset.current_title_id).chapters() - 1;
-	}
-
-	int ID = mset.current_chapter_id - 1;
-	if (ID < 0) {
-		ID = last_chapter;
-	}
-	changeChapter(ID);
-#endif
 }
 
 void Core::nextChapter() {
 	qDebug("Core::nextChapter");
 
-#if GENERIC_CHAPTER_SUPPORT
 	int last_chapter = 0;
 	last_chapter = mdat.chapters - 1;
 
@@ -3192,24 +3145,6 @@ void Core::nextChapter() {
 		ID = 0;
 	}
 	changeChapter(ID);
-#else
-	int last_chapter = 0;
-	bool matroshka = (mdat.mkv_chapters > 0);
-
-	// Matroshka chapters
-	if (matroshka) last_chapter = mdat.mkv_chapters - 1;
-	else
-	// DVD chapters
-	if (mset.current_title_id > 0) {
-		last_chapter = mdat.titles.item(mset.current_title_id).chapters() - 1;
-	}
-
-	int ID = mset.current_chapter_id + 1;
-	if (ID > last_chapter) {
-		ID = 0;
-	}
-	changeChapter(ID);
-#endif
 }
 
 void Core::changeAngle(int ID) {
@@ -3453,7 +3388,6 @@ void Core::decZoom() {
 	changeZoom( mset.zoom_factor - ZOOM_STEP );
 }
 
-#if USE_MPLAYER_PANSCAN
 void Core::changePanscan(double p) {
 	 qDebug("Core::changePanscan: %f", p);
 
@@ -3472,7 +3406,6 @@ void Core::incPanscan() {
 void Core::decPanscan() {
 	changePanscan(mset.panscan_factor - .1);
 }
-#endif
 
 void Core::showFilenameOnOSD() {
 	tellmp("osd_show_property_text \"${filename}\" 5000 0");
@@ -3708,37 +3641,6 @@ void Core::checkIfVideoIsHD() {
 		// then the video should restart too.
 	}
 }
-
-#if DELAYED_AUDIO_SETUP_ON_STARTUP && NOTIFY_AUDIO_CHANGES
-#error "DELAYED_AUDIO_SETUP_ON_STARTUP and NOTIFY_AUDIO_CHANGES can't be both defined"
-#endif
-
-#if DELAYED_AUDIO_SETUP_ON_STARTUP
-void Core::initAudioTrack() {
-	qDebug("Core::initAudioTrack");
-
-	// First audio if none selected
-	if ( (mset.current_audio_id == MediaSettings::NoneSelected) && 
-         (mdat.audios.numItems() > 0) ) 
-	{
-		// Don't set mset.current_audio_id here! changeAudio will do. 
-		// Otherwise changeAudio will do nothing.
-
-		int audio = mdat.audios.itemAt(0).ID(); // First one
-		if (mdat.audios.existsItemAt(pref->initial_audio_track-1)) {
-			audio = mdat.audios.itemAt(pref->initial_audio_track-1).ID();
-		}
-
-		// Check if one of the audio tracks is the user preferred.
-		if (!pref->audio_lang.isEmpty()) {
-			int res = mdat.audios.findLang( pref->audio_lang );
-			if (res != -1) audio = res;
-		}
-
-		changeAudio( audio );
-	}
-}
-#endif
 
 #if NOTIFY_AUDIO_CHANGES
 void Core::initAudioTrack(const Tracks & audios) {

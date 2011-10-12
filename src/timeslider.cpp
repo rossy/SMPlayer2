@@ -40,14 +40,6 @@ TimeSlider::TimeSlider( QWidget * parent ) : MySlider(parent)
 	connect( this, SIGNAL( sliderReleased() ), this, SLOT( resumeUpdate() ) );
 	connect( this, SIGNAL( sliderReleased() ), this, SLOT( mouseReleased() ) );
 	connect( this, SIGNAL( valueChanged(int) ), this, SLOT( valueChanged_slot(int) ) );
-#if ENABLE_DELAYED_DRAGGING
-	connect( this, SIGNAL(draggingPos(int) ), this, SLOT(checkDragging(int)) );
-	
-	last_pos_to_send = -1;
-	timer = new QTimer(this);
-	connect( timer, SIGNAL(timeout()), this, SLOT(sendDelayedPos()) );
-	timer->start(200);
-#endif
 }
 
 TimeSlider::~TimeSlider() {
@@ -95,30 +87,6 @@ void TimeSlider::valueChanged_slot(int v) {
 		emit draggingPos(v);
 	}
 }
-
-#if ENABLE_DELAYED_DRAGGING
-void TimeSlider::setDragDelay(int d) {
-	qDebug("TimeSlider::setDragDelay: %d", d);
-	timer->setInterval(d);
-}
-
-int TimeSlider::dragDelay() {
-	return timer->interval();
-}
-
-void TimeSlider::checkDragging(int v) {
-	qDebug("TimeSlider::checkDragging: %d", v);
-	last_pos_to_send = v;
-}
-
-void TimeSlider::sendDelayedPos() {
-	if (last_pos_to_send != -1) {
-		qDebug("TimeSlider::sendDelayedPos: %d", last_pos_to_send);
-		emit delayedDraggingPos(last_pos_to_send);
-		last_pos_to_send = -1;
-	}
-}
-#endif
 
 void TimeSlider::setPos(int v) {
 	#if DEBUG

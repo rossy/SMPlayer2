@@ -280,11 +280,9 @@ public slots:
 	void autoZoomFor169();
 	void autoZoomFor235();
 
-#if USE_MPLAYER_PANSCAN
 	void changePanscan(double);
 	void incPanscan();
 	void decPanscan();
-#endif
 
 	void showFilenameOnOSD();
 	void toggleDeinterlace();
@@ -320,10 +318,6 @@ public slots:
                           QString prefix = QString::null);
 
 public:
-#if !GENERIC_CHAPTER_SUPPORT
-	static int dvdFirstChapter();
-#endif
-
 #ifndef NO_USE_INI_FILES
 	void changeFileSettingsMethod(QString method);
 #endif
@@ -359,9 +353,6 @@ protected slots:
 	//! the resolution is HD
 	void checkIfVideoIsHD();
 
-#if DELAYED_AUDIO_SETUP_ON_STARTUP
-	void initAudioTrack();
-#endif
 #if NOTIFY_AUDIO_CHANGES
 	void initAudioTrack(const Tracks &);
 #endif
