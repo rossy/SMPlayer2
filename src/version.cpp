@@ -18,18 +18,10 @@
 
 #include "version.h"
 
-#define USE_SVN_VERSIONS 1
-
-#define VERSION "0.6.9"
-
-#if USE_SVN_VERSIONS
-#include "svn_revision.h"
+#ifndef VERSION
+#define VERSION "UNKNOWN"
 #endif
 
 QString smplayerVersion() {
-#if USE_SVN_VERSIONS
-	return QString(QString(VERSION) + "+" + QString(SVN_REVISION));
-#else
 	return QString(VERSION);
-#endif
 }

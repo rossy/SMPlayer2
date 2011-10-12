@@ -17,7 +17,6 @@ DEFINES += DOWNLOAD_SUBS
 HEADERS += guiconfig.h \
 	config.h \
 	constants.h \
-	svn_revision.h \
 	version.h \
 	global.h \
 	paths.h \

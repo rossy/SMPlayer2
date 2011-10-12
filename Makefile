@@ -1,6 +1,5 @@
 
 PREFIX=/usr/local
-#PREFIX=/tmp/smplayer
 
 CONF_PREFIX=$(PREFIX)
 
@@ -10,8 +9,6 @@ TRANSLATION_PATH=$(PREFIX)/share/smplayer/translations
 THEMES_PATH=$(PREFIX)/share/smplayer/themes
 SHORTCUTS_PATH=$(PREFIX)/share/smplayer/shortcuts
 
-#KDE_PREFIX=`kde-config --prefix`
-#KDE_PREFIX=/tmp/smplayer/kde/
 KDE_PREFIX=$(PREFIX)
 
 KDE_ICONS=$(KDE_PREFIX)/share/icons/hicolor/
@@ -40,7 +37,6 @@ QMAKE_OPTS=DEFINES+=KDE_SUPPORT INCLUDEPATH+=$(KDE_INCLUDE_PATH) \
 endif
 
 src/smplayer:
-	./get_svn_revision.sh
 	+cd src && $(QMAKE) $(QMAKE_OPTS) && $(DEFS) make
 	cd src && $(LRELEASE) smplayer.pro
 
@@ -55,11 +51,6 @@ install: src/smplayer
 	install -m 644 src/input.conf $(DESTDIR)$(DATA_PATH)
 	-install -d $(DESTDIR)$(TRANSLATION_PATH)
 	install -m 644 src/translations/*.qm $(DESTDIR)$(TRANSLATION_PATH)
-	-install -d $(DESTDIR)$(DOC_PATH)
-	install -m 644 Changelog *.txt $(DESTDIR)$(DOC_PATH)
-
-	-install -d $(DESTDIR)$(DOC_PATH)
-	tar -C docs/ --exclude=.svn -c -f - . | tar -C $(DESTDIR)$(DOC_PATH) -x -f -
 
 	-install -d $(DESTDIR)$(SHORTCUTS_PATH)
 	cp src/shortcuts/* $(DESTDIR)$(SHORTCUTS_PATH)
@@ -83,8 +74,6 @@ uninstall:
 	-rm -f $(PREFIX)/bin/smplayer
 	-rm -f $(DATA_PATH)/input.conf
 	-rm -f $(TRANSLATION_PATH)/*.qm
-	-rm -f $(DOC_PATH)/Changelog
-	-rm -f $(DOC_PATH)/*.txt
 	-rm -f $(SHORTCUTS_PATH)/*.keys
 	-rm -f $(KDE_ICONS)/64x64/apps/smplayer.png
 	-rm -f $(KDE_ICONS)/32x32/apps/smplayer.png
@@ -94,14 +83,5 @@ uninstall:
 	-rm -f $(PREFIX)/share/man/man1/smplayer.1.gz
 	-rmdir $(SHORTCUTS_PATH)/
 	-rmdir $(TRANSLATION_PATH)/
-#	-for file in docs/*/*; do \
-#	    rm -f $(DOC_PATH)/$${file/docs/}; \
-#	done;
-#	-for file in docs/*; do \
-#	    rmdir $(DOC_PATH)/$${file/docs/}; \
-#	done;
-	-(cd docs && find -iname '*.html') | (cd $(DESTDIR)$(DOC_PATH) && xargs rm)
-	-(cd docs && find -type d -name '??') | (cd $(DESTDIR)$(DOC_PATH) && xargs rmdir)
-	-rmdir $(DOC_PATH)/
 	-rmdir $(DATA_PATH)/
 
