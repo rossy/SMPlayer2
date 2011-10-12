@@ -127,11 +127,6 @@ void MpcVolumeSlideStyle::drawComplexControl(ComplexControl cc, const QStyleOpti
             }
 
             if (slider->subControls & SC_SliderHandle) {
-                const QColor c0 = slider->palette.shadow().color();
-                const QColor c1 = slider->palette.dark().color();
-                // const QColor c2 = g.button();
-                const QColor c3 = slider->palette.midlight().color();
-                const QColor c4 = slider->palette.light().color();
                 QBrush handleBrush;
 
                 if (slider->state & State_Enabled) {
@@ -196,11 +191,6 @@ void MpcTimeSlideStyle::drawComplexControl(ComplexControl cc, const QStyleOption
             }
 
             if (slider->subControls & SC_SliderHandle) {
-                const QColor c0 = slider->palette.shadow().color();
-                const QColor c1 = slider->palette.dark().color();
-                // const QColor c2 = g.button();
-                const QColor c3 = slider->palette.midlight().color();
-                const QColor c4 = slider->palette.light().color();
                 QBrush handleBrush;
 
                 if (slider->state & State_Enabled) {
