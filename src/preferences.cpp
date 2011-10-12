@@ -301,7 +301,7 @@ void Preferences::reset() {
 	seeking3 = 10*60;
 	seeking4 = 30;
 
-	update_while_seeking = false;
+	update_while_seeking = true;
 
 	language = "";
 	iconset = "";
