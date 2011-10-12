@@ -54,11 +54,13 @@ void MediaData::reset() {
 
 #if GENERIC_CHAPTER_SUPPORT
 	chapters = 0;
+    chapters_name.clear();
 #else
 	//chapters=0;
 	//angles=0;
 
 	mkv_chapters=0;
+    mkv_chapters_name.clear();
 #endif
 
 	initialized=false;

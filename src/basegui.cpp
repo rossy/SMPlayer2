@@ -3003,7 +3003,7 @@ void BaseGui::initializeMenus() {
 		for (n=0; n < core->mdat.chapters; n++) {
 			QAction *a = new QAction(chapterGroup);
 			a->setCheckable(true);
-			a->setText( QString::number(n+1) );
+			a->setText(core->mdat.chapters_name[n]);
 			a->setData( n + Core::firstChapter() );
 		}
 	} else {
@@ -3027,7 +3027,7 @@ void BaseGui::initializeMenus() {
 			for (n=0; n < core->mdat.mkv_chapters; n++) {
 				QAction *a = new QAction(chapterGroup);
 				a->setCheckable(true);
-				a->setText( QString::number(n+1) );
+				a->setText(core->mdat.mkv_chapters_name[n]);
 				a->setData( n + Core::firstChapter() );
 			}
 		} else {
