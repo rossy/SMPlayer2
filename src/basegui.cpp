@@ -1026,8 +1026,9 @@ void BaseGui::createActions() {
 	channelsGroup = new MyActionGroup(this);
 	/* channelsDefaultAct = new MyActionGroupItem(this, channelsGroup, "channels_default", MediaSettings::ChDefault); */
 	channelsStereoAct = new MyActionGroupItem(this, channelsGroup, "channels_stereo", MediaSettings::ChStereo);
-	channelsSurroundAct = new MyActionGroupItem(this, channelsGroup, "channels_surround", MediaSettings::ChSurround);
-	channelsFull51Act = new MyActionGroupItem(this, channelsGroup, "channels_ful51", MediaSettings::ChFull51);
+	channelsQuadAct = new MyActionGroupItem(this, channelsGroup, "channels_quad", MediaSettings::ChQuad);
+	channels51Act = new MyActionGroupItem(this, channelsGroup, "channels_51", MediaSettings::Ch51);
+	channels71Act = new MyActionGroupItem(this, channelsGroup, "channels_71", MediaSettings::Ch71);
 	connect( channelsGroup, SIGNAL(activated(int)),
              core, SLOT(setAudioChannels(int)) );
 
@@ -1794,8 +1795,9 @@ void BaseGui::retranslateStrings() {
 
 	/* channelsDefaultAct->change( tr("&Default") ); */
 	channelsStereoAct->change( tr("&Stereo") );
-	channelsSurroundAct->change( tr("&4.0 Surround") );
-	channelsFull51Act->change( tr("&5.1 Surround") );
+	channelsQuadAct->change( tr("&4.0 Quadraphonic") );
+	channels51Act->change( tr("&5.1 Surround") );
+	channels71Act->change( tr("&7.1 Surround") );
 
 	stereoAct->change( tr("&Stereo") );
 	leftChannelAct->change( tr("&Left channel") );
@@ -1948,10 +1950,6 @@ void BaseGui::createCore() {
 
 	connect( core, SIGNAL(mediaStartPlay()),
              this, SLOT(checkPendingActionsToRun()), Qt::QueuedConnection );
-#if REPORT_OLD_MPLAYER
-	connect( core, SIGNAL(mediaStartPlay()),
-             this, SLOT(checkMplayerVersion()), Qt::QueuedConnection );
-#endif
 	connect( core, SIGNAL(failedToParseMplayerVersion(QString)),
              this, SLOT(askForMplayerVersion(QString)) );
 
@@ -3918,39 +3916,6 @@ void BaseGui::checkPendingActionsToRun() {
 		runActions(actions);
 	}
 }
-
-#if REPORT_OLD_MPLAYER
-void BaseGui::checkMplayerVersion() {
-	qDebug("BaseGui::checkMplayerVersion");
-
-	// Qt 4.3.5 is crazy, I can't popup a messagebox here, it calls 
-	// this function once and again when the messagebox is shown
-
-	if ( (pref->mplayer_detected_version > 0) && (!MplayerVersion::isMplayerAtLeast(25158)) ) {
-		QTimer::singleShot(1000, this, SLOT(displayWarningAboutOldMplayer()));
-	}
-}
-
-void BaseGui::displayWarningAboutOldMplayer() {
-	qDebug("BaseGui::displayWarningAboutOldMplayer");
-
-	if (!pref->reported_mplayer_is_old) {
-		QMessageBox::warning(this, tr("Warning - Using old MPlayer"),
-			tr("The version of MPlayer (%1) installed on your system "
-               "is obsolete. SMPlayer2 can't work well with it: some "
-               "options won't work, subtitle selection may fail...")
-               .arg(MplayerVersion::toString(pref->mplayer_detected_version)) +
-            "<br><br>" + 
-            tr("Please, update your MPlayer.") +
-            "<br><br>" + 
-            tr("(This warning won't be displayed anymore)") );
-
-		pref->reported_mplayer_is_old = true;
-	}
-	//else
-	//statusBar()->showMessage( tr("Using an old MPlayer, please update it"), 10000 );
-}
-#endif
 
 void BaseGui::dragEnterEvent( QDragEnterEvent *e ) {
 	qDebug("BaseGui::dragEnterEvent");

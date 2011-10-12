@@ -170,11 +170,6 @@ protected slots:
 
 	void checkPendingActionsToRun();
 
-#if REPORT_OLD_MPLAYER
-	void checkMplayerVersion();
-	void displayWarningAboutOldMplayer();
-#endif
-
 #if AUTODISABLE_ACTIONS
 	virtual void enableActionsOnPlaying();
 	virtual void disableActionsOnStop();
@@ -561,8 +556,9 @@ protected:
 	MyActionGroup * channelsGroup;
 	/* MyAction * channelsDefaultAct; */
 	MyAction * channelsStereoAct;
-	MyAction * channelsSurroundAct;
-	MyAction * channelsFull51Act;
+	MyAction * channelsQuadAct;
+	MyAction * channels51Act;
+	MyAction * channels71Act;
 
 	// Stereo Mode Action Group
 	MyActionGroup * stereoGroup;

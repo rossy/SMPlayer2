@@ -84,11 +84,11 @@ void Preferences::reset() {
 	audio_lang = "";
 	subtitle_lang = "";
 
-	use_direct_rendering = false;
+	use_direct_rendering = true;
 	use_double_buffer = true;
 
 	use_soft_video_eq = false;
-	use_slices = true;
+	use_slices = false;
 	autoq = 6;
 	add_blackborders_on_fullscreen = false;
 
@@ -253,13 +253,13 @@ void Preferences::reset() {
 
 	prefer_ipv4 = true;
 
-	use_short_pathnames = false;
+	use_short_pathnames = true;
 
 	change_video_equalizer_on_startup = true;
 
 	use_pausing_keep_force = true;
 
-	use_correct_pts = Detect;
+	use_correct_pts = Enabled;
 
 	actions_to_run = "";
 
@@ -338,10 +338,6 @@ void Preferences::reset() {
 #endif
 
 	report_mplayer_crashes = true;
-
-#if REPORT_OLD_MPLAYER
-	reported_mplayer_is_old = false;
-#endif
 
 	auto_add_to_playlist = true;
 	add_to_playlist_consecutive_files = false;
@@ -713,10 +709,6 @@ void Preferences::save() {
 #endif
 
 	set->setValue("report_mplayer_crashes", report_mplayer_crashes);
-
-#if REPORT_OLD_MPLAYER
-	set->setValue("reported_mplayer_is_old", reported_mplayer_is_old);
-#endif
 
     set->setValue("auto_add_to_playlist", auto_add_to_playlist);
     set->setValue("add_to_playlist_consecutive_files", add_to_playlist_consecutive_files);
@@ -1106,10 +1098,6 @@ void Preferences::load() {
 #endif
 
 	report_mplayer_crashes = set->value("report_mplayer_crashes", report_mplayer_crashes).toBool();
-
-#if REPORT_OLD_MPLAYER
-	reported_mplayer_is_old = set->value("reported_mplayer_is_old", reported_mplayer_is_old).toBool();
-#endif
 
 	auto_add_to_playlist = set->value("auto_add_to_playlist", auto_add_to_playlist).toBool();
 	add_to_playlist_consecutive_files = set->value("add_to_playlist_consecutive_files", add_to_playlist_consecutive_files).toBool();

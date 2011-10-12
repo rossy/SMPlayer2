@@ -40,8 +40,8 @@ public:
                   AspectNone = 0 };
 	enum Deinterlace { NoDeinterlace = 0, L5 = 1, Yadif = 2, LB = 3, 
                        Yadif_1 = 4, Kerndeint = 5 };
-	enum AudioChannels { ChDefault = 0, ChStereo = 2, ChSurround = 4, 
-                         ChFull51 = 6 };
+	enum AudioChannels { ChDefault = 0, ChStereo = 2, ChQuad = 4, 
+                         Ch51 = 6, Ch71 = 8 };
 	enum StereoMode { Stereo = 0, Left = 1, Right = 2 };
 
 	enum Rotate { NoRotate = -1, Clockwise_flip = 0, Clockwise = 1, 

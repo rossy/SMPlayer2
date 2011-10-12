@@ -65,8 +65,9 @@ PrefGeneral::PrefGeneral(QWidget * parent, Qt::WindowFlags f)
 
 	// Channels combo
 	channels_combo->addItem( "2", MediaSettings::ChStereo );
-	channels_combo->addItem( "4", MediaSettings::ChSurround );
-	channels_combo->addItem( "6", MediaSettings::ChFull51 );
+	channels_combo->addItem( "4", MediaSettings::ChQuad );
+	channels_combo->addItem( "6", MediaSettings::Ch51 );
+	channels_combo->addItem( "8", MediaSettings::Ch71 );
 
 	connect(vo_combo, SIGNAL(currentIndexChanged(int)),
             this, SLOT(vo_combo_changed(int)));
@@ -94,6 +95,7 @@ void PrefGeneral::retranslateStrings() {
 	channels_combo->setItemText(0, tr("2 (Stereo)") );
 	channels_combo->setItemText(1, tr("4 (4.0 Surround)") );
 	channels_combo->setItemText(2, tr("6 (5.1 Surround)") );
+	channels_combo->setItemText(3, tr("8 (7.1 Surround)") );
 
 	int deinterlace_item = deinterlace_combo->currentIndex();
 	deinterlace_combo->clear();
@@ -149,11 +151,7 @@ void PrefGeneral::setData(Preferences * pref) {
 	QString vo = pref->vo;
 	if (vo.isEmpty()) {
 #ifdef Q_OS_WIN
-		if (QSysInfo::WindowsVersion >= QSysInfo::WV_VISTA) {
-			vo = "direct3d,";
-		} else {
-			vo = "directx,";
-		}
+		vo = "direct3d,";
 #else
 		vo = "xv,";
 #endif
