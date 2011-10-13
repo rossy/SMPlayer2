@@ -70,13 +70,9 @@ void Preferences::reset() {
 
 	use_screenshot = true;
 	screenshot_directory="";
-#ifdef PORTABLE_APP
-	screenshot_directory= "./screenshots";
-#else
 	if (QFile::exists(Paths::configPath() + "/screenshots")) {
 		screenshot_directory = Paths::configPath() + "/screenshots";
 	}
-#endif
 
 	dont_remember_media_settings = false;
 	dont_remember_time_pos = false;
@@ -223,9 +219,6 @@ void Preferences::reset() {
 	use_idx = false;
 
 	mplayer_additional_options="";
-	#ifdef PORTABLE_APP
-	mplayer_additional_options="-nofontconfig";
-	#endif
     mplayer_additional_video_filters="";
     mplayer_additional_audio_filters="";
 

@@ -40,7 +40,7 @@ public:
 	void start();
 
 private:
-#ifndef PORTABLE_APP
+#ifndef Q_OS_WIN
 	void createConfigDirectory();
 #endif
 	void showInfo();

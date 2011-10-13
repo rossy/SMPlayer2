@@ -173,7 +173,7 @@ int main( int argc, char ** argv )
 	// Sets the config path
 	QString config_path;
 
-#ifdef PORTABLE_APP
+#ifdef Q_OS_WIN
 	config_path = a.applicationDirPath();
 #else
 	// If a smplayer2.ini exists in the app path, will use that path

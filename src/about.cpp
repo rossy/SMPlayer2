@@ -46,10 +46,6 @@ About::About(QWidget * parent, Qt::WindowFlags f)
 		"<b>SMPlayer2</b> &copy; 2011 Martin Herkt &lt;lachs0r@srsfckn.biz&gt;<br>"
 		"based on SMPlayer &copy; 2006-2010 Ricardo Villalba &lt;rvm@escomposlinux.org&gt;<br>"
 		"<b>" + tr("Version: %1").arg(smplayer2Version()) + "</b>" +
-#if PORTABLE_APP
-                " (" + tr("Portable Edition") + ")" +
-#endif
-        "<br>" +
         tr("Using Qt %1 (compiled with Qt %2)").arg(qVersion()).arg(QT_VERSION_STR) + "<br><br>" +
 		tr("Visit our web for updates:") +"<br>"+ 
         link("http://smplayer2.srsfckn.biz") +"<br>"+

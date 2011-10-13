@@ -57,7 +57,7 @@ SMPlayer2::SMPlayer2(const QString & config_path, QObject * parent )
 
     Paths::setAppPath( qApp->applicationDirPath() );
 
-#ifndef PORTABLE_APP
+#ifndef Q_OS_WIN
 	if (config_path.isEmpty()) createConfigDirectory();
 #endif
 	global_init(config_path);
@@ -337,7 +337,7 @@ void SMPlayer2::start() {
 	}
 }
 
-#ifndef PORTABLE_APP
+#ifndef Q_OS_WIN
 void SMPlayer2::createConfigDirectory() {
 	// Create smplayer2 config directory
 	if (!QFile::exists(Paths::configPath())) {
