@@ -66,9 +66,6 @@ install: src/smplayer2
 	-install -d $(DESTDIR)$(KDE_APPLNK)
 	install -m 644 smplayer2.desktop $(DESTDIR)$(KDE_APPLNK)
 	install -m 644 smplayer2_enqueue.desktop $(DESTDIR)$(KDE_APPLNK)
-	-install -d $(DESTDIR)$(PREFIX)/share/man/man1/
-	install -m 644 man/smplayer2.1 $(DESTDIR)$(PREFIX)/share/man/man1/
-	gzip -9 -f $(DESTDIR)$(PREFIX)/share/man/man1/smplayer2.1
 
 uninstall:
 	-rm -f $(PREFIX)/bin/smplayer2
@@ -80,7 +77,6 @@ uninstall:
 	-rm -f $(KDE_ICONS)/22x22/apps/smplayer2.png
 	-rm -f $(KDE_ICONS)/16x16/apps/smplayer2.png
 	-rm -f $(KDE_APPLNK)/smplayer2.desktop
-	-rm -f $(PREFIX)/share/man/man1/smplayer2.1.gz
 	-rmdir $(SHORTCUTS_PATH)/
 	-rmdir $(TRANSLATION_PATH)/
 	-rmdir $(DATA_PATH)/
