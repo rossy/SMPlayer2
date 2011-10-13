@@ -68,7 +68,7 @@ void Preferences::reset() {
 	vo = ""; 
 	ao = "";
 
-	use_screenshot = true;
+	use_screenshot = false;
 	screenshot_directory="";
 	if (QFile::exists(Paths::configPath() + "/screenshots")) {
 		screenshot_directory = Paths::configPath() + "/screenshots";
