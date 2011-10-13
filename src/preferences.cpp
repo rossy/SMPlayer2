@@ -60,7 +60,7 @@ void Preferences::reset() {
        ******* */
 
 #ifdef Q_OS_WIN
-	mplayer_bin= "mplayer/mplayer.exe";
+	mplayer_bin= "mplayer2.exe";
 #else
 	mplayer_bin = "mplayer";
 #endif
