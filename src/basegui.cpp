@@ -4217,14 +4217,12 @@ void BaseGui::displayGotoTime(int t) {
 
 void BaseGui::goToPosOnDragging(int t) {
 	if (pref->update_while_seeking) {
-		if ( ( t % 4 ) == 0 ) {
-			qDebug("BaseGui::goToPosOnDragging: %d", t);
-			#ifdef SEEKBAR_RESOLUTION
-			core->goToPosition(t);
-			#else
-			core->goToPos(t);
-			#endif
-		}
+		qDebug("BaseGui::goToPosOnDragging: %d", t);
+		#ifdef SEEKBAR_RESOLUTION
+		core->goToPosition(t);
+		#else
+		core->goToPos(t);
+		#endif
 	}
 }
 
