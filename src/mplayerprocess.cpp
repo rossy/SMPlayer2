@@ -41,10 +41,10 @@ MplayerProcess::MplayerProcess(QObject * parent) : MyProcess(parent)
 			 this, SLOT(parseLine(QByteArray)) );
 
 	connect( this, SIGNAL(finished(int,QProcess::ExitStatus)), 
-             this, SLOT(processFinished(int,QProcess::ExitStatus)) );
+			 this, SLOT(processFinished(int,QProcess::ExitStatus)) );
 
 	connect( this, SIGNAL(error(QProcess::ProcessError)),
-             this, SLOT(gotError(QProcess::ProcessError)) );
+			 this, SLOT(gotError(QProcess::ProcessError)) );
 
 	notified_mplayer_is_running = false;
 	last_sub_id = -1;
@@ -163,15 +163,18 @@ void MplayerProcess::parseLine(QByteArray ba) {
 	QString tag;
 	QString value;
 
-#if COLOR_OUTPUT_SUPPORT
-    QString line = ColorUtils::stripColorsTags(QString::fromLocal8Bit(ba));
+#ifdef WIN32
+	QString line = QString::fromUtf8(ba);
 #else
 	QString line = QString::fromLocal8Bit(ba);
+#endif
+#if COLOR_OUTPUT_SUPPORT
+	line = ColorUtils::stripColorsTags(line);
 #endif
 
 	// Parse A: V: line
 	//qDebug("%s", line.toUtf8().data());
-    if (rx_av.indexIn(line) > -1) {
+	if (rx_av.indexIn(line) > -1) {
 		double sec = rx_av.cap(1).toDouble();
 		if(rx_v.indexIn(line) > -1) {
 			sec = rx_v.cap(1).toDouble();
@@ -208,7 +211,7 @@ void MplayerProcess::parseLine(QByteArray ba) {
 		if (!notified_mplayer_is_running) {
 			qDebug("MplayerProcess::parseLine: starting sec: %f", sec);
 			if ( (md.chapters <= 0) && (dvd_current_title > 0) && 
-                 (md.titles.find(dvd_current_title) != -1) )
+				 (md.titles.find(dvd_current_title) != -1) )
 			{
 				int idx = md.titles.find(dvd_current_title);
 				md.chapters = md.titles.itemAt(idx).chapters();
@@ -231,22 +234,16 @@ void MplayerProcess::parseLine(QByteArray ba) {
 			notified_mplayer_is_running = true;
 		}
 		
-	    emit receivedCurrentSec( sec );
+		emit receivedCurrentSec( sec );
 
 		// Check for frame
-        if (rx_frame.indexIn(line) > -1) {
+		if (rx_frame.indexIn(line) > -1) {
 			int frame = rx_frame.cap(1).toInt();
 			//qDebug(" frame: %d", frame);
 			emit receivedCurrentFrame(frame);
 		}
 	}
 	else {
-		// Emulates mplayer version in Ubuntu:
-		//if (line.startsWith("MPlayer 1.0rc1")) line = "MPlayer 2:1.0~rc1-0ubuntu13.1 (C) 2000-2006 MPlayer Team";
-
-		// Emulates unknown version
-		//if (line.startsWith("MPlayer SVN")) line = "MPlayer lalksklsjjakksja";
-
 		emit lineAvailable(line);
 
 		// Parse other things
@@ -265,10 +262,10 @@ void MplayerProcess::parseLine(QByteArray ba) {
 			qDebug("MplayerProcess::parseLine: detected end of file");
 			if (!received_end_of_file) {
 				// In case of playing VCDs or DVDs, maybe the first title
-    	        // is not playable, so the GUI doesn't get the info about
-        	    // available titles. So if we received the end of file
-            	// first let's pretend the file has started so the GUI can have
-	            // the data.
+				// is not playable, so the GUI doesn't get the info about
+				// available titles. So if we received the end of file
+				// first let's pretend the file has started so the GUI can have
+				// the data.
 				if ( !notified_mplayer_is_running) {
 					emit mplayerFullyLoaded();
 				}
@@ -285,7 +282,7 @@ void MplayerProcess::parseLine(QByteArray ba) {
 			/*
 			md.win_width = rx_winresolution.cap(4).toInt();
 			md.win_height = rx_winresolution.cap(5).toInt();
-		    md.video_aspect = (double) md.win_width / md.win_height;
+			md.video_aspect = (double) md.win_width / md.win_height;
 			*/
 
 			int w = rx_winresolution.cap(4).toInt();
@@ -354,7 +351,7 @@ void MplayerProcess::parseLine(QByteArray ba) {
 			QString lang = rx_audio_info.cap(3);
 			QString t = rx_audio_info.cap(2);
 			qDebug("MplayerProcess::parseLine: Audio: ID: %d, Lang: '%s' Type: '%s'", 
-                    ID, lang.toUtf8().data(), t.toUtf8().data());
+					ID, lang.toUtf8().data(), t.toUtf8().data());
 
 			int idx = audios.find(ID);
 			if (idx == -1) {
@@ -445,7 +442,7 @@ void MplayerProcess::parseLine(QByteArray ba) {
 			QString lang = rx_audio_mat.cap(3);
 			QString t = rx_audio_mat.cap(2);
 			qDebug("MplayerProcess::parseLine: Audio: ID: %d, Lang: '%s' Type: '%s'", 
-                    ID, lang.toUtf8().data(), t.toUtf8().data());
+					ID, lang.toUtf8().data(), t.toUtf8().data());
 
 			if ( t == "NAME" ) 
 				md.audios.addName(ID, lang);
@@ -471,7 +468,7 @@ void MplayerProcess::parseLine(QByteArray ba) {
 			QString lang = rx_video.cap(3);
 			QString t = rx_video.cap(2);
 			qDebug("MplayerProcess::parseLine: Video: ID: %d, Lang: '%s' Type: '%s'", 
-                    ID, lang.toUtf8().data(), t.toUtf8().data());
+					ID, lang.toUtf8().data(), t.toUtf8().data());
 
 			if ( t == "NAME" ) 
 				md.videos.addName(ID, lang);
@@ -492,15 +489,17 @@ void MplayerProcess::parseLine(QByteArray ba) {
 		else
 
 		if (rx_mkvchapters_name.indexIn(line) > -1) {
-            int id = rx_mkvchapters_name.cap(1).toInt();
-            QString s = rx_mkvchapters_name.cap(2);
-            qDebug("MplayerProcess::parseLine: mkv chapters: %d", id);
-            qDebug("MplayerProcess::parseLine: mkv chapters name: %s", s.toUtf8().data());
+			int id = rx_mkvchapters_name.cap(1).toInt();
+			QString s = rx_mkvchapters_name.cap(2);
+			qDebug("MplayerProcess::parseLine: mkv chapters: %d", id);
+			qDebug("MplayerProcess::parseLine: mkv chapters name: %s", s.toUtf8().data());
 			//Only insert the first time. 
 			//When playing mkv ordered chapter file, mplayer will scan all the file in the directory and it'll mess up the chapter's name.
-            if(!md.chapters_name.contains(id))
+			if(!md.chapters_name.contains(id)) {
 				md.chapters_name.insert(id,s);
-        }
+				md.chapters = md.chapters_name.count();
+			}
+		}
 		else
 		
 		// VCD titles
@@ -783,7 +782,7 @@ void MplayerProcess::parseLine(QByteArray ba) {
 				md.audio_codec = value;
 			}
 			else
-			if (tag == "ID_CHAPTERS") {
+			if (tag == "ID_CHAPTERS" && md.chapters_name.count() == 0) {
 				md.chapters = value.toInt();
 			}
 			else

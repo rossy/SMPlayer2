@@ -123,10 +123,13 @@ static QRegExp rx_demuxer("^\\s+([A-Z,a-z,0-9]+)\\s+(\\d+)\\s+(\\S.*)");
 static QRegExp rx_codec("^([A-Z,a-z,0-9]+)\\s+([A-Z,a-z,0-9]+)\\s+([A-Z,a-z,0-9]+)\\s+(\\S.*)");
 
 void InfoReader::readLine(QByteArray ba) {
-#if COLOR_OUTPUT_SUPPORT
-    QString line = ColorUtils::stripColorsTags(QString::fromLocal8Bit(ba));
+#ifdef WIN32
+    QString line = QString::fromUtf8(ba);
 #else
 	QString line = QString::fromLocal8Bit(ba);
+#endif
+#if COLOR_OUTPUT_SUPPORT
+    line = ColorUtils::stripColorsTags(line);
 #endif
 
 	qDebug("InfoReader::readLine: line: '%s'", line.toUtf8().data());
