@@ -248,10 +248,6 @@ public:
 	//! Preferred connection method: ipv4 or ipv6
 	bool prefer_ipv4;
 
-	//! Windows only. If true, smplayer2 will pass short filenames to mplayer.
-	//! To workaround a bug in mplayer.
-	bool use_short_pathnames; 
-
 	//! If false, -brightness, -contrast and so on, won't be passed to
 	//! mplayer. It seems that some graphic cards don't support those options.
 	bool change_video_equalizer_on_startup;

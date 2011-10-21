@@ -246,8 +246,6 @@ void Preferences::reset() {
 
 	prefer_ipv4 = true;
 
-	use_short_pathnames = true;
-
 	change_video_equalizer_on_startup = true;
 
 	use_pausing_keep_force = true;
@@ -621,8 +619,6 @@ void Preferences::save() {
 	set->setValue("use_edl_files", use_edl_files);
 
 	set->setValue("prefer_ipv4", prefer_ipv4);
-
-	set->setValue("use_short_pathnames", use_short_pathnames);
 
 	set->setValue("change_video_equalizer_on_startup", change_video_equalizer_on_startup);
 
@@ -1011,8 +1007,6 @@ void Preferences::load() {
 	use_edl_files = set->value("use_edl_files", use_edl_files).toBool();
 
 	prefer_ipv4 = set->value("prefer_ipv4", prefer_ipv4).toBool();
-
-	use_short_pathnames = set->value("use_short_pathnames", use_short_pathnames).toBool();
 
 	use_pausing_keep_force = set->value("use_pausing_keep_force", use_pausing_keep_force).toBool();
 

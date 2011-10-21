@@ -28,10 +28,6 @@ PrefAdvanced::PrefAdvanced(QWidget * parent, Qt::WindowFlags f)
 {
 	setupUi(this);
 
-#ifndef Q_OS_WIN
-	shortnames_check->hide();
-#endif
-
 #if !USE_COLORKEY
 	colorkey_label->hide();
 	colorkey_view->hide();
@@ -102,8 +98,6 @@ void PrefAdvanced::setData(Preferences * pref) {
     setMplayerLogName( pref->mplayer_log_saveto );
 
 	setSaveSmplayerLog( pref->save_smplayer2_log );
-
-	setUseShortNames( pref->use_short_pathnames );
 }
 
 void PrefAdvanced::getData(Preferences * pref) {
@@ -154,8 +148,6 @@ void PrefAdvanced::getData(Preferences * pref) {
     pref->mplayer_log_saveto = mplayerLogName();
 
 	pref->save_smplayer2_log = saveSmplayerLog();
-
-	pref->use_short_pathnames = useShortNames();
 }
 
 void PrefAdvanced::setMonitorAspect(QString asp) {
@@ -189,14 +181,6 @@ void PrefAdvanced::setUseMplayerWindow(bool v) {
 
 bool PrefAdvanced::useMplayerWindow() {
 	return mplayer_use_window_check->isChecked();
-}
-
-void PrefAdvanced::setUseShortNames(bool b) {
-	shortnames_check->setChecked(b);
-}
-
-bool PrefAdvanced::useShortNames() {
-	return shortnames_check->isChecked();
 }
 
 void PrefAdvanced::setMplayerAdditionalArguments(QString args) {
@@ -383,14 +367,6 @@ void PrefAdvanced::createHelp() {
            "SSA/ASS library enabled. Without correct pts the subtitle timing "
            "will typically be off by some frames. This option does not work "
            "correctly with some demuxers and codecs.") );
-
-#ifdef Q_OS_WIN
-	setWhatsThis(shortnames_check, tr("Pass short filenames (8+3) to MPlayer"),
-		tr("Currently MPlayer can't open filenames which contains characters "
-           "outside the local codepage. Checking this option will make "
-           "SMPlayer2 to pass to MPlayer the short version of the filenames, "
-           "and thus it will able to open them.") );
-#endif
 
 #if REPAINT_BACKGROUND_OPTION
 	setWhatsThis(repaint_video_background_check, 

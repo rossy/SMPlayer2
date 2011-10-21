@@ -475,14 +475,6 @@ void Core::loadSub(const QString & sub ) {
 		QFileInfo fi(sub);
 		if ((pref->fast_load_sub) && (fi.suffix().toLower() != "idx")) {
 			QString sub_file = sub;
-			#ifdef Q_OS_WIN
-			if (pref->use_short_pathnames) {
-				sub_file = Helper::shortPathName(sub);
-				// For some reason it seems it's necessary to change the path separator to unix style
-				// otherwise mplayer fails to load it
-				sub_file = sub_file.replace("\\","/");
-			}
-			#endif
 			tellmp( "sub_load \""+ sub_file +"\"" );
 		} else {
 			restartPlay();
@@ -1600,11 +1592,6 @@ void Core::startMplayer( QString file, double seek ) {
 			// sub/idx subtitles
 			QFileInfo fi;
 
-			#ifdef Q_OS_WIN
-			if (pref->use_short_pathnames)
-				fi.setFile(Helper::shortPathName(mset.external_subtitles));
-			else
-			#endif
 			fi.setFile(mset.external_subtitles);
 
 			QString s = fi.path() +"/"+ fi.completeBaseName();
@@ -1613,22 +1600,12 @@ void Core::startMplayer( QString file, double seek ) {
 			proc->addArgument( s );
 		} else {
 			proc->addArgument("-sub");
-			#ifdef Q_OS_WIN
-			if (pref->use_short_pathnames)
-				proc->addArgument(Helper::shortPathName(mset.external_subtitles));
-			else
-			#endif
 			proc->addArgument( mset.external_subtitles );
 		}
 	}
 
 	if (!mset.external_audio.isEmpty()) {
 		proc->addArgument("-audiofile");
-		#ifdef Q_OS_WIN
-		if (pref->use_short_pathnames)
-			proc->addArgument(Helper::shortPathName(mset.external_audio));
-		else
-		#endif
 		proc->addArgument( mset.external_audio );
 	}
 
@@ -2055,11 +2032,6 @@ end_video_filters:
 		proc->addArgument("-playlist");
 	}
 
-#ifdef Q_OS_WIN
-	if (pref->use_short_pathnames)
-		proc->addArgument(Helper::shortPathName(file));
-	else
-#endif
 	proc->addArgument( file );
 
 	// It seems the loop option must be after the filename
