@@ -576,6 +576,7 @@ protected:
 	MyActionGroup * titleGroup;
 	MyActionGroup * angleGroup;
 	MyActionGroup * chapterGroup;
+	MyActionGroup * editionGroup;
 
 #if DVDNAV_SUPPORT
 	MyAction * dvdnavUpAct;
@@ -606,6 +607,7 @@ protected:
 	QMenu * audiotrack_menu;
 	QMenu * titles_menu;
 	QMenu * chapters_menu;
+	QMenu * editions_menu;
 	QMenu * angles_menu;
 	QMenu * aspect_menu;
 	QMenu * osd_menu;

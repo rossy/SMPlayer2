@@ -106,6 +106,9 @@ Core::Core( MplayerWindow *mpw, QWidget* parent )
 	connect( proc, SIGNAL(receivedCurrentChapter(int)),
 			 this, SLOT(updateChapter(int)) );
 
+	connect( proc, SIGNAL(receivedCurrentEdition(int)),
+			 this, SLOT(updateEdition(int)) );
+
 	connect( proc, SIGNAL(receivedPause()),
 			 this, SLOT(changePause()) );
 
@@ -533,6 +536,7 @@ void Core::openVCD(int title) {
 
 	mset.current_title_id = title;
 	mset.current_chapter_id = -1;
+	mset.current_edition_id = -1;
 	mset.current_angle_id = -1;
 
 	/* initializeMenus(); */
@@ -1321,11 +1325,7 @@ void Core::startMplayer( QString file, double seek ) {
 	} else {
 		proc->addArgument("-vo");
 #ifdef Q_OS_WIN
-		if (QSysInfo::WindowsVersion >= QSysInfo::WV_VISTA) {
-			proc->addArgument("direct3d,");
-		} else {
-			proc->addArgument("directx,");
-		}
+		proc->addArgument("direct3d,");
 #else
 		proc->addArgument("xv,");
 #endif
@@ -1679,6 +1679,11 @@ void Core::startMplayer( QString file, double seek ) {
 		int chapter = mset.current_chapter_id;
 		if (mdat.type == TYPE_DVD) chapter++;
 		proc->addArgument( QString::number( chapter ) );
+	}
+	
+	if (mset.current_edition_id > -1) {
+		proc->addArgument("-edition");
+		proc->addArgument( QString::number( mset.current_edition_id ) );
 	}
 
 	if (mset.current_angle_id > 0) {
@@ -3110,6 +3115,14 @@ void Core::nextChapter() {
 	changeChapter(1, true);
 }
 
+void Core::changeEdition(int ID) {
+	if (ID != mset.current_edition_id) {
+		mset.current_edition_id = ID;
+		mset.current_sec = 0;
+		restartPlay();
+	}
+}
+
 void Core::changeAngle(int ID) {
 	qDebug("Core::changeAngle: ID: %d", ID);
 
@@ -3808,6 +3821,13 @@ void Core::updateChapter(int chapter) {
 	qDebug("Core::updateChapter");
 	
 	mset.current_chapter_id = chapter;
+	updateWidgets();
+}
+
+void Core::updateEdition(int edition) {
+	qDebug("Core::updateEdition");
+	
+	mset.current_edition_id = edition;
 	updateWidgets();
 }
 

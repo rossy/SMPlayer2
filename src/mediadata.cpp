@@ -54,6 +54,7 @@ void MediaData::reset() {
 
 	chapters = 0;
     chapters_name.clear();
+	editions = -1;
 
 	initialized=false;
 
@@ -117,6 +118,7 @@ void MediaData::list() {
 	qDebug("  initialized: %d", initialized);
 
 	qDebug("  chapters: %d", chapters);
+	qDebug("  editions: %d", editions > -1 ? editions : 0);
 
 	qDebug("  Subs:");
 	subs.list();

@@ -109,6 +109,7 @@ static QRegExp rx_screenshot("^\\*\\*\\* screenshot '(.*)'");
 static QRegExp rx_endoffile("^Exiting... \\(End of file\\)|^ID_EXIT=EOF");
 static QRegExp rx_mkvchapters("\\[mkv\\] Chapter (\\d+) from");
 static QRegExp rx_mkvchapters_name("^ID_CHAPTER_(\\d+)_NAME=(.*)");
+static QRegExp rx_mkveditions("\\[mkv\\] Found (\\d+) editions, will play #(\\d+)");
 static QRegExp rx_chapter("^ANS_chapter=(.*)");
 static QRegExp rx_aspect2("^Movie-Aspect is ([0-9,.]+):1");
 static QRegExp rx_fontcache("^\\[ass\\] Updating font cache|^\\[ass\\] Init");
@@ -499,6 +500,16 @@ void MplayerProcess::parseLine(QByteArray ba) {
 				md.chapters_name.insert(id,s);
 				md.chapters = md.chapters_name.count();
 			}
+		}
+		else
+		
+		if (rx_mkveditions.indexIn(line) > -1) {
+			int editions = rx_mkveditions.cap(1).toInt();
+			int playing = rx_mkveditions.cap(2).toInt();
+			qDebug("MplayerProcess::parseLine: mkv editions: %d", editions);
+			qDebug("MplayerProcess::parseLine: current edition: %d", playing);
+			md.editions = editions;
+			emit receivedCurrentEdition(playing);
 		}
 		else
 		

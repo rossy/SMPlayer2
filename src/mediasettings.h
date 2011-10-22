@@ -66,6 +66,7 @@ public:
 
 	int current_title_id;
 	int current_chapter_id;
+	int current_edition_id;
 	int current_angle_id;
 
 	int aspect_ratio_id;

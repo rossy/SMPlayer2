@@ -256,6 +256,7 @@ public slots:
 	void changeChapter(int);
 	void prevChapter();
 	void nextChapter();
+	void changeEdition(int);
 	void changeAngle(int);
 	void changeAspectRatio(int);
 	void nextAspectRatio();
@@ -364,6 +365,7 @@ protected slots:
 #if DVDNAV_SUPPORT
 	void dvdTitleChanged(int);
 	void updateChapter(int chapter);
+	void updateEdition(int edition);
 	void durationChanged(double);
 	void askForInfo();
 	void dvdnavUpdateMousePos(QPoint);

@@ -75,7 +75,8 @@ public:
 	SubTracks subs;
 
 	int chapters;
-    QMap<int,QString> chapters_name;
+	QMap<int,QString> chapters_name;
+	int editions;
 
 	// Clip info
 	QString clip_name;

@@ -50,6 +50,7 @@ signals:
 	void receivedCurrentSec(double sec);
 	void receivedCurrentFrame(int frame);
 	void receivedCurrentChapter(int chapter);
+	void receivedCurrentEdition(int edition);
 	void receivedPause();
 	void receivedWindowResolution(int,int);
 	void receivedNoVideo();

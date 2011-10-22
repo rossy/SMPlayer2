@@ -1152,6 +1152,11 @@ void BaseGui::createActions() {
 	chapterGroup = new MyActionGroup(this);
 	connect( chapterGroup, SIGNAL(activated(int)),
 			 core, SLOT(changeChapter(int)) );
+	
+	// Editions
+	editionGroup = new MyActionGroup(this);
+	connect( editionGroup, SIGNAL(activated(int)),
+			 core, SLOT(changeEdition(int)) );
 
 #if DVDNAV_SUPPORT
 	dvdnavUpAct = new MyAction(Qt::SHIFT | Qt::Key_Up, this, "dvdnav_up");
@@ -1816,6 +1821,8 @@ void BaseGui::retranslateStrings() {
 
 	chapters_menu->menuAction()->setText( tr("&Chapter") );
 	chapters_menu->menuAction()->setIcon( Images::icon("chapter") );
+	
+	editions_menu->menuAction()->setText( tr("&Edition") );
 
 	angles_menu->menuAction()->setText( tr("&Angle") );
 	angles_menu->menuAction()->setIcon( Images::icon("angle") );
@@ -2402,6 +2409,12 @@ void BaseGui::createMenus() {
 	chapters_menu->menuAction()->setObjectName("chapters_menu");
 
 	browseMenu->addMenu(chapters_menu);
+	
+	// Editions submenu
+	editions_menu = new QMenu(this);
+	editions_menu->menuAction()->setObjectName("editions_menu");
+	
+	browseMenu->addMenu(editions_menu);
 
 	// Angles submenu
 	angles_menu = new QMenu(this);
@@ -3002,6 +3015,20 @@ void BaseGui::initializeMenus() {
 		a->setEnabled(false);
 	}
 	chapters_menu->addActions( chapterGroup->actions() );
+	
+	editionGroup->clear(true);
+	if (core->mdat.editions > 0) {
+		for (n=0; n < core->mdat.editions; n++) {
+			QAction *a = new QAction(editionGroup);
+			a->setCheckable(true);
+			a->setText( QString::number(n + 1) );
+			a->setData( n );
+		}
+	} else {
+		QAction *a = editionGroup->addAction( tr("<empty>") );
+		a->setEnabled(false);
+	}
+	editions_menu->addActions( editionGroup->actions() );
 
 	// Angles
 	angleGroup->clear(true);
@@ -3112,6 +3139,9 @@ void BaseGui::updateWidgets() {
 
 	// Chapters
 	chapterGroup->setChecked( core->mset.current_chapter_id );
+
+	// Editions
+	editionGroup->setChecked( core->mset.current_edition_id );
 
 	// Angles
 	angleGroup->setChecked( core->mset.current_angle_id );

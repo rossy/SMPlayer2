@@ -41,6 +41,7 @@ void MediaSettings::reset() {
 	current_audio_id = NoneSelected;
 	current_title_id = NoneSelected;
 	current_chapter_id = NoneSelected;
+	current_edition_id = NoneSelected;
 	current_angle_id = NoneSelected;
 
 	aspect_ratio_id = AspectAuto;
@@ -179,6 +180,7 @@ void MediaSettings::list() {
 	qDebug("  current_audio_id: %d", current_audio_id);
 	qDebug("  current_title_id: %d", current_title_id);
 	qDebug("  current_chapter_id: %d", current_chapter_id);
+	qDebug("  current_edition_id: %d", current_edition_id);
 	qDebug("  current_angle_id: %d", current_angle_id);
 
 	qDebug("  aspect_ratio_id: %d", aspect_ratio_id);
@@ -271,6 +273,7 @@ void MediaSettings::save(QSettings * set) {
 	set->setValue( "current_audio_id", current_audio_id );
 	set->setValue( "current_title_id", current_title_id );
 	set->setValue( "current_chapter_id", current_chapter_id );
+	set->setValue( "current_edition_id", current_edition_id );
 	set->setValue( "current_angle_id", current_angle_id );
 
 	set->setValue( "aspect_ratio", aspect_ratio_id );
@@ -366,6 +369,7 @@ void MediaSettings::load(QSettings * set) {
 	current_audio_id = set->value( "current_audio_id", current_audio_id ).toInt();
 	current_title_id = set->value( "current_title_id", current_title_id ).toInt();
 	current_chapter_id = set->value( "current_chapter_id", current_chapter_id ).toInt();
+	current_edition_id = set->value( "current_edition_id", current_edition_id ).toInt();
 	current_angle_id = set->value( "current_angle_id", current_angle_id ).toInt();
 
 	aspect_ratio_id = set->value( "aspect_ratio", aspect_ratio_id ).toInt();
