@@ -176,7 +176,7 @@ protected slots:
 	virtual void togglePlayAction(Core::State);
 #endif
 
-	virtual void resizeWindow(int w, int h);
+	virtual void resizeWindow(int w, int h, bool force);
 	virtual void hidePanel();
 
 	/* virtual void playlistVisibilityChanged(); */

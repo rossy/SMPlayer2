@@ -412,7 +412,7 @@ signals:
 #endif
 	void showFrame(int frame);
 	void ABMarkersChanged(int secs_a, int secs_b);
-	void needResize(int w, int h);
+	void needResize(int w, int h, bool force);
 	void noVideo();
 	void volumeChanged(int);
 #if NOTIFY_AUDIO_CHANGES

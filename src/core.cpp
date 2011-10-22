@@ -743,7 +743,7 @@ void Core::playNewFile(QString file, int seek) {
 				saved_height = 0;
 			}
 			if ((saved_width > 0) && (saved_height > 0)) {
-				emit needResize(mset.win_width, mset.win_height);
+				emit needResize(mset.win_width, mset.win_height, false);
 				changeAspectRatio(mset.aspect_ratio_id);
 			}
 
@@ -3260,7 +3260,7 @@ void Core::changeSize(int n) {
 	if ( /*(n != pref->size_factor) &&*/ (!pref->use_mplayer_window) ) {
 		pref->size_factor = n;
 
-		emit needResize(mset.win_width, mset.win_height);
+		emit needResize(mset.win_width, mset.win_height, true);
 		updateWidgets();
 	}
 }
@@ -3529,7 +3529,7 @@ void Core::gotWindowResolution(int w, int h) {
 		if ((pref->resize_method==Preferences::Afterload) && (we_are_restarting)) {
 			// Do nothing
 		} else {
-			emit needResize(w,h);
+			emit needResize(w, h, false);
 		}
 	}
 

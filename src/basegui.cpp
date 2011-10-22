@@ -1922,8 +1922,8 @@ void BaseGui::createCore() {
 	connect( core, SIGNAL(showTime(double)),
              this, SLOT(gotCurrentTime(double)) );
 
-	connect( core, SIGNAL(needResize(int, int)),
-             this, SLOT(resizeWindow(int,int)) );
+	connect( core, SIGNAL(needResize(int, int, bool)),
+             this, SLOT(resizeWindow(int, int, bool)) );
 	connect( core, SIGNAL(showMessage(QString)),
              this, SLOT(displayMessage(QString)) );
 	connect( core, SIGNAL(stateChanged(Core::State)),
@@ -4146,13 +4146,13 @@ void BaseGui::gotCurrentTime(double sec) {
 	emit timeChanged( time );
 }
 
-void BaseGui::resizeWindow(int w, int h) {
+void BaseGui::resizeWindow(int w, int h, bool force) {
 	qDebug("BaseGui::resizeWindow: %d, %d", w, h);
 
 	// If fullscreen, don't resize!
 	if (pref->fullscreen) return;
 
-	if ( (pref->resize_method==Preferences::Never) && (panel->isVisible()) ) {
+	if ( (pref->resize_method == Preferences::Never) && !force && (panel->isVisible()) ) {
 		return;
 	}
 

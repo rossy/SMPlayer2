@@ -62,7 +62,7 @@ protected slots:
 	// Reimplemented methods
 	virtual void closeWindow();
 	virtual void setWindowCaption(const QString & title);
-	virtual void resizeWindow(int w, int h);
+	virtual void resizeWindow(int w, int h, bool force);
 	virtual void updateMediaInfo();
 	// New
 	virtual void trayIconActivated(QSystemTrayIcon::ActivationReason);

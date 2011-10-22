@@ -348,12 +348,12 @@ void BaseGuiPlus::showAll(bool b) {
 	updateShowAllAct();
 }
 
-void BaseGuiPlus::resizeWindow(int w, int h) {
+void BaseGuiPlus::resizeWindow(int w, int h, bool force) {
     qDebug("BaseGuiPlus::resizeWindow: %d, %d", w, h);
 
 	if ( (tray->isVisible()) && (!isVisible()) ) showAll(true);
 
-	BaseGui::resizeWindow(w, h );
+	BaseGui::resizeWindow(w, h, force);
 }
 
 void BaseGuiPlus::updateMediaInfo() {
