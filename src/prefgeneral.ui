@@ -40,7 +40,7 @@
          <item>
           <widget class="QLabel" name="textLabel1_2" >
            <property name="text" >
-            <string>&amp;MPlayer executable:</string>
+            <string>&amp;mplayer2 executable:</string>
            </property>
            <property name="wordWrap" >
             <bool>false</bool>

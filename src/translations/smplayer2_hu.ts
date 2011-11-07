@@ -219,8 +219,8 @@
     </message>
     <message>
         <location filename="../about.cpp" line="48"/>
-        <source>Using MPlayer %1</source>
-        <translation>Használt MPlayer: %1</translation>
+        <source>Using mplayer2 %1</source>
+        <translation>Használt mplayer2: %1</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="202"/>
@@ -891,7 +891,7 @@ Valóban felül akarja írni?</translation>
     <message>
         <location filename="../basegui.cpp" line="1733"/>
         <source>SMPlayer2 - mplayer log</source>
-        <translation>SMPlayer2 - MPlayer napló</translation>
+        <translation>SMPlayer2 - mplayer2 napló</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="1734"/>
@@ -1277,8 +1277,8 @@ A beállító panel megjelenik most, állítsa be az eszközöket.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4397"/>
-        <source>MPlayer has finished unexpectedly.</source>
-        <translation>Az MPlayer váratlanul leállt.</translation>
+        <source>mplayer2 has finished unexpectedly.</source>
+        <translation>Az mplayer2 váratlanul leállt.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4398"/>
@@ -1287,18 +1287,18 @@ A beállító panel megjelenik most, állítsa be az eszközöket.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4415"/>
-        <source>MPlayer failed to start.</source>
-        <translation>Az MPlayer nem tudott elindulni.</translation>
+        <source>mplayer2 failed to start.</source>
+        <translation>Az mplayer2 nem tudott elindulni.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4416"/>
-        <source>Please check the MPlayer path in preferences.</source>
-        <translation>Ellenőrizze az MPlayer elérési útvonalát a beállításokban.</translation>
+        <source>Please check the mplayer2 path in preferences.</source>
+        <translation>Ellenőrizze az mplayer2 elérési útvonalát a beállításokban.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4418"/>
-        <source>MPlayer has crashed.</source>
-        <translation>Az MPlayer összeomlott.</translation>
+        <source>mplayer2 has crashed.</source>
+        <translation>Az mplayer2 összeomlott.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4419"/>
@@ -1434,18 +1434,18 @@ A beállító panel megjelenik most, állítsa be az eszközöket.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3824"/>
-        <source>Warning - Using old MPlayer</source>
-        <translation>Figyelem - Régi MPlayer használata</translation>
+        <source>Warning - Using old mplayer2</source>
+        <translation>Figyelem - Régi mplayer2 használata</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3828"/>
-        <source>The version of MPlayer (%1) installed on your system is obsolete. SMPlayer2 can&apos;t work well with it: some options won&apos;t work, subtitle selection may fail...</source>
-        <translation>A feltelepített %1 verziójú MPlayer elavult. Az SMPlayer2 nem tud vele jól együttműködni: egyes opciók nem fognak működni, felirat kiválasztás hibás lehet...</translation>
+        <source>The version of mplayer2 (%1) installed on your system is obsolete. SMPlayer2 can&apos;t work well with it: some options won&apos;t work, subtitle selection may fail...</source>
+        <translation>A feltelepített %1 verziójú mplayer2 elavult. Az SMPlayer2 nem tud vele jól együttműködni: egyes opciók nem fognak működni, felirat kiválasztás hibás lehet...</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3831"/>
-        <source>Please, update your MPlayer.</source>
-        <translation>Kérem frissítse az MPlayert.</translation>
+        <source>Please, update your mplayer2.</source>
+        <translation>Kérem frissítse az mplayer2t.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3832"/>
@@ -1951,8 +1951,8 @@ A beállító panel megjelenik most, állítsa be az eszközöket.</translation>
     </message>
     <message>
         <location filename="../errordialog.ui" line="13"/>
-        <source>MPlayer Error</source>
-        <translation>MPlayer hiba</translation>
+        <source>mplayer2 Error</source>
+        <translation>mplayer2 hiba</translation>
     </message>
     <message>
         <location filename="../errordialog.ui" line="41"/>
@@ -2113,20 +2113,20 @@ A beállító panel megjelenik most, állítsa be az eszközöket.</translation>
     </message>
     <message>
         <location filename="../filepropertiesdialog.ui" line="239"/>
-        <source>&amp;MPlayer options</source>
-        <translation>&amp;MPlayer opciók</translation>
+        <source>&amp;mplayer2 options</source>
+        <translation>&amp;mplayer2 opciók</translation>
     </message>
     <message>
         <location filename="../filepropertiesdialog.ui" line="251"/>
-        <source>Additional Options for MPlayer</source>
-        <translation>További opciók az MPlayernek</translation>
+        <source>Additional Options for mplayer2</source>
+        <translation>További opciók az mplayer2nek</translation>
     </message>
     <message>
         <location filename="../filepropertiesdialog.ui" line="263"/>
-        <source>Here you can pass extra options to MPlayer.
+        <source>Here you can pass extra options to mplayer2.
 Write them separated by spaces.
 Example: -flip -nosound</source>
-        <translation>Itt kell megadnia az extra opciókat az MPlayernek.
+        <translation>Itt kell megadnia az extra opciókat az mplayer2nek.
 Írja őket szóközzel elválasztva.
 Például: -flip -nosound</translation>
     </message>
@@ -2672,18 +2672,18 @@ Please check the permissions of that folder.</source>
     <name>InputMplayerVersion</name>
     <message>
         <location filename="../inputmplayerversion.ui" line="14"/>
-        <source>SMPlayer2 - Enter the MPlayer version</source>
-        <translation>SMPlayer2 - Adja meg az MPlayer verzióját</translation>
+        <source>SMPlayer2 - Enter the mplayer2 version</source>
+        <translation>SMPlayer2 - Adja meg az mplayer2 verzióját</translation>
     </message>
     <message>
         <location filename="../inputmplayerversion.ui" line="35"/>
-        <source>SMPlayer2 couldn&apos;t identify the MPlayer version you&apos;re using.</source>
-        <translation>Az SMPlayer2 nem tudta azonosítani a használt MPlayer verziót.</translation>
+        <source>SMPlayer2 couldn&apos;t identify the mplayer2 version you&apos;re using.</source>
+        <translation>Az SMPlayer2 nem tudta azonosítani a használt mplayer2 verziót.</translation>
     </message>
     <message>
         <location filename="../inputmplayerversion.ui" line="58"/>
-        <source>Version reported by MPlayer:</source>
-        <translation>MPlayer által jelentett verzió:</translation>
+        <source>Version reported by mplayer2:</source>
+        <translation>mplayer2 által jelentett verzió:</translation>
     </message>
     <message>
         <location filename="../inputmplayerversion.ui" line="102"/>
@@ -4103,10 +4103,10 @@ Valóban felül akarja írni?</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="325"/>
-        <source>Here you can pass extra options to MPlayer.
+        <source>Here you can pass extra options to mplayer2.
 Write them separated by spaces.
 Example: -flip -nosound</source>
-        <translation>Itt küldhet további opciókat az MPlayer-hez
+        <translation>Itt küldhet további opciókat az mplayer2-hez
 Írja őket szóközzel elválasztva.
 Például:  -flip -nosound</translation>
     </message>
@@ -4128,8 +4128,8 @@ Például: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="456"/>
-        <source>Log MPlayer output</source>
-        <translation>MPlayer kimenet naplózása</translation>
+        <source>Log mplayer2 output</source>
+        <translation>mplayer2 kimenet naplózása</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="445"/>
@@ -4158,7 +4158,7 @@ Például: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="122"/>
-        <source>&amp;Run MPlayer in its own window</source>
+        <source>&amp;Run mplayer2 in its own window</source>
         <translation>M&amp;Player futtatása saját ablakban</translation>
     </message>
     <message>
@@ -4203,53 +4203,53 @@ Például: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="641"/>
-        <source>Log MPlayer &amp;output</source>
+        <source>Log mplayer2 &amp;output</source>
         <translation>M&amp;Player kimenet naplózása</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="304"/>
         <source>Options for MP&amp;layer</source>
-        <translation>&amp;MPlayer opciók</translation>
+        <translation>&amp;mplayer2 opciók</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="462"/>
-        <source>Autosave MPlayer log</source>
-        <translation>MPlayer napló automatikus mentése</translation>
+        <source>Autosave mplayer2 log</source>
+        <translation>mplayer2 napló automatikus mentése</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="466"/>
-        <source>If this option is checked, the MPlayer log will be saved to the specified file every time a new file starts to play. It&apos;s intended for external applications, so they can get info about the file you&apos;re playing.</source>
-        <translation>Ezen opció bejelölésével az MPlayer napló minden új fájl lejátszásakor a megadott fájlba lesz mentve. Külső alkalmazások ily mód információt szerezhetnek az épp lejátszott fájlról.</translation>
+        <source>If this option is checked, the mplayer2 log will be saved to the specified file every time a new file starts to play. It&apos;s intended for external applications, so they can get info about the file you&apos;re playing.</source>
+        <translation>Ezen opció bejelölésével az mplayer2 napló minden új fájl lejátszásakor a megadott fájlba lesz mentve. Külső alkalmazások ily mód információt szerezhetnek az épp lejátszott fájlról.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="468"/>
-        <source>Autosave MPlayer log filename</source>
-        <translation>Automatikusan mentett MPlayer napló fájlnév</translation>
+        <source>Autosave mplayer2 log filename</source>
+        <translation>Automatikusan mentett mplayer2 napló fájlnév</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="470"/>
-        <source>Enter here the path and filename that will be used to save the MPlayer log.</source>
-        <translation>Adja meg az elérési utat és a fájlnevet az MPlayer napló mentéséhez.</translation>
+        <source>Enter here the path and filename that will be used to save the mplayer2 log.</source>
+        <translation>Adja meg az elérési utat és a fájlnevet az mplayer2 napló mentéséhez.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="689"/>
-        <source>A&amp;utosave MPlayer log to file</source>
-        <translation>MPlayer &amp;napló automatikus mentése fájlba</translation>
+        <source>A&amp;utosave mplayer2 log to file</source>
+        <translation>mplayer2 &amp;napló automatikus mentése fájlba</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="388"/>
-        <source>Pass short filenames (8+3) to MPlayer</source>
-        <translation>Rövid fájlnevek (8+3) küldése az MPlayernek</translation>
+        <source>Pass short filenames (8+3) to mplayer2</source>
+        <translation>Rövid fájlnevek (8+3) küldése az mplayer2nek</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="392"/>
-        <source>Currently MPlayer can&apos;t open filenames which contains characters outside the local codepage. Checking this option will make SMPlayer2 to pass to MPlayer the short version of the filenames, and thus it will able to open them.</source>
-        <translation>Jelenleg az MPlayer nem képes megnyitni a helyi kódlapban nem szereplő karaktereket tartalmazó fájlneveket. Ezen opció bejelölésével az SMPlayer2 a fájlnevek rövid változatát küldi el az MPlayernek, így képes lesz megnyitni őket.</translation>
+        <source>Currently mplayer2 can&apos;t open filenames which contains characters outside the local codepage. Checking this option will make SMPlayer2 to pass to mplayer2 the short version of the filenames, and thus it will able to open them.</source>
+        <translation>Jelenleg az mplayer2 nem képes megnyitni a helyi kódlapban nem szereplő karaktereket tartalmazó fájlneveket. Ezen opció bejelölésével az SMPlayer2 a fájlnevek rövid változatát küldi el az mplayer2nek, így képes lesz megnyitni őket.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="166"/>
-        <source>&amp;Pass short filenames (8+3) to MPlayer</source>
-        <translation>&amp;Rövid fájlnevek (8+3) küldése az MPlayernek</translation>
+        <source>&amp;Pass short filenames (8+3) to mplayer2</source>
+        <translation>&amp;Rövid fájlnevek (8+3) küldése az mplayer2nek</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="359"/>
@@ -4263,13 +4263,13 @@ Például: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="362"/>
-        <source>Run MPlayer in its own window</source>
-        <translation>MPlayer futtatása saját ablakban</translation>
+        <source>Run mplayer2 in its own window</source>
+        <translation>mplayer2 futtatása saját ablakban</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="368"/>
-        <source>If you check this option, the MPlayer video window won&apos;t be embedded in SMPlayer2&apos;s main window but instead it will use its own window. Note that mouse and keyboard events will be handled directly by MPlayer, that means key shortcuts and mouse clicks probably won&apos;t work as expected when the MPlayer window has the focus.</source>
-        <translation>Ezen opció bejelölésével az MPlayer ablak nem lesz beágyazva az SMPlayer2 főablakába, hanem független ablakban fog futni. Az egér és billentyűparancsokat közvetlenül az MPlayer fogja kezelni, ez azt jelenti, hogy a gyorsgombok és az egérkattintások valószínűleg nem fognak megfelelően működni ha az MPlayer ablak van fókuszban.</translation>
+        <source>If you check this option, the mplayer2 video window won&apos;t be embedded in SMPlayer2&apos;s main window but instead it will use its own window. Note that mouse and keyboard events will be handled directly by mplayer2, that means key shortcuts and mouse clicks probably won&apos;t work as expected when the mplayer2 window has the focus.</source>
+        <translation>Ezen opció bejelölésével az mplayer2 ablak nem lesz beágyazva az SMPlayer2 főablakába, hanem független ablakban fog futni. Az egér és billentyűparancsokat közvetlenül az mplayer2 fogja kezelni, ez azt jelenti, hogy a gyorsgombok és az egérkattintások valószínűleg nem fognak megfelelően működni ha az mplayer2 ablak van fókuszban.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="403"/>
@@ -4283,8 +4283,8 @@ Például: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="421"/>
-        <source>Options for MPlayer</source>
-        <translation>MPlayer opciók</translation>
+        <source>Options for mplayer2</source>
+        <translation>mplayer2 opciók</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="423"/>
@@ -4293,8 +4293,8 @@ Például: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="425"/>
-        <source>Here you can type options for MPlayer. Write them separated by spaces.</source>
-        <translation>Itt adhat meg opciókat az MPlayernek. Írja őket szóközzel elválasztva.</translation>
+        <source>Here you can type options for mplayer2. Write them separated by spaces.</source>
+        <translation>Itt adhat meg opciókat az mplayer2nek. Írja őket szóközzel elválasztva.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="427"/>
@@ -4303,8 +4303,8 @@ Például: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="429"/>
-        <source>Here you can add video filters for MPlayer. Write them separated by commas. Don&apos;t use spaces!</source>
-        <translation>Itt tud további videó szűrőket hozzáadni az MPlayernek. Írja őket &quot;,&quot;-vel elválasztva. Ne használja a szóközt!</translation>
+        <source>Here you can add video filters for mplayer2. Write them separated by commas. Don&apos;t use spaces!</source>
+        <translation>Itt tud további videó szűrőket hozzáadni az mplayer2nek. Írja őket &quot;,&quot;-vel elválasztva. Ne használja a szóközt!</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="431"/>
@@ -4313,8 +4313,8 @@ Például: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="433"/>
-        <source>Here you can add audio filters for MPlayer. Write them separated by commas. Don&apos;t use spaces!</source>
-        <translation>Itt tud további hang szűrőket hozzáadni az MPlayernek. Írja őket &quot;,&quot;-vel elválasztva. Ne használja a szóközt!</translation>
+        <source>Here you can add audio filters for mplayer2. Write them separated by commas. Don&apos;t use spaces!</source>
+        <translation>Itt tud további hang szűrőket hozzáadni az mplayer2nek. Írja őket &quot;,&quot;-vel elválasztva. Ne használja a szóközt!</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="397"/>
@@ -4383,8 +4383,8 @@ Például: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="460"/>
-        <source>If checked, SMPlayer2 will store the output of MPlayer (you can see it in &lt;b&gt;Options -&gt; View logs -&gt; MPlayer&lt;/b&gt;). In case of problems this log can contain important information, so it&apos;s recommended to keep this option checked.</source>
-        <translation>Ha bejelöli, az SMPlayer2 rögzíti az MPlayer kimenetét (megtekinthető itt: &lt;b&gt;Opciók -&gt; Naplók megjelenítése -&gt; MPlayer&lt;/b&gt;). Probléma esetén fontos információkat tartalmazhat, ezért érdemes ezt az opciót bejelölni.</translation>
+        <source>If checked, SMPlayer2 will store the output of mplayer2 (you can see it in &lt;b&gt;Options -&gt; View logs -&gt; mplayer2&lt;/b&gt;). In case of problems this log can contain important information, so it&apos;s recommended to keep this option checked.</source>
+        <translation>Ha bejelöli, az SMPlayer2 rögzíti az mplayer2 kimenetét (megtekinthető itt: &lt;b&gt;Opciók -&gt; Naplók megjelenítése -&gt; mplayer2&lt;/b&gt;). Probléma esetén fontos információkat tartalmazhat, ezért érdemes ezt az opciót bejelölni.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="476"/>
@@ -4398,8 +4398,8 @@ Például: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="385"/>
-        <source>Switches MPlayer to an experimental mode where timestamps for video frames are calculated differently and video filters which add new frames or modify timestamps of existing ones are supported. The more accurate timestamps can be visible for example when playing subtitles timed to scene changes with the SSA/ASS library enabled. Without correct pts the subtitle timing will typically be off by some frames. This option does not work correctly with some demuxers and codecs.</source>
-        <translation>Az MPlayert egy kísérleti módba kapcsolja, amelyben a képkockák időcímkéi máshogyan számítódnak és támogatva lesznek az új képkockákat hozzáadó vagy a meglévők időcímkéit módosító videó szűrők. A pontosabb időcímkék észlelhetők például jelenetváltáshoz időzített feliratok lejátszásakor engedélyezett SSA/ASS könyvtárral. Korrekt PTS nélkül a felirat időzítése általában eltérhet néhány képkockával. Ez az opció nem működik helyesen néhány demuxerrel és kodekkel.</translation>
+        <source>Switches mplayer2 to an experimental mode where timestamps for video frames are calculated differently and video filters which add new frames or modify timestamps of existing ones are supported. The more accurate timestamps can be visible for example when playing subtitles timed to scene changes with the SSA/ASS library enabled. Without correct pts the subtitle timing will typically be off by some frames. This option does not work correctly with some demuxers and codecs.</source>
+        <translation>Az mplayer2t egy kísérleti módba kapcsolja, amelyben a képkockák időcímkéi máshogyan számítódnak és támogatva lesznek az új képkockákat hozzáadó vagy a meglévők időcímkéit módosító videó szűrők. A pontosabb időcímkék észlelhetők például jelenetváltáshoz időzített feliratok lejátszásakor engedélyezett SSA/ASS könyvtárral. Korrekt PTS nélkül a felirat időzítése általában eltérhet néhány képkockával. Ez az opció nem működik helyesen néhány demuxerrel és kodekkel.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="409"/>
@@ -4595,7 +4595,7 @@ Például: resample=44100:0:0,volnorm</translation>
     <message>
         <location filename="../prefdrives.cpp" line="190"/>
         <source>If this option is checked, smplayer2 will play DVDs using dvdnav. Requires a recent version of mplayer compiled with dvdnav support.</source>
-        <translation>Ha ez be van jelölve, az SMPlayer2 a DVD-ket dvdnav használatával fogja lejátszani. Egy aktuális MPlayer verzió szükséges hozzá, dvdnav támogatással fordítva.</translation>
+        <translation>Ha ez be van jelölve, az SMPlayer2 a DVD-ket dvdnav használatával fogja lejátszani. Egy aktuális mplayer2 verzió szükséges hozzá, dvdnav támogatással fordítva.</translation>
     </message>
     <message>
         <location filename="../prefdrives.cpp" line="191"/>
@@ -4673,7 +4673,7 @@ Például: resample=44100:0:0,volnorm</translation>
     <message>
         <location filename="../prefgeneral.cpp" line="122"/>
         <source>Select the mplayer executable</source>
-        <translation>Válassza ki az MPlayer futtatható fájlt</translation>
+        <translation>Válassza ki az mplayer2 futtatható fájlt</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="124"/>
@@ -4692,8 +4692,8 @@ Például: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="780"/>
-        <source>MPlayer executable</source>
-        <translation>MPlayer futtatható állománya</translation>
+        <source>mplayer2 executable</source>
+        <translation>mplayer2 futtatható állománya</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="811"/>
@@ -4787,8 +4787,8 @@ Például: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="847"/>
-        <source>Select the &amp;MPlayer executable:</source>
-        <translation type="obsolete">A futtatható &amp;MPlayer állomány kiválasztása:</translation>
+        <source>Select the &amp;mplayer2 executable:</source>
+        <translation type="obsolete">A futtatható &amp;mplayer2 állomány kiválasztása:</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="847"/>
@@ -5043,8 +5043,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="950"/>
-        <source>Allows to change the playback speed without altering pitch. Requires at least MPlayer dev-SVN-r24924.</source>
-        <translation>Lehetőséget nyújt a visszajátszási sebesség változtatására a hangmagasság változása nélkül. Legalább MPlayer dev-SVN-r24924 szükséges.</translation>
+        <source>Allows to change the playback speed without altering pitch. Requires at least mplayer2 dev-SVN-r24924.</source>
+        <translation>Lehetőséget nyújt a visszajátszási sebesség változtatására a hangmagasság változása nélkül. Legalább mplayer2 dev-SVN-r24924 szükséges.</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="949"/>
@@ -5203,8 +5203,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="784"/>
-        <source>Here you must specify the mplayer executable that SMPlayer2 will use.&lt;br&gt;SMPlayer2 requires at least MPlayer 1.0rc1 (although a recent revision from SVN is highly recommended).</source>
-        <translation>Itt kell beállítania a futtatható MPlayer fájlt amit az SMPlayer2 használni fog.&lt;br&gt;Az SMPlayer2 legalább 1.0rc1-es MPlayert igényel (bár egy friss SVN verzió ajánlott).</translation>
+        <source>Here you must specify the mplayer executable that SMPlayer2 will use.&lt;br&gt;SMPlayer2 requires at least mplayer2 1.0rc1 (although a recent revision from SVN is highly recommended).</source>
+        <translation>Itt kell beállítania a futtatható mplayer2 fájlt amit az SMPlayer2 használni fog.&lt;br&gt;Az SMPlayer2 legalább 1.0rc1-es mplayer2t igényel (bár egy friss SVN verzió ajánlott).</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="786"/>
@@ -5258,8 +5258,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.ui" line="569"/>
-        <source>If this option is checked the initial volume will be set just before playback starts. This avoids a loud volume on startup. Requires at least MPlayer SVN r27872.</source>
-        <translation type="obsolete">Ha ez be van jelölve, a hangerő a lejátszás kezdete előtt lesz beállítva. Ezzel elkerülhető a magas hangerő a kezdésnél. Legalább MPlayer SVN r27872-t igényel.</translation>
+        <source>If this option is checked the initial volume will be set just before playback starts. This avoids a loud volume on startup. Requires at least mplayer2 SVN r27872.</source>
+        <translation type="obsolete">Ha ez be van jelölve, a hangerő a lejátszás kezdete előtt lesz beállítva. Ezzel elkerülhető a magas hangerő a kezdésnél. Legalább mplayer2 SVN r27872-t igényel.</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="886"/>
@@ -5328,8 +5328,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="946"/>
-        <source>Requests the number of playback channels. MPlayer asks the decoder to decode the audio into as many channels as specified. Then it is up to the decoder to fulfill the requirement. This is usually only important when playing videos with AC3 audio (like DVDs). In that case liba52 does the decoding by default and correctly downmixes the audio into the requested number of channels. &lt;b&gt;Note&lt;/b&gt;: This option is honored by codecs (AC3 only), filters (surround) and audio output drivers (OSS at least).</source>
-        <translation>Lejátszási csatornák számának kérése. Az MPlayer a dekódert a hang megadott számú csatornára dekódolására kéri. A kérés teljesítése a dekóderen múlik. Ez általában csak AC3 hangú videók (pl. DVD-k) lejátszásánál fontos. Abban az esetben liba52 végzi a dekódolást alapértelmezés szerint és helyesen lekeveri a hangot a kért számú csatornára. &lt;b&gt;Megjegyzés&lt;/b&gt;: Ez az opció vonatkozik kodekekre (csak AC3), szűrőkre (surround) és hang kimeneti meghajtókra (OSS legalább is).</translation>
+        <source>Requests the number of playback channels. mplayer2 asks the decoder to decode the audio into as many channels as specified. Then it is up to the decoder to fulfill the requirement. This is usually only important when playing videos with AC3 audio (like DVDs). In that case liba52 does the decoding by default and correctly downmixes the audio into the requested number of channels. &lt;b&gt;Note&lt;/b&gt;: This option is honored by codecs (AC3 only), filters (surround) and audio output drivers (OSS at least).</source>
+        <translation>Lejátszási csatornák számának kérése. Az mplayer2 a dekódert a hang megadott számú csatornára dekódolására kéri. A kérés teljesítése a dekóderen múlik. Ez általában csak AC3 hangú videók (pl. DVD-k) lejátszásánál fontos. Abban az esetben liba52 végzi a dekódolást alapértelmezés szerint és helyesen lekeveri a hangot a kért számú csatornára. &lt;b&gt;Megjegyzés&lt;/b&gt;: Ez az opció vonatkozik kodekekre (csak AC3), szűrőkre (surround) és hang kimeneti meghajtókra (OSS legalább is).</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="807"/>
@@ -5348,8 +5348,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.ui" line="43"/>
-        <source>&amp;MPlayer executable:</source>
-        <translation>&amp;MPlayer futtatható állomány:</translation>
+        <source>&amp;mplayer2 executable:</source>
+        <translation>&amp;mplayer2 futtatható állomány:</translation>
     </message>
     <message>
         <location filename="../prefgeneral.ui" line="150"/>
@@ -6442,8 +6442,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefperformance.ui" line="77"/>
-        <source>Select the priority for the MPlayer process.</source>
-        <translation>Válasszon egy prioritást az MPlayer folyamathoz.</translation>
+        <source>Select the priority for the mplayer2 process.</source>
+        <translation>Válasszon egy prioritást az mplayer2 folyamathoz.</translation>
     </message>
     <message>
         <location filename="../prefperformance.ui" line="118"/>
@@ -6587,8 +6587,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="280"/>
-        <source>Possible values:&lt;br&gt; &lt;b&gt;Yes&lt;/b&gt;: it will try the fastest method to switch the audio track (it might not work with some formats).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: the MPlayer process will be restarted whenever you change the audio track.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 will decide what to do according to the MPlayer version.</source>
-        <translation>Lehetséges értékek:&lt;br&gt; &lt;b&gt;Igen&lt;/b&gt;: hangsávváltás a leggyorsabb módszerrel (néhány formátumnál nem működik).&lt;br&gt; &lt;b&gt;Nem&lt;/b&gt;: az MPlayer folyamat újraindul minden hangsávváltáskor.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: az SMPlayer2 dönti el az MPlayer verzió alapján.</translation>
+        <source>Possible values:&lt;br&gt; &lt;b&gt;Yes&lt;/b&gt;: it will try the fastest method to switch the audio track (it might not work with some formats).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: the mplayer2 process will be restarted whenever you change the audio track.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 will decide what to do according to the mplayer2 version.</source>
+        <translation>Lehetséges értékek:&lt;br&gt; &lt;b&gt;Igen&lt;/b&gt;: hangsávváltás a leggyorsabb módszerrel (néhány formátumnál nem működik).&lt;br&gt; &lt;b&gt;Nem&lt;/b&gt;: az mplayer2 folyamat újraindul minden hangsávváltáskor.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: az SMPlayer2 dönti el az mplayer2 verzió alapján.</translation>
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="290"/>
@@ -6733,7 +6733,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     <message>
         <location filename="../prefperformance.cpp" line="240"/>
         <source>Set process priority for mplayer according to the predefined priorities available under Windows.&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; Using realtime priority can cause system lockup.</source>
-        <translation>Állítsa be az MPlayer folyamat prioritását a Windowsban meghatározott prioritásoknak megfelelően.&lt;br&gt;&lt;b&gt;Figyelem:&lt;/b&gt; A valós idejű prioritás használata rendszerlefagyást okozhat.</translation>
+        <translation>Állítsa be az mplayer2 folyamat prioritását a Windowsban meghatározott prioritásoknak megfelelően.&lt;br&gt;&lt;b&gt;Figyelem:&lt;/b&gt; A valós idejű prioritás használata rendszerlefagyást okozhat.</translation>
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="254"/>
@@ -6742,8 +6742,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="255"/>
-        <source>Try to use non-free CoreAVC codec with no other codec is specified and non-VDPAU video output selected. Requires MPlayer build with CoreAVC support.</source>
-        <translation>A nem szabad szoftver CoreAVC kodek használata ha nincs más kodek beállítva és nem VDPAU video kimenet van kiválasztva. CoreAVC-t támogató MPlayer buildet igényel.</translation>
+        <source>Try to use non-free CoreAVC codec with no other codec is specified and non-VDPAU video output selected. Requires mplayer2 build with CoreAVC support.</source>
+        <translation>A nem szabad szoftver CoreAVC kodek használata ha nincs más kodek beállítva és nem VDPAU video kimenet van kiválasztva. CoreAVC-t támogató mplayer2 buildet igényel.</translation>
     </message>
     <message>
         <location filename="../prefperformance.ui" line="292"/>
@@ -7013,8 +7013,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="472"/>
-        <source>Here you can select a system font to be used for the subtitles and OSD. &lt;b&gt;Note:&lt;/b&gt; requires a MPlayer with fontconfig support.</source>
-        <translation>Itt kiválaszthatja a feliratokhoz és OSD-hez használt rendszer betűtípust. &lt;b&gt;Megjegyzés:&lt;/b&gt; fontconfig-ot támogató MPlayer szükséges.</translation>
+        <source>Here you can select a system font to be used for the subtitles and OSD. &lt;b&gt;Note:&lt;/b&gt; requires a mplayer2 with fontconfig support.</source>
+        <translation>Itt kiválaszthatja a feliratokhoz és OSD-hez használt rendszer betűtípust. &lt;b&gt;Megjegyzés:&lt;/b&gt; fontconfig-ot támogató mplayer2 szükséges.</translation>
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="474"/>
@@ -7068,8 +7068,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="431"/>
-        <source>When this option is on, the encoding of the subtitles will be tried to be autodetected for the given language. It will fall back to the default encoding if the autodetection fails. This option requires a MPlayer compiled with ENCA support.</source>
-        <translation>Ha ez az opció aktív, a feliratok kódolásának megállapítása az adott nyelvhez lesz megpróbálva. Ha az automatikus felismerés sikertelen, az alap kódolás lesz használva. Ez az opció ENCA támogatással fordított MPlayert igényel.</translation>
+        <source>When this option is on, the encoding of the subtitles will be tried to be autodetected for the given language. It will fall back to the default encoding if the autodetection fails. This option requires a mplayer2 compiled with ENCA support.</source>
+        <translation>Ha ez az opció aktív, a feliratok kódolásának megállapítása az adott nyelvhez lesz megpróbálva. Ha az automatikus felismerés sikertelen, az alap kódolás lesz használva. Ez az opció ENCA támogatással fordított mplayer2t igényel.</translation>
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="433"/>
@@ -7436,8 +7436,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="446"/>
-        <source>You should normally not disable this option. Do it only if your MPlayer is compiled without freetype support. &lt;b&gt;Disabling this option could make that subtitles won&apos;t work at all!&lt;/b&gt;</source>
-        <translation>Általában nem ajánlott letiltani ezt az opciót, kivéve ha az MPlayerje freetype támogatás nélkül lett fordítva. &lt;b&gt;Az opció letiltásával előfordulhat, hogy a feliratok egyáltalán nem fognak működni!&lt;/b&gt;</translation>
+        <source>You should normally not disable this option. Do it only if your mplayer2 is compiled without freetype support. &lt;b&gt;Disabling this option could make that subtitles won&apos;t work at all!&lt;/b&gt;</source>
+        <translation>Általában nem ajánlott letiltani ezt az opciót, kivéve ha az mplayer2je freetype támogatás nélkül lett fordítva. &lt;b&gt;Az opció letiltásával előfordulhat, hogy a feliratok egyáltalán nem fognak működni!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../prefsubtitles.ui" line="256"/>
@@ -7690,8 +7690,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../clhelp.cpp" line="178"/>
-        <source>&apos;media&apos; is any kind of file that SMPlayer2 can open. It can be a local file, a DVD (e.g. dvd://1), an Internet stream (e.g. mms://....) or a local playlist in format m3u or pls. If the -playlist option is used, that means that SMPlayer2 will pass the -playlist option to MPlayer, so MPlayer will handle the playlist, not SMPlayer2.</source>
-        <translation>&apos;media&apos; bármely fájl amit az SMPlayer2 meg tud nyitni. Lehet egy helyi fájl, egy DVD (pl. dvd://1), egy internet adatfolyam (pl. mms://....) vagy egy helyi lejátszási lista m3u vagy pls formátumban. Ha a -playlist opció van használva, azt jelenti hogy az SMPlayer2 átadja a -playlist opciót az MPlayernek, így az MPlayer fogja kezelni a listát az SMPlayer2 helyett.</translation>
+        <source>&apos;media&apos; is any kind of file that SMPlayer2 can open. It can be a local file, a DVD (e.g. dvd://1), an Internet stream (e.g. mms://....) or a local playlist in format m3u or pls. If the -playlist option is used, that means that SMPlayer2 will pass the -playlist option to mplayer2, so mplayer2 will handle the playlist, not SMPlayer2.</source>
+        <translation>&apos;media&apos; bármely fájl amit az SMPlayer2 meg tud nyitni. Lehet egy helyi fájl, egy DVD (pl. dvd://1), egy internet adatfolyam (pl. mms://....) vagy egy helyi lejátszási lista m3u vagy pls formátumban. Ha a -playlist opció van használva, azt jelenti hogy az SMPlayer2 átadja a -playlist opciót az mplayer2nek, így az mplayer2 fogja kezelni a listát az SMPlayer2 helyett.</translation>
     </message>
     <message>
         <location filename="../clhelp.cpp" line="106"/>

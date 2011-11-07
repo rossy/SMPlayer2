@@ -219,8 +219,8 @@
     </message>
     <message>
         <location filename="../about.cpp" line="48"/>
-        <source>Using MPlayer %1</source>
-        <translation>MPlayer bi kar tîne %1</translation>
+        <source>Using mplayer2 %1</source>
+        <translation>mplayer2 bi kar tîne %1</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="202"/>
@@ -1277,8 +1277,8 @@ Niha wê peyama mîhengkirinê xuya bibe û hûn dikarên mîheng bikin.</transl
     </message>
     <message>
         <location filename="../basegui.cpp" line="4397"/>
-        <source>MPlayer has finished unexpectedly.</source>
-        <translation>MPlayer bi awayekî nedihat hêvîkirin xelas kir.</translation>
+        <source>mplayer2 has finished unexpectedly.</source>
+        <translation>mplayer2 bi awayekî nedihat hêvîkirin xelas kir.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4398"/>
@@ -1287,18 +1287,18 @@ Niha wê peyama mîhengkirinê xuya bibe û hûn dikarên mîheng bikin.</transl
     </message>
     <message>
         <location filename="../basegui.cpp" line="4415"/>
-        <source>MPlayer failed to start.</source>
-        <translation>MPlayer destpê nekir.</translation>
+        <source>mplayer2 failed to start.</source>
+        <translation>mplayer2 destpê nekir.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4416"/>
-        <source>Please check the MPlayer path in preferences.</source>
-        <translation>Di vebijêrkê de cihê MPlayer kontrol bike.</translation>
+        <source>Please check the mplayer2 path in preferences.</source>
+        <translation>Di vebijêrkê de cihê mplayer2 kontrol bike.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4418"/>
-        <source>MPlayer has crashed.</source>
-        <translation>MPlayerê lê xist.</translation>
+        <source>mplayer2 has crashed.</source>
+        <translation>mplayer2ê lê xist.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4419"/>
@@ -1434,17 +1434,17 @@ Niha wê peyama mîhengkirinê xuya bibe û hûn dikarên mîheng bikin.</transl
     </message>
     <message>
         <location filename="../basegui.cpp" line="3824"/>
-        <source>Warning - Using old MPlayer</source>
+        <source>Warning - Using old mplayer2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3828"/>
-        <source>The version of MPlayer (%1) installed on your system is obsolete. SMPlayer2 can&apos;t work well with it: some options won&apos;t work, subtitle selection may fail...</source>
+        <source>The version of mplayer2 (%1) installed on your system is obsolete. SMPlayer2 can&apos;t work well with it: some options won&apos;t work, subtitle selection may fail...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3831"/>
-        <source>Please, update your MPlayer.</source>
+        <source>Please, update your mplayer2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1951,8 +1951,8 @@ Niha wê peyama mîhengkirinê xuya bibe û hûn dikarên mîheng bikin.</transl
     </message>
     <message>
         <location filename="../errordialog.ui" line="13"/>
-        <source>MPlayer Error</source>
-        <translation>MPlayer Çewtî</translation>
+        <source>mplayer2 Error</source>
+        <translation>mplayer2 Çewtî</translation>
     </message>
     <message>
         <location filename="../errordialog.ui" line="41"/>
@@ -2113,20 +2113,20 @@ Niha wê peyama mîhengkirinê xuya bibe û hûn dikarên mîheng bikin.</transl
     </message>
     <message>
         <location filename="../filepropertiesdialog.ui" line="239"/>
-        <source>&amp;MPlayer options</source>
-        <translation>&amp;MPlayer vebijêrk</translation>
+        <source>&amp;mplayer2 options</source>
+        <translation>&amp;mplayer2 vebijêrk</translation>
     </message>
     <message>
         <location filename="../filepropertiesdialog.ui" line="251"/>
-        <source>Additional Options for MPlayer</source>
-        <translation>Ji bo MPlayer vebijêrkên pêvek</translation>
+        <source>Additional Options for mplayer2</source>
+        <translation>Ji bo mplayer2 vebijêrkên pêvek</translation>
     </message>
     <message>
         <location filename="../filepropertiesdialog.ui" line="263"/>
-        <source>Here you can pass extra options to MPlayer.
+        <source>Here you can pass extra options to mplayer2.
 Write them separated by spaces.
 Example: -flip -nosound</source>
-        <translation>Here you can pass extra options to MPlayer.(new line)
+        <translation>Here you can pass extra options to mplayer2.(new line)
 Write them separated by spaces.(new line)
 Example: -flip -nosound</translation>
     </message>
@@ -2673,18 +2673,18 @@ Please check the permissions of that folder.</source>
     <name>InputMplayerVersion</name>
     <message>
         <location filename="../inputmplayerversion.ui" line="14"/>
-        <source>SMPlayer2 - Enter the MPlayer version</source>
-        <translation>SMPlayer2 - Guhertoya MPlayerê têkevin</translation>
+        <source>SMPlayer2 - Enter the mplayer2 version</source>
+        <translation>SMPlayer2 - Guhertoya mplayer2ê têkevin</translation>
     </message>
     <message>
         <location filename="../inputmplayerversion.ui" line="35"/>
-        <source>SMPlayer2 couldn&apos;t identify the MPlayer version you&apos;re using.</source>
-        <translation>SMplayerê guhertoya we ya MPlayerê nas nekir.</translation>
+        <source>SMPlayer2 couldn&apos;t identify the mplayer2 version you&apos;re using.</source>
+        <translation>SMplayerê guhertoya we ya mplayer2ê nas nekir.</translation>
     </message>
     <message>
         <location filename="../inputmplayerversion.ui" line="58"/>
-        <source>Version reported by MPlayer:</source>
-        <translation>Guhertiya ji aliyê MPlayerê ve hat raporkirin:</translation>
+        <source>Version reported by mplayer2:</source>
+        <translation>Guhertiya ji aliyê mplayer2ê ve hat raporkirin:</translation>
     </message>
     <message>
         <location filename="../inputmplayerversion.ui" line="102"/>
@@ -4104,10 +4104,10 @@ Tu dixwazî biguherî?</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="325"/>
-        <source>Here you can pass extra options to MPlayer.
+        <source>Here you can pass extra options to mplayer2.
 Write them separated by spaces.
 Example: -flip -nosound</source>
-        <translation>Here you can pass extra options to MPlayer.
+        <translation>Here you can pass extra options to mplayer2.
 Write them separated by spaces.
 Example: -flip -nosound</translation>
     </message>
@@ -4129,8 +4129,8 @@ Example: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="456"/>
-        <source>Log MPlayer output</source>
-        <translation>Log derketiya MPlayer</translation>
+        <source>Log mplayer2 output</source>
+        <translation>Log derketiya mplayer2</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="445"/>
@@ -4159,7 +4159,7 @@ Example: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="122"/>
-        <source>&amp;Run MPlayer in its own window</source>
+        <source>&amp;Run mplayer2 in its own window</source>
         <translation>&amp;Mplayerê di paeya wê xwe de bixebitîne</translation>
     </message>
     <message>
@@ -4204,8 +4204,8 @@ Example: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="641"/>
-        <source>Log MPlayer &amp;output</source>
-        <translation>Log MPlayer &amp;output</translation>
+        <source>Log mplayer2 &amp;output</source>
+        <translation>Log mplayer2 &amp;output</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="304"/>
@@ -4214,43 +4214,43 @@ Example: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="462"/>
-        <source>Autosave MPlayer log</source>
-        <translation>Logên MPlayer bixweber tomarke</translation>
+        <source>Autosave mplayer2 log</source>
+        <translation>Logên mplayer2 bixweber tomarke</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="466"/>
-        <source>If this option is checked, the MPlayer log will be saved to the specified file every time a new file starts to play. It&apos;s intended for external applications, so they can get info about the file you&apos;re playing.</source>
-        <translation>If this option is checked, the MPlayer log will be saved to the specified file every time a new file starts to play. It&apos;s intended for external applications, so they can get info about the file you&apos;re playing.</translation>
+        <source>If this option is checked, the mplayer2 log will be saved to the specified file every time a new file starts to play. It&apos;s intended for external applications, so they can get info about the file you&apos;re playing.</source>
+        <translation>If this option is checked, the mplayer2 log will be saved to the specified file every time a new file starts to play. It&apos;s intended for external applications, so they can get info about the file you&apos;re playing.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="468"/>
-        <source>Autosave MPlayer log filename</source>
-        <translation>Navê pelên MPlayer bixweber tomarke</translation>
+        <source>Autosave mplayer2 log filename</source>
+        <translation>Navê pelên mplayer2 bixweber tomarke</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="470"/>
-        <source>Enter here the path and filename that will be used to save the MPlayer log.</source>
-        <translation>Enter here the path and filename that will be used to save the MPlayer log.</translation>
+        <source>Enter here the path and filename that will be used to save the mplayer2 log.</source>
+        <translation>Enter here the path and filename that will be used to save the mplayer2 log.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="689"/>
-        <source>A&amp;utosave MPlayer log to file</source>
-        <translation>A&amp;utosave MPlayer log to file</translation>
+        <source>A&amp;utosave mplayer2 log to file</source>
+        <translation>A&amp;utosave mplayer2 log to file</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="388"/>
-        <source>Pass short filenames (8+3) to MPlayer</source>
-        <translation>Pass short filenames (8+3) to MPlayer</translation>
+        <source>Pass short filenames (8+3) to mplayer2</source>
+        <translation>Pass short filenames (8+3) to mplayer2</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="392"/>
-        <source>Currently MPlayer can&apos;t open filenames which contains characters outside the local codepage. Checking this option will make SMPlayer2 to pass to MPlayer the short version of the filenames, and thus it will able to open them.</source>
-        <translation>Currently MPlayer can&apos;t open filenames which contains characters outside the local codepage. Checking this option will make SMPlayer2 to pass to MPlayer the short version of the filenames, and thus it will able to open them.</translation>
+        <source>Currently mplayer2 can&apos;t open filenames which contains characters outside the local codepage. Checking this option will make SMPlayer2 to pass to mplayer2 the short version of the filenames, and thus it will able to open them.</source>
+        <translation>Currently mplayer2 can&apos;t open filenames which contains characters outside the local codepage. Checking this option will make SMPlayer2 to pass to mplayer2 the short version of the filenames, and thus it will able to open them.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="166"/>
-        <source>&amp;Pass short filenames (8+3) to MPlayer</source>
-        <translation>&amp;Pass short filenames (8+3) to MPlayer</translation>
+        <source>&amp;Pass short filenames (8+3) to mplayer2</source>
+        <translation>&amp;Pass short filenames (8+3) to mplayer2</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="359"/>
@@ -4264,13 +4264,13 @@ Example: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="362"/>
-        <source>Run MPlayer in its own window</source>
-        <translation>MPlayerê di paeya wê xwe de bixebitînin</translation>
+        <source>Run mplayer2 in its own window</source>
+        <translation>mplayer2ê di paeya wê xwe de bixebitînin</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="368"/>
-        <source>If you check this option, the MPlayer video window won&apos;t be embedded in SMPlayer2&apos;s main window but instead it will use its own window. Note that mouse and keyboard events will be handled directly by MPlayer, that means key shortcuts and mouse clicks probably won&apos;t work as expected when the MPlayer window has the focus.</source>
-        <translation>If you check this option, the MPlayer video window won&apos;t be embedded in SMPlayer2&apos;s main window but instead it will use its own window. Note that mouse and keyboard events will be handled directly by MPlayer, that means key shortcuts and mouse clicks probably won&apos;t work as expected when the MPlayer window has the focus.</translation>
+        <source>If you check this option, the mplayer2 video window won&apos;t be embedded in SMPlayer2&apos;s main window but instead it will use its own window. Note that mouse and keyboard events will be handled directly by mplayer2, that means key shortcuts and mouse clicks probably won&apos;t work as expected when the mplayer2 window has the focus.</source>
+        <translation>If you check this option, the mplayer2 video window won&apos;t be embedded in SMPlayer2&apos;s main window but instead it will use its own window. Note that mouse and keyboard events will be handled directly by mplayer2, that means key shortcuts and mouse clicks probably won&apos;t work as expected when the mplayer2 window has the focus.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="403"/>
@@ -4284,8 +4284,8 @@ Example: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="421"/>
-        <source>Options for MPlayer</source>
-        <translation>Vebijêrkên MPlayer</translation>
+        <source>Options for mplayer2</source>
+        <translation>Vebijêrkên mplayer2</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="423"/>
@@ -4294,8 +4294,8 @@ Example: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="425"/>
-        <source>Here you can type options for MPlayer. Write them separated by spaces.</source>
-        <translation>Li vir hûn dikarin vebijêrkên MPlayer sererast bikin. Bi valahiyê ji hev veqetînin.</translation>
+        <source>Here you can type options for mplayer2. Write them separated by spaces.</source>
+        <translation>Li vir hûn dikarin vebijêrkên mplayer2 sererast bikin. Bi valahiyê ji hev veqetînin.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="427"/>
@@ -4304,8 +4304,8 @@ Example: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="429"/>
-        <source>Here you can add video filters for MPlayer. Write them separated by commas. Don&apos;t use spaces!</source>
-        <translation>Li vir hûn dikarin fîltreyên vîdyoyê li MPlayerê zêde bikin. Bi vîrgûlan ji hev veqetînin. Valahî bi kar neynin!</translation>
+        <source>Here you can add video filters for mplayer2. Write them separated by commas. Don&apos;t use spaces!</source>
+        <translation>Li vir hûn dikarin fîltreyên vîdyoyê li mplayer2ê zêde bikin. Bi vîrgûlan ji hev veqetînin. Valahî bi kar neynin!</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="431"/>
@@ -4314,8 +4314,8 @@ Example: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="433"/>
-        <source>Here you can add audio filters for MPlayer. Write them separated by commas. Don&apos;t use spaces!</source>
-        <translation>Li vir hûn dikarin fîltreyên dengê li MPlayerê zêde bikin. Bi vîrgûlan ji hev veqetînin. Valahî bi kar neynin!</translation>
+        <source>Here you can add audio filters for mplayer2. Write them separated by commas. Don&apos;t use spaces!</source>
+        <translation>Li vir hûn dikarin fîltreyên dengê li mplayer2ê zêde bikin. Bi vîrgûlan ji hev veqetînin. Valahî bi kar neynin!</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="397"/>
@@ -4384,7 +4384,7 @@ Example: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="460"/>
-        <source>If checked, SMPlayer2 will store the output of MPlayer (you can see it in &lt;b&gt;Options -&gt; View logs -&gt; MPlayer&lt;/b&gt;). In case of problems this log can contain important information, so it&apos;s recommended to keep this option checked.</source>
+        <source>If checked, SMPlayer2 will store the output of mplayer2 (you can see it in &lt;b&gt;Options -&gt; View logs -&gt; mplayer2&lt;/b&gt;). In case of problems this log can contain important information, so it&apos;s recommended to keep this option checked.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4399,7 +4399,7 @@ Example: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="385"/>
-        <source>Switches MPlayer to an experimental mode where timestamps for video frames are calculated differently and video filters which add new frames or modify timestamps of existing ones are supported. The more accurate timestamps can be visible for example when playing subtitles timed to scene changes with the SSA/ASS library enabled. Without correct pts the subtitle timing will typically be off by some frames. This option does not work correctly with some demuxers and codecs.</source>
+        <source>Switches mplayer2 to an experimental mode where timestamps for video frames are calculated differently and video filters which add new frames or modify timestamps of existing ones are supported. The more accurate timestamps can be visible for example when playing subtitles timed to scene changes with the SSA/ASS library enabled. Without correct pts the subtitle timing will typically be off by some frames. This option does not work correctly with some demuxers and codecs.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4678,8 +4678,8 @@ Example: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="780"/>
-        <source>MPlayer executable</source>
-        <translation>MPlayer executable</translation>
+        <source>mplayer2 executable</source>
+        <translation>mplayer2 executable</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="811"/>
@@ -4773,8 +4773,8 @@ Example: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="847"/>
-        <source>Select the &amp;MPlayer executable:</source>
-        <translation type="obsolete">Select the &amp;MPlayer executable:</translation>
+        <source>Select the &amp;mplayer2 executable:</source>
+        <translation type="obsolete">Select the &amp;mplayer2 executable:</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="847"/>
@@ -5030,8 +5030,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="950"/>
-        <source>Allows to change the playback speed without altering pitch. Requires at least MPlayer dev-SVN-r24924.</source>
-        <translation>Allows to change the playback speed without altering pitch. Requires at least MPlayer dev-SVN-r24924.</translation>
+        <source>Allows to change the playback speed without altering pitch. Requires at least mplayer2 dev-SVN-r24924.</source>
+        <translation>Allows to change the playback speed without altering pitch. Requires at least mplayer2 dev-SVN-r24924.</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="949"/>
@@ -5205,7 +5205,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="784"/>
-        <source>Here you must specify the mplayer executable that SMPlayer2 will use.&lt;br&gt;SMPlayer2 requires at least MPlayer 1.0rc1 (although a recent revision from SVN is highly recommended).</source>
+        <source>Here you must specify the mplayer executable that SMPlayer2 will use.&lt;br&gt;SMPlayer2 requires at least mplayer2 1.0rc1 (although a recent revision from SVN is highly recommended).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5320,7 +5320,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="946"/>
-        <source>Requests the number of playback channels. MPlayer asks the decoder to decode the audio into as many channels as specified. Then it is up to the decoder to fulfill the requirement. This is usually only important when playing videos with AC3 audio (like DVDs). In that case liba52 does the decoding by default and correctly downmixes the audio into the requested number of channels. &lt;b&gt;Note&lt;/b&gt;: This option is honored by codecs (AC3 only), filters (surround) and audio output drivers (OSS at least).</source>
+        <source>Requests the number of playback channels. mplayer2 asks the decoder to decode the audio into as many channels as specified. Then it is up to the decoder to fulfill the requirement. This is usually only important when playing videos with AC3 audio (like DVDs). In that case liba52 does the decoding by default and correctly downmixes the audio into the requested number of channels. &lt;b&gt;Note&lt;/b&gt;: This option is honored by codecs (AC3 only), filters (surround) and audio output drivers (OSS at least).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5340,7 +5340,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.ui" line="43"/>
-        <source>&amp;MPlayer executable:</source>
+        <source>&amp;mplayer2 executable:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6429,8 +6429,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefperformance.ui" line="77"/>
-        <source>Select the priority for the MPlayer process.</source>
-        <translation>Ji bo xebaa MPlayer giringiyê hilbijêre.</translation>
+        <source>Select the priority for the mplayer2 process.</source>
+        <translation>Ji bo xebaa mplayer2 giringiyê hilbijêre.</translation>
     </message>
     <message>
         <location filename="../prefperformance.ui" line="118"/>
@@ -6569,8 +6569,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="280"/>
-        <source>Possible values:&lt;br&gt; &lt;b&gt;Yes&lt;/b&gt;: it will try the fastest method to switch the audio track (it might not work with some formats).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: the MPlayer process will be restarted whenever you change the audio track.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 will decide what to do according to the MPlayer version.</source>
-        <translation>Possible values:&lt;br&gt; &lt;b&gt;Yes&lt;/b&gt;: it will try the fastest method to switch the audio track (it might not work with some formats).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: the MPlayer process will be restarted whenever you change the audio track.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 will decide what to do according to the MPlayer version.</translation>
+        <source>Possible values:&lt;br&gt; &lt;b&gt;Yes&lt;/b&gt;: it will try the fastest method to switch the audio track (it might not work with some formats).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: the mplayer2 process will be restarted whenever you change the audio track.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 will decide what to do according to the mplayer2 version.</source>
+        <translation>Possible values:&lt;br&gt; &lt;b&gt;Yes&lt;/b&gt;: it will try the fastest method to switch the audio track (it might not work with some formats).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: the mplayer2 process will be restarted whenever you change the audio track.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 will decide what to do according to the mplayer2 version.</translation>
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="290"/>
@@ -6729,7 +6729,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="255"/>
-        <source>Try to use non-free CoreAVC codec with no other codec is specified and non-VDPAU video output selected. Requires MPlayer build with CoreAVC support.</source>
+        <source>Try to use non-free CoreAVC codec with no other codec is specified and non-VDPAU video output selected. Requires mplayer2 build with CoreAVC support.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7000,8 +7000,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="472"/>
-        <source>Here you can select a system font to be used for the subtitles and OSD. &lt;b&gt;Note:&lt;/b&gt; requires a MPlayer with fontconfig support.</source>
-        <translation>Here you can select a system font to be used for the subtitles and OSD. &lt;b&gt;Note:&lt;/b&gt; requires a MPlayer with fontconfig support.</translation>
+        <source>Here you can select a system font to be used for the subtitles and OSD. &lt;b&gt;Note:&lt;/b&gt; requires a mplayer2 with fontconfig support.</source>
+        <translation>Here you can select a system font to be used for the subtitles and OSD. &lt;b&gt;Note:&lt;/b&gt; requires a mplayer2 with fontconfig support.</translation>
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="474"/>
@@ -7055,7 +7055,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="431"/>
-        <source>When this option is on, the encoding of the subtitles will be tried to be autodetected for the given language. It will fall back to the default encoding if the autodetection fails. This option requires a MPlayer compiled with ENCA support.</source>
+        <source>When this option is on, the encoding of the subtitles will be tried to be autodetected for the given language. It will fall back to the default encoding if the autodetection fails. This option requires a mplayer2 compiled with ENCA support.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7423,7 +7423,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="446"/>
-        <source>You should normally not disable this option. Do it only if your MPlayer is compiled without freetype support. &lt;b&gt;Disabling this option could make that subtitles won&apos;t work at all!&lt;/b&gt;</source>
+        <source>You should normally not disable this option. Do it only if your mplayer2 is compiled without freetype support. &lt;b&gt;Disabling this option could make that subtitles won&apos;t work at all!&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7667,8 +7667,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../clhelp.cpp" line="178"/>
-        <source>&apos;media&apos; is any kind of file that SMPlayer2 can open. It can be a local file, a DVD (e.g. dvd://1), an Internet stream (e.g. mms://....) or a local playlist in format m3u or pls. If the -playlist option is used, that means that SMPlayer2 will pass the -playlist option to MPlayer, so MPlayer will handle the playlist, not SMPlayer2.</source>
-        <translation>&apos;media&apos; is any kind of file that SMPlayer2 can open. It can be a local file, a DVD (e.g. dvd://1), an Internet stream (e.g. mms://....) or a local playlist in format m3u or pls. If the -playlist option is used, that means that SMPlayer2 will pass the -playlist option to MPlayer, so MPlayer will handle the playlist, not SMPlayer2.</translation>
+        <source>&apos;media&apos; is any kind of file that SMPlayer2 can open. It can be a local file, a DVD (e.g. dvd://1), an Internet stream (e.g. mms://....) or a local playlist in format m3u or pls. If the -playlist option is used, that means that SMPlayer2 will pass the -playlist option to mplayer2, so mplayer2 will handle the playlist, not SMPlayer2.</source>
+        <translation>&apos;media&apos; is any kind of file that SMPlayer2 can open. It can be a local file, a DVD (e.g. dvd://1), an Internet stream (e.g. mms://....) or a local playlist in format m3u or pls. If the -playlist option is used, that means that SMPlayer2 will pass the -playlist option to mplayer2, so mplayer2 will handle the playlist, not SMPlayer2.</translation>
     </message>
     <message>
         <location filename="../clhelp.cpp" line="106"/>

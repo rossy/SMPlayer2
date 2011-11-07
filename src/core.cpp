@@ -1,4 +1,4 @@
-/*  smplayer2, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer2.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -865,7 +865,7 @@ void Core::newMediaPlaying() {
 
 	mdat.initialized = TRUE;
 
-	// MPlayer doesn't display the length in ID_LENGTH for audio CDs...
+	// mplayer2 doesn't display the length in ID_LENGTH for audio CDs...
 	if ((mdat.duration == 0) && (mdat.type == TYPE_AUDIO_CD)) {
 		/*
 		qDebug(" *** get duration here from title info *** ");
@@ -1193,7 +1193,7 @@ void Core::startMplayer( QString file, double seek ) {
 	}
 
 	if (proc->isRunning()) {
-		qWarning("Core::startMplayer: MPlayer still running!");
+		qWarning("Core::startMplayer: mplayer2 still running!");
 		return;
     } 
 

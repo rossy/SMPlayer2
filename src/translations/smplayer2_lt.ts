@@ -220,8 +220,8 @@
     </message>
     <message>
         <location filename="../about.cpp" line="48"/>
-        <source>Using MPlayer %1</source>
-        <translation>Naudojamas MPlayer %1</translation>
+        <source>Using mplayer2 %1</source>
+        <translation>Naudojamas mplayer2 %1</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="202"/>
@@ -1233,7 +1233,7 @@ Nustatymo diaogas bus parodytas - galima tai padaryti.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4397"/>
-        <source>MPlayer has finished unexpectedly.</source>
+        <source>mplayer2 has finished unexpectedly.</source>
         <translation>Netikėta MPLayer pabaiga.</translation>
     </message>
     <message>
@@ -1243,18 +1243,18 @@ Nustatymo diaogas bus parodytas - galima tai padaryti.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4415"/>
-        <source>MPlayer failed to start.</source>
-        <translation>MPlayer starto klaida.</translation>
+        <source>mplayer2 failed to start.</source>
+        <translation>mplayer2 starto klaida.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4416"/>
-        <source>Please check the MPlayer path in preferences.</source>
+        <source>Please check the mplayer2 path in preferences.</source>
         <translation>Patikrinkite kelią iki MPLayer&apos;io parinktyse.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4418"/>
-        <source>MPlayer has crashed.</source>
-        <translation>MPlayer užlūžo.</translation>
+        <source>mplayer2 has crashed.</source>
+        <translation>mplayer2 užlūžo.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4419"/>
@@ -1390,18 +1390,18 @@ Nustatymo diaogas bus parodytas - galima tai padaryti.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3824"/>
-        <source>Warning - Using old MPlayer</source>
-        <translation>Dėmesio - naudojamas senas MPlayer</translation>
+        <source>Warning - Using old mplayer2</source>
+        <translation>Dėmesio - naudojamas senas mplayer2</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3828"/>
-        <source>The version of MPlayer (%1) installed on your system is obsolete. SMPlayer2 can&apos;t work well with it: some options won&apos;t work, subtitle selection may fail...</source>
-        <translation>Įdegta MPlayer (%1) versija paseno. SMPlayer2 negali su ja gerai dirbti - kai kurios parinktys gali neveikti, subtitrų parinkimas gali nepasisekti...</translation>
+        <source>The version of mplayer2 (%1) installed on your system is obsolete. SMPlayer2 can&apos;t work well with it: some options won&apos;t work, subtitle selection may fail...</source>
+        <translation>Įdegta mplayer2 (%1) versija paseno. SMPlayer2 negali su ja gerai dirbti - kai kurios parinktys gali neveikti, subtitrų parinkimas gali nepasisekti...</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3831"/>
-        <source>Please, update your MPlayer.</source>
-        <translation>Atnaujinkite MPlayer&apos;į.</translation>
+        <source>Please, update your mplayer2.</source>
+        <translation>Atnaujinkite mplayer2&apos;į.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3832"/>
@@ -1907,8 +1907,8 @@ Nustatymo diaogas bus parodytas - galima tai padaryti.</translation>
     </message>
     <message>
         <location filename="../errordialog.ui" line="13"/>
-        <source>MPlayer Error</source>
-        <translation>MPlayer klaida</translation>
+        <source>mplayer2 Error</source>
+        <translation>mplayer2 klaida</translation>
     </message>
     <message>
         <location filename="../errordialog.ui" line="41"/>
@@ -2069,20 +2069,20 @@ Nustatymo diaogas bus parodytas - galima tai padaryti.</translation>
     </message>
     <message>
         <location filename="../filepropertiesdialog.ui" line="239"/>
-        <source>&amp;MPlayer options</source>
-        <translation>&amp;MPlayer parinktys</translation>
+        <source>&amp;mplayer2 options</source>
+        <translation>&amp;mplayer2 parinktys</translation>
     </message>
     <message>
         <location filename="../filepropertiesdialog.ui" line="251"/>
-        <source>Additional Options for MPlayer</source>
-        <translation>Papildomos MPlayer&apos;io parinktys</translation>
+        <source>Additional Options for mplayer2</source>
+        <translation>Papildomos mplayer2&apos;io parinktys</translation>
     </message>
     <message>
         <location filename="../filepropertiesdialog.ui" line="263"/>
-        <source>Here you can pass extra options to MPlayer.
+        <source>Here you can pass extra options to mplayer2.
 Write them separated by spaces.
 Example: -flip -nosound</source>
-        <translation>Čia galima nurodyti papildomas MPlayer&apos;io parinktis.
+        <translation>Čia galima nurodyti papildomas mplayer2&apos;io parinktis.
 Įrašai turi būti atskirti tarpais.
 Pavyzdžiui: -flip -nosound</translation>
     </message>
@@ -2632,18 +2632,18 @@ Patiktinti priėjimo prie katalogo teises.</translation>
     <name>InputMplayerVersion</name>
     <message>
         <location filename="../inputmplayerversion.ui" line="14"/>
-        <source>SMPlayer2 - Enter the MPlayer version</source>
-        <translation>SMPlayer2 - įveskite MPlayer&apos;io versiją</translation>
+        <source>SMPlayer2 - Enter the mplayer2 version</source>
+        <translation>SMPlayer2 - įveskite mplayer2&apos;io versiją</translation>
     </message>
     <message>
         <location filename="../inputmplayerversion.ui" line="35"/>
-        <source>SMPlayer2 couldn&apos;t identify the MPlayer version you&apos;re using.</source>
-        <translation>SMPlayer2 negali identifikuoti naudojamo MPlayer&apos;io versijos.</translation>
+        <source>SMPlayer2 couldn&apos;t identify the mplayer2 version you&apos;re using.</source>
+        <translation>SMPlayer2 negali identifikuoti naudojamo mplayer2&apos;io versijos.</translation>
     </message>
     <message>
         <location filename="../inputmplayerversion.ui" line="58"/>
-        <source>Version reported by MPlayer:</source>
-        <translation>Versija gauta iš MPlayer&apos;io:</translation>
+        <source>Version reported by mplayer2:</source>
+        <translation>Versija gauta iš mplayer2&apos;io:</translation>
     </message>
     <message>
         <location filename="../inputmplayerversion.ui" line="102"/>
@@ -4058,10 +4058,10 @@ Norite perrašyti?</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="325"/>
-        <source>Here you can pass extra options to MPlayer.
+        <source>Here you can pass extra options to mplayer2.
 Write them separated by spaces.
 Example: -flip -nosound</source>
-        <translation>Čia galima nurodyti papildomas MPlayer&apos;io parinktis.
+        <translation>Čia galima nurodyti papildomas mplayer2&apos;io parinktis.
 Įrašai turi būti atskirti tarpais.
 Pavyzdžiui: -flip -nosound</translation>
     </message>
@@ -4083,8 +4083,8 @@ Pavyzdžiui: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="456"/>
-        <source>Log MPlayer output</source>
-        <translation>MPlayer&apos;io išvesties ataskaita</translation>
+        <source>Log mplayer2 output</source>
+        <translation>mplayer2&apos;io išvesties ataskaita</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="445"/>
@@ -4113,8 +4113,8 @@ Pavyzdžiui: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="122"/>
-        <source>&amp;Run MPlayer in its own window</source>
-        <translation>Paleisti MPlayer&apos;į atski&amp;rame lange</translation>
+        <source>&amp;Run mplayer2 in its own window</source>
+        <translation>Paleisti mplayer2&apos;į atski&amp;rame lange</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="357"/>
@@ -4158,8 +4158,8 @@ Pavyzdžiui: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="641"/>
-        <source>Log MPlayer &amp;output</source>
-        <translation>MPlayer&apos;io &amp;išvesties ataskaita</translation>
+        <source>Log mplayer2 &amp;output</source>
+        <translation>mplayer2&apos;io &amp;išvesties ataskaita</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="304"/>
@@ -4168,43 +4168,43 @@ Pavyzdžiui: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="462"/>
-        <source>Autosave MPlayer log</source>
-        <translation>Automatinis MPlayer&apos;io ataskaitos išsaugojimas</translation>
+        <source>Autosave mplayer2 log</source>
+        <translation>Automatinis mplayer2&apos;io ataskaitos išsaugojimas</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="466"/>
-        <source>If this option is checked, the MPlayer log will be saved to the specified file every time a new file starts to play. It&apos;s intended for external applications, so they can get info about the file you&apos;re playing.</source>
-        <translation>Jei pažymėta, MPlayer&apos;io ataskaita bus išsaugota specialiame faile kiekvieną kartą, kai bus pradėtas naujo failo atkūrimas. Tai gali būti reikalinga išoriniams priedams, kurie gauna informaciją apie atkuriamą failą.</translation>
+        <source>If this option is checked, the mplayer2 log will be saved to the specified file every time a new file starts to play. It&apos;s intended for external applications, so they can get info about the file you&apos;re playing.</source>
+        <translation>Jei pažymėta, mplayer2&apos;io ataskaita bus išsaugota specialiame faile kiekvieną kartą, kai bus pradėtas naujo failo atkūrimas. Tai gali būti reikalinga išoriniams priedams, kurie gauna informaciją apie atkuriamą failą.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="468"/>
-        <source>Autosave MPlayer log filename</source>
+        <source>Autosave mplayer2 log filename</source>
         <translation>Automatiškai išsaugoti Mplayer&apos;io ataskaitos failo pavadinimą</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="470"/>
-        <source>Enter here the path and filename that will be used to save the MPlayer log.</source>
-        <translation>Čia įveskite failo, kuriame bus išsaugota MPlayer&apos;io ataskaita, pavadinimą ir kelią iki jo.</translation>
+        <source>Enter here the path and filename that will be used to save the mplayer2 log.</source>
+        <translation>Čia įveskite failo, kuriame bus išsaugota mplayer2&apos;io ataskaita, pavadinimą ir kelią iki jo.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="689"/>
-        <source>A&amp;utosave MPlayer log to file</source>
-        <translation>A&amp;utomatiškai išsaugoti MPlayer&apos;io ataskaitą faile</translation>
+        <source>A&amp;utosave mplayer2 log to file</source>
+        <translation>A&amp;utomatiškai išsaugoti mplayer2&apos;io ataskaitą faile</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="388"/>
-        <source>Pass short filenames (8+3) to MPlayer</source>
-        <translation>Perduoti MPlayer&apos;iui trumpus vardus (8+3)</translation>
+        <source>Pass short filenames (8+3) to mplayer2</source>
+        <translation>Perduoti mplayer2&apos;iui trumpus vardus (8+3)</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="392"/>
-        <source>Currently MPlayer can&apos;t open filenames which contains characters outside the local codepage. Checking this option will make SMPlayer2 to pass to MPlayer the short version of the filenames, and thus it will able to open them.</source>
-        <translation>Šiuo metu Mplayer negali atverti failų su vardais, turinčiais ne lokalios kodinės lentelės simbolių. Šis pasirinkimas įgalins SMPlayer2&apos;į perduoti MPlayer&apos;iui trumpus failų vardus, kad jis galėtų juos atverti.</translation>
+        <source>Currently mplayer2 can&apos;t open filenames which contains characters outside the local codepage. Checking this option will make SMPlayer2 to pass to mplayer2 the short version of the filenames, and thus it will able to open them.</source>
+        <translation>Šiuo metu Mplayer negali atverti failų su vardais, turinčiais ne lokalios kodinės lentelės simbolių. Šis pasirinkimas įgalins SMPlayer2&apos;į perduoti mplayer2&apos;iui trumpus failų vardus, kad jis galėtų juos atverti.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="166"/>
-        <source>&amp;Pass short filenames (8+3) to MPlayer</source>
-        <translation>&amp;Perduoti MPlayer&apos;iui trumpus vardus (8+3)</translation>
+        <source>&amp;Pass short filenames (8+3) to mplayer2</source>
+        <translation>&amp;Perduoti mplayer2&apos;iui trumpus vardus (8+3)</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="359"/>
@@ -4218,13 +4218,13 @@ Pavyzdžiui: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="362"/>
-        <source>Run MPlayer in its own window</source>
-        <translation>Paleisti MPlayer&apos;į atskirame lange</translation>
+        <source>Run mplayer2 in its own window</source>
+        <translation>Paleisti mplayer2&apos;į atskirame lange</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="368"/>
-        <source>If you check this option, the MPlayer video window won&apos;t be embedded in SMPlayer2&apos;s main window but instead it will use its own window. Note that mouse and keyboard events will be handled directly by MPlayer, that means key shortcuts and mouse clicks probably won&apos;t work as expected when the MPlayer window has the focus.</source>
-        <translation>Jei pažymėta, MPlayer&apos;io langas nebus įterptas į pagrindinį SMPlayer2&apos;io langą, bet naudos savo atskirą langą. Atkreipkite dėmesį, kad pelės ir klaviatūros įvykiai bus perduoti tiesiogiai MPlayer&apos;iui, t. y. nustatyti karštieji klavišai ir pelės paspaudimai gali veikti ne taip, jei MPlayer&apos;io langas aktyvuotas.</translation>
+        <source>If you check this option, the mplayer2 video window won&apos;t be embedded in SMPlayer2&apos;s main window but instead it will use its own window. Note that mouse and keyboard events will be handled directly by mplayer2, that means key shortcuts and mouse clicks probably won&apos;t work as expected when the mplayer2 window has the focus.</source>
+        <translation>Jei pažymėta, mplayer2&apos;io langas nebus įterptas į pagrindinį SMPlayer2&apos;io langą, bet naudos savo atskirą langą. Atkreipkite dėmesį, kad pelės ir klaviatūros įvykiai bus perduoti tiesiogiai mplayer2&apos;iui, t. y. nustatyti karštieji klavišai ir pelės paspaudimai gali veikti ne taip, jei mplayer2&apos;io langas aktyvuotas.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="403"/>
@@ -4238,8 +4238,8 @@ Pavyzdžiui: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="421"/>
-        <source>Options for MPlayer</source>
-        <translation>MPlayer&apos;io parinktys</translation>
+        <source>Options for mplayer2</source>
+        <translation>mplayer2&apos;io parinktys</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="423"/>
@@ -4248,8 +4248,8 @@ Pavyzdžiui: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="425"/>
-        <source>Here you can type options for MPlayer. Write them separated by spaces.</source>
-        <translation>Čia galima įvesti parinktis MPlayer&apos;iui. Atskirtike jas tarpais.</translation>
+        <source>Here you can type options for mplayer2. Write them separated by spaces.</source>
+        <translation>Čia galima įvesti parinktis mplayer2&apos;iui. Atskirtike jas tarpais.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="427"/>
@@ -4258,8 +4258,8 @@ Pavyzdžiui: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="429"/>
-        <source>Here you can add video filters for MPlayer. Write them separated by commas. Don&apos;t use spaces!</source>
-        <translation>Čia galima pridėti video filtrus MPlayer&apos;iui. Rašydami atskirkite juos kableliais. Nenaudokite tarpų!</translation>
+        <source>Here you can add video filters for mplayer2. Write them separated by commas. Don&apos;t use spaces!</source>
+        <translation>Čia galima pridėti video filtrus mplayer2&apos;iui. Rašydami atskirkite juos kableliais. Nenaudokite tarpų!</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="431"/>
@@ -4268,8 +4268,8 @@ Pavyzdžiui: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="433"/>
-        <source>Here you can add audio filters for MPlayer. Write them separated by commas. Don&apos;t use spaces!</source>
-        <translation>Čia galima pridėti audio filtrus MPlayer&apos;iui. Rašydami atskirkite juos kableliais. Nenaudokite tarpų!</translation>
+        <source>Here you can add audio filters for mplayer2. Write them separated by commas. Don&apos;t use spaces!</source>
+        <translation>Čia galima pridėti audio filtrus mplayer2&apos;iui. Rašydami atskirkite juos kableliais. Nenaudokite tarpų!</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="397"/>
@@ -4338,8 +4338,8 @@ Pavyzdžiui: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="460"/>
-        <source>If checked, SMPlayer2 will store the output of MPlayer (you can see it in &lt;b&gt;Options -&gt; View logs -&gt; MPlayer&lt;/b&gt;). In case of problems this log can contain important information, so it&apos;s recommended to keep this option checked.</source>
-        <translation>Jei pažymėta, SMPlayer2 atsakaitas apie įvykusias klaidas išsaugos MPlayer išvestyje (jas galima pamatyti &lt;b&gt;Parinktys -&gt; Rodyti ataskaitas -&gt; MPlayer&lt;/b&gt;). Ataskaitose gali būti svarbios informacijos apie iškilusias problemas, todėl rekomenduojama šią parinktį palikti įjungtą.</translation>
+        <source>If checked, SMPlayer2 will store the output of mplayer2 (you can see it in &lt;b&gt;Options -&gt; View logs -&gt; mplayer2&lt;/b&gt;). In case of problems this log can contain important information, so it&apos;s recommended to keep this option checked.</source>
+        <translation>Jei pažymėta, SMPlayer2 atsakaitas apie įvykusias klaidas išsaugos mplayer2 išvestyje (jas galima pamatyti &lt;b&gt;Parinktys -&gt; Rodyti ataskaitas -&gt; mplayer2&lt;/b&gt;). Ataskaitose gali būti svarbios informacijos apie iškilusias problemas, todėl rekomenduojama šią parinktį palikti įjungtą.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="476"/>
@@ -4353,8 +4353,8 @@ Pavyzdžiui: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="385"/>
-        <source>Switches MPlayer to an experimental mode where timestamps for video frames are calculated differently and video filters which add new frames or modify timestamps of existing ones are supported. The more accurate timestamps can be visible for example when playing subtitles timed to scene changes with the SSA/ASS library enabled. Without correct pts the subtitle timing will typically be off by some frames. This option does not work correctly with some demuxers and codecs.</source>
-        <translation>Perjungia MPlayer&apos;į į eksperimentinį režimą, kuriame kadrų laikas apskaičiuojamas kitaip, palaikomi video filtrai, pridedantys naujus kadrus arba keičiantys jau egzistuojančių kadrų laiką. Tikslesnis laiko skaičiavimas gali būti pastebimas, pavyzdžiui, atkuriant subtitrus, susietus su scenų pasikeitimu su įjungta SSA/ASS biblioteka. Be subtitrų pts korekcijos kai kuriems kadrams laiko skaičiavimas būtų išjungtas. Ši parinktis su kai kuriais demukseriais ir kodekais neveikia korektiškai.</translation>
+        <source>Switches mplayer2 to an experimental mode where timestamps for video frames are calculated differently and video filters which add new frames or modify timestamps of existing ones are supported. The more accurate timestamps can be visible for example when playing subtitles timed to scene changes with the SSA/ASS library enabled. Without correct pts the subtitle timing will typically be off by some frames. This option does not work correctly with some demuxers and codecs.</source>
+        <translation>Perjungia mplayer2&apos;į į eksperimentinį režimą, kuriame kadrų laikas apskaičiuojamas kitaip, palaikomi video filtrai, pridedantys naujus kadrus arba keičiantys jau egzistuojančių kadrų laiką. Tikslesnis laiko skaičiavimas gali būti pastebimas, pavyzdžiui, atkuriant subtitrus, susietus su scenų pasikeitimu su įjungta SSA/ASS biblioteka. Be subtitrų pts korekcijos kai kuriems kadrams laiko skaičiavimas būtų išjungtas. Ši parinktis su kai kuriais demukseriais ir kodekais neveikia korektiškai.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="409"/>
@@ -4627,8 +4627,8 @@ Pavyzdžiui: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="780"/>
-        <source>MPlayer executable</source>
-        <translation>Vykdomoji MPlayer programa</translation>
+        <source>mplayer2 executable</source>
+        <translation>Vykdomoji mplayer2 programa</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="811"/>
@@ -4928,8 +4928,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="950"/>
-        <source>Allows to change the playback speed without altering pitch. Requires at least MPlayer dev-SVN-r24924.</source>
-        <translation>Leidžia keisti atkūrimo greitį be pič-efekto. Reikalinga ne senesnė kaip dev-SVN-r24924 MPlayer&apos;io versija.</translation>
+        <source>Allows to change the playback speed without altering pitch. Requires at least mplayer2 dev-SVN-r24924.</source>
+        <translation>Leidžia keisti atkūrimo greitį be pič-efekto. Reikalinga ne senesnė kaip dev-SVN-r24924 mplayer2&apos;io versija.</translation>
     </message>
     <message>
         <location filename="../prefgeneral.ui" line="220"/>
@@ -5088,8 +5088,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="784"/>
-        <source>Here you must specify the mplayer executable that SMPlayer2 will use.&lt;br&gt;SMPlayer2 requires at least MPlayer 1.0rc1 (although a recent revision from SVN is highly recommended).</source>
-        <translation>Čia reikia nurodyti vykdomąjį mplayer failą, kurį naudos SMPlayer2. &lt;br&gt;SMPlayer2&apos;iui reikalingas minimum MPlayer 1.0rc1 (rekomenduojama naujausia SVN revizija).</translation>
+        <source>Here you must specify the mplayer executable that SMPlayer2 will use.&lt;br&gt;SMPlayer2 requires at least mplayer2 1.0rc1 (although a recent revision from SVN is highly recommended).</source>
+        <translation>Čia reikia nurodyti vykdomąjį mplayer failą, kurį naudos SMPlayer2. &lt;br&gt;SMPlayer2&apos;iui reikalingas minimum mplayer2 1.0rc1 (rekomenduojama naujausia SVN revizija).</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="786"/>
@@ -5203,7 +5203,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="946"/>
-        <source>Requests the number of playback channels. MPlayer asks the decoder to decode the audio into as many channels as specified. Then it is up to the decoder to fulfill the requirement. This is usually only important when playing videos with AC3 audio (like DVDs). In that case liba52 does the decoding by default and correctly downmixes the audio into the requested number of channels. &lt;b&gt;Note&lt;/b&gt;: This option is honored by codecs (AC3 only), filters (surround) and audio output drivers (OSS at least).</source>
+        <source>Requests the number of playback channels. mplayer2 asks the decoder to decode the audio into as many channels as specified. Then it is up to the decoder to fulfill the requirement. This is usually only important when playing videos with AC3 audio (like DVDs). In that case liba52 does the decoding by default and correctly downmixes the audio into the requested number of channels. &lt;b&gt;Note&lt;/b&gt;: This option is honored by codecs (AC3 only), filters (surround) and audio output drivers (OSS at least).</source>
         <translation>Užklausia atkūrimo kanalų skaičių. MPlayr prašo dekoderio dekoduoti audio į nurodytą kanalų skaičių. Tai paliekama dekoderio atsakomybei. Paprastai tai svarbu kai atkuriamas video su AC3 garsu (pvz. DVD). Šiuo atvejus liba52 atlieka dekodavimą kaip įprasta ir korektiškai išdalina audio į prašomą kanalų skaičių. &lt;b&gt;Pastaba&lt;/b&gt;: Šią parinktį pripažįsta AC3 kodekai, &lt;i&gt;surround&lt;/i&gt;  filtrai ir audio išvesties tvarkyklės (minimum OSS).</translation>
     </message>
     <message>
@@ -5223,8 +5223,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.ui" line="43"/>
-        <source>&amp;MPlayer executable:</source>
-        <translation>Vykdomoji &amp;MPlayer programa:</translation>
+        <source>&amp;mplayer2 executable:</source>
+        <translation>Vykdomoji &amp;mplayer2 programa:</translation>
     </message>
     <message>
         <location filename="../prefgeneral.ui" line="150"/>
@@ -6312,8 +6312,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefperformance.ui" line="77"/>
-        <source>Select the priority for the MPlayer process.</source>
-        <translation>Pažymėkite MPlayer&apos;io proceso prioriteto lygį.</translation>
+        <source>Select the priority for the mplayer2 process.</source>
+        <translation>Pažymėkite mplayer2&apos;io proceso prioriteto lygį.</translation>
     </message>
     <message>
         <location filename="../prefperformance.ui" line="118"/>
@@ -6427,8 +6427,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="280"/>
-        <source>Possible values:&lt;br&gt; &lt;b&gt;Yes&lt;/b&gt;: it will try the fastest method to switch the audio track (it might not work with some formats).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: the MPlayer process will be restarted whenever you change the audio track.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 will decide what to do according to the MPlayer version.</source>
-        <translation>Galimos reikšmės:&lt;br&gt; &lt;b&gt;Taip&lt;/b&gt;: Bus naudojamas greičiausias audio takelių perjungimo metodas (gali neveikti su kai kuriais formatais).&lt;br&gt; &lt;b&gt;Ne&lt;/b&gt;: Pakeitus audio takelį, MPlayer&apos;io procesas bus perleistas.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: Priklausomai nuo MPlayer&apos;io versijos, SMPlayer2 pats nuspręs ką daryti.</translation>
+        <source>Possible values:&lt;br&gt; &lt;b&gt;Yes&lt;/b&gt;: it will try the fastest method to switch the audio track (it might not work with some formats).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: the mplayer2 process will be restarted whenever you change the audio track.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 will decide what to do according to the mplayer2 version.</source>
+        <translation>Galimos reikšmės:&lt;br&gt; &lt;b&gt;Taip&lt;/b&gt;: Bus naudojamas greičiausias audio takelių perjungimo metodas (gali neveikti su kai kuriais formatais).&lt;br&gt; &lt;b&gt;Ne&lt;/b&gt;: Pakeitus audio takelį, mplayer2&apos;io procesas bus perleistas.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: Priklausomai nuo mplayer2&apos;io versijos, SMPlayer2 pats nuspręs ką daryti.</translation>
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="290"/>
@@ -6578,7 +6578,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     <message>
         <location filename="../prefperformance.cpp" line="240"/>
         <source>Set process priority for mplayer according to the predefined priorities available under Windows.&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; Using realtime priority can cause system lockup.</source>
-        <translation>Nustato MPlayer&apos;io prioritetą sutinkamai su Windows nustatytais procesų prioritetais. &lt;br&gt;&lt;b&gt;Dėmesio:&lt;/b&gt; Realaus laiko prioriteto naudojimas, gali sulėtinti sistemos darbą.</translation>
+        <translation>Nustato mplayer2&apos;io prioritetą sutinkamai su Windows nustatytais procesų prioritetais. &lt;br&gt;&lt;b&gt;Dėmesio:&lt;/b&gt; Realaus laiko prioriteto naudojimas, gali sulėtinti sistemos darbą.</translation>
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="254"/>
@@ -6587,8 +6587,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="255"/>
-        <source>Try to use non-free CoreAVC codec with no other codec is specified and non-VDPAU video output selected. Requires MPlayer build with CoreAVC support.</source>
-        <translation>Jei nenurodytas joks kodekas ir pasirinkta ne VDPAU video išvestis, pabandyti naudoti nelaisvą CoreAVC kodeką. Reikalingas MPlayer sukurtas su CoreAVC palaikymu.</translation>
+        <source>Try to use non-free CoreAVC codec with no other codec is specified and non-VDPAU video output selected. Requires mplayer2 build with CoreAVC support.</source>
+        <translation>Jei nenurodytas joks kodekas ir pasirinkta ne VDPAU video išvestis, pabandyti naudoti nelaisvą CoreAVC kodeką. Reikalingas mplayer2 sukurtas su CoreAVC palaikymu.</translation>
     </message>
     <message>
         <location filename="../prefperformance.ui" line="292"/>
@@ -6858,7 +6858,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="472"/>
-        <source>Here you can select a system font to be used for the subtitles and OSD. &lt;b&gt;Note:&lt;/b&gt; requires a MPlayer with fontconfig support.</source>
+        <source>Here you can select a system font to be used for the subtitles and OSD. &lt;b&gt;Note:&lt;/b&gt; requires a mplayer2 with fontconfig support.</source>
         <translation>Čia galima nurodyti sisteminį šriftą, kuris bus naudojamas subtitrams ir OSD. &lt;b&gt;Pastaba:&lt;/b&gt; reikalingas MPLayer, palaikantis &lt;b&gt;fontconfig&lt;/b&gt;.</translation>
     </message>
     <message>
@@ -6913,8 +6913,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="431"/>
-        <source>When this option is on, the encoding of the subtitles will be tried to be autodetected for the given language. It will fall back to the default encoding if the autodetection fails. This option requires a MPlayer compiled with ENCA support.</source>
-        <translation>Jei parinktis įjungta, bus pabandyta automatiškai nustatyti subtitrų koduotę šiai kalbai. Nepavykus, bus naudojama pirminė koduotė. Parinktis reikalauja su ENCA palaikymu sukompiliuoto MPlayer&apos;io.</translation>
+        <source>When this option is on, the encoding of the subtitles will be tried to be autodetected for the given language. It will fall back to the default encoding if the autodetection fails. This option requires a mplayer2 compiled with ENCA support.</source>
+        <translation>Jei parinktis įjungta, bus pabandyta automatiškai nustatyti subtitrų koduotę šiai kalbai. Nepavykus, bus naudojama pirminė koduotė. Parinktis reikalauja su ENCA palaikymu sukompiliuoto mplayer2&apos;io.</translation>
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="433"/>
@@ -7281,8 +7281,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="446"/>
-        <source>You should normally not disable this option. Do it only if your MPlayer is compiled without freetype support. &lt;b&gt;Disabling this option could make that subtitles won&apos;t work at all!&lt;/b&gt;</source>
-        <translation>Įprastai šios parinkties galima neišjungti.Išjunkite ją, jei MPlayer yra sukompiliuotas be &lt;i&gt;freetype&lt;/i&gt; palaikymo. &lt;b&gt;Dėl šios parinkties išjungimo subtitrai gali iš viso neveikti!&lt;/b&gt;</translation>
+        <source>You should normally not disable this option. Do it only if your mplayer2 is compiled without freetype support. &lt;b&gt;Disabling this option could make that subtitles won&apos;t work at all!&lt;/b&gt;</source>
+        <translation>Įprastai šios parinkties galima neišjungti.Išjunkite ją, jei mplayer2 yra sukompiliuotas be &lt;i&gt;freetype&lt;/i&gt; palaikymo. &lt;b&gt;Dėl šios parinkties išjungimo subtitrai gali iš viso neveikti!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../prefsubtitles.ui" line="256"/>
@@ -7525,8 +7525,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../clhelp.cpp" line="178"/>
-        <source>&apos;media&apos; is any kind of file that SMPlayer2 can open. It can be a local file, a DVD (e.g. dvd://1), an Internet stream (e.g. mms://....) or a local playlist in format m3u or pls. If the -playlist option is used, that means that SMPlayer2 will pass the -playlist option to MPlayer, so MPlayer will handle the playlist, not SMPlayer2.</source>
-        <translation>&quot;media&quot; yra bet kokios rūšies failas, kurį gali atverti SMPlayer2.Tai gali būti vietinis failas, DVD (t.y. dvd://1), internetinis srautas (t.y. mms://....) ar lokalus m3u ar pls formato grojaraštis. Jei naudojama parinktis&lt;i&gt;-playlist&lt;/i&gt;, tai reiškia, kad SMPlayer2 ją perduos MPlayer&apos;iui ir ją priims jis, o ne SMPlayer2.</translation>
+        <source>&apos;media&apos; is any kind of file that SMPlayer2 can open. It can be a local file, a DVD (e.g. dvd://1), an Internet stream (e.g. mms://....) or a local playlist in format m3u or pls. If the -playlist option is used, that means that SMPlayer2 will pass the -playlist option to mplayer2, so mplayer2 will handle the playlist, not SMPlayer2.</source>
+        <translation>&quot;media&quot; yra bet kokios rūšies failas, kurį gali atverti SMPlayer2.Tai gali būti vietinis failas, DVD (t.y. dvd://1), internetinis srautas (t.y. mms://....) ar lokalus m3u ar pls formato grojaraštis. Jei naudojama parinktis&lt;i&gt;-playlist&lt;/i&gt;, tai reiškia, kad SMPlayer2 ją perduos mplayer2&apos;iui ir ją priims jis, o ne SMPlayer2.</translation>
     </message>
     <message>
         <location filename="../clhelp.cpp" line="106"/>

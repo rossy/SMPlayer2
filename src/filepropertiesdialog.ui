@@ -236,7 +236,7 @@
      </widget>
      <widget class="QWidget" name="options_page" >
       <attribute name="title" >
-       <string>&amp;MPlayer options</string>
+       <string>&amp;mplayer2 options</string>
       </attribute>
       <layout class="QVBoxLayout" >
        <property name="margin" >
@@ -248,7 +248,7 @@
        <item>
         <widget class="QGroupBox" name="groupBox" >
          <property name="title" >
-          <string>Additional Options for MPlayer</string>
+          <string>Additional Options for mplayer2</string>
          </property>
          <layout class="QVBoxLayout" >
           <property name="margin" >
@@ -260,7 +260,7 @@
           <item>
            <widget class="QLabel" name="textLabel3_2" >
             <property name="text" >
-             <string>Here you can pass extra options to MPlayer.
+             <string>Here you can pass extra options to mplayer2.
 Write them separated by spaces.
 Example: -flip -nosound</string>
             </property>

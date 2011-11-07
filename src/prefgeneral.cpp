@@ -1,4 +1,4 @@
-/*  smplayer2, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer2.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -785,11 +785,10 @@ void PrefGeneral::createHelp() {
 
 	addSectionTitle(tr("General"));
 
-	setWhatsThis(mplayerbin_edit, tr("MPlayer executable"), 
-		tr("Here you must specify the mplayer "
+	setWhatsThis(mplayerbin_edit, tr("mplayer2 executable"),
+		tr("Here you must specify the mplayer2 "
            "executable that SMPlayer2 will use.<br>"
-           "SMPlayer2 requires at least MPlayer 1.0rc1 (although a recent "
-           "revision from SVN is highly recommended).") + "<br><b>" +
+           "SMPlayer2 requires a recent version of mplayer2 (latest from git preferred)") + "<br><b>" +
         tr("If this setting is wrong, SMPlayer2 won't be able to play "
            "anything!") + "</b>");
 
@@ -899,7 +898,7 @@ void PrefGeneral::createHelp() {
 		tr("If this option is enabled, black borders will be added to the "
            "image in fullscreen mode. This allows subtitles to be displayed "
            "on the black borders.") /* + "<br>" +
- 		tr("This option will be ignored if MPlayer uses its own window, as "
+ 		tr("This option will be ignored if mplayer2 uses its own window, as "
            "some video drivers (like gl) are already able to display the "
            "subtitles automatically in the black borders.") */ );
 
@@ -947,7 +946,7 @@ void PrefGeneral::createHelp() {
            "option is enabled.") );
 
 	setWhatsThis(channels_combo, tr("Channels by default"),
-		tr("Requests the number of playback channels. MPlayer "
+		tr("Requests the number of playback channels. mplayer2 "
            "asks the decoder to decode the audio into as many channels as "
            "specified. Then it is up to the decoder to fulfill the "
            "requirement. This is usually only important when playing "
@@ -958,8 +957,7 @@ void PrefGeneral::createHelp() {
            "filters (surround) and audio output drivers (OSS at least).") );
 
 	setWhatsThis(scaletempo_combo, tr("High speed playback without altering pitch"),
-		tr("Allows to change the playback speed without altering pitch. "
-           "Requires at least MPlayer dev-SVN-r24924.") );
+		tr("Allows to change the playback speed without altering pitch. ") );
 
 	setWhatsThis(global_volume_check, tr("Global volume"),
 		tr("If this option is checked, the same volume will be used for "

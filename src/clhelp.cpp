@@ -1,4 +1,4 @@
-/*  smplayer2, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer2.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -121,7 +121,7 @@ QString CLHelp::help(bool html) {
 		"opens the default gui."), html );
 
 	s += formatHelp( "-config-path", QObject::tr(
-		"specifies the directory where smplayer2 will store its configuration "
+		"specifies the directory where SMPlayer2 will store its configuration "
         "files (smplayer2.ini, smplayer2_files.ini...)"), html );
 
 	s += formatHelp( "-send-action", QObject::tr(
@@ -174,7 +174,7 @@ QString CLHelp::help(bool html) {
         "be a local file, a DVD (e.g. dvd://1), an Internet stream "
         "(e.g. mms://....) or a local playlist in format m3u or pls. "
         "If the -playlist option is used, that means that SMPlayer2 "
-        "will pass the -playlist option to MPlayer, so MPlayer will "
+        "will pass the -playlist option to mplayer2, so mplayer2 will "
         "handle the playlist, not SMPlayer2."), html );
 
 	if (html) s += "</table>";

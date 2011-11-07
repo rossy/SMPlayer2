@@ -220,8 +220,8 @@
     </message>
     <message>
         <location filename="../about.cpp" line="48"/>
-        <source>Using MPlayer %1</source>
-        <translation>Používá MPlayer %1</translation>
+        <source>Using mplayer2 %1</source>
+        <translation>Používá mplayer2 %1</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="202"/>
@@ -1278,8 +1278,8 @@ Bude zobrazeno konfigurační okno.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4397"/>
-        <source>MPlayer has finished unexpectedly.</source>
-        <translation>MPlayer skončil chybou.</translation>
+        <source>mplayer2 has finished unexpectedly.</source>
+        <translation>mplayer2 skončil chybou.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4398"/>
@@ -1288,18 +1288,18 @@ Bude zobrazeno konfigurační okno.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4415"/>
-        <source>MPlayer failed to start.</source>
-        <translation>Nelze spustit MPlayer.</translation>
+        <source>mplayer2 failed to start.</source>
+        <translation>Nelze spustit mplayer2.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4416"/>
-        <source>Please check the MPlayer path in preferences.</source>
-        <translation>Zkontrolujte cestu k MPlayeru v nastavení.</translation>
+        <source>Please check the mplayer2 path in preferences.</source>
+        <translation>Zkontrolujte cestu k mplayer2u v nastavení.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4418"/>
-        <source>MPlayer has crashed.</source>
-        <translation>MPlayer havaroval.</translation>
+        <source>mplayer2 has crashed.</source>
+        <translation>mplayer2 havaroval.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4419"/>
@@ -1435,18 +1435,18 @@ Bude zobrazeno konfigurační okno.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3824"/>
-        <source>Warning - Using old MPlayer</source>
-        <translation>Varování - Použit starý MPlayer</translation>
+        <source>Warning - Using old mplayer2</source>
+        <translation>Varování - Použit starý mplayer2</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3828"/>
-        <source>The version of MPlayer (%1) installed on your system is obsolete. SMPlayer2 can&apos;t work well with it: some options won&apos;t work, subtitle selection may fail...</source>
-        <translation>Nainstalovaná verze MPlayeru (%1) je zastaralá. SMPlayer2 nebude pracovat správně: ne všechna nastavení budou funkční, výběr titulků může selhat, ...</translation>
+        <source>The version of mplayer2 (%1) installed on your system is obsolete. SMPlayer2 can&apos;t work well with it: some options won&apos;t work, subtitle selection may fail...</source>
+        <translation>Nainstalovaná verze mplayer2u (%1) je zastaralá. SMPlayer2 nebude pracovat správně: ne všechna nastavení budou funkční, výběr titulků může selhat, ...</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3831"/>
-        <source>Please, update your MPlayer.</source>
-        <translation>Prosím, updatujte si MPlayer.</translation>
+        <source>Please, update your mplayer2.</source>
+        <translation>Prosím, updatujte si mplayer2.</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3832"/>
@@ -1952,8 +1952,8 @@ Bude zobrazeno konfigurační okno.</translation>
     </message>
     <message>
         <location filename="../errordialog.ui" line="13"/>
-        <source>MPlayer Error</source>
-        <translation>Chyba MPlayeru</translation>
+        <source>mplayer2 Error</source>
+        <translation>Chyba mplayer2u</translation>
     </message>
     <message>
         <location filename="../errordialog.ui" line="41"/>
@@ -2114,20 +2114,20 @@ Bude zobrazeno konfigurační okno.</translation>
     </message>
     <message>
         <location filename="../filepropertiesdialog.ui" line="239"/>
-        <source>&amp;MPlayer options</source>
-        <translation>&amp;Nastavení MPlayeru</translation>
+        <source>&amp;mplayer2 options</source>
+        <translation>&amp;Nastavení mplayer2u</translation>
     </message>
     <message>
         <location filename="../filepropertiesdialog.ui" line="251"/>
-        <source>Additional Options for MPlayer</source>
-        <translation>Přídavné volby pro MPlayer</translation>
+        <source>Additional Options for mplayer2</source>
+        <translation>Přídavné volby pro mplayer2</translation>
     </message>
     <message>
         <location filename="../filepropertiesdialog.ui" line="263"/>
-        <source>Here you can pass extra options to MPlayer.
+        <source>Here you can pass extra options to mplayer2.
 Write them separated by spaces.
 Example: -flip -nosound</source>
-        <translation>Zde můžete zadat extra volby pro MPlayer.
+        <translation>Zde můžete zadat extra volby pro mplayer2.
 Oddělujte je mezerami.
 Příklad: -flip -nosound</translation>
     </message>
@@ -2677,18 +2677,18 @@ Zkontrolujte přístupová práva.</translation>
     <name>InputMplayerVersion</name>
     <message>
         <location filename="../inputmplayerversion.ui" line="14"/>
-        <source>SMPlayer2 - Enter the MPlayer version</source>
-        <translation>SMPlayer2 - Zadejte verzi MPlayeru</translation>
+        <source>SMPlayer2 - Enter the mplayer2 version</source>
+        <translation>SMPlayer2 - Zadejte verzi mplayer2u</translation>
     </message>
     <message>
         <location filename="../inputmplayerversion.ui" line="35"/>
-        <source>SMPlayer2 couldn&apos;t identify the MPlayer version you&apos;re using.</source>
-        <translation>SMPlayer2 nemohl identifikovat verzi nainstalovaného MPlayeru.</translation>
+        <source>SMPlayer2 couldn&apos;t identify the mplayer2 version you&apos;re using.</source>
+        <translation>SMPlayer2 nemohl identifikovat verzi nainstalovaného mplayer2u.</translation>
     </message>
     <message>
         <location filename="../inputmplayerversion.ui" line="58"/>
-        <source>Version reported by MPlayer:</source>
-        <translation>Verze oznámená MPlayerem:</translation>
+        <source>Version reported by mplayer2:</source>
+        <translation>Verze oznámená mplayer2em:</translation>
     </message>
     <message>
         <location filename="../inputmplayerversion.ui" line="102"/>
@@ -4108,10 +4108,10 @@ Opravdu jej chcete přepsat?</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="325"/>
-        <source>Here you can pass extra options to MPlayer.
+        <source>Here you can pass extra options to mplayer2.
 Write them separated by spaces.
 Example: -flip -nosound</source>
-        <translation>Zde můžete zadat extra volby pro MPlayer.
+        <translation>Zde můžete zadat extra volby pro mplayer2.
 Oddělujte je mezerami.
 Příklad: -flip -nosound</translation>
     </message>
@@ -4133,8 +4133,8 @@ Příklad: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="456"/>
-        <source>Log MPlayer output</source>
-        <translation>Logovat výstup MPlayeru</translation>
+        <source>Log mplayer2 output</source>
+        <translation>Logovat výstup mplayer2u</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="445"/>
@@ -4163,8 +4163,8 @@ Příklad: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="122"/>
-        <source>&amp;Run MPlayer in its own window</source>
-        <translation>Sp&amp;ustit MPlayer ve vlastním okně</translation>
+        <source>&amp;Run mplayer2 in its own window</source>
+        <translation>Sp&amp;ustit mplayer2 ve vlastním okně</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="357"/>
@@ -4203,23 +4203,23 @@ Příklad: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="462"/>
-        <source>Autosave MPlayer log</source>
-        <translation>Automaticky ukládat log MPlayeru</translation>
+        <source>Autosave mplayer2 log</source>
+        <translation>Automaticky ukládat log mplayer2u</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="466"/>
-        <source>If this option is checked, the MPlayer log will be saved to the specified file every time a new file starts to play. It&apos;s intended for external applications, so they can get info about the file you&apos;re playing.</source>
-        <translation>Zaškrtnutím této volby se log MPlayeru uloží vždy při spuštění přehrávání nového souboru. Vhodné pro externí aplikace, které potřebují zjistit informace o právě přehrávaném souboru.</translation>
+        <source>If this option is checked, the mplayer2 log will be saved to the specified file every time a new file starts to play. It&apos;s intended for external applications, so they can get info about the file you&apos;re playing.</source>
+        <translation>Zaškrtnutím této volby se log mplayer2u uloží vždy při spuštění přehrávání nového souboru. Vhodné pro externí aplikace, které potřebují zjistit informace o právě přehrávaném souboru.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="468"/>
-        <source>Autosave MPlayer log filename</source>
-        <translation>Soubor pro automatické ukládání logu MPlayeru</translation>
+        <source>Autosave mplayer2 log filename</source>
+        <translation>Soubor pro automatické ukládání logu mplayer2u</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="470"/>
-        <source>Enter here the path and filename that will be used to save the MPlayer log.</source>
-        <translation>Zadejte cestu, kam se má ukládat log MPlayeru.</translation>
+        <source>Enter here the path and filename that will be used to save the mplayer2 log.</source>
+        <translation>Zadejte cestu, kam se má ukládat log mplayer2u.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="443"/>
@@ -4228,13 +4228,13 @@ Příklad: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="641"/>
-        <source>Log MPlayer &amp;output</source>
-        <translation>Logovat výstup &amp;MPlayeru</translation>
+        <source>Log mplayer2 &amp;output</source>
+        <translation>Logovat výstup &amp;mplayer2u</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="689"/>
-        <source>A&amp;utosave MPlayer log to file</source>
-        <translation>A&amp;utomaticky ukládat log MPlayeru</translation>
+        <source>A&amp;utosave mplayer2 log to file</source>
+        <translation>A&amp;utomaticky ukládat log mplayer2u</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="304"/>
@@ -4243,18 +4243,18 @@ Příklad: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="388"/>
-        <source>Pass short filenames (8+3) to MPlayer</source>
-        <translation>Předávat MPlayeru krátké názvy souborů (8+3)</translation>
+        <source>Pass short filenames (8+3) to mplayer2</source>
+        <translation>Předávat mplayer2u krátké názvy souborů (8+3)</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="392"/>
-        <source>Currently MPlayer can&apos;t open filenames which contains characters outside the local codepage. Checking this option will make SMPlayer2 to pass to MPlayer the short version of the filenames, and thus it will able to open them.</source>
-        <translation>MPlayer v současnosti nedokáže otevřít soubory, jejichž jména obsahují znaky jiné než lokální kódové stránky. Zaškrtnutím této volby donutíte SMPlayer2, aby MPlayeru posílal krátké názvy souborů a MPlayer tak byl schopen tyto soubory otevřít.</translation>
+        <source>Currently mplayer2 can&apos;t open filenames which contains characters outside the local codepage. Checking this option will make SMPlayer2 to pass to mplayer2 the short version of the filenames, and thus it will able to open them.</source>
+        <translation>mplayer2 v současnosti nedokáže otevřít soubory, jejichž jména obsahují znaky jiné než lokální kódové stránky. Zaškrtnutím této volby donutíte SMPlayer2, aby mplayer2u posílal krátké názvy souborů a mplayer2 tak byl schopen tyto soubory otevřít.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="166"/>
-        <source>&amp;Pass short filenames (8+3) to MPlayer</source>
-        <translation>&amp;Předávat MPlayeru krátké názvy souborů (8+3)</translation>
+        <source>&amp;Pass short filenames (8+3) to mplayer2</source>
+        <translation>&amp;Předávat mplayer2u krátké názvy souborů (8+3)</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="359"/>
@@ -4268,13 +4268,13 @@ Příklad: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="362"/>
-        <source>Run MPlayer in its own window</source>
-        <translation>Spustit MPlayer ve vlastním okně</translation>
+        <source>Run mplayer2 in its own window</source>
+        <translation>Spustit mplayer2 ve vlastním okně</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="368"/>
-        <source>If you check this option, the MPlayer video window won&apos;t be embedded in SMPlayer2&apos;s main window but instead it will use its own window. Note that mouse and keyboard events will be handled directly by MPlayer, that means key shortcuts and mouse clicks probably won&apos;t work as expected when the MPlayer window has the focus.</source>
-        <translation>Zaškrtnutím této možnosti se nebude výstup MPlayeru integrovat do hlavního okna SMPlayer2u, ale bude mít své vlastní okno. Události z klávesnice a myši budou spravovány přímo MPlayerem, takže klávesové zkratky a akce myši nejspíše nebudou fungovat jak mají, pokud okno MPlayeru ztratí focus.</translation>
+        <source>If you check this option, the mplayer2 video window won&apos;t be embedded in SMPlayer2&apos;s main window but instead it will use its own window. Note that mouse and keyboard events will be handled directly by mplayer2, that means key shortcuts and mouse clicks probably won&apos;t work as expected when the mplayer2 window has the focus.</source>
+        <translation>Zaškrtnutím této možnosti se nebude výstup mplayer2u integrovat do hlavního okna SMPlayer2u, ale bude mít své vlastní okno. Události z klávesnice a myši budou spravovány přímo mplayer2em, takže klávesové zkratky a akce myši nejspíše nebudou fungovat jak mají, pokud okno mplayer2u ztratí focus.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="403"/>
@@ -4288,8 +4288,8 @@ Příklad: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="421"/>
-        <source>Options for MPlayer</source>
-        <translation>Nastavení MPlayeru</translation>
+        <source>Options for mplayer2</source>
+        <translation>Nastavení mplayer2u</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="423"/>
@@ -4298,8 +4298,8 @@ Příklad: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="425"/>
-        <source>Here you can type options for MPlayer. Write them separated by spaces.</source>
-        <translation>Zde můžete zadat nastavení pro MPlayer. Oddělujte je mezerami.</translation>
+        <source>Here you can type options for mplayer2. Write them separated by spaces.</source>
+        <translation>Zde můžete zadat nastavení pro mplayer2. Oddělujte je mezerami.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="427"/>
@@ -4308,8 +4308,8 @@ Příklad: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="429"/>
-        <source>Here you can add video filters for MPlayer. Write them separated by commas. Don&apos;t use spaces!</source>
-        <translation>Zde můžete přidávat video filtry pro MPlayer. Oddělujte je čárkami. Nepoužívejte mezery!</translation>
+        <source>Here you can add video filters for mplayer2. Write them separated by commas. Don&apos;t use spaces!</source>
+        <translation>Zde můžete přidávat video filtry pro mplayer2. Oddělujte je čárkami. Nepoužívejte mezery!</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="431"/>
@@ -4318,8 +4318,8 @@ Příklad: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="433"/>
-        <source>Here you can add audio filters for MPlayer. Write them separated by commas. Don&apos;t use spaces!</source>
-        <translation>Zde můžete přidávat audio filtry pro MPlayer. Oddělujte je čárkami. Nepoužívejte mezery!</translation>
+        <source>Here you can add audio filters for mplayer2. Write them separated by commas. Don&apos;t use spaces!</source>
+        <translation>Zde můžete přidávat audio filtry pro mplayer2. Oddělujte je čárkami. Nepoužívejte mezery!</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="397"/>
@@ -4388,8 +4388,8 @@ Příklad: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="460"/>
-        <source>If checked, SMPlayer2 will store the output of MPlayer (you can see it in &lt;b&gt;Options -&gt; View logs -&gt; MPlayer&lt;/b&gt;). In case of problems this log can contain important information, so it&apos;s recommended to keep this option checked.</source>
-        <translation>Je-li tato volba zaškrtnuta, SMPlayer2 bude ukládat ladící informace MPlayeru (log je přístupný přes &lt;b&gt;Nastavení -&gt; Zobrazit logy -&gt; MPlayer&lt;/b&gt;). Tyto informace jsou velmi přínosné pro řešení problémů, je doporučeno nechat volbu zaškrtnutou.</translation>
+        <source>If checked, SMPlayer2 will store the output of mplayer2 (you can see it in &lt;b&gt;Options -&gt; View logs -&gt; mplayer2&lt;/b&gt;). In case of problems this log can contain important information, so it&apos;s recommended to keep this option checked.</source>
+        <translation>Je-li tato volba zaškrtnuta, SMPlayer2 bude ukládat ladící informace mplayer2u (log je přístupný přes &lt;b&gt;Nastavení -&gt; Zobrazit logy -&gt; mplayer2&lt;/b&gt;). Tyto informace jsou velmi přínosné pro řešení problémů, je doporučeno nechat volbu zaškrtnutou.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="476"/>
@@ -4403,8 +4403,8 @@ Příklad: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="385"/>
-        <source>Switches MPlayer to an experimental mode where timestamps for video frames are calculated differently and video filters which add new frames or modify timestamps of existing ones are supported. The more accurate timestamps can be visible for example when playing subtitles timed to scene changes with the SSA/ASS library enabled. Without correct pts the subtitle timing will typically be off by some frames. This option does not work correctly with some demuxers and codecs.</source>
-        <translation>Přepne MPlayer do experimentálního módu, který počítá časová razítka videa jiným způsobem a je možné použít filtry, které přidávají snimky nebo modifikují časová razítka. Přesnější výpočty časových razítek jsou viditelné například při přehrávání filmů s titulky časovanými podle změn ve scéně přes SSA/ASS knihovnu. Bez správného pts budou titulky většinou zobrazeny o několik snímků mimo. Tato možnost nefunguje správně s některými kodeky.</translation>
+        <source>Switches mplayer2 to an experimental mode where timestamps for video frames are calculated differently and video filters which add new frames or modify timestamps of existing ones are supported. The more accurate timestamps can be visible for example when playing subtitles timed to scene changes with the SSA/ASS library enabled. Without correct pts the subtitle timing will typically be off by some frames. This option does not work correctly with some demuxers and codecs.</source>
+        <translation>Přepne mplayer2 do experimentálního módu, který počítá časová razítka videa jiným způsobem a je možné použít filtry, které přidávají snimky nebo modifikují časová razítka. Přesnější výpočty časových razítek jsou viditelné například při přehrávání filmů s titulky časovanými podle změn ve scéně přes SSA/ASS knihovnu. Bez správného pts budou titulky většinou zobrazeny o několik snímků mimo. Tato možnost nefunguje správně s některými kodeky.</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="409"/>
@@ -4419,7 +4419,7 @@ Příklad: resample=44100:0:0,volnorm</translation>
     <message>
         <location filename="../prefadvanced.cpp" line="419"/>
         <source>Limitation: the actions are run only when a file is opened and not when the mplayer process is restarted (e.g. you select an audio or video filter).</source>
-        <translation>Omezení: akce jsou spuštěny pouze při otevření souboru, ne při restartu MPlayeru (např. při přepnutí filtru).</translation>
+        <translation>Omezení: akce jsou spuštěny pouze při otevření souboru, ne při restartu mplayer2u (např. při přepnutí filtru).</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="435"/>
@@ -4600,7 +4600,7 @@ Příklad: resample=44100:0:0,volnorm</translation>
     <message>
         <location filename="../prefdrives.cpp" line="190"/>
         <source>If this option is checked, smplayer2 will play DVDs using dvdnav. Requires a recent version of mplayer compiled with dvdnav support.</source>
-        <translation>Je-li tato možnost povolena, SMPlayer2 bude přehrávat DVD pomocí dvdnav. Toto vyžaduje dostatečně novou verzi MPlayeru s dvdnav podporou.</translation>
+        <translation>Je-li tato možnost povolena, SMPlayer2 bude přehrávat DVD pomocí dvdnav. Toto vyžaduje dostatečně novou verzi mplayer2u s dvdnav podporou.</translation>
     </message>
     <message>
         <location filename="../prefdrives.cpp" line="191"/>
@@ -4678,7 +4678,7 @@ Příklad: resample=44100:0:0,volnorm</translation>
     <message>
         <location filename="../prefgeneral.cpp" line="122"/>
         <source>Select the mplayer executable</source>
-        <translation>Výberte spustitelný soubor MPlayeru</translation>
+        <translation>Výberte spustitelný soubor mplayer2u</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="124"/>
@@ -4697,8 +4697,8 @@ Příklad: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="780"/>
-        <source>MPlayer executable</source>
-        <translation>program MPlayer</translation>
+        <source>mplayer2 executable</source>
+        <translation>program mplayer2</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="811"/>
@@ -4792,8 +4792,8 @@ Příklad: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="847"/>
-        <source>Select the &amp;MPlayer executable:</source>
-        <translation type="obsolete">Zvolte spustitelný soubor &amp;MPlayeru:</translation>
+        <source>Select the &amp;mplayer2 executable:</source>
+        <translation type="obsolete">Zvolte spustitelný soubor &amp;mplayer2u:</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="847"/>
@@ -4992,8 +4992,8 @@ Příklad: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="950"/>
-        <source>Allows to change the playback speed without altering pitch. Requires at least MPlayer dev-SVN-r24924.</source>
-        <translation>Umožňuje rychlé přehrávání beze změny výšky tónu. Vyžaduje MPlayer verze dev-SVN-r24924 nebo vyšší.</translation>
+        <source>Allows to change the playback speed without altering pitch. Requires at least mplayer2 dev-SVN-r24924.</source>
+        <translation>Umožňuje rychlé přehrávání beze změny výšky tónu. Vyžaduje mplayer2 verze dev-SVN-r24924 nebo vyšší.</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="1001"/>
@@ -5208,8 +5208,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="784"/>
-        <source>Here you must specify the mplayer executable that SMPlayer2 will use.&lt;br&gt;SMPlayer2 requires at least MPlayer 1.0rc1 (although a recent revision from SVN is highly recommended).</source>
-        <translation>Zde zadejte, který MPlayer má SMPlayer2 použít.&lt;br&gt; SMPlayer2 potřebuje minimálně MPlayer 1.0rc1 (dostatečně nová verze z SVN je vysoce doporučována).</translation>
+        <source>Here you must specify the mplayer executable that SMPlayer2 will use.&lt;br&gt;SMPlayer2 requires at least mplayer2 1.0rc1 (although a recent revision from SVN is highly recommended).</source>
+        <translation>Zde zadejte, který mplayer2 má SMPlayer2 použít.&lt;br&gt; SMPlayer2 potřebuje minimálně mplayer2 1.0rc1 (dostatečně nová verze z SVN je vysoce doporučována).</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="786"/>
@@ -5263,8 +5263,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.ui" line="569"/>
-        <source>If this option is checked the initial volume will be set just before playback starts. This avoids a loud volume on startup. Requires at least MPlayer SVN r27872.</source>
-        <translation type="obsolete">Je-li toto nastavení zapnuto, výchozí hlasitost se nastaví před přehráváním. Takto lze předejít vysoké hlasitosti při startu. Vyžaduje minimálně MPlayer SVN r27872.</translation>
+        <source>If this option is checked the initial volume will be set just before playback starts. This avoids a loud volume on startup. Requires at least mplayer2 SVN r27872.</source>
+        <translation type="obsolete">Je-li toto nastavení zapnuto, výchozí hlasitost se nastaví před přehráváním. Takto lze předejít vysoké hlasitosti při startu. Vyžaduje minimálně mplayer2 SVN r27872.</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="886"/>
@@ -5333,8 +5333,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="946"/>
-        <source>Requests the number of playback channels. MPlayer asks the decoder to decode the audio into as many channels as specified. Then it is up to the decoder to fulfill the requirement. This is usually only important when playing videos with AC3 audio (like DVDs). In that case liba52 does the decoding by default and correctly downmixes the audio into the requested number of channels. &lt;b&gt;Note&lt;/b&gt;: This option is honored by codecs (AC3 only), filters (surround) and audio output drivers (OSS at least).</source>
-        <translation>Zažádá o daný počet kanálů pro přehrávání. MPlayer požádá dekodér o použití tohoto počtu kanálů. Dekodér pak může, ale nemusí všechny kanály použít. Toto nastavení je většinou důležité pouze pro videa s AC3 stopou (DVD). V tom případě pak liba52 provádí dekódování a správně převede zvuk na požadovaný počet kanálů. &lt;b&gt;Poznámka:&lt;/b&gt; Toto nastavení respektují kodeky (pouze AC3), filtry (surround) a výstupní ovladače zvuku (minimálně OSS).</translation>
+        <source>Requests the number of playback channels. mplayer2 asks the decoder to decode the audio into as many channels as specified. Then it is up to the decoder to fulfill the requirement. This is usually only important when playing videos with AC3 audio (like DVDs). In that case liba52 does the decoding by default and correctly downmixes the audio into the requested number of channels. &lt;b&gt;Note&lt;/b&gt;: This option is honored by codecs (AC3 only), filters (surround) and audio output drivers (OSS at least).</source>
+        <translation>Zažádá o daný počet kanálů pro přehrávání. mplayer2 požádá dekodér o použití tohoto počtu kanálů. Dekodér pak může, ale nemusí všechny kanály použít. Toto nastavení je většinou důležité pouze pro videa s AC3 stopou (DVD). V tom případě pak liba52 provádí dekódování a správně převede zvuk na požadovaný počet kanálů. &lt;b&gt;Poznámka:&lt;/b&gt; Toto nastavení respektují kodeky (pouze AC3), filtry (surround) a výstupní ovladače zvuku (minimálně OSS).</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="807"/>
@@ -5353,7 +5353,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.ui" line="43"/>
-        <source>&amp;MPlayer executable:</source>
+        <source>&amp;mplayer2 executable:</source>
         <translation>Program &amp;Mplayeru:</translation>
     </message>
     <message>
@@ -6442,8 +6442,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefperformance.ui" line="77"/>
-        <source>Select the priority for the MPlayer process.</source>
-        <translation>Zvolte prioritu pro proces MPlayeru.</translation>
+        <source>Select the priority for the mplayer2 process.</source>
+        <translation>Zvolte prioritu pro proces mplayer2u.</translation>
     </message>
     <message>
         <location filename="../prefperformance.ui" line="118"/>
@@ -6582,8 +6582,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="280"/>
-        <source>Possible values:&lt;br&gt; &lt;b&gt;Yes&lt;/b&gt;: it will try the fastest method to switch the audio track (it might not work with some formats).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: the MPlayer process will be restarted whenever you change the audio track.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 will decide what to do according to the MPlayer version.</source>
-        <translation>Možné hodnoty:&lt;br&gt; &lt;b&gt;Ano&lt;/b&gt;: použije nejrychlejší metodu přepínání zvukových stop (nemusí fungovat se všemi formáty).&lt;br&gt; &lt;b&gt;Ne&lt;/b&gt;: MPlayer se restartuje při každé změně zvukové stopy.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 určí metodu podle verze MPlayeru.</translation>
+        <source>Possible values:&lt;br&gt; &lt;b&gt;Yes&lt;/b&gt;: it will try the fastest method to switch the audio track (it might not work with some formats).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: the mplayer2 process will be restarted whenever you change the audio track.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 will decide what to do according to the mplayer2 version.</source>
+        <translation>Možné hodnoty:&lt;br&gt; &lt;b&gt;Ano&lt;/b&gt;: použije nejrychlejší metodu přepínání zvukových stop (nemusí fungovat se všemi formáty).&lt;br&gt; &lt;b&gt;Ne&lt;/b&gt;: mplayer2 se restartuje při každé změně zvukové stopy.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 určí metodu podle verze mplayer2u.</translation>
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="290"/>
@@ -6733,7 +6733,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     <message>
         <location filename="../prefperformance.cpp" line="240"/>
         <source>Set process priority for mplayer according to the predefined priorities available under Windows.&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; Using realtime priority can cause system lockup.</source>
-        <translation>Nastavení priority pro proces MPlayeru pod Windows .&lt;br&gt;&lt;b&gt;Varování:&lt;/b&gt; Použití priority reálného času může způsobit zablokování systému.</translation>
+        <translation>Nastavení priority pro proces mplayer2u pod Windows .&lt;br&gt;&lt;b&gt;Varování:&lt;/b&gt; Použití priority reálného času může způsobit zablokování systému.</translation>
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="254"/>
@@ -6742,7 +6742,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="255"/>
-        <source>Try to use non-free CoreAVC codec with no other codec is specified and non-VDPAU video output selected. Requires MPlayer build with CoreAVC support.</source>
+        <source>Try to use non-free CoreAVC codec with no other codec is specified and non-VDPAU video output selected. Requires mplayer2 build with CoreAVC support.</source>
         <translation>Použije proprietární kodek CoreAVC, není-li zvolen jiný kodek a je zapnutý jiný video výstup než VDPAU. Vyžaduje Mplayer s podporou CoreAVC.</translation>
     </message>
     <message>
@@ -7013,8 +7013,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="472"/>
-        <source>Here you can select a system font to be used for the subtitles and OSD. &lt;b&gt;Note:&lt;/b&gt; requires a MPlayer with fontconfig support.</source>
-        <translation>Zde můžete nastavit systémový font pro vykreslení titulků a OSD. &lt;b&gt;Poznámka:&lt;/b&gt; vyžaduje MPlayer s podporou fontconfig.</translation>
+        <source>Here you can select a system font to be used for the subtitles and OSD. &lt;b&gt;Note:&lt;/b&gt; requires a mplayer2 with fontconfig support.</source>
+        <translation>Zde můžete nastavit systémový font pro vykreslení titulků a OSD. &lt;b&gt;Poznámka:&lt;/b&gt; vyžaduje mplayer2 s podporou fontconfig.</translation>
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="474"/>
@@ -7068,8 +7068,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="431"/>
-        <source>When this option is on, the encoding of the subtitles will be tried to be autodetected for the given language. It will fall back to the default encoding if the autodetection fails. This option requires a MPlayer compiled with ENCA support.</source>
-        <translation>Je-li tato možnost zaškrtnuta, kódování titulků se pro daný jazyk detekuje. Nepovede-li se určit kódování, použije se výchozí nastavení. Toto funguje pouze pro MPlayer přeložený s podporou ENCA.</translation>
+        <source>When this option is on, the encoding of the subtitles will be tried to be autodetected for the given language. It will fall back to the default encoding if the autodetection fails. This option requires a mplayer2 compiled with ENCA support.</source>
+        <translation>Je-li tato možnost zaškrtnuta, kódování titulků se pro daný jazyk detekuje. Nepovede-li se určit kódování, použije se výchozí nastavení. Toto funguje pouze pro mplayer2 přeložený s podporou ENCA.</translation>
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="433"/>
@@ -7436,8 +7436,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="446"/>
-        <source>You should normally not disable this option. Do it only if your MPlayer is compiled without freetype support. &lt;b&gt;Disabling this option could make that subtitles won&apos;t work at all!&lt;/b&gt;</source>
-        <translation>Tato volba by většinou měla zůstat povolena. Použijte ji pouze v případě, že je MPlayer přeložen s podporou freetype. &lt;b&gt;Zakázáním této položky mohou titulky přestat fungovat!&lt;/b&gt;</translation>
+        <source>You should normally not disable this option. Do it only if your mplayer2 is compiled without freetype support. &lt;b&gt;Disabling this option could make that subtitles won&apos;t work at all!&lt;/b&gt;</source>
+        <translation>Tato volba by většinou měla zůstat povolena. Použijte ji pouze v případě, že je mplayer2 přeložen s podporou freetype. &lt;b&gt;Zakázáním této položky mohou titulky přestat fungovat!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../prefsubtitles.ui" line="256"/>
@@ -7690,8 +7690,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../clhelp.cpp" line="178"/>
-        <source>&apos;media&apos; is any kind of file that SMPlayer2 can open. It can be a local file, a DVD (e.g. dvd://1), an Internet stream (e.g. mms://....) or a local playlist in format m3u or pls. If the -playlist option is used, that means that SMPlayer2 will pass the -playlist option to MPlayer, so MPlayer will handle the playlist, not SMPlayer2.</source>
-        <translation>&apos;média&apos; jsou jakýkoli soubor, který SMPlayer2 umí otevřít. Může to být soubor na disku, DVD (např. dvd://1), internetový stream (např. mms://...) nebo playlist ve formátu m3u nebo pls. Použijete-li parametr -playlist, SMPlayer2 přepošle tento parametr MPlayeru, který se o playlist postará sám (playlist se tak nedostane do SMPlayer2u).</translation>
+        <source>&apos;media&apos; is any kind of file that SMPlayer2 can open. It can be a local file, a DVD (e.g. dvd://1), an Internet stream (e.g. mms://....) or a local playlist in format m3u or pls. If the -playlist option is used, that means that SMPlayer2 will pass the -playlist option to mplayer2, so mplayer2 will handle the playlist, not SMPlayer2.</source>
+        <translation>&apos;média&apos; jsou jakýkoli soubor, který SMPlayer2 umí otevřít. Může to být soubor na disku, DVD (např. dvd://1), internetový stream (např. mms://...) nebo playlist ve formátu m3u nebo pls. Použijete-li parametr -playlist, SMPlayer2 přepošle tento parametr mplayer2u, který se o playlist postará sám (playlist se tak nedostane do SMPlayer2u).</translation>
     </message>
     <message>
         <location filename="../clhelp.cpp" line="106"/>
@@ -8039,7 +8039,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     <message>
         <location filename="../videopreview/videopreview.cpp" line="304"/>
         <source>The mplayer process didn&apos;t run</source>
-        <translation>Nešlo spustit MPlayer</translation>
+        <translation>Nešlo spustit mplayer2</translation>
     </message>
     <message>
         <location filename="../videopreview/videopreview.cpp" line="380"/>
@@ -8074,7 +8074,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     <message>
         <location filename="../videopreview/videopreview.cpp" line="481"/>
         <source>The mplayer process didn&apos;t start while trying to get info about the video</source>
-        <translation>Nešlo spustit MPlayer pro získání informací o videu</translation>
+        <translation>Nešlo spustit mplayer2 pro získání informací o videu</translation>
     </message>
     <message>
         <location filename="../videopreview/videopreview.cpp" line="200"/>

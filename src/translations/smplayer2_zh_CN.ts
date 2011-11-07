@@ -224,8 +224,8 @@
     </message>
     <message>
         <location filename="../about.cpp" line="48"/>
-        <source>Using MPlayer %1</source>
-        <translation>正在使用 MPlayer %1</translation>
+        <source>Using mplayer2 %1</source>
+        <translation>正在使用 mplayer2 %1</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="203"/>
@@ -865,7 +865,7 @@ Do you want to overwrite?</source>
     <message>
         <location filename="../basegui.cpp" line="1747"/>
         <source>SMPlayer2 - mplayer log</source>
-        <translation>SMPlayer2 - MPlayer 日志</translation>
+        <translation>SMPlayer2 - mplayer2 日志</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="1748"/>
@@ -1257,8 +1257,8 @@ The configuration dialog will be shown now, so you can do it.</source>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4420"/>
-        <source>MPlayer has finished unexpectedly.</source>
-        <translation>MPlayer 意外结束。</translation>
+        <source>mplayer2 has finished unexpectedly.</source>
+        <translation>mplayer2 意外结束。</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4421"/>
@@ -1267,18 +1267,18 @@ The configuration dialog will be shown now, so you can do it.</source>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4438"/>
-        <source>MPlayer failed to start.</source>
-        <translation>MPlayer 启动失败。</translation>
+        <source>mplayer2 failed to start.</source>
+        <translation>mplayer2 启动失败。</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4439"/>
-        <source>Please check the MPlayer path in preferences.</source>
-        <translation>请检查首选项中的 MPlayer 路径。</translation>
+        <source>Please check the mplayer2 path in preferences.</source>
+        <translation>请检查首选项中的 mplayer2 路径。</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4441"/>
-        <source>MPlayer has crashed.</source>
-        <translation>MPlayer 已经崩溃。</translation>
+        <source>mplayer2 has crashed.</source>
+        <translation>mplayer2 已经崩溃。</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="4442"/>
@@ -1415,18 +1415,18 @@ The configuration dialog will be shown now, so you can do it.</source>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3847"/>
-        <source>Warning - Using old MPlayer</source>
-        <translation>警告 - 正在使用旧的 MPlayer</translation>
+        <source>Warning - Using old mplayer2</source>
+        <translation>警告 - 正在使用旧的 mplayer2</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3848"/>
-        <source>The version of MPlayer (%1) installed on your system is obsolete. SMPlayer2 can&apos;t work well with it: some options won&apos;t work, subtitle selection may fail...</source>
-        <translation>安装在您系统中的 MPlayer (%1) 版本已经过时。SMPlayer2 不能和它一起很好的工作：一些选项将无法工作，字幕选择可能会失效...</translation>
+        <source>The version of mplayer2 (%1) installed on your system is obsolete. SMPlayer2 can&apos;t work well with it: some options won&apos;t work, subtitle selection may fail...</source>
+        <translation>安装在您系统中的 mplayer2 (%1) 版本已经过时。SMPlayer2 不能和它一起很好的工作：一些选项将无法工作，字幕选择可能会失效...</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3853"/>
-        <source>Please, update your MPlayer.</source>
-        <translation>请更新您的 MPlayer。</translation>
+        <source>Please, update your mplayer2.</source>
+        <translation>请更新您的 mplayer2。</translation>
     </message>
     <message>
         <location filename="../basegui.cpp" line="3855"/>
@@ -1936,8 +1936,8 @@ The configuration dialog will be shown now, so you can do it.</source>
     </message>
     <message>
         <location filename="../errordialog.ui" line="13"/>
-        <source>MPlayer Error</source>
-        <translation>MPlayer 错误</translation>
+        <source>mplayer2 Error</source>
+        <translation>mplayer2 错误</translation>
     </message>
     <message>
         <location filename="../errordialog.ui" line="41"/>
@@ -2101,20 +2101,20 @@ The configuration dialog will be shown now, so you can do it.</source>
     </message>
     <message>
         <location filename="../filepropertiesdialog.ui" line="239"/>
-        <source>&amp;MPlayer options</source>
-        <translation>MPlayer 选项(&amp;M)</translation>
+        <source>&amp;mplayer2 options</source>
+        <translation>mplayer2 选项(&amp;M)</translation>
     </message>
     <message>
         <location filename="../filepropertiesdialog.ui" line="251"/>
-        <source>Additional Options for MPlayer</source>
-        <translation>MPlayer 附加选项</translation>
+        <source>Additional Options for mplayer2</source>
+        <translation>mplayer2 附加选项</translation>
     </message>
     <message>
         <location filename="../filepropertiesdialog.ui" line="263"/>
-        <source>Here you can pass extra options to MPlayer.
+        <source>Here you can pass extra options to mplayer2.
 Write them separated by spaces.
 Example: -flip -nosound</source>
-        <translation>在这里您可以传送附加选项至 MPlayer。
+        <translation>在这里您可以传送附加选项至 mplayer2。
 请用空格分开写入它们。
 实例：-flip -nosound</translation>
     </message>
@@ -2676,18 +2676,18 @@ Please check the permissions of that folder.</source>
     <name>InputMplayerVersion</name>
     <message>
         <location filename="../inputmplayerversion.ui" line="14"/>
-        <source>SMPlayer2 - Enter the MPlayer version</source>
-        <translation>SMPlayer2 - 输入 MPlayer 版本</translation>
+        <source>SMPlayer2 - Enter the mplayer2 version</source>
+        <translation>SMPlayer2 - 输入 mplayer2 版本</translation>
     </message>
     <message>
         <location filename="../inputmplayerversion.ui" line="35"/>
-        <source>SMPlayer2 couldn&apos;t identify the MPlayer version you&apos;re using.</source>
-        <translation>SMPlayer2 无法识别您正在使用的 MPlayer 版本。</translation>
+        <source>SMPlayer2 couldn&apos;t identify the mplayer2 version you&apos;re using.</source>
+        <translation>SMPlayer2 无法识别您正在使用的 mplayer2 版本。</translation>
     </message>
     <message>
         <location filename="../inputmplayerversion.ui" line="58"/>
-        <source>Version reported by MPlayer:</source>
-        <translation>MPlayer 报告的版本:</translation>
+        <source>Version reported by mplayer2:</source>
+        <translation>mplayer2 报告的版本:</translation>
     </message>
     <message>
         <location filename="../inputmplayerversion.ui" line="102"/>
@@ -4145,10 +4145,10 @@ Do you want to overwrite?</source>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="325"/>
-        <source>Here you can pass extra options to MPlayer.
+        <source>Here you can pass extra options to mplayer2.
 Write them separated by spaces.
 Example: -flip -nosound</source>
-        <translation>在这里您可以传送附加选项至 MPlayer。
+        <translation>在这里您可以传送附加选项至 mplayer2。
 请用空格分开写入它们。
 实例：-flip -nosound</translation>
     </message>
@@ -4170,8 +4170,8 @@ Example: resample=44100:0:0,volnorm</source>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="456"/>
-        <source>Log MPlayer output</source>
-        <translation>记录 MPlayer 输出</translation>
+        <source>Log mplayer2 output</source>
+        <translation>记录 mplayer2 输出</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="445"/>
@@ -4200,8 +4200,8 @@ Example: resample=44100:0:0,volnorm</source>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="122"/>
-        <source>&amp;Run MPlayer in its own window</source>
-        <translation>让 MPlayer 在自己的窗口中运行(&amp;R)</translation>
+        <source>&amp;Run mplayer2 in its own window</source>
+        <translation>让 mplayer2 在自己的窗口中运行(&amp;R)</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="357"/>
@@ -4245,53 +4245,53 @@ Example: resample=44100:0:0,volnorm</source>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="641"/>
-        <source>Log MPlayer &amp;output</source>
-        <translation>记录 MPlayer 输出(&amp;O)</translation>
+        <source>Log mplayer2 &amp;output</source>
+        <translation>记录 mplayer2 输出(&amp;O)</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="304"/>
         <source>Options for MP&amp;layer</source>
-        <translation>MPlayer 选项(&amp;L)</translation>
+        <translation>mplayer2 选项(&amp;L)</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="462"/>
-        <source>Autosave MPlayer log</source>
-        <translation>自动保存 MPlayer 日志</translation>
+        <source>Autosave mplayer2 log</source>
+        <translation>自动保存 mplayer2 日志</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="463"/>
-        <source>If this option is checked, the MPlayer log will be saved to the specified file every time a new file starts to play. It&apos;s intended for external applications, so they can get info about the file you&apos;re playing.</source>
-        <translation>如果这个选项被选中，每次开始播放新文件时 MPlayer 日志将被保存到指定的文件。它是用于外部程序的，这样外部程序可以获取有关您正在播放文件的信息。</translation>
+        <source>If this option is checked, the mplayer2 log will be saved to the specified file every time a new file starts to play. It&apos;s intended for external applications, so they can get info about the file you&apos;re playing.</source>
+        <translation>如果这个选项被选中，每次开始播放新文件时 mplayer2 日志将被保存到指定的文件。它是用于外部程序的，这样外部程序可以获取有关您正在播放文件的信息。</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="468"/>
-        <source>Autosave MPlayer log filename</source>
-        <translation>自动保存 MPlayer 日志的文件名</translation>
+        <source>Autosave mplayer2 log filename</source>
+        <translation>自动保存 mplayer2 日志的文件名</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="469"/>
-        <source>Enter here the path and filename that will be used to save the MPlayer log.</source>
-        <translation>在此输入将被用于保存 MPlayer 日志的路径和文件名。</translation>
+        <source>Enter here the path and filename that will be used to save the mplayer2 log.</source>
+        <translation>在此输入将被用于保存 mplayer2 日志的路径和文件名。</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="689"/>
-        <source>A&amp;utosave MPlayer log to file</source>
-        <translation>自动保存 MPlayer 日志到文件(&amp;U)</translation>
+        <source>A&amp;utosave mplayer2 log to file</source>
+        <translation>自动保存 mplayer2 日志到文件(&amp;U)</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="388"/>
-        <source>Pass short filenames (8+3) to MPlayer</source>
-        <translation>传送短文件名（8+3）至 MPlayer</translation>
+        <source>Pass short filenames (8+3) to mplayer2</source>
+        <translation>传送短文件名（8+3）至 mplayer2</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="389"/>
-        <source>Currently MPlayer can&apos;t open filenames which contains characters outside the local codepage. Checking this option will make SMPlayer2 to pass to MPlayer the short version of the filenames, and thus it will able to open them.</source>
-        <translation>目前 MPlayer 无法打开包含本地代码页以外字符的文件名。选中此选项 SMPlayer2 将生成短文版的文件名传送至 MPlayer，从而使其能够打开它们。</translation>
+        <source>Currently mplayer2 can&apos;t open filenames which contains characters outside the local codepage. Checking this option will make SMPlayer2 to pass to mplayer2 the short version of the filenames, and thus it will able to open them.</source>
+        <translation>目前 mplayer2 无法打开包含本地代码页以外字符的文件名。选中此选项 SMPlayer2 将生成短文版的文件名传送至 mplayer2，从而使其能够打开它们。</translation>
     </message>
     <message>
         <location filename="../prefadvanced.ui" line="166"/>
-        <source>&amp;Pass short filenames (8+3) to MPlayer</source>
-        <translation>传送短文件名（8+3）至 MPlayer (&amp;P)</translation>
+        <source>&amp;Pass short filenames (8+3) to mplayer2</source>
+        <translation>传送短文件名（8+3）至 mplayer2 (&amp;P)</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="359"/>
@@ -4305,13 +4305,13 @@ Example: resample=44100:0:0,volnorm</source>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="362"/>
-        <source>Run MPlayer in its own window</source>
-        <translation>让 MPlayer 在自己的窗口中运行</translation>
+        <source>Run mplayer2 in its own window</source>
+        <translation>让 mplayer2 在自己的窗口中运行</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="363"/>
-        <source>If you check this option, the MPlayer video window won&apos;t be embedded in SMPlayer2&apos;s main window but instead it will use its own window. Note that mouse and keyboard events will be handled directly by MPlayer, that means key shortcuts and mouse clicks probably won&apos;t work as expected when the MPlayer window has the focus.</source>
-        <translation>如果选中此选项，MPlayer 的视频窗口将不会被嵌入到 SMPlayer2 的主窗口中，它会使用其自己的窗口。请注意，鼠标和键盘事件将可直接由 MPlayer 处理，这意味着当焦点在 MPlayer 窗口时快捷键和鼠标点击动作很可能无法按预期工作。</translation>
+        <source>If you check this option, the mplayer2 video window won&apos;t be embedded in SMPlayer2&apos;s main window but instead it will use its own window. Note that mouse and keyboard events will be handled directly by mplayer2, that means key shortcuts and mouse clicks probably won&apos;t work as expected when the mplayer2 window has the focus.</source>
+        <translation>如果选中此选项，mplayer2 的视频窗口将不会被嵌入到 SMPlayer2 的主窗口中，它会使用其自己的窗口。请注意，鼠标和键盘事件将可直接由 mplayer2 处理，这意味着当焦点在 mplayer2 窗口时快捷键和鼠标点击动作很可能无法按预期工作。</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="403"/>
@@ -4325,8 +4325,8 @@ Example: resample=44100:0:0,volnorm</source>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="421"/>
-        <source>Options for MPlayer</source>
-        <translation>MPlayer 选项</translation>
+        <source>Options for mplayer2</source>
+        <translation>mplayer2 选项</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="423"/>
@@ -4335,8 +4335,8 @@ Example: resample=44100:0:0,volnorm</source>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="424"/>
-        <source>Here you can type options for MPlayer. Write them separated by spaces.</source>
-        <translation>您可以在这里键入 MPlayer 选项。请用空格分开写入它们。</translation>
+        <source>Here you can type options for mplayer2. Write them separated by spaces.</source>
+        <translation>您可以在这里键入 mplayer2 选项。请用空格分开写入它们。</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="427"/>
@@ -4345,8 +4345,8 @@ Example: resample=44100:0:0,volnorm</source>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="428"/>
-        <source>Here you can add video filters for MPlayer. Write them separated by commas. Don&apos;t use spaces!</source>
-        <translation>您可以在这里添加 MPlayer 视频滤镜。请用逗号分开写入它们。不要使用空格!</translation>
+        <source>Here you can add video filters for mplayer2. Write them separated by commas. Don&apos;t use spaces!</source>
+        <translation>您可以在这里添加 mplayer2 视频滤镜。请用逗号分开写入它们。不要使用空格!</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="431"/>
@@ -4355,8 +4355,8 @@ Example: resample=44100:0:0,volnorm</source>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="432"/>
-        <source>Here you can add audio filters for MPlayer. Write them separated by commas. Don&apos;t use spaces!</source>
-        <translation>您可以在这里添加 MPlayer 音频滤镜。请用逗号分开写入它们。不要使用空格!</translation>
+        <source>Here you can add audio filters for mplayer2. Write them separated by commas. Don&apos;t use spaces!</source>
+        <translation>您可以在这里添加 mplayer2 音频滤镜。请用逗号分开写入它们。不要使用空格!</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="397"/>
@@ -4425,8 +4425,8 @@ Example: resample=44100:0:0,volnorm</source>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="457"/>
-        <source>If checked, SMPlayer2 will store the output of MPlayer (you can see it in &lt;b&gt;Options -&gt; View logs -&gt; MPlayer&lt;/b&gt;). In case of problems this log can contain important information, so it&apos;s recommended to keep this option checked.</source>
-        <translation>如果选中，SMPlayer2 将存储 MPlayer 的输出（您可以通过打开&lt;b&gt;选项-&gt;查看日志-&gt;MPlayer&lt;/b&gt;看到它)。如果出现问题，这个日志中包含有可备查用的重要信息，因此建议保留选中此选项。</translation>
+        <source>If checked, SMPlayer2 will store the output of mplayer2 (you can see it in &lt;b&gt;Options -&gt; View logs -&gt; mplayer2&lt;/b&gt;). In case of problems this log can contain important information, so it&apos;s recommended to keep this option checked.</source>
+        <translation>如果选中，SMPlayer2 将存储 mplayer2 的输出（您可以通过打开&lt;b&gt;选项-&gt;查看日志-&gt;mplayer2&lt;/b&gt;看到它)。如果出现问题，这个日志中包含有可备查用的重要信息，因此建议保留选中此选项。</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="473"/>
@@ -4440,8 +4440,8 @@ Example: resample=44100:0:0,volnorm</source>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="378"/>
-        <source>Switches MPlayer to an experimental mode where timestamps for video frames are calculated differently and video filters which add new frames or modify timestamps of existing ones are supported. The more accurate timestamps can be visible for example when playing subtitles timed to scene changes with the SSA/ASS library enabled. Without correct pts the subtitle timing will typically be off by some frames. This option does not work correctly with some demuxers and codecs.</source>
-        <translation>切换 MPlayer 到试验模式，其中视频帧的时间戳计算不同，且支持视频滤镜添加新的帧或修改已有的时间戳。可以看到更精确的时间戳，例如通过启用 SSA/ASS 库修改播放字幕与场景同步。如果没有修正 PTS，字幕同步通常会被某些帧关闭。此选项不能与某些分离器和编解码器一起正常工作。</translation>
+        <source>Switches mplayer2 to an experimental mode where timestamps for video frames are calculated differently and video filters which add new frames or modify timestamps of existing ones are supported. The more accurate timestamps can be visible for example when playing subtitles timed to scene changes with the SSA/ASS library enabled. Without correct pts the subtitle timing will typically be off by some frames. This option does not work correctly with some demuxers and codecs.</source>
+        <translation>切换 mplayer2 到试验模式，其中视频帧的时间戳计算不同，且支持视频滤镜添加新的帧或修改已有的时间戳。可以看到更精确的时间戳，例如通过启用 SSA/ASS 库修改播放字幕与场景同步。如果没有修正 PTS，字幕同步通常会被某些帧关闭。此选项不能与某些分离器和编解码器一起正常工作。</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="409"/>
@@ -4456,7 +4456,7 @@ Example: resample=44100:0:0,volnorm</source>
     <message>
         <location filename="../prefadvanced.cpp" line="417"/>
         <source>Limitation: the actions are run only when a file is opened and not when the mplayer process is restarted (e.g. you select an audio or video filter).</source>
-        <translation>限制：只有当文件被打开时才会执行动作，MPlayer 进程重启时动作是无效的（例如您选择音频或视频滤镜时）。</translation>
+        <translation>限制：只有当文件被打开时才会执行动作，mplayer2 进程重启时动作是无效的（例如您选择音频或视频滤镜时）。</translation>
     </message>
     <message>
         <location filename="../prefadvanced.cpp" line="435"/>
@@ -4639,7 +4639,7 @@ Example: resample=44100:0:0,volnorm</source>
     <message>
         <location filename="../prefdrives.cpp" line="188"/>
         <source>If this option is checked, smplayer2 will play DVDs using dvdnav. Requires a recent version of mplayer compiled with dvdnav support.</source>
-        <translation>如果这个选项被选中，SMPlayer2 将使用 DVDNav 播放 DVD。需要最新版本已编译有 DVDNav 支持的 MPlayer。</translation>
+        <translation>如果这个选项被选中，SMPlayer2 将使用 DVDNav 播放 DVD。需要最新版本已编译有 DVDNav 支持的 mplayer2。</translation>
     </message>
     <message>
         <location filename="../prefdrives.cpp" line="191"/>
@@ -4713,7 +4713,7 @@ Example: resample=44100:0:0,volnorm</source>
     <message>
         <location filename="../prefgeneral.cpp" line="122"/>
         <source>Select the mplayer executable</source>
-        <translation>选择 MPlayer 可执行文件</translation>
+        <translation>选择 mplayer2 可执行文件</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="124"/>
@@ -4732,8 +4732,8 @@ Example: resample=44100:0:0,volnorm</source>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="790"/>
-        <source>MPlayer executable</source>
-        <translation>MPlayer 可执行文件</translation>
+        <source>mplayer2 executable</source>
+        <translation>mplayer2 可执行文件</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="821"/>
@@ -5048,8 +5048,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="963"/>
-        <source>Allows to change the playback speed without altering pitch. Requires at least MPlayer dev-SVN-r24924.</source>
-        <translation>允许改变播放速度（不改变间隔）。至少需要 MPlayer dev-SVN-r24924。</translation>
+        <source>Allows to change the playback speed without altering pitch. Requires at least mplayer2 dev-SVN-r24924.</source>
+        <translation>允许改变播放速度（不改变间隔）。至少需要 mplayer2 dev-SVN-r24924。</translation>
     </message>
     <message>
         <location filename="../prefgeneral.ui" line="227"/>
@@ -5196,8 +5196,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="791"/>
-        <source>Here you must specify the mplayer executable that SMPlayer2 will use.&lt;br&gt;SMPlayer2 requires at least MPlayer 1.0rc1 (although a recent revision from SVN is highly recommended).</source>
-        <translation>在这里您必须指定 SMPlayer2 将使用的 MPlayer 可执行文件。&lt;br&gt;SMPlayer2 至少需要 MPlayer 1.0rc1（但是强烈推荐 SVN 最新修订版）。</translation>
+        <source>Here you must specify the mplayer executable that SMPlayer2 will use.&lt;br&gt;SMPlayer2 requires at least mplayer2 1.0rc1 (although a recent revision from SVN is highly recommended).</source>
+        <translation>在这里您必须指定 SMPlayer2 将使用的 mplayer2 可执行文件。&lt;br&gt;SMPlayer2 至少需要 mplayer2 1.0rc1（但是强烈推荐 SVN 最新修订版）。</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="795"/>
@@ -5312,8 +5312,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="952"/>
-        <source>Requests the number of playback channels. MPlayer asks the decoder to decode the audio into as many channels as specified. Then it is up to the decoder to fulfill the requirement. This is usually only important when playing videos with AC3 audio (like DVDs). In that case liba52 does the decoding by default and correctly downmixes the audio into the requested number of channels. &lt;b&gt;Note&lt;/b&gt;: This option is honored by codecs (AC3 only), filters (surround) and audio output drivers (OSS at least).</source>
-        <translation>请求播放的声道数。MPlayer 要求解码器把音频解码到指定数量的声道。然后由解码器来实现这个要求。此选项通常只有在播放带 AC-3 音频（比如 DVD）的视频时才显得重要。在那时默认使用 liba52 解码并把音频正确地混合到需要的声道数。&lt;b&gt;注意&lt;/b&gt;：此选项可以被解码器（仅适用于 AC3）、滤镜（环绕立体声）和音频输出驱动（至少 OSS 可以）接受。</translation>
+        <source>Requests the number of playback channels. mplayer2 asks the decoder to decode the audio into as many channels as specified. Then it is up to the decoder to fulfill the requirement. This is usually only important when playing videos with AC3 audio (like DVDs). In that case liba52 does the decoding by default and correctly downmixes the audio into the requested number of channels. &lt;b&gt;Note&lt;/b&gt;: This option is honored by codecs (AC3 only), filters (surround) and audio output drivers (OSS at least).</source>
+        <translation>请求播放的声道数。mplayer2 要求解码器把音频解码到指定数量的声道。然后由解码器来实现这个要求。此选项通常只有在播放带 AC-3 音频（比如 DVD）的视频时才显得重要。在那时默认使用 liba52 解码并把音频正确地混合到需要的声道数。&lt;b&gt;注意&lt;/b&gt;：此选项可以被解码器（仅适用于 AC3）、滤镜（环绕立体声）和音频输出驱动（至少 OSS 可以）接受。</translation>
     </message>
     <message>
         <location filename="../prefgeneral.cpp" line="817"/>
@@ -5332,8 +5332,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefgeneral.ui" line="43"/>
-        <source>&amp;MPlayer executable:</source>
-        <translation>MPlayer 可执行文件(&amp;M):</translation>
+        <source>&amp;mplayer2 executable:</source>
+        <translation>mplayer2 可执行文件(&amp;M):</translation>
     </message>
     <message>
         <location filename="../prefgeneral.ui" line="150"/>
@@ -6440,8 +6440,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefperformance.ui" line="77"/>
-        <source>Select the priority for the MPlayer process.</source>
-        <translation>选择用于 MPlayer 进程的优先级。</translation>
+        <source>Select the priority for the mplayer2 process.</source>
+        <translation>选择用于 mplayer2 进程的优先级。</translation>
     </message>
     <message>
         <location filename="../prefperformance.ui" line="118"/>
@@ -6565,8 +6565,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="274"/>
-        <source>Possible values:&lt;br&gt; &lt;b&gt;Yes&lt;/b&gt;: it will try the fastest method to switch the audio track (it might not work with some formats).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: the MPlayer process will be restarted whenever you change the audio track.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 will decide what to do according to the MPlayer version.</source>
-        <translation>可能的值：&lt;br&gt;&lt;b&gt;是&lt;/b&gt;：它会尝试以最快的方法来切换音轨（它可能无法工作于某些格式）。&lt;br&gt;&lt;b&gt;否&lt;/b&gt;：每当您更改音轨，MPlayer 进程将被重新启动。&lt;br&gt;&lt;b&gt;自动&lt;/b&gt;：SMPlayer2 将根据 MPlayer 版本来决定做什么。</translation>
+        <source>Possible values:&lt;br&gt; &lt;b&gt;Yes&lt;/b&gt;: it will try the fastest method to switch the audio track (it might not work with some formats).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: the mplayer2 process will be restarted whenever you change the audio track.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 will decide what to do according to the mplayer2 version.</source>
+        <translation>可能的值：&lt;br&gt;&lt;b&gt;是&lt;/b&gt;：它会尝试以最快的方法来切换音轨（它可能无法工作于某些格式）。&lt;br&gt;&lt;b&gt;否&lt;/b&gt;：每当您更改音轨，mplayer2 进程将被重新启动。&lt;br&gt;&lt;b&gt;自动&lt;/b&gt;：SMPlayer2 将根据 mplayer2 版本来决定做什么。</translation>
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="290"/>
@@ -6711,7 +6711,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     <message>
         <location filename="../prefperformance.cpp" line="238"/>
         <source>Set process priority for mplayer according to the predefined priorities available under Windows.&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; Using realtime priority can cause system lockup.</source>
-        <translation>根据 Windows 下可用的预定义优先顺序设置 MPlayer 进程的优先级。&lt;br&gt;&lt;b&gt;警告：&lt;/b&gt;使用实时优先级会引起系统锁死。</translation>
+        <translation>根据 Windows 下可用的预定义优先顺序设置 mplayer2 进程的优先级。&lt;br&gt;&lt;b&gt;警告：&lt;/b&gt;使用实时优先级会引起系统锁死。</translation>
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="254"/>
@@ -6720,8 +6720,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefperformance.cpp" line="255"/>
-        <source>Try to use non-free CoreAVC codec with no other codec is specified and non-VDPAU video output selected. Requires MPlayer build with CoreAVC support.</source>
-        <translation>没有指定其他编解码器和选择非 VDPAU 视频输出时尝试使用非自由软件 CoreAVC 编解码器。需要 MPlayer 编译有 CoreAVC 支持。</translation>
+        <source>Try to use non-free CoreAVC codec with no other codec is specified and non-VDPAU video output selected. Requires mplayer2 build with CoreAVC support.</source>
+        <translation>没有指定其他编解码器和选择非 VDPAU 视频输出时尝试使用非自由软件 CoreAVC 编解码器。需要 mplayer2 编译有 CoreAVC 支持。</translation>
     </message>
     <message>
         <location filename="../prefperformance.ui" line="292"/>
@@ -6997,8 +6997,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="471"/>
-        <source>Here you can select a system font to be used for the subtitles and OSD. &lt;b&gt;Note:&lt;/b&gt; requires a MPlayer with fontconfig support.</source>
-        <translation>在这里您可以选择被应用于字幕和 OSD 的系统字体。&lt;b&gt;注意：&lt;/b&gt;需要 MPlayer 有 fontconfig 支持。</translation>
+        <source>Here you can select a system font to be used for the subtitles and OSD. &lt;b&gt;Note:&lt;/b&gt; requires a mplayer2 with fontconfig support.</source>
+        <translation>在这里您可以选择被应用于字幕和 OSD 的系统字体。&lt;b&gt;注意：&lt;/b&gt;需要 mplayer2 有 fontconfig 支持。</translation>
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="474"/>
@@ -7052,8 +7052,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="427"/>
-        <source>When this option is on, the encoding of the subtitles will be tried to be autodetected for the given language. It will fall back to the default encoding if the autodetection fails. This option requires a MPlayer compiled with ENCA support.</source>
-        <translation>当此选项开启时，字幕将被设法自动检测特定语言的编码。如果自动检测失败，它将退回到默认编码。此选项需要 MPlayer 已编译有 ENCA 支持。</translation>
+        <source>When this option is on, the encoding of the subtitles will be tried to be autodetected for the given language. It will fall back to the default encoding if the autodetection fails. This option requires a mplayer2 compiled with ENCA support.</source>
+        <translation>当此选项开启时，字幕将被设法自动检测特定语言的编码。如果自动检测失败，它将退回到默认编码。此选项需要 mplayer2 已编译有 ENCA 支持。</translation>
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="433"/>
@@ -7421,8 +7421,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../prefsubtitles.cpp" line="443"/>
-        <source>You should normally not disable this option. Do it only if your MPlayer is compiled without freetype support. &lt;b&gt;Disabling this option could make that subtitles won&apos;t work at all!&lt;/b&gt;</source>
-        <translation>您通常不应禁用此选项，除非您的 MPlayer 没有编译有 Freetype 支持。&lt;b&gt;禁用此选项可致使字幕无法工作！&lt;/b&gt;</translation>
+        <source>You should normally not disable this option. Do it only if your mplayer2 is compiled without freetype support. &lt;b&gt;Disabling this option could make that subtitles won&apos;t work at all!&lt;/b&gt;</source>
+        <translation>您通常不应禁用此选项，除非您的 mplayer2 没有编译有 Freetype 支持。&lt;b&gt;禁用此选项可致使字幕无法工作！&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../prefsubtitles.ui" line="256"/>
@@ -7667,8 +7667,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     </message>
     <message>
         <location filename="../clhelp.cpp" line="172"/>
-        <source>&apos;media&apos; is any kind of file that SMPlayer2 can open. It can be a local file, a DVD (e.g. dvd://1), an Internet stream (e.g. mms://....) or a local playlist in format m3u or pls. If the -playlist option is used, that means that SMPlayer2 will pass the -playlist option to MPlayer, so MPlayer will handle the playlist, not SMPlayer2.</source>
-        <translation>“媒体”是 SMPlayer2 可以打开的任何一种文件。它可以是本地文件、DVD（例如 dvd://1）、网络串流（例如 mms://....）或 m3u/pls 格式的本地播放列表。如果使用了 -playlist 选项，这意味着 SMPlayer2 将传送 -playlist 选项到 MPlayer，因此 MPlayer 将处理该播放列表，而不是 SMPlayer2。</translation>
+        <source>&apos;media&apos; is any kind of file that SMPlayer2 can open. It can be a local file, a DVD (e.g. dvd://1), an Internet stream (e.g. mms://....) or a local playlist in format m3u or pls. If the -playlist option is used, that means that SMPlayer2 will pass the -playlist option to mplayer2, so mplayer2 will handle the playlist, not SMPlayer2.</source>
+        <translation>“媒体”是 SMPlayer2 可以打开的任何一种文件。它可以是本地文件、DVD（例如 dvd://1）、网络串流（例如 mms://....）或 m3u/pls 格式的本地播放列表。如果使用了 -playlist 选项，这意味着 SMPlayer2 将传送 -playlist 选项到 mplayer2，因此 mplayer2 将处理该播放列表，而不是 SMPlayer2。</translation>
     </message>
     <message>
         <location filename="../clhelp.cpp" line="103"/>
@@ -8021,7 +8021,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     <message>
         <location filename="../videopreview/videopreview.cpp" line="304"/>
         <source>The mplayer process didn&apos;t run</source>
-        <translation>MPlayer 进程没有运行</translation>
+        <translation>mplayer2 进程没有运行</translation>
     </message>
     <message>
         <location filename="../videopreview/videopreview.cpp" line="380"/>
@@ -8056,7 +8056,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
     <message>
         <location filename="../videopreview/videopreview.cpp" line="481"/>
         <source>The mplayer process didn&apos;t start while trying to get info about the video</source>
-        <translation>试图获取视频信息时 MPlayer 的进程没有启动</translation>
+        <translation>试图获取视频信息时 mplayer2 的进程没有启动</translation>
     </message>
     <message>
         <location filename="../videopreview/videopreview.cpp" line="200"/>

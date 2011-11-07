@@ -174,8 +174,8 @@
         <translation>Basco</translation>
     </message>
     <message>
-        <source>Using MPlayer %1</source>
-        <translation>MPlayer %1 in uso</translation>
+        <source>Using mplayer2 %1</source>
+        <translation>mplayer2 %1 in uso</translation>
     </message>
     <message>
         <source>Catalan</source>
@@ -1008,24 +1008,24 @@ Si aprirà ora il dialogo di configurazione, in modo che tu possa farlo.
         <translation>Reinizializza equalizzatore video</translation>
     </message>
     <message>
-        <source>MPlayer has finished unexpectedly.</source>
-        <translation>MPlayer si è fermato inaspettatamente.</translation>
+        <source>mplayer2 has finished unexpectedly.</source>
+        <translation>mplayer2 si è fermato inaspettatamente.</translation>
     </message>
     <message>
         <source>Exit code: %1</source>
         <translation>Codice di uscita: %1</translation>
     </message>
     <message>
-        <source>MPlayer failed to start.</source>
-        <translation>MPlayer non è riuscito a partire.</translation>
+        <source>mplayer2 failed to start.</source>
+        <translation>mplayer2 non è riuscito a partire.</translation>
     </message>
     <message>
-        <source>Please check the MPlayer path in preferences.</source>
-        <translation>Controlla il percorso dell&apos;eseguibile MPlayer nelle preferenze.</translation>
+        <source>Please check the mplayer2 path in preferences.</source>
+        <translation>Controlla il percorso dell&apos;eseguibile mplayer2 nelle preferenze.</translation>
     </message>
     <message>
-        <source>MPlayer has crashed.</source>
-        <translation>MPlayer è andato in crash.</translation>
+        <source>mplayer2 has crashed.</source>
+        <translation>mplayer2 è andato in crash.</translation>
     </message>
     <message>
         <source>See the log for more info.</source>
@@ -1134,16 +1134,16 @@ Si aprirà ora il dialogo di configurazione, in modo che tu possa farlo.
         <translation>&amp;Traccia</translation>
     </message>
     <message>
-        <source>Warning - Using old MPlayer</source>
-        <translation>Attenzione - Vecchio MPlayer in uso</translation>
+        <source>Warning - Using old mplayer2</source>
+        <translation>Attenzione - Vecchio mplayer2 in uso</translation>
     </message>
     <message>
-        <source>The version of MPlayer (%1) installed on your system is obsolete. SMPlayer2 can&apos;t work well with it: some options won&apos;t work, subtitle selection may fail...</source>
-        <translation>La versione di MPlayer (%1) installata su questo sistema è obsoleta, SMPlayer2 non può funzionare bene con essa: alcune opzioni non andranno, la selezione dei sottotitoli potrebbe non riuscire...</translation>
+        <source>The version of mplayer2 (%1) installed on your system is obsolete. SMPlayer2 can&apos;t work well with it: some options won&apos;t work, subtitle selection may fail...</source>
+        <translation>La versione di mplayer2 (%1) installata su questo sistema è obsoleta, SMPlayer2 non può funzionare bene con essa: alcune opzioni non andranno, la selezione dei sottotitoli potrebbe non riuscire...</translation>
     </message>
     <message>
-        <source>Please, update your MPlayer.</source>
-        <translation>Per favore, aggiorna MPlayer.</translation>
+        <source>Please, update your mplayer2.</source>
+        <translation>Per favore, aggiorna mplayer2.</translation>
     </message>
     <message>
         <source>(This warning won&apos;t be displayed anymore)</source>
@@ -1567,8 +1567,8 @@ Si aprirà ora il dialogo di configurazione, in modo che tu possa farlo.
         <translation>&amp;Mostra registro</translation>
     </message>
     <message>
-        <source>MPlayer Error</source>
-        <translation>Errore MPlayer</translation>
+        <source>mplayer2 Error</source>
+        <translation>Errore mplayer2</translation>
     </message>
     <message>
         <source>icon</source>
@@ -1699,18 +1699,18 @@ Si aprirà ora il dialogo di configurazione, in modo che tu possa farlo.
         <translation>&amp;Selezionare il codec audio:</translation>
     </message>
     <message>
-        <source>&amp;MPlayer options</source>
-        <translation>Opzioni &amp;MPlayer</translation>
+        <source>&amp;mplayer2 options</source>
+        <translation>Opzioni &amp;mplayer2</translation>
     </message>
     <message>
-        <source>Additional Options for MPlayer</source>
-        <translation>Opzioni addizionali per MPlayer</translation>
+        <source>Additional Options for mplayer2</source>
+        <translation>Opzioni addizionali per mplayer2</translation>
     </message>
     <message>
-        <source>Here you can pass extra options to MPlayer.
+        <source>Here you can pass extra options to mplayer2.
 Write them separated by spaces.
 Example: -flip -nosound</source>
-        <translation>Qui si possono passare opzioni extra a MPlayer.
+        <translation>Qui si possono passare opzioni extra a mplayer2.
 Scriverle separate da spazi.
 Esempio: -flip -nosound</translation>
     </message>
@@ -2154,16 +2154,16 @@ Controllarne i relativi permessi.</translation>
 <context>
     <name>InputMplayerVersion</name>
     <message>
-        <source>SMPlayer2 - Enter the MPlayer version</source>
-        <translation>SMPlayer2 - Inserisci la versione di  MPlayer</translation>
+        <source>SMPlayer2 - Enter the mplayer2 version</source>
+        <translation>SMPlayer2 - Inserisci la versione di  mplayer2</translation>
     </message>
     <message>
-        <source>SMPlayer2 couldn&apos;t identify the MPlayer version you&apos;re using.</source>
-        <translation>SMPlayer2 non è riuscito a identificare la versione di MPlayer in uso.</translation>
+        <source>SMPlayer2 couldn&apos;t identify the mplayer2 version you&apos;re using.</source>
+        <translation>SMPlayer2 non è riuscito a identificare la versione di mplayer2 in uso.</translation>
     </message>
     <message>
-        <source>Version reported by MPlayer:</source>
-        <translation>MPlayer riporta la versione:</translation>
+        <source>Version reported by mplayer2:</source>
+        <translation>mplayer2 riporta la versione:</translation>
     </message>
     <message>
         <source>Please, &amp;select the correct version:</source>
@@ -3305,10 +3305,10 @@ Vuoi sovrascriverlo?</translation>
         <translation>icona</translation>
     </message>
     <message>
-        <source>Here you can pass extra options to MPlayer.
+        <source>Here you can pass extra options to mplayer2.
 Write them separated by spaces.
 Example: -flip -nosound</source>
-        <translation>Qui è possibile passare opzioni addizionali a MPlayer.
+        <translation>Qui è possibile passare opzioni addizionali a mplayer2.
 Scriverle separate da spazi.
 Esempio: -flip -nosound</translation>
     </message>
@@ -3327,8 +3327,8 @@ Example: resample=44100:0:0,volnorm</source>
 Esempio: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
-        <source>Log MPlayer output</source>
-        <translation>Registra l&apos;output di MPlayer</translation>
+        <source>Log mplayer2 output</source>
+        <translation>Registra l&apos;output di mplayer2</translation>
     </message>
     <message>
         <source>Log SMPlayer2 output</source>
@@ -3351,8 +3351,8 @@ Esempio: resample=44100:0:0,volnorm</translation>
         <translation>Rapporto del &amp;monitor:</translation>
     </message>
     <message>
-        <source>&amp;Run MPlayer in its own window</source>
-        <translation>&amp;Esegui MPlayer nella sua finestra</translation>
+        <source>&amp;Run mplayer2 in its own window</source>
+        <translation>&amp;Esegui mplayer2 nella sua finestra</translation>
     </message>
     <message>
         <source>&amp;Options:</source>
@@ -3387,44 +3387,44 @@ Esempio: resample=44100:0:0,volnorm</translation>
         <translation>Registri</translation>
     </message>
     <message>
-        <source>Log MPlayer &amp;output</source>
-        <translation>Abilita il registro di &amp;MPlayer</translation>
+        <source>Log mplayer2 &amp;output</source>
+        <translation>Abilita il registro di &amp;mplayer2</translation>
     </message>
     <message>
         <source>Options for MP&amp;layer</source>
         <translation>Opzioni per MP&amp;layer</translation>
     </message>
     <message>
-        <source>Autosave MPlayer log</source>
-        <translation>Salva automaticamente il registro di MPlayer su file</translation>
+        <source>Autosave mplayer2 log</source>
+        <translation>Salva automaticamente il registro di mplayer2 su file</translation>
     </message>
     <message>
-        <source>If this option is checked, the MPlayer log will be saved to the specified file every time a new file starts to play. It&apos;s intended for external applications, so they can get info about the file you&apos;re playing.</source>
-        <translation>Selezionando questa opzione, l&apos;output di MPlayer verrà salvato automaticamente nel file specificato ogni volta che viene riprodotto un nuovo file.Utile per applicazioni esterne, per avere informazioni sul file in riproduzione.</translation>
+        <source>If this option is checked, the mplayer2 log will be saved to the specified file every time a new file starts to play. It&apos;s intended for external applications, so they can get info about the file you&apos;re playing.</source>
+        <translation>Selezionando questa opzione, l&apos;output di mplayer2 verrà salvato automaticamente nel file specificato ogni volta che viene riprodotto un nuovo file.Utile per applicazioni esterne, per avere informazioni sul file in riproduzione.</translation>
     </message>
     <message>
-        <source>Autosave MPlayer log filename</source>
-        <translation>Nome del file di registro di MPlayer</translation>
+        <source>Autosave mplayer2 log filename</source>
+        <translation>Nome del file di registro di mplayer2</translation>
     </message>
     <message>
-        <source>Enter here the path and filename that will be used to save the MPlayer log.</source>
-        <translation>Inserire nome e percorso del file che verrà usato come registro di MPlayer.</translation>
+        <source>Enter here the path and filename that will be used to save the mplayer2 log.</source>
+        <translation>Inserire nome e percorso del file che verrà usato come registro di mplayer2.</translation>
     </message>
     <message>
-        <source>A&amp;utosave MPlayer log to file</source>
-        <translation>Salva au&amp;tomaticamente il registro di MPlayer su file</translation>
+        <source>A&amp;utosave mplayer2 log to file</source>
+        <translation>Salva au&amp;tomaticamente il registro di mplayer2 su file</translation>
     </message>
     <message>
-        <source>Pass short filenames (8+3) to MPlayer</source>
-        <translation>Fornisci nomi di file DOS (8+3) a MPlayer</translation>
+        <source>Pass short filenames (8+3) to mplayer2</source>
+        <translation>Fornisci nomi di file DOS (8+3) a mplayer2</translation>
     </message>
     <message>
-        <source>Currently MPlayer can&apos;t open filenames which contains characters outside the local codepage. Checking this option will make SMPlayer2 to pass to MPlayer the short version of the filenames, and thus it will able to open them.</source>
-        <translation>Attualmente MPlayer non è in grado di aprire file il cui nome contiene caratteri non supportati dal sistema. Selezionando questa opzione, SMPlayer2 passerà a MPlayer la versione DOS del nome del file, e sarà quindi in grado di aprirlo.</translation>
+        <source>Currently mplayer2 can&apos;t open filenames which contains characters outside the local codepage. Checking this option will make SMPlayer2 to pass to mplayer2 the short version of the filenames, and thus it will able to open them.</source>
+        <translation>Attualmente mplayer2 non è in grado di aprire file il cui nome contiene caratteri non supportati dal sistema. Selezionando questa opzione, SMPlayer2 passerà a mplayer2 la versione DOS del nome del file, e sarà quindi in grado di aprirlo.</translation>
     </message>
     <message>
-        <source>&amp;Pass short filenames (8+3) to MPlayer</source>
-        <translation>&amp;Fornisci nomi di file DOS (8+3) a MPlayer</translation>
+        <source>&amp;Pass short filenames (8+3) to mplayer2</source>
+        <translation>&amp;Fornisci nomi di file DOS (8+3) a mplayer2</translation>
     </message>
     <message>
         <source>Monitor aspect</source>
@@ -3435,12 +3435,12 @@ Esempio: resample=44100:0:0,volnorm</translation>
         <translation>Selezionare il rapporto d&apos;aspetto del monitor in uso.</translation>
     </message>
     <message>
-        <source>Run MPlayer in its own window</source>
-        <translation>Esegui MPlayer nella sua finestra</translation>
+        <source>Run mplayer2 in its own window</source>
+        <translation>Esegui mplayer2 nella sua finestra</translation>
     </message>
     <message>
-        <source>If you check this option, the MPlayer video window won&apos;t be embedded in SMPlayer2&apos;s main window but instead it will use its own window. Note that mouse and keyboard events will be handled directly by MPlayer, that means key shortcuts and mouse clicks probably won&apos;t work as expected when the MPlayer window has the focus.</source>
-        <translation>Selezionando questa opzione, la finestra di MPlayer non sarà contenuta in quella di SMPlayer2. Eventi da mouse e tastiera saranno gestiti direttamente da MPlayer, quindi le opzioni in preferenze potrebbero non funzionare.</translation>
+        <source>If you check this option, the mplayer2 video window won&apos;t be embedded in SMPlayer2&apos;s main window but instead it will use its own window. Note that mouse and keyboard events will be handled directly by mplayer2, that means key shortcuts and mouse clicks probably won&apos;t work as expected when the mplayer2 window has the focus.</source>
+        <translation>Selezionando questa opzione, la finestra di mplayer2 non sarà contenuta in quella di SMPlayer2. Eventi da mouse e tastiera saranno gestiti direttamente da mplayer2, quindi le opzioni in preferenze potrebbero non funzionare.</translation>
     </message>
     <message>
         <source>Colorkey</source>
@@ -3451,32 +3451,32 @@ Esempio: resample=44100:0:0,volnorm</translation>
         <translation>Se si visualizzano parti del video al di sopra di altre finestre, si può cambiare la chiave colore. Provare a selezionare un colore vicino al nero.</translation>
     </message>
     <message>
-        <source>Options for MPlayer</source>
-        <translation>Opzioni per MPlayer</translation>
+        <source>Options for mplayer2</source>
+        <translation>Opzioni per mplayer2</translation>
     </message>
     <message>
         <source>Options</source>
         <translation>Opzioni</translation>
     </message>
     <message>
-        <source>Here you can type options for MPlayer. Write them separated by spaces.</source>
-        <translation>Qui si possono passare opzioni a MPlayer. Scriverle separate da spazi.</translation>
+        <source>Here you can type options for mplayer2. Write them separated by spaces.</source>
+        <translation>Qui si possono passare opzioni a mplayer2. Scriverle separate da spazi.</translation>
     </message>
     <message>
         <source>Video filters</source>
         <translation>Filtri video</translation>
     </message>
     <message>
-        <source>Here you can add video filters for MPlayer. Write them separated by commas. Don&apos;t use spaces!</source>
-        <translation>Qui si possono aggiungere filtri video a MPlayer. Scrivili separati da virgole. Non usare spazi!</translation>
+        <source>Here you can add video filters for mplayer2. Write them separated by commas. Don&apos;t use spaces!</source>
+        <translation>Qui si possono aggiungere filtri video a mplayer2. Scrivili separati da virgole. Non usare spazi!</translation>
     </message>
     <message>
         <source>Audio filters</source>
         <translation>Filtri audio</translation>
     </message>
     <message>
-        <source>Here you can add audio filters for MPlayer. Write them separated by commas. Don&apos;t use spaces!</source>
-        <translation>Qui si possono aggiungere filtri audio a MPlayer. Scrivili separati da virgole. Non usare spazi!</translation>
+        <source>Here you can add audio filters for mplayer2. Write them separated by commas. Don&apos;t use spaces!</source>
+        <translation>Qui si possono aggiungere filtri audio a mplayer2. Scrivili separati da virgole. Non usare spazi!</translation>
     </message>
     <message>
         <source>Repaint the background of the video window</source>
@@ -3531,8 +3531,8 @@ Esempio: resample=44100:0:0,volnorm</translation>
         <translation>Se questa opzione è selezionata, SMPlayer2 salverà i messaggi di debug (puoi visualizzarlo in &lt;b&gt;Opzioni -&gt; Vedi registri -&gt; SMPlayer2&lt;/b&gt;). Queste informazioni possono essere utili per gli sviluppatori nel caso si trovi un bug.</translation>
     </message>
     <message>
-        <source>If checked, SMPlayer2 will store the output of MPlayer (you can see it in &lt;b&gt;Options -&gt; View logs -&gt; MPlayer&lt;/b&gt;). In case of problems this log can contain important information, so it&apos;s recommended to keep this option checked.</source>
-        <translation>Se selezionata, SMPlayer2 salverà l&apos;output di MPlayer (puoi visualizzarlo in &lt;b&gt;Opzioni -&gt; Vedi registri -&gt; MPlayer&lt;/b&gt;). In caso di problemi, questo registro può contenere informazioni importanti, si raccomanda quindi di tenere selezionata questa opzione.</translation>
+        <source>If checked, SMPlayer2 will store the output of mplayer2 (you can see it in &lt;b&gt;Options -&gt; View logs -&gt; mplayer2&lt;/b&gt;). In case of problems this log can contain important information, so it&apos;s recommended to keep this option checked.</source>
+        <translation>Se selezionata, SMPlayer2 salverà l&apos;output di mplayer2 (puoi visualizzarlo in &lt;b&gt;Opzioni -&gt; Vedi registri -&gt; mplayer2&lt;/b&gt;). In caso di problemi, questo registro può contenere informazioni importanti, si raccomanda quindi di tenere selezionata questa opzione.</translation>
     </message>
     <message>
         <source>This option allows to filter the SMPlayer2 messages that will be stored in the log. Here you can write any regular expression.&lt;br&gt;For instance: &lt;i&gt;^Core::.*&lt;/i&gt; will display only the lines starting with &lt;i&gt;Core::&lt;/i&gt;</source>
@@ -3543,8 +3543,8 @@ Esempio: resample=44100:0:0,volnorm</translation>
         <translation>Correggi pts</translation>
     </message>
     <message>
-        <source>Switches MPlayer to an experimental mode where timestamps for video frames are calculated differently and video filters which add new frames or modify timestamps of existing ones are supported. The more accurate timestamps can be visible for example when playing subtitles timed to scene changes with the SSA/ASS library enabled. Without correct pts the subtitle timing will typically be off by some frames. This option does not work correctly with some demuxers and codecs.</source>
-        <translation>Applica una modalità sperimentale di MPlayer dove i timestamp per i fotogrammi video sono calcolati in modo differente e sono supportati i filtri video che aggiungono fotogrammi o modificano i timestamp di quelli presenti. Timestamp più precisi possono vedersi per esempio quando si riproducono sottotitoli temporizzati ai cambi di scena con la libreria SSA/ASS abilitata. Senza correct pts la temporizzazione dei sottotitoli sarà tipicamente spostata di qualche fotogramma. Questa opzione non funzionerà correttamente con alcuni demuxer e codec.</translation>
+        <source>Switches mplayer2 to an experimental mode where timestamps for video frames are calculated differently and video filters which add new frames or modify timestamps of existing ones are supported. The more accurate timestamps can be visible for example when playing subtitles timed to scene changes with the SSA/ASS library enabled. Without correct pts the subtitle timing will typically be off by some frames. This option does not work correctly with some demuxers and codecs.</source>
+        <translation>Applica una modalità sperimentale di mplayer2 dove i timestamp per i fotogrammi video sono calcolati in modo differente e sono supportati i filtri video che aggiungono fotogrammi o modificano i timestamp di quelli presenti. Timestamp più precisi possono vedersi per esempio quando si riproducono sottotitoli temporizzati ai cambi di scena con la libreria SSA/ASS abilitata. Senza correct pts la temporizzazione dei sottotitoli sarà tipicamente spostata di qualche fotogramma. Questa opzione non funzionerà correttamente con alcuni demuxer e codec.</translation>
     </message>
     <message>
         <source>Actions list</source>
@@ -3780,8 +3780,8 @@ Esempio: resample=44100:0:0,volnorm</translation>
         <translation>Seleziona una cartella</translation>
     </message>
     <message>
-        <source>MPlayer executable</source>
-        <translation>Eseguibile MPlayer</translation>
+        <source>mplayer2 executable</source>
+        <translation>Eseguibile mplayer2</translation>
     </message>
     <message>
         <source>Screenshots folder</source>
@@ -4021,8 +4021,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
         <translation>Riproduzione ad alta velocità senza alterazione del pitch</translation>
     </message>
     <message>
-        <source>Allows to change the playback speed without altering pitch. Requires at least MPlayer dev-SVN-r24924.</source>
-        <translation>Permette di cambiare la velocità di riproduzione senza alterare il pitch. Richiede almeno MPlayer dev-SVN-r24924.</translation>
+        <source>Allows to change the playback speed without altering pitch. Requires at least mplayer2 dev-SVN-r24924.</source>
+        <translation>Permette di cambiare la velocità di riproduzione senza alterare il pitch. Richiede almeno mplayer2 dev-SVN-r24924.</translation>
     </message>
     <message>
         <source>&amp;Video</source>
@@ -4137,8 +4137,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
         <translation>&amp;Zoom predefinito:</translation>
     </message>
     <message>
-        <source>Here you must specify the mplayer executable that SMPlayer2 will use.&lt;br&gt;SMPlayer2 requires at least MPlayer 1.0rc1 (although a recent revision from SVN is highly recommended).</source>
-        <translation>Qui è necessario specificare l&apos;eseguibile mplayer che SMPlayer2 userà.&lt;br&gt;SMPlayer2 richiede almeno MPlayer 1.0rc1 (tuttavia si consiglia una versione più recente presa da SVN).</translation>
+        <source>Here you must specify the mplayer executable that SMPlayer2 will use.&lt;br&gt;SMPlayer2 requires at least mplayer2 1.0rc1 (although a recent revision from SVN is highly recommended).</source>
+        <translation>Qui è necessario specificare l&apos;eseguibile mplayer che SMPlayer2 userà.&lt;br&gt;SMPlayer2 richiede almeno mplayer2 1.0rc1 (tuttavia si consiglia una versione più recente presa da SVN).</translation>
     </message>
     <message>
         <source>If this setting is wrong, SMPlayer2 won&apos;t be able to play anything!</source>
@@ -4229,8 +4229,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
         <translation>Se abilitata, attiva il rendering diretto(non supportato da tutti i codec e uscite video)&lt;br&gt;&lt;b&gt;Attenzione:&lt;/b&gt; Potrebbe causare la corruzione di OSD/SUB!</translation>
     </message>
     <message>
-        <source>Requests the number of playback channels. MPlayer asks the decoder to decode the audio into as many channels as specified. Then it is up to the decoder to fulfill the requirement. This is usually only important when playing videos with AC3 audio (like DVDs). In that case liba52 does the decoding by default and correctly downmixes the audio into the requested number of channels. &lt;b&gt;Note&lt;/b&gt;: This option is honored by codecs (AC3 only), filters (surround) and audio output drivers (OSS at least).</source>
-        <translation>Il numero dei canali audio di riproduzione richiesti. MPlayer chiede al decodificatore di decodificare l&apos;audio nel numero canali specificati. Quindi è il decodificatore che asseconda la richiesta. Solitamente questo è importante solo quando si riproducono video con audio AC3 (come i DVD). In quel caso liba52 gestisce la decodifica in modo predefinito e mixa l&apos;audio nel numero di canali richiesti. &lt;b&gt;Nota&lt;/b&gt;: Questa opzione viene rispettata da alcuni codec (solo AC3), filtri (surround) e driver di uscita audio (sicuramente OSS).</translation>
+        <source>Requests the number of playback channels. mplayer2 asks the decoder to decode the audio into as many channels as specified. Then it is up to the decoder to fulfill the requirement. This is usually only important when playing videos with AC3 audio (like DVDs). In that case liba52 does the decoding by default and correctly downmixes the audio into the requested number of channels. &lt;b&gt;Note&lt;/b&gt;: This option is honored by codecs (AC3 only), filters (surround) and audio output drivers (OSS at least).</source>
+        <translation>Il numero dei canali audio di riproduzione richiesti. mplayer2 chiede al decodificatore di decodificare l&apos;audio nel numero canali specificati. Quindi è il decodificatore che asseconda la richiesta. Solitamente questo è importante solo quando si riproducono video con audio AC3 (come i DVD). In quel caso liba52 gestisce la decodifica in modo predefinito e mixa l&apos;audio nel numero di canali richiesti. &lt;b&gt;Nota&lt;/b&gt;: Questa opzione viene rispettata da alcuni codec (solo AC3), filtri (surround) e driver di uscita audio (sicuramente OSS).</translation>
     </message>
     <message>
         <source>Enable screenshots</source>
@@ -4245,7 +4245,7 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
         <translation>Qui puoi specificare una cartella dove verranno salvate le schermate prese in SMPlayer2. Se la cartella non esiste la funzionalità di cattura schermate verrà disattivata.</translation>
     </message>
     <message>
-        <source>&amp;MPlayer executable:</source>
+        <source>&amp;mplayer2 executable:</source>
         <translation>Eseguibile &amp;Mplayer:</translation>
     </message>
     <message>
@@ -4369,8 +4369,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
         <translation type="obsolete">&amp;Cambia volume ad ogni file</translation>
     </message>
     <message>
-        <source>Select the &amp;MPlayer executable:</source>
-        <translation type="obsolete">Seleziona l&apos;eseguibile &amp;MPlayer:</translation>
+        <source>Select the &amp;mplayer2 executable:</source>
+        <translation type="obsolete">Seleziona l&apos;eseguibile &amp;mplayer2:</translation>
     </message>
     <message>
         <source>&amp;Folder for storing screenshots:</source>
@@ -4405,8 +4405,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
         <translation type="obsolete">Qui puoi specificare una cartella dove salvare gli screenshot. Se il campo è vuoto, la cattura degli screenshot sarà disabilitata.</translation>
     </message>
     <message>
-        <source>If this option is checked the initial volume will be set just before playback starts. This avoids a loud volume on startup. Requires at least MPlayer SVN r27872.</source>
-        <translation type="obsolete">Se questa opzione è abilitata il volume iniziale sarà impostato un momento prima che la riproduzione inizi, evitando un alto volume all&apos;avvio. Richiede almeno MPlayer SVN r27872.</translation>
+        <source>If this option is checked the initial volume will be set just before playback starts. This avoids a loud volume on startup. Requires at least mplayer2 SVN r27872.</source>
+        <translation type="obsolete">Se questa opzione è abilitata il volume iniziale sarà impostato un momento prima che la riproduzione inizi, evitando un alto volume all&apos;avvio. Richiede almeno mplayer2 SVN r27872.</translation>
     </message>
     <message>
         <source>Disable video filters when using vdpau</source>
@@ -5178,8 +5178,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
         <translation>Priorità</translation>
     </message>
     <message>
-        <source>Select the priority for the MPlayer process.</source>
-        <translation>Selezionare la priorità del processo MPlayer.</translation>
+        <source>Select the priority for the mplayer2 process.</source>
+        <translation>Selezionare la priorità del processo mplayer2.</translation>
     </message>
     <message>
         <source>realtime</source>
@@ -5274,8 +5274,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
         <translation>H.264</translation>
     </message>
     <message>
-        <source>Possible values:&lt;br&gt; &lt;b&gt;Yes&lt;/b&gt;: it will try the fastest method to switch the audio track (it might not work with some formats).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: the MPlayer process will be restarted whenever you change the audio track.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 will decide what to do according to the MPlayer version.</source>
-        <translation>Possibili valori: :&lt;br&gt; &lt;b&gt;Si&lt;/b&gt;: proverà il metodo più veloce per cambiare la traccia audio (può non funzionare con alcuni formati).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: MPlayer verrà fatto ripartire ogni volta che si cambia la traccia audio.&lt;br&gt; &lt;b&gt;Automatico&lt;/b&gt;: SMPlayer2 applicherà una delle altre due opzioni in base alla versione di MPlayer. </translation>
+        <source>Possible values:&lt;br&gt; &lt;b&gt;Yes&lt;/b&gt;: it will try the fastest method to switch the audio track (it might not work with some formats).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: the mplayer2 process will be restarted whenever you change the audio track.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 will decide what to do according to the mplayer2 version.</source>
+        <translation>Possibili valori: :&lt;br&gt; &lt;b&gt;Si&lt;/b&gt;: proverà il metodo più veloce per cambiare la traccia audio (può non funzionare con alcuni formati).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: mplayer2 verrà fatto ripartire ogni volta che si cambia la traccia audio.&lt;br&gt; &lt;b&gt;Automatico&lt;/b&gt;: SMPlayer2 applicherà una delle altre due opzioni in base alla versione di mplayer2. </translation>
     </message>
     <message>
         <source>Cache for files</source>
@@ -5398,8 +5398,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
         <translation>Usa CoreAVC se non è specificato un altro codec</translation>
     </message>
     <message>
-        <source>Try to use non-free CoreAVC codec with no other codec is specified and non-VDPAU video output selected. Requires MPlayer build with CoreAVC support.</source>
-        <translation>Prova ad usare il codec non libero CoreAVC quando nessun altro codec è specificato ed è selezionata un&apos;uscita video non-VDPAU. Richiede MPlayer con il supporto a CoreAVC.</translation>
+        <source>Try to use non-free CoreAVC codec with no other codec is specified and non-VDPAU video output selected. Requires mplayer2 build with CoreAVC support.</source>
+        <translation>Prova ad usare il codec non libero CoreAVC quando nessun altro codec è specificato ed è selezionata un&apos;uscita video non-VDPAU. Richiede mplayer2 con il supporto a CoreAVC.</translation>
     </message>
     <message>
         <source>&amp;Use CoreAVC if no other codec specified</source>
@@ -5636,8 +5636,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
         <translation>Font di sistema</translation>
     </message>
     <message>
-        <source>Here you can select a system font to be used for the subtitles and OSD. &lt;b&gt;Note:&lt;/b&gt; requires a MPlayer with fontconfig support.</source>
-        <translation>Qui si possono selezionare i caratteri di sistema da usare per i sottotitoli e l&apos;OSD. &lt;b&gt;Nota:&lt;/b&gt; richiede MPlayer con supporto a fontconfig.</translation>
+        <source>Here you can select a system font to be used for the subtitles and OSD. &lt;b&gt;Note:&lt;/b&gt; requires a mplayer2 with fontconfig support.</source>
+        <translation>Qui si possono selezionare i caratteri di sistema da usare per i sottotitoli e l&apos;OSD. &lt;b&gt;Nota:&lt;/b&gt; richiede mplayer2 con supporto a fontconfig.</translation>
     </message>
     <message>
         <source>Autoscale</source>
@@ -5680,8 +5680,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
         <translation>Cerca in automatico per questa lingua</translation>
     </message>
     <message>
-        <source>When this option is on, the encoding of the subtitles will be tried to be autodetected for the given language. It will fall back to the default encoding if the autodetection fails. This option requires a MPlayer compiled with ENCA support.</source>
-        <translation>Quando l&apos;opzione è attiva, la codifica dei sottotitoli verrà riconosciuta automaticamente in base alla lingua selezionata. Se il riconoscimento automatico dovesse fallire verrà impostata alla codifica predefinita. Questa opzione richiede MPlayer compilato con il supporto a ENCA.</translation>
+        <source>When this option is on, the encoding of the subtitles will be tried to be autodetected for the given language. It will fall back to the default encoding if the autodetection fails. This option requires a mplayer2 compiled with ENCA support.</source>
+        <translation>Quando l&apos;opzione è attiva, la codifica dei sottotitoli verrà riconosciuta automaticamente in base alla lingua selezionata. Se il riconoscimento automatico dovesse fallire verrà impostata alla codifica predefinita. Questa opzione richiede mplayer2 compilato con il supporto a ENCA.</translation>
     </message>
     <message>
         <source>Subtitle language</source>
@@ -5976,8 +5976,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
         <translation>Supporto Freetype</translation>
     </message>
     <message>
-        <source>You should normally not disable this option. Do it only if your MPlayer is compiled without freetype support. &lt;b&gt;Disabling this option could make that subtitles won&apos;t work at all!&lt;/b&gt;</source>
-        <translation>Normalmente non dovresti disabilitare questa opzione, a meno che la tua versione di MPlayer sia priva del supporto freetype. &lt;b&gt;Disabilitando questa opzione potresti rendere i sottotitoli totalmente non funzionanti!&lt;/b&gt;</translation>
+        <source>You should normally not disable this option. Do it only if your mplayer2 is compiled without freetype support. &lt;b&gt;Disabling this option could make that subtitles won&apos;t work at all!&lt;/b&gt;</source>
+        <translation>Normalmente non dovresti disabilitare questa opzione, a meno che la tua versione di mplayer2 sia priva del supporto freetype. &lt;b&gt;Disabilitando questa opzione potresti rendere i sottotitoli totalmente non funzionanti!&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Freet&amp;ype support</source>
@@ -6181,8 +6181,8 @@ For translators: don&apos;t translate this text, it will be replaced with anothe
         <translation>Ristabilisce la vecchie associazioni e ripulisce il registro.</translation>
     </message>
     <message>
-        <source>&apos;media&apos; is any kind of file that SMPlayer2 can open. It can be a local file, a DVD (e.g. dvd://1), an Internet stream (e.g. mms://....) or a local playlist in format m3u or pls. If the -playlist option is used, that means that SMPlayer2 will pass the -playlist option to MPlayer, so MPlayer will handle the playlist, not SMPlayer2.</source>
-        <translation>&apos;media&apos; è qualsiasi tipo di file che SMPlayer2 è in grado di riprodurre. Può essere un file locale, un DVD (per es. dvd://1), uno stream internet (per es. mms://....) o una lista di riproduzione locale in formato m3u. Se si usa l&apos;opzione -playlist, questa sarà passata a MPlayer che si occuperà di gestirla. </translation>
+        <source>&apos;media&apos; is any kind of file that SMPlayer2 can open. It can be a local file, a DVD (e.g. dvd://1), an Internet stream (e.g. mms://....) or a local playlist in format m3u or pls. If the -playlist option is used, that means that SMPlayer2 will pass the -playlist option to mplayer2, so mplayer2 will handle the playlist, not SMPlayer2.</source>
+        <translation>&apos;media&apos; è qualsiasi tipo di file che SMPlayer2 è in grado di riprodurre. Può essere un file locale, un DVD (per es. dvd://1), uno stream internet (per es. mms://....) o una lista di riproduzione locale in formato m3u. Se si usa l&apos;opzione -playlist, questa sarà passata a mplayer2 che si occuperà di gestirla. </translation>
     </message>
     <message>
         <source>Usage:</source>

@@ -1,4 +1,4 @@
-/*  smplayer2, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer2.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -1608,7 +1608,7 @@ void BaseGui::retranslateStrings() {
 	showPreferencesAct->change( Images::icon("prefs"), tr("P&references") );
 
 	// Submenu Logs
-	showLogMplayerAct->change( "MPlayer" );
+	showLogMplayerAct->change( "mplayer2" );
 	showLogSmplayerAct->change( "SMPlayer2" );
 
 	// Menu Help
@@ -4487,7 +4487,7 @@ void BaseGui::showExitCodeFromMplayer(int exit_code) {
 
 	if (exit_code != 255 ) {
 		ErrorDialog d(this);
-		d.setText(tr("MPlayer has finished unexpectedly.") + " " + 
+		d.setText(tr("mplayer2 has finished unexpectedly.") + " " +
 	              tr("Exit code: %1").arg(exit_code));
 		d.setLog( mplayer_log );
 		d.exec();
@@ -4505,10 +4505,10 @@ void BaseGui::showErrorFromMplayer(QProcess::ProcessError e) {
 	if ((e == QProcess::FailedToStart) || (e == QProcess::Crashed)) {
 		ErrorDialog d(this);
 		if (e == QProcess::FailedToStart) {
-			d.setText(tr("MPlayer failed to start.") + " " + 
-                         tr("Please check the MPlayer path in preferences."));
+			d.setText(tr("mplayer2 failed to start.") + " " +
+                         tr("Please check the mplayer2 path in preferences."));
 		} else {
-			d.setText(tr("MPlayer has crashed.") + " " + 
+			d.setText(tr("mplayer2 has crashed.") + " " +
                       tr("See the log for more info."));
 		}
 		d.setLog( mplayer_log );

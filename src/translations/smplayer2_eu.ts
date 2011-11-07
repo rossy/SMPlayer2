@@ -219,8 +219,8 @@
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/about.cpp" line="48"/>
-        <source>Using MPlayer %1</source>
-        <translation>MPlayer %1 erabiltzen </translation>
+        <source>Using mplayer2 %1</source>
+        <translation>mplayer2 %1 erabiltzen </translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/about.cpp" line="202"/>
@@ -1272,8 +1272,8 @@ Itxurapen morroia ikusiko da orain, egin ahal izan dezazun.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/basegui.cpp" line="4374"/>
-        <source>MPlayer has finished unexpectedly.</source>
-        <translation>MPlayerrek ustekabean amaitu du.</translation>
+        <source>mplayer2 has finished unexpectedly.</source>
+        <translation>mplayer2rek ustekabean amaitu du.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/basegui.cpp" line="4375"/>
@@ -1282,18 +1282,18 @@ Itxurapen morroia ikusiko da orain, egin ahal izan dezazun.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/basegui.cpp" line="4392"/>
-        <source>MPlayer failed to start.</source>
-        <translation>MPlayerrek huts egin du abiaratzerakoan.</translation>
+        <source>mplayer2 failed to start.</source>
+        <translation>mplayer2rek huts egin du abiaratzerakoan.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/basegui.cpp" line="4393"/>
-        <source>Please check the MPlayer path in preferences.</source>
+        <source>Please check the mplayer2 path in preferences.</source>
         <translation>Mesedez egiaztatu Mplayer helburua hobespenetan.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/basegui.cpp" line="4395"/>
-        <source>MPlayer has crashed.</source>
-        <translation>MPlayerrek huts egin du.</translation>
+        <source>mplayer2 has crashed.</source>
+        <translation>mplayer2rek huts egin du.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/basegui.cpp" line="4396"/>
@@ -1429,18 +1429,18 @@ Itxurapen morroia ikusiko da orain, egin ahal izan dezazun.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/basegui.cpp" line="3801"/>
-        <source>Warning - Using old MPlayer</source>
-        <translation>Kontuz - MPlayer zaharra erabiltzen ari zara</translation>
+        <source>Warning - Using old mplayer2</source>
+        <translation>Kontuz - mplayer2 zaharra erabiltzen ari zara</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/basegui.cpp" line="3805"/>
-        <source>The version of MPlayer (%1) installed on your system is obsolete. SMPlayer2 can&apos;t work well with it: some options won&apos;t work, subtitle selection may fail...</source>
-        <translation>Zure erabidean ezarritako MPlayer (%1) bertsioa zaharkitua dago. SMPlayer2rek ezin du ongi lan egin horrekin: aukera batzuk ez dute lan eginten, azpidatzi hautaketak huts egin dezake... </translation>
+        <source>The version of mplayer2 (%1) installed on your system is obsolete. SMPlayer2 can&apos;t work well with it: some options won&apos;t work, subtitle selection may fail...</source>
+        <translation>Zure erabidean ezarritako mplayer2 (%1) bertsioa zaharkitua dago. SMPlayer2rek ezin du ongi lan egin horrekin: aukera batzuk ez dute lan eginten, azpidatzi hautaketak huts egin dezake... </translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/basegui.cpp" line="3808"/>
-        <source>Please, update your MPlayer.</source>
-        <translation>Mesedez, eguneratu zure MPlayerra.</translation>
+        <source>Please, update your mplayer2.</source>
+        <translation>Mesedez, eguneratu zure mplayer2ra.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/basegui.cpp" line="3809"/>
@@ -1946,8 +1946,8 @@ Itxurapen morroia ikusiko da orain, egin ahal izan dezazun.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/errordialog.ui" line="13"/>
-        <source>MPlayer Error</source>
-        <translation>MPlayer Akatsa</translation>
+        <source>mplayer2 Error</source>
+        <translation>mplayer2 Akatsa</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/errordialog.ui" line="41"/>
@@ -2108,17 +2108,17 @@ Itxurapen morroia ikusiko da orain, egin ahal izan dezazun.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/filepropertiesdialog.ui" line="239"/>
-        <source>&amp;MPlayer options</source>
-        <translation>&amp;MPlayer aukerak</translation>
+        <source>&amp;mplayer2 options</source>
+        <translation>&amp;mplayer2 aukerak</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/filepropertiesdialog.ui" line="251"/>
-        <source>Additional Options for MPlayer</source>
-        <translation>MPlayerren Aukera Gehigarriak</translation>
+        <source>Additional Options for mplayer2</source>
+        <translation>mplayer2ren Aukera Gehigarriak</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/filepropertiesdialog.ui" line="263"/>
-        <source>Here you can pass extra options to MPlayer.
+        <source>Here you can pass extra options to mplayer2.
 Write them separated by spaces.
 Example: -flip -nosound</source>
         <translation>Hemen aukera gehigarriak bidali ahal dizkiozu MPlyerri.
@@ -2670,18 +2670,18 @@ Mesedez egiaztatu agiritegiaren baimenak.</translation>
     <name>InputMplayerVersion</name>
     <message>
         <location filename="smplayer2-0.6.9/src/inputmplayerversion.ui" line="14"/>
-        <source>SMPlayer2 - Enter the MPlayer version</source>
-        <translation>SMPlayer2 - Idatzi MPlayer bertsioa</translation>
+        <source>SMPlayer2 - Enter the mplayer2 version</source>
+        <translation>SMPlayer2 - Idatzi mplayer2 bertsioa</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/inputmplayerversion.ui" line="35"/>
-        <source>SMPlayer2 couldn&apos;t identify the MPlayer version you&apos;re using.</source>
-        <translation>SMPlayer2 ez da erabiltzen duzun MPlayer bertsioa ezagutzeko gai.</translation>
+        <source>SMPlayer2 couldn&apos;t identify the mplayer2 version you&apos;re using.</source>
+        <translation>SMPlayer2 ez da erabiltzen duzun mplayer2 bertsioa ezagutzeko gai.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/inputmplayerversion.ui" line="58"/>
-        <source>Version reported by MPlayer:</source>
-        <translation>MPlayerrek dioen bertsioa:</translation>
+        <source>Version reported by mplayer2:</source>
+        <translation>mplayer2rek dioen bertsioa:</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/inputmplayerversion.ui" line="102"/>
@@ -4101,7 +4101,7 @@ Gainidaztea nahi duzu?</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.ui" line="325"/>
-        <source>Here you can pass extra options to MPlayer.
+        <source>Here you can pass extra options to mplayer2.
 Write them separated by spaces.
 Example: -flip -nosound</source>
         <translation>Hemen aukera gehigarriak bidali ahal dizkiozu MPlyerri.
@@ -4126,8 +4126,8 @@ Adibidea: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="456"/>
-        <source>Log MPlayer output</source>
-        <translation>Ohartu MPlayer irteera</translation>
+        <source>Log mplayer2 output</source>
+        <translation>Ohartu mplayer2 irteera</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="445"/>
@@ -4156,7 +4156,7 @@ Adibidea: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.ui" line="122"/>
-        <source>&amp;Run MPlayer in its own window</source>
+        <source>&amp;Run mplayer2 in its own window</source>
         <translation>Abiarazi M&amp;Player bere leihoan</translation>
     </message>
     <message>
@@ -4201,52 +4201,52 @@ Adibidea: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.ui" line="641"/>
-        <source>Log MPlayer &amp;output</source>
-        <translation>Ohartu MPlayer &amp;irteera</translation>
+        <source>Log mplayer2 &amp;output</source>
+        <translation>Ohartu mplayer2 &amp;irteera</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.ui" line="304"/>
         <source>Options for MP&amp;layer</source>
-        <translation>&amp;MPlayer aukerak</translation>
+        <translation>&amp;mplayer2 aukerak</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="462"/>
-        <source>Autosave MPlayer log</source>
-        <translation>MPlayer oharrak berezgaitasunez gorde</translation>
+        <source>Autosave mplayer2 log</source>
+        <translation>mplayer2 oharrak berezgaitasunez gorde</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="466"/>
-        <source>If this option is checked, the MPlayer log will be saved to the specified file every time a new file starts to play. It&apos;s intended for external applications, so they can get info about the file you&apos;re playing.</source>
-        <translation>Aukera hau hautaturik badago MPlayer oharra ezarritako agirian gordeko da agiri berri bat irakurtzen hasten den bakoitzean. Hau kanpo aplikazioentzat da beraiek irakurtzen ari zaren agiriaren argibideak izan ditzaten.</translation>
+        <source>If this option is checked, the mplayer2 log will be saved to the specified file every time a new file starts to play. It&apos;s intended for external applications, so they can get info about the file you&apos;re playing.</source>
+        <translation>Aukera hau hautaturik badago mplayer2 oharra ezarritako agirian gordeko da agiri berri bat irakurtzen hasten den bakoitzean. Hau kanpo aplikazioentzat da beraiek irakurtzen ari zaren agiriaren argibideak izan ditzaten.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="468"/>
-        <source>Autosave MPlayer log filename</source>
-        <translation>Berezgaitasunez gorde MPlayer ohar agirizena</translation>
+        <source>Autosave mplayer2 log filename</source>
+        <translation>Berezgaitasunez gorde mplayer2 ohar agirizena</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="470"/>
-        <source>Enter here the path and filename that will be used to save the MPlayer log.</source>
-        <translation>Idatzi hemen MPlayer oharrak gordetzeko erabiliko den helburua eta agirizena.</translation>
+        <source>Enter here the path and filename that will be used to save the mplayer2 log.</source>
+        <translation>Idatzi hemen mplayer2 oharrak gordetzeko erabiliko den helburua eta agirizena.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.ui" line="689"/>
-        <source>A&amp;utosave MPlayer log to file</source>
-        <translation>&amp;Berezgaitasunez gorde MPlayer oharra agirian</translation>
+        <source>A&amp;utosave mplayer2 log to file</source>
+        <translation>&amp;Berezgaitasunez gorde mplayer2 oharra agirian</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="388"/>
-        <source>Pass short filenames (8+3) to MPlayer</source>
+        <source>Pass short filenames (8+3) to mplayer2</source>
         <translation>Bidali agirizen laburrak (8+3) MPlyaerri</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="392"/>
-        <source>Currently MPlayer can&apos;t open filenames which contains characters outside the local codepage. Checking this option will make SMPlayer2 to pass to MPlayer the short version of the filenames, and thus it will able to open them.</source>
-        <translation>Oraingoz MPlayerrek ezin du orrialde-kode lokaletik kanpoko hizkirik duen agiririk irakurri. Aukera hau hautatuz SMPlayer2rek MPlayerri agirizen bertsio laburra bidaliko dio eta hauek irekitzeko gai izan beharko litzake.</translation>
+        <source>Currently mplayer2 can&apos;t open filenames which contains characters outside the local codepage. Checking this option will make SMPlayer2 to pass to mplayer2 the short version of the filenames, and thus it will able to open them.</source>
+        <translation>Oraingoz mplayer2rek ezin du orrialde-kode lokaletik kanpoko hizkirik duen agiririk irakurri. Aukera hau hautatuz SMPlayer2rek mplayer2ri agirizen bertsio laburra bidaliko dio eta hauek irekitzeko gai izan beharko litzake.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.ui" line="166"/>
-        <source>&amp;Pass short filenames (8+3) to MPlayer</source>
+        <source>&amp;Pass short filenames (8+3) to mplayer2</source>
         <translation>&amp;Bidali agirizen laburrak (8+3) MPlyaerri</translation>
     </message>
     <message>
@@ -4261,13 +4261,13 @@ Adibidea: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="362"/>
-        <source>Run MPlayer in its own window</source>
-        <translation>Ekin MPlayer bere leihoan</translation>
+        <source>Run mplayer2 in its own window</source>
+        <translation>Ekin mplayer2 bere leihoan</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="368"/>
-        <source>If you check this option, the MPlayer video window won&apos;t be embedded in SMPlayer2&apos;s main window but instead it will use its own window. Note that mouse and keyboard events will be handled directly by MPlayer, that means key shortcuts and mouse clicks probably won&apos;t work as expected when the MPlayer window has the focus.</source>
-        <translation>Aukera hau hautatzen baduzu, MPlayerren bideo leihoa ez da SMPlayer2ren leiho nagusian barneratuko baina ordez bere leihoa erabiliko du. Nabaritu sagua eta teklatua zuzenean kudeatu daitezkela MPlayerretik, honek esanahi du lasterbide teklak eta sagu klikak zihurrenik ez dutela nahi bezala lan egingo MPlayerren leihoak fokua duenean.</translation>
+        <source>If you check this option, the mplayer2 video window won&apos;t be embedded in SMPlayer2&apos;s main window but instead it will use its own window. Note that mouse and keyboard events will be handled directly by mplayer2, that means key shortcuts and mouse clicks probably won&apos;t work as expected when the mplayer2 window has the focus.</source>
+        <translation>Aukera hau hautatzen baduzu, mplayer2ren bideo leihoa ez da SMPlayer2ren leiho nagusian barneratuko baina ordez bere leihoa erabiliko du. Nabaritu sagua eta teklatua zuzenean kudeatu daitezkela mplayer2retik, honek esanahi du lasterbide teklak eta sagu klikak zihurrenik ez dutela nahi bezala lan egingo mplayer2ren leihoak fokua duenean.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="403"/>
@@ -4281,8 +4281,8 @@ Adibidea: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="421"/>
-        <source>Options for MPlayer</source>
-        <translation>MPlayer aukerak</translation>
+        <source>Options for mplayer2</source>
+        <translation>mplayer2 aukerak</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="423"/>
@@ -4291,8 +4291,8 @@ Adibidea: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="425"/>
-        <source>Here you can type options for MPlayer. Write them separated by spaces.</source>
-        <translation>Hemen MPlayerrentzako aukerak idatzi ditzakezu. Idatzi itzazu tarte batez bananduta.</translation>
+        <source>Here you can type options for mplayer2. Write them separated by spaces.</source>
+        <translation>Hemen mplayer2rentzako aukerak idatzi ditzakezu. Idatzi itzazu tarte batez bananduta.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="427"/>
@@ -4301,8 +4301,8 @@ Adibidea: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="429"/>
-        <source>Here you can add video filters for MPlayer. Write them separated by commas. Don&apos;t use spaces!</source>
-        <translation>Hemen MPlayerrentzako bideo iragazkiak gehitu ditzakezu. Idatzi itzazu kakotxaz banandute. Ez erabili tarterik!</translation>
+        <source>Here you can add video filters for mplayer2. Write them separated by commas. Don&apos;t use spaces!</source>
+        <translation>Hemen mplayer2rentzako bideo iragazkiak gehitu ditzakezu. Idatzi itzazu kakotxaz banandute. Ez erabili tarterik!</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="431"/>
@@ -4311,8 +4311,8 @@ Adibidea: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="433"/>
-        <source>Here you can add audio filters for MPlayer. Write them separated by commas. Don&apos;t use spaces!</source>
-        <translation>Hemen MPlayerrentzako audio iragazkiak gehitu ditzakezu. Idatzi itzazu kakotxaz banandute. Ez erabili tarterik!</translation>
+        <source>Here you can add audio filters for mplayer2. Write them separated by commas. Don&apos;t use spaces!</source>
+        <translation>Hemen mplayer2rentzako audio iragazkiak gehitu ditzakezu. Idatzi itzazu kakotxaz banandute. Ez erabili tarterik!</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="397"/>
@@ -4381,8 +4381,8 @@ Adibidea: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="460"/>
-        <source>If checked, SMPlayer2 will store the output of MPlayer (you can see it in &lt;b&gt;Options -&gt; View logs -&gt; MPlayer&lt;/b&gt;). In case of problems this log can contain important information, so it&apos;s recommended to keep this option checked.</source>
-        <translation>Hautatua bada, SMPlayer2rek MPlayerren irteera biltegiratuko du (ikusi dezakezu &lt;b&gt;Aukerak -&gt; Ikusi oharrak -&gt; MPlayer&lt;/b&gt;). Arazoak badira ohar honek argibide garrantzitsuak lortzen lagundu dezake, hortaz aukera hau gaituta edukitzea gomendatzen da.  </translation>
+        <source>If checked, SMPlayer2 will store the output of mplayer2 (you can see it in &lt;b&gt;Options -&gt; View logs -&gt; mplayer2&lt;/b&gt;). In case of problems this log can contain important information, so it&apos;s recommended to keep this option checked.</source>
+        <translation>Hautatua bada, SMPlayer2rek mplayer2ren irteera biltegiratuko du (ikusi dezakezu &lt;b&gt;Aukerak -&gt; Ikusi oharrak -&gt; mplayer2&lt;/b&gt;). Arazoak badira ohar honek argibide garrantzitsuak lortzen lagundu dezake, hortaz aukera hau gaituta edukitzea gomendatzen da.  </translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="476"/>
@@ -4396,8 +4396,8 @@ Adibidea: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="385"/>
-        <source>Switches MPlayer to an experimental mode where timestamps for video frames are calculated differently and video filters which add new frames or modify timestamps of existing ones are supported. The more accurate timestamps can be visible for example when playing subtitles timed to scene changes with the SSA/ASS library enabled. Without correct pts the subtitle timing will typically be off by some frames. This option does not work correctly with some demuxers and codecs.</source>
-        <translation>Aldatzen du MPlayer modu esperimental batera non bideo framentzako denbora markak ezberdin kalkulatzen diren eta bideo iragazkiek frame berriak gehitzen dituzte edo denbora markak aldatzea sostengatuta dagoen. Denbora marka zehatzagoak ikusi daitezke adibidez azpidatziak irakurtzen denboratuta agerraldi aldaketetarako SSA/ASS liburutegia gaiturik. Pts zuzen gabe azpidatzien denboratzea frame batzuetan aldiberetugabe joango da. Aukera honek ez du zuzen lan egiten demultiplexatzaile eta kodek batzuekin.</translation>
+        <source>Switches mplayer2 to an experimental mode where timestamps for video frames are calculated differently and video filters which add new frames or modify timestamps of existing ones are supported. The more accurate timestamps can be visible for example when playing subtitles timed to scene changes with the SSA/ASS library enabled. Without correct pts the subtitle timing will typically be off by some frames. This option does not work correctly with some demuxers and codecs.</source>
+        <translation>Aldatzen du mplayer2 modu esperimental batera non bideo framentzako denbora markak ezberdin kalkulatzen diren eta bideo iragazkiek frame berriak gehitzen dituzte edo denbora markak aldatzea sostengatuta dagoen. Denbora marka zehatzagoak ikusi daitezke adibidez azpidatziak irakurtzen denboratuta agerraldi aldaketetarako SSA/ASS liburutegia gaiturik. Pts zuzen gabe azpidatzien denboratzea frame batzuetan aldiberetugabe joango da. Aukera honek ez du zuzen lan egiten demultiplexatzaile eta kodek batzuekin.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefadvanced.cpp" line="409"/>
@@ -4593,7 +4593,7 @@ Adibidea: resample=44100:0:0,volnorm</translation>
     <message>
         <location filename="smplayer2-0.6.9/src/prefdrives.cpp" line="190"/>
         <source>If this option is checked, smplayer2 will play DVDs using dvdnav. Requires a recent version of mplayer compiled with dvdnav support.</source>
-        <translation>Aukera hau hautatua bada, smplayer2rek DVD-ak dvdnav erabiliz irakurriko ditu. MPlayerren bertsio berri bat behar da dvdnav sostengatzen duena.</translation>
+        <translation>Aukera hau hautatua bada, smplayer2rek DVD-ak dvdnav erabiliz irakurriko ditu. mplayer2ren bertsio berri bat behar da dvdnav sostengatzen duena.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefdrives.cpp" line="191"/>
@@ -4675,8 +4675,8 @@ Adibidea: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefgeneral.cpp" line="780"/>
-        <source>MPlayer executable</source>
-        <translation>MPlayer exekutagarria</translation>
+        <source>mplayer2 executable</source>
+        <translation>mplayer2 exekutagarria</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefgeneral.cpp" line="811"/>
@@ -4770,8 +4770,8 @@ Adibidea: resample=44100:0:0,volnorm</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefgeneral.ui" line="62"/>
-        <source>Select the &amp;MPlayer executable:</source>
-        <translation type="obsolete">Hautatu &amp;MPlayer exekutagarria:</translation>
+        <source>Select the &amp;mplayer2 executable:</source>
+        <translation type="obsolete">Hautatu &amp;mplayer2 exekutagarria:</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefgeneral.ui" line="78"/>
@@ -5027,8 +5027,8 @@ Itzultzaileentzat: Ez itzuli idazki hau, beste batze ordezkatuko da ekinaldian.<
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefgeneral.cpp" line="950"/>
-        <source>Allows to change the playback speed without altering pitch. Requires at least MPlayer dev-SVN-r24924.</source>
-        <translation>Irakurketa abiadura doinua aldatu gabe aldatzeko aukera ematen du. Behintzat MPlayer dev-SVN-r24924 behar du.</translation>
+        <source>Allows to change the playback speed without altering pitch. Requires at least mplayer2 dev-SVN-r24924.</source>
+        <translation>Irakurketa abiadura doinua aldatu gabe aldatzeko aukera ematen du. Behintzat mplayer2 dev-SVN-r24924 behar du.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefgeneral.cpp" line="864"/>
@@ -5192,8 +5192,8 @@ Itzultzaileentzat: Ez itzuli idazki hau, beste batze ordezkatuko da ekinaldian.<
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefgeneral.cpp" line="784"/>
-        <source>Here you must specify the mplayer executable that SMPlayer2 will use.&lt;br&gt;SMPlayer2 requires at least MPlayer 1.0rc1 (although a recent revision from SVN is highly recommended).</source>
-        <translation>Hemen adierazi behar duzu SMPlayer2rek erabiliko duen mplayer exekutagarria. &lt;br&gt;SMPlayer2rek gutxienez behar du MPlayer 1.0rc1 (hala ere SVN-tiko birrikuspen berriago bat oso gomendagarria da).</translation>
+        <source>Here you must specify the mplayer executable that SMPlayer2 will use.&lt;br&gt;SMPlayer2 requires at least mplayer2 1.0rc1 (although a recent revision from SVN is highly recommended).</source>
+        <translation>Hemen adierazi behar duzu SMPlayer2rek erabiliko duen mplayer exekutagarria. &lt;br&gt;SMPlayer2rek gutxienez behar du mplayer2 1.0rc1 (hala ere SVN-tiko birrikuspen berriago bat oso gomendagarria da).</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefgeneral.cpp" line="786"/>
@@ -5307,8 +5307,8 @@ Itzultzaileentzat: Ez itzuli idazki hau, beste batze ordezkatuko da ekinaldian.<
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefgeneral.cpp" line="946"/>
-        <source>Requests the number of playback channels. MPlayer asks the decoder to decode the audio into as many channels as specified. Then it is up to the decoder to fulfill the requirement. This is usually only important when playing videos with AC3 audio (like DVDs). In that case liba52 does the decoding by default and correctly downmixes the audio into the requested number of channels. &lt;b&gt;Note&lt;/b&gt;: This option is honored by codecs (AC3 only), filters (surround) and audio output drivers (OSS at least).</source>
-        <translation>Galdetzen du irakurketa bide zenbatekoa. MPlayerrek galdetzen dio dekoatzaileari audioa adierazitako haina bideetan dekodeatzeko. Orduan gertu dago dekodeaketa eskabidea betetzeko. Hau garrantzitsua da bakarik AC3 audioa duten bideoak irakurtzerakoan (DVD-ak adibidez). Honelakoetan liba52-k egiten du dekodeaketa eta audioa behar bezala nahasten du eskatutako audio bide zenbatekoan. &lt;b&gt;Oharra&lt;/b&gt;: Aukera hau eskertzen dute kodek-ek (AC3 bakarrik), iragazkiek (ingurusoinua) eta audio irteera kontrolatzaileak (OSS-k gutxienez).</translation>
+        <source>Requests the number of playback channels. mplayer2 asks the decoder to decode the audio into as many channels as specified. Then it is up to the decoder to fulfill the requirement. This is usually only important when playing videos with AC3 audio (like DVDs). In that case liba52 does the decoding by default and correctly downmixes the audio into the requested number of channels. &lt;b&gt;Note&lt;/b&gt;: This option is honored by codecs (AC3 only), filters (surround) and audio output drivers (OSS at least).</source>
+        <translation>Galdetzen du irakurketa bide zenbatekoa. mplayer2rek galdetzen dio dekoatzaileari audioa adierazitako haina bideetan dekodeatzeko. Orduan gertu dago dekodeaketa eskabidea betetzeko. Hau garrantzitsua da bakarik AC3 audioa duten bideoak irakurtzerakoan (DVD-ak adibidez). Honelakoetan liba52-k egiten du dekodeaketa eta audioa behar bezala nahasten du eskatutako audio bide zenbatekoan. &lt;b&gt;Oharra&lt;/b&gt;: Aukera hau eskertzen dute kodek-ek (AC3 bakarrik), iragazkiek (ingurusoinua) eta audio irteera kontrolatzaileak (OSS-k gutxienez).</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefgeneral.cpp" line="807"/>
@@ -5327,8 +5327,8 @@ Itzultzaileentzat: Ez itzuli idazki hau, beste batze ordezkatuko da ekinaldian.<
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefgeneral.ui" line="43"/>
-        <source>&amp;MPlayer executable:</source>
-        <translation>&amp;MPlayer exekutagarria:</translation>
+        <source>&amp;mplayer2 executable:</source>
+        <translation>&amp;mplayer2 exekutagarria:</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefgeneral.ui" line="150"/>
@@ -6396,7 +6396,7 @@ Itzultzaileentzat: Ez itzuli idazki hau, beste batze ordezkatuko da ekinaldian.<
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefperformance.ui" line="77"/>
-        <source>Select the priority for the MPlayer process.</source>
+        <source>Select the priority for the mplayer2 process.</source>
         <translation>Hautatu SMPlayer2 prozesuaren lehentasuna.</translation>
     </message>
     <message>
@@ -6536,8 +6536,8 @@ Itzultzaileentzat: Ez itzuli idazki hau, beste batze ordezkatuko da ekinaldian.<
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefperformance.cpp" line="280"/>
-        <source>Possible values:&lt;br&gt; &lt;b&gt;Yes&lt;/b&gt;: it will try the fastest method to switch the audio track (it might not work with some formats).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: the MPlayer process will be restarted whenever you change the audio track.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 will decide what to do according to the MPlayer version.</source>
-        <translation>Balizko balioak: &lt;br&gt; &lt;b&gt;Bai&lt;/b&gt;: Saiatuko da audio bidea aldatzeko metodo azkarrago batekin (badaiteke ez jardutea heuskarri batzuekin). &lt;br&gt; &lt;b&gt;Ez&lt;/b&gt;: MPlayerren garapena birrabiarazia izango da audio bidea aldatzen duzun bakoitzean. &lt;br&gt; &lt;b&gt;Berez&lt;/b&gt;: SMPlayer2rek erabakiko du zer egin MPlayer bertsioaren arabera.</translation>
+        <source>Possible values:&lt;br&gt; &lt;b&gt;Yes&lt;/b&gt;: it will try the fastest method to switch the audio track (it might not work with some formats).&lt;br&gt; &lt;b&gt;No&lt;/b&gt;: the mplayer2 process will be restarted whenever you change the audio track.&lt;br&gt; &lt;b&gt;Auto&lt;/b&gt;: SMPlayer2 will decide what to do according to the mplayer2 version.</source>
+        <translation>Balizko balioak: &lt;br&gt; &lt;b&gt;Bai&lt;/b&gt;: Saiatuko da audio bidea aldatzeko metodo azkarrago batekin (badaiteke ez jardutea heuskarri batzuekin). &lt;br&gt; &lt;b&gt;Ez&lt;/b&gt;: mplayer2ren garapena birrabiarazia izango da audio bidea aldatzen duzun bakoitzean. &lt;br&gt; &lt;b&gt;Berez&lt;/b&gt;: SMPlayer2rek erabakiko du zer egin mplayer2 bertsioaren arabera.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefperformance.cpp" line="290"/>
@@ -6696,8 +6696,8 @@ Itzultzaileentzat: Ez itzuli idazki hau, beste batze ordezkatuko da ekinaldian.<
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefperformance.cpp" line="255"/>
-        <source>Try to use non-free CoreAVC codec with no other codec is specified and non-VDPAU video output selected. Requires MPlayer build with CoreAVC support.</source>
-        <translation>Saiatu erabiltzen non-free CoreAVC kodeka beste kodekarik adierazten ez denean eta non-VDPAU bideo irteera hautatuta dagoenean. Beharrezkoa du CoreAVC sostengua duen MPlayerra.</translation>
+        <source>Try to use non-free CoreAVC codec with no other codec is specified and non-VDPAU video output selected. Requires mplayer2 build with CoreAVC support.</source>
+        <translation>Saiatu erabiltzen non-free CoreAVC kodeka beste kodekarik adierazten ez denean eta non-VDPAU bideo irteera hautatuta dagoenean. Beharrezkoa du CoreAVC sostengua duen mplayer2ra.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefperformance.ui" line="292"/>
@@ -6927,8 +6927,8 @@ Itzultzaileentzat: Ez itzuli idazki hau, beste batze ordezkatuko da ekinaldian.<
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefsubtitles.cpp" line="472"/>
-        <source>Here you can select a system font to be used for the subtitles and OSD. &lt;b&gt;Note:&lt;/b&gt; requires a MPlayer with fontconfig support.</source>
-        <translation>Hemen azpidatzientzako eta OSD-an erabiliko den sistema hizkia hautatu dezakezu. &lt;b&gt;Oharra:&lt;/b&gt; fontconfig duen MPlayerra behar du.</translation>
+        <source>Here you can select a system font to be used for the subtitles and OSD. &lt;b&gt;Note:&lt;/b&gt; requires a mplayer2 with fontconfig support.</source>
+        <translation>Hemen azpidatzientzako eta OSD-an erabiliko den sistema hizkia hautatu dezakezu. &lt;b&gt;Oharra:&lt;/b&gt; fontconfig duen mplayer2ra behar du.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefsubtitles.cpp" line="474"/>
@@ -6982,8 +6982,8 @@ Itzultzaileentzat: Ez itzuli idazki hau, beste batze ordezkatuko da ekinaldian.<
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefsubtitles.cpp" line="431"/>
-        <source>When this option is on, the encoding of the subtitles will be tried to be autodetected for the given language. It will fall back to the default encoding if the autodetection fails. This option requires a MPlayer compiled with ENCA support.</source>
-        <translation>Aukera hau eraginda dagoenean, azpidatzien kodeaketa berez-atzematen saitu daiteke emaniko hizkuntzan. Berezko kodeaketara itzuliko da berez-atzemateak huts egiten badu. Aukera honek ENCA sostengua duen MPlayerra behar du.</translation>
+        <source>When this option is on, the encoding of the subtitles will be tried to be autodetected for the given language. It will fall back to the default encoding if the autodetection fails. This option requires a mplayer2 compiled with ENCA support.</source>
+        <translation>Aukera hau eraginda dagoenean, azpidatzien kodeaketa berez-atzematen saitu daiteke emaniko hizkuntzan. Berezko kodeaketara itzuliko da berez-atzemateak huts egiten badu. Aukera honek ENCA sostengua duen mplayer2ra behar du.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefsubtitles.cpp" line="433"/>
@@ -7350,8 +7350,8 @@ Itzultzaileentzat: Ez itzuli idazki hau, beste batze ordezkatuko da ekinaldian.<
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefsubtitles.cpp" line="446"/>
-        <source>You should normally not disable this option. Do it only if your MPlayer is compiled without freetype support. &lt;b&gt;Disabling this option could make that subtitles won&apos;t work at all!&lt;/b&gt;</source>
-        <translation>Arrunt ez zenuke aukera hau ezgaitu beharko. Egin bakarrik zure MPlayerra freetype sostengu gabe ari bada.&lt;b&gt;Aukera hau ezgaitzeak eragin dezake azpidatziek ez lan egitea betik!&lt;/b&gt;</translation>
+        <source>You should normally not disable this option. Do it only if your mplayer2 is compiled without freetype support. &lt;b&gt;Disabling this option could make that subtitles won&apos;t work at all!&lt;/b&gt;</source>
+        <translation>Arrunt ez zenuke aukera hau ezgaitu beharko. Egin bakarrik zure mplayer2ra freetype sostengu gabe ari bada.&lt;b&gt;Aukera hau ezgaitzeak eragin dezake azpidatziek ez lan egitea betik!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/prefsubtitles.ui" line="256"/>
@@ -7594,8 +7594,8 @@ Itzultzaileentzat: Ez itzuli idazki hau, beste batze ordezkatuko da ekinaldian.<
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/clhelp.cpp" line="178"/>
-        <source>&apos;media&apos; is any kind of file that SMPlayer2 can open. It can be a local file, a DVD (e.g. dvd://1), an Internet stream (e.g. mms://....) or a local playlist in format m3u or pls. If the -playlist option is used, that means that SMPlayer2 will pass the -playlist option to MPlayer, so MPlayer will handle the playlist, not SMPlayer2.</source>
-        <translation>&apos;multimedia&apos; SMPlayer2rek ireki dezakeen agiri mota da. Izan daiteke tokiko agiri bat, DVD bat (adib dvd://1), interneteko jario bat (adib. mms://...) edo tokiko irakur-zerrenda bat m2u edo pls heuskarrian. -paylist zerrenda erabiltzean SMPlayer2rek -playlist aukera MPlayerreri pasatzen dio hark kudeatu dezan irakur-zerrenda SMPlayer2ek ordez.</translation>
+        <source>&apos;media&apos; is any kind of file that SMPlayer2 can open. It can be a local file, a DVD (e.g. dvd://1), an Internet stream (e.g. mms://....) or a local playlist in format m3u or pls. If the -playlist option is used, that means that SMPlayer2 will pass the -playlist option to mplayer2, so mplayer2 will handle the playlist, not SMPlayer2.</source>
+        <translation>&apos;multimedia&apos; SMPlayer2rek ireki dezakeen agiri mota da. Izan daiteke tokiko agiri bat, DVD bat (adib dvd://1), interneteko jario bat (adib. mms://...) edo tokiko irakur-zerrenda bat m2u edo pls heuskarrian. -paylist zerrenda erabiltzean SMPlayer2rek -playlist aukera mplayer2reri pasatzen dio hark kudeatu dezan irakur-zerrenda SMPlayer2ek ordez.</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/clhelp.cpp" line="106"/>
@@ -7941,7 +7941,7 @@ Itzultzaileentzat: Ez itzuli idazki hau, beste batze ordezkatuko da ekinaldian.<
     <message>
         <location filename="smplayer2-0.6.9/src/videopreview/videopreview.cpp" line="304"/>
         <source>The mplayer process didn&apos;t run</source>
-        <translation>MPlayer garapenak ezin du ekin</translation>
+        <translation>mplayer2 garapenak ezin du ekin</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/videopreview/videopreview.cpp" line="380"/>
@@ -7976,7 +7976,7 @@ Itzultzaileentzat: Ez itzuli idazki hau, beste batze ordezkatuko da ekinaldian.<
     <message>
         <location filename="smplayer2-0.6.9/src/videopreview/videopreview.cpp" line="481"/>
         <source>The mplayer process didn&apos;t start while trying to get info about the video</source>
-        <translation> MPlayer garapenak ezin du ekin bideoari buruzko argibideak lortzen saiatzen den bitartean</translation>
+        <translation> mplayer2 garapenak ezin du ekin bideoari buruzko argibideak lortzen saiatzen den bitartean</translation>
     </message>
     <message>
         <location filename="smplayer2-0.6.9/src/videopreview/videopreview.cpp" line="200"/>

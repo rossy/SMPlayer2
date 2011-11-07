@@ -1,4 +1,4 @@
-/*  smplayer2, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer2.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -48,9 +48,9 @@ public:
 	static void setBackgroundColor(QWidget * w, const QColor & color);
 
     /**
-     ** \brief Strip colors and tags from MPlayer output lines
+     ** \brief Strip colors and tags from mplayer2 output lines
      **
-     ** Some MPlayer configurations (configured with --enable-color-console)
+     ** Some mplayer2 configurations (configured with --enable-color-console)
      ** use colored/tagged console output. This function removes those colors
      ** and tags.
      **

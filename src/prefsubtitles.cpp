@@ -1,4 +1,4 @@
-/*  smplayer2, GUI front-end for mplayer.
+/*  smplayer2, GUI front-end for mplayer2.
     Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -436,7 +436,7 @@ void PrefSubtitles::createHelp() {
 		tr("When this option is on, the encoding of the subtitles will be "
            "tried to be autodetected for the given language. "
            "It will fall back to the default encoding if the autodetection "
-           "fails. This option requires a MPlayer compiled with ENCA "
+           "fails. This option requires a mplayer2 compiled with ENCA "
            "support.") );
 
 	setWhatsThis(enca_lang_combo, tr("Subtitle language"),
@@ -452,7 +452,7 @@ void PrefSubtitles::createHelp() {
 
 	setWhatsThis(freetype_check, tr("Freetype support"),
 		tr("You should normally not disable this option. Do it only if your "
-		"MPlayer is compiled without freetype support. "
+		"mplayer2 is compiled without freetype support. "
 		"<b>Disabling this option could make that subtitles won't work "
 		"at all!</b>") );
 
@@ -482,7 +482,7 @@ void PrefSubtitles::createHelp() {
 
 	setWhatsThis(fontCombo, tr("System font"), 
         tr("Here you can select a system font to be used for the subtitles "
-           "and OSD. <b>Note:</b> requires a MPlayer with fontconfig support.") );
+           "and OSD. <b>Note:</b> requires a mplayer2 with fontconfig support.") );
 
 	setWhatsThis(font_autoscale_combo, tr("Autoscale"), 
         tr("Select the subtitle autoscaling method.") );
