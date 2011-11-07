@@ -1300,7 +1300,7 @@ void Core::startMplayer( QString file, double seek ) {
 		lavdopts += "vismv=7";
 	}
 
-	if (pref->threads > 1) {
+	if (pref->threads > 0) {
 		if (!lavdopts.isEmpty()) lavdopts += ":";
 		lavdopts += "threads=" + QString::number(pref->threads);
 	}

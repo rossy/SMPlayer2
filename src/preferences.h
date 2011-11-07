@@ -154,7 +154,7 @@ public:
 	H264LoopFilter h264_skip_loop_filter;
 	int HD_height; //!< An HD is a video which height is equal or greater than this.
 
-	int threads; //!< number of threads to use for decoding (-lavdopts threads <1-8>)
+	int threads; //!< number of threads to use for decoding (-lavdopts threads <1-16>)
 
 	int cache_for_files;
 	int cache_for_streams;

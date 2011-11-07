@@ -155,7 +155,7 @@ void Preferences::reset() {
 	h264_skip_loop_filter = LoopEnabled;
 	HD_height = 720;
 
-	threads = 1;
+	threads = 0;
 
 	cache_for_files = 0;
 	cache_for_streams = 1000;
@@ -528,7 +528,7 @@ void Preferences::save() {
 	set->setValue("h264_skip_loop_filter", h264_skip_loop_filter);
 	set->setValue("HD_height", HD_height);
 
-	set->setValue("threads", threads);
+	set->setValue("lavdthreads", threads);
 
 	set->setValue("cache_for_files", cache_for_files);
 	set->setValue("cache_for_streams", cache_for_streams);
@@ -910,7 +910,7 @@ void Preferences::load() {
 	h264_skip_loop_filter = (H264LoopFilter) set->value("h264_skip_loop_filter", h264_skip_loop_filter).toInt();
 	HD_height = set->value("HD_height", HD_height).toInt();
 
-	threads = set->value("threads", threads).toInt();
+	threads = set->value("lavdthreads", threads).toInt();
 
 	cache_for_files = set->value("cache_for_files", cache_for_files).toInt();
 	cache_for_streams = set->value("cache_for_streams", cache_for_streams).toInt();
