@@ -36,8 +36,8 @@
 #ifdef DOWNLOAD_SUBS
 #include "filedownloader.h"
 #include "subchooserdialog.h"
-#include "quazip.h"
-#include "quazipfile.h"
+#include <quazip/quazip.h>
+#include <quazip/quazipfile.h>
 #include <QTemporaryFile>
 #include <QBuffer>
 #endif

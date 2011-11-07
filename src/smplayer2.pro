@@ -243,29 +243,15 @@ TRANSLATIONS = translations/smplayer2_es.ts translations/smplayer2_de.ts \
                translations/smplayer2_da.ts
 
 contains( DEFINES, DOWNLOAD_SUBS ) {
-	INCLUDEPATH += findsubtitles/filedownloader findsubtitles/quazip
-	DEPENDPATH += findsubtitles/filedownloader findsubtitles/quazip
+	INCLUDEPATH += findsubtitles/filedownloader
+	DEPENDPATH += findsubtitles/filedownloader
 
 	HEADERS += filedownloader.h subchooserdialog.h
 	SOURCES += filedownloader.cpp subchooserdialog.cpp
 
 	FORMS += subchooserdialog.ui
 
-	HEADERS += crypt.h \
-	           ioapi.h \
-	           quazip.h \
-	           quazipfile.h \
-	           quazipfileinfo.h \
-	           quazipnewinfo.h \
-	           unzip.h \
-	           zip.h
-
-	SOURCES += ioapi.c \
-	           quazip.cpp \
-	           quazipfile.cpp \
-	           quazipnewinfo.cpp \
-	           unzip.c \
-	           zip.c
+	LIBS += -lquazip
 
 	LIBS += -lz
 }
