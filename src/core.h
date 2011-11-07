@@ -289,6 +289,7 @@ public slots:
 	void showFilenameOnOSD();
 	void toggleDeinterlace();
 
+	void changeSubUseMplayer2Defaults(bool);
 	void changeUseAss(bool);
 	void toggleForcedSubsOnly(bool);
 

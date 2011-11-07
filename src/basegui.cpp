@@ -774,6 +774,10 @@ void BaseGui::createActions() {
 	connect( incSubStepAct, SIGNAL(triggered()),
              core, SLOT(incSubStep()) );
 
+	subUseMplayer2DefaultsAct = new MyAction(this, "sub_use_mplayer2_defaults");
+	subUseMplayer2DefaultsAct->setCheckable(true);
+	connect( subUseMplayer2DefaultsAct, SIGNAL(toggled(bool)), core, SLOT(changeSubUseMplayer2Defaults(bool)) );
+
 	useAssAct = new MyAction(this, "use_ass_lib");
 	useAssAct->setCheckable(true);
 	connect( useAssAct, SIGNAL(toggled(bool)), core, SLOT(changeUseAss(bool)) );
@@ -1583,6 +1587,7 @@ void BaseGui::retranslateStrings() {
                            tr("&Previous line in subtitles") );
 	incSubStepAct->change( Images::icon("inc_sub_step"), 
                            tr("N&ext line in subtitles") );
+	subUseMplayer2DefaultsAct->change( tr("Use mplayer2 defaults") );
 	useAssAct->change( Images::icon("use_ass_lib"), tr("Use SSA/&ASS library") );
 	useForcedSubsOnlyAct->change( Images::icon("forced_subs"), tr("&Forced subtitles only") );
 
@@ -2392,6 +2397,7 @@ void BaseGui::createMenus() {
 	subtitlesMenu->addSeparator();
 	subtitlesMenu->addAction(subVisibilityAct);
 	subtitlesMenu->addSeparator();
+	subtitlesMenu->addAction(subUseMplayer2DefaultsAct);
 	subtitlesMenu->addAction(useAssAct);
 	subtitlesMenu->addSeparator(); //turbos
 	subtitlesMenu->addAction(showFindSubtitlesDialogAct);
@@ -3246,8 +3252,12 @@ void BaseGui::updateWidgets() {
 	// Mirror
 	mirrorAct->setChecked( core->mset.mirror );
 
+	// Use mplayer2 defaults for subtitles
+	subUseMplayer2DefaultsAct->setChecked( pref->sub_use_mplayer2_defaults );
+
 	// Use ass lib
 	useAssAct->setChecked( pref->use_ass_subtitles );
+	useAssAct->setEnabled( !pref->sub_use_mplayer2_defaults );
 
 	// Forced subs
 	useForcedSubsOnlyAct->setChecked( pref->use_forced_subs_only );

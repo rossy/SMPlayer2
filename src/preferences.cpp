@@ -169,6 +169,7 @@ void Preferences::reset() {
        Subtitles
        ********* */
 
+	sub_use_mplayer2_defaults = true;
 	font_file = "";
 	font_name = "";
 	use_fontconfig = false;
@@ -545,6 +546,8 @@ void Preferences::save() {
        ********* */
 
 	set->beginGroup("subtitles");
+
+	set->setValue("sub_use_mplayer2_defaults", sub_use_mplayer2_defaults);
 
 	set->setValue("font_file", font_file);
 	set->setValue("font_name", font_name);
@@ -927,6 +930,8 @@ void Preferences::load() {
        ********* */
 
 	set->beginGroup("subtitles");
+
+	sub_use_mplayer2_defaults = set->value("sub_use_mplayer2_defaults", sub_use_mplayer2_defaults).toBool();
 
 	font_file = set->value("font_file", font_file).toString();
 	font_name = set->value("font_name", font_name).toString();

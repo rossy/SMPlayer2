@@ -45,6 +45,9 @@ public:
 protected:
 	virtual void createHelp();
 
+	void setUseMplayer2Defaults(bool b);
+	bool useMplayer2Defaults();
+
 	void setFontName(QString font_name);
 	QString fontName();
 

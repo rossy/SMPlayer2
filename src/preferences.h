@@ -168,6 +168,7 @@ public:
 	   Subtitles
 	   ********* */
 
+	bool sub_use_mplayer2_defaults;
 	QString font_file;
 	QString font_name;
 	bool use_fontconfig;

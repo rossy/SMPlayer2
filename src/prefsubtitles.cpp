@@ -119,6 +119,7 @@ void PrefSubtitles::retranslateStrings() {
 }
 
 void PrefSubtitles::setData(Preferences * pref) {
+	setUseMplayer2Defaults( pref->sub_use_mplayer2_defaults );
 	setFontName( pref->font_name );
 	setFontFile( pref->font_file );
 	setUseFontconfig( pref->use_fontconfig );
@@ -160,6 +161,7 @@ void PrefSubtitles::setData(Preferences * pref) {
 void PrefSubtitles::getData(Preferences * pref) {
 	requires_restart = false;
 
+	TEST_AND_SET(pref->sub_use_mplayer2_defaults, useMplayer2Defaults());
 	TEST_AND_SET(pref->font_name, fontName());
 	TEST_AND_SET(pref->font_file, fontFile());
 	TEST_AND_SET(pref->use_fontconfig, useFontconfig());
@@ -208,6 +210,13 @@ void PrefSubtitles::checkBorderStyleCombo( int index ) {
 	style_shadow_label->setEnabled(b);
 }
 
+void PrefSubtitles::setUseMplayer2Defaults(bool b) {
+	use_mplayer2_defaults_check->setChecked(b);
+}
+
+bool PrefSubtitles::useMplayer2Defaults() {
+	return use_mplayer2_defaults_check->isChecked();
+}
 
 void PrefSubtitles::setFontName(QString font_name) {
 	fontCombo->setCurrentText(font_name);
@@ -439,13 +448,17 @@ void PrefSubtitles::createHelp() {
         tr("If this option is checked, the subtitles will appear in the "
            "screenshots. <b>Note:</b> it may cause some troubles sometimes." ) );
 
-	setWhatsThis(freetype_check, tr("Freetype support"), 
-		tr("You should normally not disable this option. Do it only if your "
-           "MPlayer is compiled without freetype support. "
-           "<b>Disabling this option could make that subtitles won't work "
-           "at all!</b>") );
-
 	addSectionTitle(tr("Font"));
+
+	setWhatsThis(freetype_check, tr("Freetype support"),
+		tr("You should normally not disable this option. Do it only if your "
+		"MPlayer is compiled without freetype support. "
+		"<b>Disabling this option could make that subtitles won't work "
+		"at all!</b>") );
+
+	setWhatsThis(use_mplayer2_defaults_check, tr("Use mplayer2 defaults"),
+		tr("This prevents SMPlayer2 from overriding most subtitle-related "
+			"options.") );
 
 	setWhatsThis(normal_subs_button, tr("Enable normal subtitles"), 
         tr("Click this button to select the normal/traditional subtitles. "

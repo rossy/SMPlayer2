@@ -402,6 +402,7 @@ protected:
 	MyAction * decSubStepAct;
 	MyAction * incSubScaleAct;
 	MyAction * decSubScaleAct;
+	MyAction * subUseMplayer2DefaultsAct;
 	MyAction * useAssAct;
 	MyAction * useForcedSubsOnlyAct;
 	MyAction * subVisibilityAct;
