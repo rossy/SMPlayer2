@@ -107,7 +107,6 @@ static QRegExp rx_connecting("^Connecting to .*");
 static QRegExp rx_resolving("^Resolving .*");
 static QRegExp rx_screenshot("^\\*\\*\\* screenshot '(.*)'");
 static QRegExp rx_endoffile("^Exiting... \\(End of file\\)|^ID_EXIT=EOF");
-static QRegExp rx_mkvchapters("\\[mkv\\] Chapter (\\d+) from");
 static QRegExp rx_mkvchapters_name("^ID_CHAPTER_(\\d+)_NAME=(.*)");
 static QRegExp rx_mkveditions("\\[mkv\\] Found (\\d+) editions, will play #(\\d+)");
 static QRegExp rx_chapter("^ANS_chapter=(.*)");
@@ -478,17 +477,6 @@ void MplayerProcess::parseLine(QByteArray ba) {
 		}
 		else
 
-		// Matroshka chapters
-		if (rx_mkvchapters.indexIn(line) > -1) {
-			int c = rx_mkvchapters.cap(1).toInt();
-			qDebug("MplayerProcess::parseLine: mkv chapters: %d", c);
-			if ((c+1) > md.chapters) {
-				md.chapters = c+1;
-				qDebug("MplayerProcess::parseLine: chapters set to: %d", md.chapters);
-			}
-		}
-		else
-
 		if (rx_mkvchapters_name.indexIn(line) > -1) {
 			int id = rx_mkvchapters_name.cap(1).toInt();
 			QString s = rx_mkvchapters_name.cap(2);
@@ -498,7 +486,6 @@ void MplayerProcess::parseLine(QByteArray ba) {
 			//When playing mkv ordered chapter file, mplayer will scan all the file in the directory and it'll mess up the chapter's name.
 			if(!md.chapters_name.contains(id)) {
 				md.chapters_name.insert(id,s);
-				md.chapters = md.chapters_name.count();
 			}
 		}
 		else
@@ -793,7 +780,7 @@ void MplayerProcess::parseLine(QByteArray ba) {
 				md.audio_codec = value;
 			}
 			else
-			if (tag == "ID_CHAPTERS" && md.chapters_name.count() == 0) {
+			if (tag == "ID_CHAPTERS") {
 				md.chapters = value.toInt();
 			}
 			else
