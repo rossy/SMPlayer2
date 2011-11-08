@@ -34,7 +34,7 @@
 #include <QSettings>
 
 #ifdef DOWNLOAD_SUBS
-#include "filedownloader.h"
+#include "filedownloader/filedownloader.h"
 #include "subchooserdialog.h"
 #include <quazip/quazip.h>
 #include <quazip/quazipfile.h>
@@ -678,6 +678,3 @@ void FindSubtitlesWindow::loadSettings() {
 
 	set->endGroup();
 }
-
-#include "moc_findsubtitleswindow.cpp"
-

@@ -54,5 +54,3 @@ void TristateCombo::changeEvent(QEvent *e) {
 		QComboBox::changeEvent(e);
 	}
 }
-
-#include "moc_tristatecombo.cpp"

@@ -62,5 +62,3 @@ void Filters::load(QSettings *set) {
 
 	set->endGroup();
 }
-
-#include "moc_filters.cpp"

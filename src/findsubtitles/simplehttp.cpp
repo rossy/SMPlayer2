@@ -76,6 +76,3 @@ void SimpleHttp::httpRequestFinished(int request_id, bool error) {
 		emit downloadFinished(downloaded_text);
 	}
 }
-
-#include "moc_simplehttp.cpp"
-

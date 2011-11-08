@@ -599,5 +599,3 @@ VolumeSliderAction * BaseGuiPlus::createVolumeSliderAction(QWidget * parent) {
 
 	return volumeslider_action;
 }
-
-#include "moc_baseguiplus.cpp"

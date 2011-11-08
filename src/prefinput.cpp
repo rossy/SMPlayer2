@@ -355,5 +355,3 @@ void PrefInput::createHelp() {
 		tr("Check it to seek in the opposite direction.") );
 
 }
-
-#include "moc_prefinput.cpp"

@@ -92,5 +92,3 @@ int FindSubtitlesConfigDialog::proxyType() {
 	int index = proxy_type_combo->currentIndex();
 	return proxy_type_combo->itemData(index).toInt();
 }
-
-#include "moc_findsubtitlesconfigdialog.cpp"

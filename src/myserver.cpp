@@ -17,7 +17,6 @@
 */
 
 #include "myserver.h"
-#include "version.h"
 #include <QHostAddress>
 #include <QRegExp>
 
@@ -28,7 +27,7 @@ Connection::Connection(QTcpSocket * s)
 	//connect(s, SIGNAL(disconnected()), this, SLOT(deleteLater()));
 	connect(s, SIGNAL(readyRead()), this, SLOT(readData()));
 
-	sendText(QString("SMPlayer2 %1").arg(smplayer2Version()));
+	sendText(QString("SMPlayer2 %1").arg(SMPLAYER2_VERSION));
 	sendText("Type help for a list of commands");
 }
 
@@ -66,7 +65,7 @@ void Connection::parseLine(QString str) {
 	QRegExp rx_setVol("^set volume ([0-9]+)");
 
 	if (str.toLower() == "hello") {
-		sendText(QString("Hello, this is SMPlayer2 %1").arg(smplayer2Version()));
+		sendText(QString("Hello, this is SMPlayer2 %1").arg(SMPLAYER2_VERSION));
 	}
 	else
 	if (str.toLower() == "help") {
@@ -268,5 +267,3 @@ void MyServer::newConnection_slot() {
 	connect(c, SIGNAL(receivedSetVolume(int)),
 			this, SIGNAL(receivedSetVolume(int)));
 }
-
-#include "moc_myserver.cpp"

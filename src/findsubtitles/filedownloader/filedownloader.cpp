@@ -106,6 +106,3 @@ void FileDownloader::updateDataReadProgress(int bytes_read, int total_bytes) {
 	setMaximum(total_bytes);
 	setValue(bytes_read);
 }
-
-#include "moc_filedownloader.cpp"
-

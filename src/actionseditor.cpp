@@ -626,5 +626,3 @@ void ActionsEditor::changeEvent(QEvent *e) {
 		QWidget::changeEvent(e);
 	}
 }
-
-#include "moc_actionseditor.cpp"

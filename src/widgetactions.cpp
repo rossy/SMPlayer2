@@ -218,5 +218,3 @@ QWidget * SeekingButton::createWidget( QWidget * parent ) {
 	return button;
 }
 #endif
-
-#include "moc_widgetactions.cpp"

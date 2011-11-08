@@ -195,5 +195,3 @@ void PrefDrives::createHelp() {
            "issues with it."));
 #endif
 }
-
-#include "moc_prefdrives.cpp"

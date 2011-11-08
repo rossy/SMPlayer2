@@ -224,5 +224,3 @@ void PreferencesDialog::changeEvent(QEvent *e) {
 		QDialog::changeEvent(e);
 	}
 }
-
-#include "moc_preferencesdialog.cpp"

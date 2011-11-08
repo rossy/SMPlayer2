@@ -46,7 +46,3 @@ void PlaylistDock::hideEvent( QHideEvent * /* event */ ) {
 	emit visibilityChanged(false);
 }
 #endif
-
-
-#include "moc_playlistdock.cpp"
-

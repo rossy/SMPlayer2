@@ -221,5 +221,3 @@ void FilePropertiesDialog::changeEvent(QEvent *e) {
 		QDialog::changeEvent(e);
 	}
 }
-
-#include "moc_filepropertiesdialog.cpp"

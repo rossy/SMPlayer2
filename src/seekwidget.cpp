@@ -56,5 +56,3 @@ int SeekWidget::time() const {
 	QTime t = time_edit->time();
 	return (t.minute() * 60) + t.second();
 }
-
-#include "moc_seekwidget.cpp"

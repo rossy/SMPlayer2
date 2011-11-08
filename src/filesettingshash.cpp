@@ -18,7 +18,7 @@
 
 #include "filesettingshash.h"
 #include "mediasettings.h"
-#include "osparser.h" // hash function
+#include "findsubtitles/osparser.h" // hash function
 #include <QSettings>
 #include <QFile>
 #include <QDir>

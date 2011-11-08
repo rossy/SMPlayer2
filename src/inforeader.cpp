@@ -279,5 +279,3 @@ bool InfoReader::run(QString options) {
 	return true;
 }
 #endif
-
-#include "moc_inforeader.cpp"

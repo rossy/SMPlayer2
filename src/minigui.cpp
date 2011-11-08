@@ -271,6 +271,3 @@ void MiniGui::loadConfig() {
 
 	set->endGroup();
 }
-
-#include "moc_minigui.cpp"
-

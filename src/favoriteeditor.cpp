@@ -229,5 +229,3 @@ void FavoriteEditor::edit_icon(int row, int column ) {
 		last_dir = QFileInfo(res).absolutePath();
 	}
 }
-
-#include "moc_favoriteeditor.cpp"

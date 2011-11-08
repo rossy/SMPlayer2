@@ -467,6 +467,3 @@ void MpcGui::updateWidgets() {
 	// Frame counter
 	/* frame_display->setVisible( pref->show_frame_counter ); */
 }
-
-#include "moc_mpcgui.cpp"
-

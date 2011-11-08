@@ -594,5 +594,3 @@ void PrefInterface::createHelp() {
            "doesn't work well with your window manager.") );
 #endif
 }
-
-#include "moc_prefinterface.cpp"

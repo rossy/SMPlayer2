@@ -19,11 +19,10 @@
 #include "smplayer2.h"
 #include "defaultgui.h"
 #include "minigui.h"
-#include "mpcgui.h"
+#include "mpcgui/mpcgui.h"
 #include "global.h"
 #include "paths.h"
 #include "translator.h"
-#include "version.h"
 #include "constants.h"
 #include "myclient.h"
 #include "clhelp.h"
@@ -373,7 +372,7 @@ void SMPlayer2::showInfo() {
 	}
 #endif
 	QString s = QObject::tr("This is SMPlayer2 v. %1 running on %2")
-            .arg(smplayer2Version())
+            .arg(SMPLAYER2_VERSION)
 #ifdef Q_OS_LINUX
            .arg("Linux")
 #else

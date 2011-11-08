@@ -1021,5 +1021,3 @@ void PrefGeneral::createHelp() {
            "language\"</i> has preference over this option.") );
 
 }
-
-#include "moc_prefgeneral.cpp"

@@ -136,5 +136,3 @@ void AudioEqualizer::changeEvent(QEvent *e) {
 		QWidget::changeEvent(e);
 	}
 }
-
-#include "moc_audioequalizer.cpp"

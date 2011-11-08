@@ -54,5 +54,3 @@ void InputDVDDirectory::on_searchButton_clicked() {
 		dvd_directory_edit->setText(s);
 	}
 }
-
-#include "moc_inputdvddirectory.cpp"

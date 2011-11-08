@@ -96,5 +96,3 @@ void TVList::edit() {
 		updateMenu();
 	}
 }
-
-#include "moc_tvlist.cpp"

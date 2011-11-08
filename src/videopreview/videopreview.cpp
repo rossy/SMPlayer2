@@ -643,6 +643,3 @@ void VideoPreview::changeEvent(QEvent *e) {
 		QWidget::changeEvent(e);
 	}
 }
-
-#include "moc_videopreview.cpp"
-

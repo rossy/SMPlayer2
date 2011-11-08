@@ -103,6 +103,3 @@ void SubChooserDialog::changeEvent(QEvent *e) {
 		QDialog::changeEvent(e);
 	}
 }
-
-#include "moc_subchooserdialog.cpp"
-

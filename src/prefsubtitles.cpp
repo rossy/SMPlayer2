@@ -570,5 +570,3 @@ void PrefSubtitles::createHelp() {
         tr("If this option is checked, the style defined above will be "
            "applied to ass subtitles too.") );
 }
-
-#include "moc_prefsubtitles.cpp"

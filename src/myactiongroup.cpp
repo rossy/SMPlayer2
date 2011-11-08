@@ -113,5 +113,3 @@ void MyActionGroup::removeFrom(QWidget *w) {
 		w->removeAction( actions()[n] );
 	}
 }
-
-#include "moc_myactiongroup.cpp"

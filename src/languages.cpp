@@ -284,5 +284,3 @@ QMap<QString,QString> Languages::encodings() {
 
 	return l;
 }
-
-#include "moc_languages.cpp"

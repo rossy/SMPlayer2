@@ -452,5 +452,3 @@ void PrefAdvanced::createHelp() {
            "starting with <i>Core::</i>") );
 
 }
-
-#include "moc_prefadvanced.cpp"

@@ -79,5 +79,3 @@ void SelectColorButton::changeEvent(QEvent *e) {
 
 }
 #endif
-
-#include "moc_selectcolorbutton.cpp"

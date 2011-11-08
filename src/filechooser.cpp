@@ -97,6 +97,3 @@ void FileChooser::on_button_clicked() {
 		if (old_file != result) emit fileChanged(result);
 	}
 }
-
-#include "moc_filechooser.cpp"
-

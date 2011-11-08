@@ -748,5 +748,3 @@ void DefaultGui::loadConfig() {
 		
 	updateWidgets();
 }
-
-#include "moc_defaultgui.cpp"

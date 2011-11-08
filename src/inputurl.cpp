@@ -89,5 +89,3 @@ void InputURL::playlistChanged(int state) {
 	}
 	*/
 }
-
-#include "moc_inputurl.cpp"

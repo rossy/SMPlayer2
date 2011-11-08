@@ -140,5 +140,3 @@ void LogWindow::changeEvent(QEvent *e) {
 		QWidget::changeEvent(e);
 	}
 }
-
-#include "moc_logwindow.cpp"

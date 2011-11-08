@@ -75,5 +75,3 @@ int EqSlider::value() const {
 void EqSlider::sliderValueChanged(int v) {
 	emit valueChanged( v );
 }
-
-#include "moc_eqslider.cpp"

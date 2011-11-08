@@ -46,7 +46,6 @@
 #include "helper.h"
 #include "images.h"
 #include "preferences.h"
-#include "version.h"
 #include "global.h"
 #include "core.h"
 #include "extensions.h"
@@ -722,7 +721,7 @@ bool Playlist::save_m3u(QString file) {
 		QString filename;
 
 		stream << "#EXTM3U" << "\n";
-		stream << "# Playlist created by SMPlayer2 " << smplayer2Version() << " \n";
+		stream << "# Playlist created by SMPlayer2 " << SMPLAYER2_VERSION << " \n";
 
 		PlaylistItemList::iterator it;
 		for ( it = pl.begin(); it != pl.end(); ++it ) {
@@ -1456,5 +1455,3 @@ void Playlist::changeEvent(QEvent *e) {
 		QWidget::changeEvent(e);
 	}
 }
-
-#include "moc_playlist.cpp"

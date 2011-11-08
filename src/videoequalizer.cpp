@@ -136,5 +136,3 @@ void VideoEqualizer::changeEvent(QEvent *e) {
 		QWidget::changeEvent(e);
 	}
 }
-
-#include "moc_videoequalizer.cpp"

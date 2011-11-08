@@ -151,5 +151,3 @@ void VideoPreviewConfigDialog::filenameChanged(const QString & text) {
 	dvd_device_label->setVisible(b);
 	dvd_device_edit->setVisible(b);
 }
-
-#include "moc_videopreviewconfigdialog.cpp"

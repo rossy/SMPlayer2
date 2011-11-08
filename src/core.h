@@ -21,6 +21,7 @@
 
 #include <QObject>
 #include <QProcess> // For QProcess::ProcessError
+#include <QPoint>
 #include "mediadata.h"
 #include "mediasettings.h"
 #include "mplayerprocess.h"

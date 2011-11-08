@@ -65,8 +65,8 @@
 #include "errordialog.h"
 #include "timedialog.h"
 #include "clhelp.h"
-#include "findsubtitleswindow.h"
-#include "videopreview.h"
+#include "findsubtitles/findsubtitleswindow.h"
+#include "videopreview/videopreview.h"
 
 #include "config.h"
 #include "actionseditor.h"
@@ -4619,5 +4619,3 @@ void BaseGui::clear_just_stopped() {
 	just_stopped = false;
 }
 #endif
-
-#include "moc_basegui.cpp"

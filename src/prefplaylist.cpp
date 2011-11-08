@@ -132,5 +132,3 @@ void PrefPlaylist::createHelp() {
         "specially if you add many files."));
 
 }
-
-#include "moc_prefplaylist.cpp"

@@ -56,5 +56,3 @@ void ErrorDialog::toggleLog(bool checked) {
 	else
 		viewlog_button->setText(tr("Show log"));
 }
-
-#include "moc_errordialog.cpp"

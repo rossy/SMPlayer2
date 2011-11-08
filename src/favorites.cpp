@@ -260,6 +260,3 @@ void Favorites::jump() {
 		_menu->actions()[item+FIRST_MENU_ENTRY]->trigger();
 	}
 }
-
-#include "moc_favorites.cpp"
-

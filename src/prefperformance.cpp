@@ -250,5 +250,3 @@ void PrefPerformance::createHelp() {
 		tr("This option specifies how much memory (in kBytes) to use when "
            "precaching a VCD.") );
 }
-
-#include "moc_prefperformance.cpp"

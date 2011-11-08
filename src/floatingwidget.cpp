@@ -134,5 +134,3 @@ void FloatingWidget::checkUnderMouse() {
 		if ((isVisible()) && (!underMouse())) hide();
 	}
 }
-
-#include "moc_floatingwidget.cpp"

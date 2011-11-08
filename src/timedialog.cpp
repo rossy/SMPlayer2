@@ -56,5 +56,3 @@ void TimeDialog::setLabel(const QString & label) {
 QString TimeDialog::label() {
 	return time_label->text();
 }
-
-#include "moc_timedialog.cpp"

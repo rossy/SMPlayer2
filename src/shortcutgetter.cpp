@@ -424,5 +424,3 @@ void ShortcutGetter::setText()
 	leKey->setText(seq.join("+"));
 	//leKey->selectAll();
 }
-		
-#include "moc_shortcutgetter.cpp"

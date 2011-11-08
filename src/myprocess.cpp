@@ -197,5 +197,3 @@ QStringList MyProcess::splitArguments(const QString & args) {
 
 	return l;
 }
-
-#include "moc_myprocess.cpp"

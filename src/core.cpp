@@ -3845,5 +3845,3 @@ void Core::updateEdition(int edition) {
 	mset.current_edition_id = edition;
 	updateWidgets();
 }
-
-#include "moc_core.cpp"

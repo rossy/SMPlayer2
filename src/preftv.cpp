@@ -111,5 +111,3 @@ void PrefTV::createHelp() {
            "channels on ~/.mplayer/channels.conf.ter or ~/.mplayer/channels.conf.") );
 #endif
 }
-
-#include "moc_preftv.cpp"

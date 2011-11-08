@@ -219,6 +219,3 @@ void PrefAssociations::createHelp() {
 		   "be restored.") +
         tr(" <b>Note:</b> (Restoration doesn't work on Windows Vista)."));
 }
-
-#include "moc_prefassociations.cpp"
-

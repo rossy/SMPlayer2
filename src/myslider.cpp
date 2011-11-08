@@ -179,6 +179,3 @@ void MySlider::mousePressEvent( QMouseEvent * e ) {
 	}
 }
 #endif
-
-#include "moc_myslider.cpp"
-
