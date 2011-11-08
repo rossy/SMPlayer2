@@ -46,7 +46,7 @@ public:
 	enum OptionState { Detect = -1, Disabled = 0, Enabled = 1 };
 	enum H264LoopFilter { LoopDisabled = 0, LoopEnabled = 1, LoopDisabledOnHD = 2 };
 
-	Q_DECLARE_FLAGS(WheelFunctions, WheelFunction);
+	Q_DECLARE_FLAGS(WheelFunctions, WheelFunction)
 
 	Preferences();
 	virtual ~Preferences();

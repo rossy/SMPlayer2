@@ -113,9 +113,7 @@ void MpcGui::createControlWidget() {
 	timeslidewidget->setObjectName("timeslidewidget");
 	timeslidewidget->addAction(timeslider_action);
     timeslidewidget->setMovable(false);
-    
-    QColor SliderColor = palette().color(QPalette::Window);
-    QColor SliderBorderColor = palette().color(QPalette::Dark);
+
     setIconSize( QSize( 16 , 16 ) );
 
     addToolBar(Qt::BottomToolBarArea, controlwidget);

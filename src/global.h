@@ -45,7 +45,7 @@ namespace Global {
 	void global_init(const QString & config_path);
 	void global_end();
 
-};
+}
 
 #else
 
@@ -58,7 +58,7 @@ namespace Global {
 	void global_init();
 	void global_end();
 
-};
+}
 
 #endif // MINILIB
 

@@ -17,6 +17,7 @@
 */
 
 #include "mplayerprocess.h"
+#include <cinttypes>
 #include <QRegExp>
 #include <QStringList>
 #include <QApplication>
@@ -489,8 +490,8 @@ void MplayerProcess::parseLine(QByteArray ba) {
 
 		if (rx_mkvchapters_timestamp.indexIn(line) > -1) {
 			int id = rx_mkvchapters_timestamp.cap(1).toInt();
-			long long timestamp = rx_mkvchapters_timestamp.cap(2).toLongLong();
-			qDebug("MplayerProcess::parseLine: mkv chapters: ID %d, START %lld", id, timestamp);
+			int64_t timestamp = rx_mkvchapters_timestamp.cap(2).toLongLong();
+			qDebug("MplayerProcess::parseLine: mkv chapters: ID %d, START %"PRId64, id, timestamp);
 			if(!md.chapters_timestamp.contains(id))
 				md.chapters_timestamp.insert(id, timestamp);
 		}

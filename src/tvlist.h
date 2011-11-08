@@ -29,7 +29,7 @@ class TVList : public Favorites
 
 public:
 	enum Service { TV = 1, Radio = 2, Data = 4 };
-	Q_DECLARE_FLAGS(Services, Service);
+	Q_DECLARE_FLAGS(Services, Service)
 
 	TVList(bool check_channels_conf, Services services, QString filename, QWidget * parent = 0);
 	~TVList();
