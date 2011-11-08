@@ -2822,6 +2822,18 @@ void Core::changeCurrentSec(double sec) {
 	if (floor(sec)==last_second) return; // Update only once per second
 	last_second = (int) floor(sec);
 
+	int newChapter = mset.current_chapter_id;
+	QMap<int, long long>::iterator i;
+	for (i = mdat.chapters_timestamp.begin(); i != mdat.chapters_timestamp.end(); ++i) {
+		if ((long long)sec * 1000 >= i.value())
+			newChapter = i.key();
+		else
+			break;
+	}
+
+	if (newChapter != mset.current_chapter_id)
+		emit updateChapter(newChapter);
+
 #ifdef SEEKBAR_RESOLUTION
 	int value = 0;
 	if ( (mdat.duration > 1) && (mset.current_sec > 1) &&

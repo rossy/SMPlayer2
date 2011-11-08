@@ -53,7 +53,8 @@ void MediaData::reset() {
 	subs.clear();
 
 	chapters = 0;
-    chapters_name.clear();
+	chapters_name.clear();
+	chapters_timestamp.clear();
 	editions = -1;
 
 	initialized=false;

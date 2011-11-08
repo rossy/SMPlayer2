@@ -76,6 +76,7 @@ public:
 
 	int chapters;
 	QMap<int,QString> chapters_name;
+	QMap<int,long long> chapters_timestamp;
 	int editions;
 
 	// Clip info

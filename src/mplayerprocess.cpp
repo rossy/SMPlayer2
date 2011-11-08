@@ -108,6 +108,7 @@ static QRegExp rx_resolving("^Resolving .*");
 static QRegExp rx_screenshot("^\\*\\*\\* screenshot '(.*)'");
 static QRegExp rx_endoffile("^Exiting... \\(End of file\\)|^ID_EXIT=EOF");
 static QRegExp rx_mkvchapters_name("^ID_CHAPTER_(\\d+)_NAME=(.*)");
+static QRegExp rx_mkvchapters_timestamp("^ID_CHAPTER_(\\d+)_START=(\\d+)");
 static QRegExp rx_mkveditions("\\[mkv\\] Found (\\d+) editions, will play #(\\d+)");
 static QRegExp rx_chapter("^ANS_chapter=(.*)");
 static QRegExp rx_aspect2("^Movie-Aspect is ([0-9,.]+):1");
@@ -480,16 +481,21 @@ void MplayerProcess::parseLine(QByteArray ba) {
 		if (rx_mkvchapters_name.indexIn(line) > -1) {
 			int id = rx_mkvchapters_name.cap(1).toInt();
 			QString s = rx_mkvchapters_name.cap(2);
-			qDebug("MplayerProcess::parseLine: mkv chapters: %d", id);
-			qDebug("MplayerProcess::parseLine: mkv chapters name: %s", s.toUtf8().data());
-			//Only insert the first time. 
-			//When playing mkv ordered chapter file, mplayer will scan all the file in the directory and it'll mess up the chapter's name.
-			if(!md.chapters_name.contains(id)) {
-				md.chapters_name.insert(id,s);
-			}
+			qDebug("MplayerProcess::parseLine: mkv chapters: ID %d, NAME %s", id, s.toUtf8().data());
+			if (!md.chapters_name.contains(id))
+				md.chapters_name.insert(id, s);
 		}
 		else
-		
+
+		if (rx_mkvchapters_timestamp.indexIn(line) > -1) {
+			int id = rx_mkvchapters_timestamp.cap(1).toInt();
+			long long timestamp = rx_mkvchapters_timestamp.cap(2).toLongLong();
+			qDebug("MplayerProcess::parseLine: mkv chapters: ID %d, START %lld", id, timestamp);
+			if(!md.chapters_timestamp.contains(id))
+				md.chapters_timestamp.insert(id, timestamp);
+		}
+		else
+
 		if (rx_mkveditions.indexIn(line) > -1) {
 			int editions = rx_mkveditions.cap(1).toInt();
 			int playing = rx_mkveditions.cap(2).toInt();
