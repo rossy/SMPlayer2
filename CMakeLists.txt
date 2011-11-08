@@ -19,6 +19,7 @@ if (CMAKE_COMPILER_IS_GNUCXX)
 endif()
 
 add_definitions(-DSMPLAYER2_VERSION=\"${SMPLAYER2_VERSION}\")
+add_definitions(-DDATA_PATH=\"${CMAKE_INSTALL_PREFIX}/share/smplayer2\")
 
 find_package(Qt COMPONENTS QtNetwork QtXml REQUIRED)
 find_package(ZLIB REQUIRED)

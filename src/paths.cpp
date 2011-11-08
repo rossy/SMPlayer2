@@ -51,51 +51,19 @@ QString Paths::dataPath() {
 }
 
 QString Paths::translationPath() {
-#ifdef TRANSLATION_PATH
-	QString path = QString(TRANSLATION_PATH);
-	if (!path.isEmpty())
-		return path;
-	else
-		return appPath() + "/translations";
-#else
-	return appPath() + "/translations";
-#endif
+	return dataPath() + "/translations";
 }
 
 QString Paths::docPath() {
-#ifdef DOC_PATH
-	QString path = QString(DOC_PATH);
-	if (!path.isEmpty())
-		return path;
-	else
-		return appPath() + "/docs";
-#else
-	return appPath() + "/docs";
-#endif
+	return dataPath() + "/docs";
 }
 
 QString Paths::themesPath() {
-#ifdef THEMES_PATH
-	QString path = QString(THEMES_PATH);
-	if (!path.isEmpty())
-		return path;
-	else
-		return appPath() + "/themes";
-#else
-	return appPath() + "/themes";
-#endif
+	return dataPath() + "/themes";
 }
 
 QString Paths::shortcutsPath() {
-#ifdef SHORTCUTS_PATH
-	QString path = QString(SHORTCUTS_PATH);
-	if (!path.isEmpty())
-		return path;
-	else
-		return appPath() + "/shortcuts";
-#else
-	return appPath() + "/shortcuts";
-#endif
+	return dataPath() + "/shortcuts";
 }
 
 QString Paths::qtTranslationPath() {
