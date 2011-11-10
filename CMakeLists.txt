@@ -9,7 +9,7 @@ find_program(QT_LRELEASE_EXECUTABLE NAMES lrelease)
 set(SMPLAYER2_VERSION_MAJOR 0)
 set(SMPLAYER2_VERSION_MINOR 7)
 set(SMPLAYER2_VERSION_RELEASE 0)
-execute_process(COMMAND ${PROJECT_SOURCE_DIR}/version.sh
+execute_process(COMMAND ${PROJECT_SOURCE_DIR}/version.sh WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
 	OUTPUT_VARIABLE SMPLAYER2_VERSION_GITREV OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 set(SMPLAYER2_VERSION "${SMPLAYER2_VERSION_MAJOR}.${SMPLAYER2_VERSION_MINOR}.${SMPLAYER2_VERSION_RELEASE}${SMPLAYER2_VERSION_GITREV}")
@@ -18,48 +18,35 @@ if (CMAKE_COMPILER_IS_GNUCXX)
 	add_definitions("-Wall -pedantic -std=c++0x")
 endif()
 
-add_definitions(-DSMPLAYER2_VERSION=\"${SMPLAYER2_VERSION}\")
-add_definitions(-DDATA_PATH=\"${CMAKE_INSTALL_PREFIX}/share/smplayer2\")
+if (MINGW)
+	add_definitions("-U__STRICT_ANSI__")
+endif()
 
-find_package(Qt COMPONENTS QtNetwork QtXml REQUIRED)
-find_package(ZLIB REQUIRED)
 find_package(Quazip)
-set(QT_USE_QTNETWORK TRUE)
-set(QT_USE_QTXML TRUE)
-
 if (QUAZIP_FOUND)
 	option(ENABLE_DOWNLOAD_SUBS "Enable subtitle downloader (requires QuaZip)" ON)
 	option(QUAZIP_STATIC "Enable this if QuaZip has been built as a static library" OFF)
 endif()
 
-if(ENABLE_DOWNLOAD_SUBS AND QUAZIP_FOUND)
+option(DEBUG_OUTPUT "Enable debug output on terminal" OFF)
+
+if (ENABLE_DOWNLOAD_SUBS AND QUAZIP_FOUND)
 	set(HAVE_DOWNLOAD_SUBS ON)
 	if (QUAZIP_STATIC)
 		add_definitions(-DQUAZIP_STATIC)
 	endif()
 endif()
 
+if (NOT DEBUG_OUTPUT)
+	add_definitions(-DNO_DEBUG_ON_CONSOLE)
+endif()
+
 add_subdirectory(src)
+add_subdirectory(icons)
 
 summary_add("Subtitle downloader" HAVE_DOWNLOAD_SUBS)
 summary_show()
 
-install(FILES icons/smplayer2_icon16.png
-	DESTINATION share/icons/hicolor/16x16/apps/
-	RENAME application-x-smplayer2.png
-)
-install(FILES icons/smplayer2_icon22.png
-	DESTINATION share/icons/hicolor/22x22/apps/
-	RENAME application-x-smplayer2.png
-)
-install(FILES icons/smplayer2_icon32.png
-	DESTINATION share/icons/hicolor/32x32/apps/
-	RENAME application-x-smplayer2.png
-)
-install(FILES icons/smplayer2_icon64.png
-	DESTINATION share/icons/hicolor/64x64/apps/
-	RENAME application-x-smplayer2.png
-)
 install(FILES smplayer2.desktop
 	DESTINATION share/applications
 )
