@@ -291,7 +291,7 @@ qt4_add_translation(smplayer2_TRANSLATIONS ${smplayer2_LANGUAGES})
 qt4_add_resources(smplayer2_RESOURCES_RCC ${smplayer2_RESOURCES})
 add_custom_target(translations DEPENDS ${smplayer2_TRANSLATIONS})
 
-add_executable(smplayer2
+add_executable(smplayer2 WIN32
 	${smplayer2_SOURCES}
 	${smplayer2_HEADERS_MOC}
 	${smplayer2_FORMS_HEADERS}
