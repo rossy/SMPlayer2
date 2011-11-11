@@ -24,3 +24,4 @@ MimeType=audio/ac3;audio/mp4;audio/mpeg;audio/vnd.rn-realaudio;audio/vorbis;audi
 Name=SMPlayer2
 Type=Application
 X-KDE-StartupNotify=false
+X-KDE-Protocols=http;ftp;smb

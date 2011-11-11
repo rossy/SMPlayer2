@@ -30,3 +30,4 @@ Comment[eu]=Gehitu agiria(k) SMPlayer2 irakur-zerrendara
 Type=Application
 X-KDE-StartupNotify=false
 NoDisplay=true
+X-KDE-Protocols=http;ftp;smb
