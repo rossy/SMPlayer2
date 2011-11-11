@@ -3,7 +3,7 @@ if(NOT WIN32)
 	add_definitions(-DDATA_PATH=\"${CMAKE_INSTALL_PREFIX}/share/smplayer2\")
 endif()
 
-find_package(Qt COMPONENTS QtNetwork QtXml REQUIRED)
+find_package(Qt4 REQUIRED QtCore QtGui QtNetwork QtXml)
 find_package(ZLIB REQUIRED)
 set(QT_USE_QTNETWORK TRUE)
 set(QT_USE_QTXML TRUE)
