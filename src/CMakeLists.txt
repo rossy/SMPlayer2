@@ -107,101 +107,61 @@ set(smplayer2_SOURCES
 )
 
 set(smplayer2_HEADERS
-	guiconfig.h
-	config.h
-	constants.h
-	global.h
-	paths.h
-	helper.h
-	colorutils.h
-	translator.h
-	subtracks.h
-	tracks.h
-	titletracks.h
-	discname.h
-	extensions.h
-	desktopinfo.h
-	myprocess.h
-	mplayerprocess.h
-	infoprovider.h
-	mplayerwindow.h
-	mediadata.h
-	audioequalizerlist.h
-	mediasettings.h
-	assstyles.h
-	filters.h
-	preferences.h
-	filesettingsbase.h
-	filesettings.h
-	filesettingshash.h
-	tvsettings.h
-	images.h
-	inforeader.h
-	deviceinfo.h
-	recents.h
-	urlhistory.h
-	core.h
-	logwindow.h
-	infofile.h
-	seekwidget.h
-	mytablewidget.h
-	shortcutgetter.h
-	actionseditor.h
-	filechooser.h
-	preferencesdialog.h
-	mycombobox.h
-	tristatecombo.h
-	languages.h
-	selectcolorbutton.h
-	prefwidget.h
-	prefgeneral.h
-	prefdrives.h
-	prefinterface.h
-	prefperformance.h
-	prefinput.h
-	prefsubtitles.h
-	prefadvanced.h
-	prefplaylist.h
-	preftv.h
-	filepropertiesdialog.h
-	playlist.h
-	playlistdock.h
-	verticaltext.h
-	eqslider.h
-	videoequalizer.h
-	audioequalizer.h
-	myslider.h
-	timeslider.h
-	inputdvddirectory.h
-	inputurl.h
-	myaction.h
-	myactiongroup.h
-	myserver.h
-	myclient.h
-	filedialog.h
 	about.h
-	errordialog.h
-	timedialog.h
-	findsubtitles/simplehttp.h
-	findsubtitles/osparser.h
-	findsubtitles/findsubtitlesconfigdialog.h
-	findsubtitles/findsubtitleswindow.h
-	videopreview/videopreview.h
-	videopreview/videopreviewconfigdialog.h
-	favorites.h
-	tvlist.h
-	favoriteeditor.h
+	actionseditor.h
+	audioequalizer.h
 	basegui.h
 	baseguiplus.h
-	floatingwidget.h
-	widgetactions.h
-	toolbareditor.h
+	core.h
 	defaultgui.h
+	eqslider.h
+	errordialog.h
+	favoriteeditor.h
+	favorites.h
+	filechooser.h
+	findsubtitles/findsubtitlesconfigdialog.h
+	findsubtitles/findsubtitleswindow.h
+	findsubtitles/simplehttp.h
+	filepropertiesdialog.h
+	filters.h
+	floatingwidget.h
+	inforeader.h
+	inputdvddirectory.h
+	inputurl.h
+	languages.h
+	logwindow.h
 	minigui.h
 	mpcgui/mpcgui.h
 	mpcgui/mpcstyles.h
-	smplayer2.h
-	clhelp.h
+	mplayerprocess.h
+	mplayerwindow.h
+	myactiongroup.h
+	myprocess.h
+	myserver.h
+	myslider.h
+	playlistdock.h
+	playlist.h
+	prefadvanced.h
+	prefdrives.h
+	preferencesdialog.h
+	prefgeneral.h
+	prefinput.h
+	prefinterface.h
+	prefperformance.h
+	prefplaylist.h
+	prefsubtitles.h
+	preftv.h
+	seekwidget.h
+	selectcolorbutton.h
+	shortcutgetter.h
+	timedialog.h
+	timeslider.h
+	tristatecombo.h
+	tvlist.h
+	videoequalizer.h
+	videopreview/videopreviewconfigdialog.h
+	videopreview/videopreview.h
+	widgetactions.h
 )
 
 set(smplayer2_FORMS
@@ -262,7 +222,6 @@ if(WIN32)
 	)
 	set(smplayer2_HEADERS ${smplayer2_HEADERS}
 	prefassociations.h
-	winfileassoc.h
 	)
 	set(smplayer2_FORMS ${smplayer2_FORMS}
 	prefassociations.ui
