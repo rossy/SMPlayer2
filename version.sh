@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+
+if [ -e snapshot_version ] ; then
+	VER="$(cat snapshot_version)"
+else
+
 git rev-list HEAD | sort > config.git-hash
 LOCALVER=`wc -l config.git-hash | awk '{print $1}'`
 if [ $LOCALVER -gt 1 ] ; then
@@ -12,5 +17,7 @@ if [ $LOCALVER -gt 1 ] ; then
 	VER=" r$VER $(git rev-list HEAD -n 1 | cut -c 1-7)"
 fi
 rm -f config.git-hash
+
+fi
 
 echo "$VER"
