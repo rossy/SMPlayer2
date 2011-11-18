@@ -1313,7 +1313,13 @@ void Core::startMplayer( QString file, double seek ) {
 
 	if (!pref->vo.isEmpty()) {
 		proc->addArgument( "-vo");
-		proc->addArgument( pref->vo );
+		if (pref->vo == "vdpau_hwdec") {
+			proc->addArgument("vdpau");
+			proc->addArgument("-vc");
+			proc->addArgument("ffh264vdpau,ffmpeg12vdpau,ffwmv3vdpau,ffvc1vdpau,");
+		} else {
+			proc->addArgument( pref->vo );
+		}
 	}
 
 #if USE_ADAPTER
