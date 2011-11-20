@@ -44,7 +44,7 @@ About::About(QWidget * parent, Qt::WindowFlags f)
 	info->setText( 
 		"<b>SMPlayer2</b> &copy; 2011 Martin Herkt &lt;lachs0r@srsfckn.biz&gt;<br>"
 		"based on SMPlayer &copy; 2006-2010 Ricardo Villalba &lt;rvm@escomposlinux.org&gt;<br>"
-		"<b>" + tr("Version: %1").arg(SMPLAYER2_VERSION) + "</b>" +
+		"<b>" + tr("Version: %1").arg(SMPLAYER2_VERSION) + "</b><br>" +
         tr("Using Qt %1 (compiled with Qt %2)").arg(qVersion()).arg(QT_VERSION_STR) + "<br><br>" +
 		tr("Visit our web for updates:") +"<br>"+ 
         link("http://smplayer2.srsfckn.biz") +"<br>"+
