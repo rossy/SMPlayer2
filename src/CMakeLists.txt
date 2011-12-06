@@ -49,6 +49,7 @@ set(smplayer2_SOURCES
 	shortcutgetter.cpp
 	actionseditor.cpp
 	filechooser.cpp
+	vdpauproperties.cpp
 	preferencesdialog.cpp
 	mycombobox.cpp
 	tristatecombo.cpp
@@ -119,6 +120,7 @@ set(smplayer2_HEADERS
 	favoriteeditor.h
 	favorites.h
 	filechooser.h
+	vdpauproperties.h
 	findsubtitles/findsubtitlesconfigdialog.h
 	findsubtitles/findsubtitleswindow.h
 	findsubtitles/simplehttp.h
@@ -171,6 +173,7 @@ set(smplayer2_FORMS
 	eqslider.ui
 	seekwidget.ui
 	inputurl.ui
+	vdpauproperties.ui
 	preferencesdialog.ui
 	prefgeneral.ui
 	prefdrives.ui
