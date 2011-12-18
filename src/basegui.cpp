@@ -2804,7 +2804,7 @@ void BaseGui::updateMediaInfo() {
 		if (file_dialog->isVisible()) setDataToFileProperties();
 	}
 
-	setWindowCaption( core->mdat.displayName() + " - SMPlayer2" );
+	setWindowCaption( core->mdat.displayName(pref->show_tag_in_window_title) + " - SMPlayer2" );
 
 	emit videoInfoChanged(core->mdat.video_width, core->mdat.video_height, core->mdat.video_fps.toDouble());
 }
