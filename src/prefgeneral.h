@@ -99,9 +99,6 @@ protected:
 	void setPauseWhenHidden(bool b);
 	bool pauseWhenHidden();
 
-	void setShowTagInTitle(bool b);
-	bool showTagInTitle();
-
 	// Tab video and audio
 	void setEq2(bool b);
 	bool eq2();
