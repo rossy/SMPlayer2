@@ -1218,8 +1218,7 @@ void Core::startMplayer( QString file, double seek ) {
 		if (dvd_title > 0) file += QString::number(dvd_title);
 	}
 
-	// URL
-#if AUTO_PLAYLIST
+	// Check URL playlist
 	QUrl url(file);
 	qDebug("Core::startMplayer: checking if stream is a playlist");
 	qDebug("Core::startMplayer: url path: '%s'", url.path().toUtf8().constData());
@@ -1228,10 +1227,7 @@ void Core::startMplayer( QString file, double seek ) {
 	bool url_is_playlist = (rx.indexIn(url.path()) != -1);
 
 	qDebug("Core::startMplayer: url_is_playlist: %d", url_is_playlist);
-#else
-	bool url_is_playlist = file.endsWith(IS_PLAYLIST_TAG);
-	if (url_is_playlist) file = file.remove( QRegExp(IS_PLAYLIST_TAG_RX) );
-#endif
+
 
 	bool screenshot_enabled = ( (pref->use_screenshot) && 
                                 (!pref->screenshot_directory.isEmpty()) && 
