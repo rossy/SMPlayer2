@@ -51,6 +51,7 @@ set(smplayer2_SOURCES
 	filechooser.cpp
 	vdpauproperties.cpp
 	preferencesdialog.cpp
+	mylineedit.cpp
 	mycombobox.cpp
 	tristatecombo.cpp
 	languages.cpp
@@ -146,6 +147,7 @@ set(smplayer2_HEADERS
 	prefadvanced.h
 	prefdrives.h
 	preferencesdialog.h
+	mylineedit.h
 	prefgeneral.h
 	prefinput.h
 	prefinterface.h
