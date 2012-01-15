@@ -18,6 +18,7 @@
 
 #include "inputurl.h"
 #include "images.h"
+#include "mylineedit.h"
 
 InputURL::InputURL( QWidget* parent, Qt::WindowFlags f ) 
 	: QDialog(parent, f)
@@ -26,6 +27,9 @@ InputURL::InputURL( QWidget* parent, Qt::WindowFlags f )
 
 	url_icon->setPixmap( Images::icon("url_big") );
 	url_edit->setFocus();
+
+	MyLineEdit * edit = new MyLineEdit(this);
+	url_edit->setLineEdit(edit);
 }
 
 InputURL::~InputURL() {
