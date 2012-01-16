@@ -27,8 +27,8 @@
 #include <QInputDialog>
 #include <QFileInfo>
 
-//#define FIRST_MENU_ENTRY 3
-#define FIRST_MENU_ENTRY 2
+//#define FIRST_MENU_ENTRY 4
+#define FIRST_MENU_ENTRY 3
 
 Favorites::Favorites(QString filename, QWidget * parent) : QObject(parent)
 {
@@ -52,6 +52,9 @@ Favorites::Favorites(QString filename, QWidget * parent) : QObject(parent)
 	previous_act = new QAction(this);
 	connect(previous_act, SIGNAL(triggered()), this, SLOT(previous()));
 
+	add_current_act = new QAction( "Add current media", this);
+	connect(add_current_act, SIGNAL(triggered()), SLOT(addCurrentPlaying()));
+
 	load();
 }
 
@@ -71,6 +74,7 @@ void Favorites::createMenu() {
              this, SLOT(triggered_slot(QAction *)) );
 
 	_menu->addAction(edit_act);
+	_menu->addAction(add_current_act);
 	//_menu->addAction(jump_act);
 	_menu->addSeparator();
 
@@ -87,10 +91,13 @@ void Favorites::populateMenu() {
 		QString name = QString("%1 - " + f_list[n].name() ).arg( i.insert( i.size()-1, '&' ), 3, ' ' );
 		if (f_list[n].isSubentry()) {
 			Favorites * new_fav = createNewObject(f_list[n].file(), parent_widget);
+			connect(this, SIGNAL(sendCurrentMedia(const QString &, const QString &)), 
+                    new_fav, SLOT(getCurrentMedia(const QString &, const QString &)));
 			new_fav->editAct()->setText( editAct()->text() );
 			new_fav->jumpAct()->setText( jumpAct()->text() );
 			new_fav->nextAct()->setText( nextAct()->text() );
 			new_fav->previousAct()->setText( previousAct()->text() );
+			new_fav->addCurrentAct()->setText( addCurrentAct()->text() );
 			QAction * a = _menu->addMenu(new_fav->menu());
 			a->setText( name );
 			a->setIcon( QIcon( f_list[n].icon() ) );
@@ -174,6 +181,27 @@ void Favorites::previous() {
 	QAction * a = _menu->actions()[current+FIRST_MENU_ENTRY]; // Skip "edit" and separator
 	if (a != 0) {
 		a->trigger();
+	}
+}
+
+void Favorites::getCurrentMedia(const QString & filename, const QString & title) {
+	qDebug("Favorites::getCurrentMedia: '%s', '%s'", filename.toUtf8().constData(), title.toUtf8().constData());
+	received_file_playing = filename;
+	received_title = title;
+
+	emit sendCurrentMedia(filename, title);
+}
+
+void Favorites::addCurrentPlaying() {
+	if (received_file_playing.isEmpty()) {
+		qDebug("Favorites::addCurrentPlaying: received file is empty, doing nothing");
+	} else {
+		Favorite fav;
+		fav.setName(received_title);
+		fav.setFile(received_file_playing);
+		f_list.append(fav);
+		save();
+		updateMenu();
 	}
 }
 
