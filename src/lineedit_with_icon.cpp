@@ -61,4 +61,3 @@ void LineEditWithIcon::changeEvent(QEvent *e) {
 	}
 }
 
-#include "moc_lineedit_with_icon.cpp"
