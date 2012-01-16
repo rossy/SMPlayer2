@@ -16,24 +16,30 @@
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#include "mylineedit.h"
-#include <QToolButton>
-#include <QStyle>
-#include "images.h"
+#ifndef LINEEDIT_WITH_ICON_H
+#define LINEEDIT_WITH_ICON_H
 
-MyLineEdit::MyLineEdit(QWidget *parent)
-    : LineEditWithIcon(parent)
+#include <QLineEdit>
+
+class QToolButton;
+
+class LineEditWithIcon : public QLineEdit
 {
-	setupButton();
-	button->hide();
-	connect(button, SIGNAL(clicked()), this, SLOT(clear()));
-	connect(this, SIGNAL(textChanged(const QString&)), this, SLOT(updateCloseButton(const QString&)));
-}
+    Q_OBJECT
 
-void MyLineEdit::setupButton() {
-	setIcon( Images::icon("clear_left") );
-}
+public:
+    LineEditWithIcon(QWidget *parent = 0);
 
-void MyLineEdit::updateCloseButton(const QString& text) {
-	button->setVisible(!text.isEmpty());
-}
+	void setIcon(const QPixmap & pixmap);
+
+protected:
+    void resizeEvent(QResizeEvent *);
+	virtual void changeEvent(QEvent *);
+	virtual void setupButton();
+
+protected:
+    QToolButton *button;
+};
+
+#endif
+
