@@ -86,6 +86,7 @@ protected:
 	virtual void updateMenu();
 	virtual void populateMenu();
 	virtual Favorites * createNewObject(QString filename, QWidget * parent);
+	void delete_children();
 
 	int findFile(QString filename);
 
@@ -118,6 +119,7 @@ protected:
 
 	QString received_file_playing;
 	QString received_title;
+	QList<Favorites*> child;
 };
 
 #endif
