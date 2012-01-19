@@ -72,7 +72,6 @@ Favorites::Favorites(QString filename, QWidget * parent) : QMenu(parent)
 
 Favorites::~Favorites() {
 	save();
-
 	delete_children();
 }
 
