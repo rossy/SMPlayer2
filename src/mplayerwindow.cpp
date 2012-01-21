@@ -250,9 +250,8 @@ void MplayerWindow::retranslateStrings() {
 #endif
 }
 
-void MplayerWindow::showLogo( bool b)
-{
-	if (b) logo->show(); else logo->hide();
+void MplayerWindow::setLogoVisible( bool b) {
+	logo->setVisible(b);
 }
 
 /*
