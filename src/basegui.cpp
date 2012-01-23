@@ -1725,11 +1725,9 @@ void BaseGui::retranslateStrings() {
 	recentfiles_menu->menuAction()->setIcon( Images::icon("recents") );
 	clearRecentsAct->change( Images::icon("delete"), tr("&Clear") );
 
-	favorites->menuAction()->setText( tr("&Favorites") );
-	/*
+	/* favorites->menuAction()->setText( tr("&Favorites") ); */
 	favorites->menuAction()->setText( tr("Favorit&es") );
 	favorites->menuAction()->setIcon( Images::icon("open_favorites") ); 
-	*/
 
 	tvlist->menuAction()->setText( tr("&TV") );
 	tvlist->menuAction()->setIcon( Images::icon("open_tv") );
@@ -2162,7 +2160,7 @@ void BaseGui::createMenus() {
 	videoMenu = menuBar()->addMenu("Video");
 	audioMenu = menuBar()->addMenu("Audio");
 	subtitlesMenu = menuBar()->addMenu("Subtitles");
-	menuBar()->addMenu(favorites);
+	/* menuBar()->addMenu(favorites); */
 	browseMenu = menuBar()->addMenu("Browse");
 	optionsMenu = menuBar()->addMenu("Options");
 	helpMenu = menuBar()->addMenu("Help");
@@ -2176,6 +2174,7 @@ void BaseGui::createMenus() {
 
 	openMenu->addMenu( recentfiles_menu );
 
+	openMenu->addMenu(favorites);
 	openMenu->addAction(openDirectoryAct);
 	openMenu->addAction(openPlaylistAct);
 	openMenu->addAction(openDVDAct);
@@ -2183,7 +2182,6 @@ void BaseGui::createMenus() {
 	openMenu->addAction(openVCDAct);
 	openMenu->addAction(openAudioCDAct);
 	openMenu->addAction(openURLAct);
-	/* openMenu->addMenu(favorites->menu()); */
 	openMenu->addMenu(tvlist);
 	openMenu->addMenu(radiolist);
 
