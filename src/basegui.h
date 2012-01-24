@@ -601,6 +601,7 @@ protected:
 	QMenu *optionsMenu;
 	QMenu *helpMenu;
 
+	QMenu * disc_menu;
 	QMenu * subtitlestrack_menu;
 #if PROGRAM_SWITCH
 	QMenu * programtrack_menu;
