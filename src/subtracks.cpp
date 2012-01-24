@@ -99,6 +99,15 @@ int SubTracks::selectOne(QString preferred_lang, int default_sub) {
 			int res = findLang( preferred_lang );
 			if (res != -1) sub = res;
 		}
+
+                // Check if external subtitle file exist.
+                // If exist user propably want to use it.
+                if (sub == 0) {
+                        SubData s = subs.at(numItems() - 1);
+                        if (s.filename() != "") {
+                                sub = numItems() - 1;
+                        }
+                }
 	}
 	return sub;
 }
