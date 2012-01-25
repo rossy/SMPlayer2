@@ -178,6 +178,7 @@ public:
 	int font_autoscale; // -subfont-autoscale
 	int subfuzziness;
 	bool autoload_sub;
+	bool prefer_external;
 
 	bool use_ass_subtitles;
 	int ass_line_spacing;

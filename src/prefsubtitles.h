@@ -69,6 +69,9 @@ protected:
 	void setAutoloadSub(bool v);
 	bool autoloadSub();
 
+	void setPreferExternal(bool v);
+	bool preferExternal();
+
 	void setFontEncoding(QString s);
 	QString fontEncoding();
 

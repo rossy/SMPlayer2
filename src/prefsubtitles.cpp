@@ -127,6 +127,7 @@ void PrefSubtitles::setData(Preferences * pref) {
 	setFontTextscale( pref->initial_sub_scale );
 	setAssFontScale( pref->initial_sub_scale_ass );
 	setAutoloadSub( pref->autoload_sub );
+	setPreferExternal(pref->prefer_external);
 	setFontFuzziness( pref->subfuzziness );
 	setFontEncoding( pref->subcp );
 	setUseEnca( pref->use_enca );
@@ -169,6 +170,7 @@ void PrefSubtitles::getData(Preferences * pref) {
 	pref->initial_sub_scale = fontTextscale();
 	pref->initial_sub_scale_ass = assFontScale();
 	TEST_AND_SET(pref->autoload_sub, autoloadSub());
+	TEST_AND_SET(pref->prefer_external, preferExternal());
 	TEST_AND_SET(pref->subfuzziness, fontFuzziness());
 	TEST_AND_SET(pref->subcp, fontEncoding());
 	TEST_AND_SET(pref->use_enca, useEnca());
@@ -274,6 +276,14 @@ void PrefSubtitles::setAutoloadSub(bool v) {
 
 bool PrefSubtitles::autoloadSub() {
 	return font_autoload_check->isChecked();
+}
+
+void PrefSubtitles::setPreferExternal(bool v) {
+	font_prefer_external->setChecked(v);
+}
+
+bool PrefSubtitles::preferExternal() {
+	return font_prefer_external->isChecked();
 }
 
 void PrefSubtitles::setFontEncoding(QString s) {
