@@ -25,7 +25,9 @@ InputURL::InputURL( QWidget* parent, Qt::WindowFlags f )
 {
 	setupUi(this);
 
-	url_icon->setPixmap( Images::icon("url_big") );
+	setMinimumSize( QSize(500,140) );
+	setMaximumSize( QSize(600,170) );
+	url_icon->setPixmap( Images::icon("url_big", 48) );
 	url_edit->setFocus();
 
 	MyLineEdit * edit = new MyLineEdit(this);
