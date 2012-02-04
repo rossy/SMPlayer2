@@ -45,12 +45,8 @@ AudioEqualizer::AudioEqualizer( QWidget* parent, Qt::WindowFlags f)
 	set_default_button = new QPushButton( "&Set as default values", this );
 	connect( set_default_button, SIGNAL(clicked()), this, SLOT(setDefaults()) );
 
-	apply_button = new QPushButton( "&Apply", this );
-	connect( apply_button, SIGNAL(clicked()), this, SLOT(applyButtonClicked()) );
-
 	QBoxLayout *button_layout = new QHBoxLayout; //(0, 4, 2);
 	button_layout->addStretch();
-	button_layout->addWidget(apply_button);
 	button_layout->addWidget(reset_button);
 	button_layout->addWidget(set_default_button);
 
@@ -82,7 +78,6 @@ void AudioEqualizer::retranslateStrings() {
 	eq[8]->setLabel( tr("8.000 kHz") );
 	eq[9]->setLabel( tr("16.00 kHz") );
 
-	apply_button->setText( tr("&Apply") );
 	reset_button->setText( tr("&Reset") );
 	set_default_button->setText( tr("&Set as default values") );
 
@@ -110,14 +105,6 @@ void AudioEqualizer::setDefaults() {
 	QMessageBox::information(this, tr("Information"), 
                              tr("The current values have been stored to be "
                                 "used as default.") );
-}
-
-void AudioEqualizer::applyButtonClicked() {
-	AudioEqualizerList l;
-	for (int n = 0; n < 10; n++) {
-		l << eq[n]->value();
-	}
-	emit applyClicked( l );
 }
 
 void AudioEqualizer::hideEvent( QHideEvent * ) {

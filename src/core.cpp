@@ -2734,7 +2734,6 @@ void Core::setAudioEqualizer(AudioEqualizerList values, bool restart) {
 
 	if (!restart) {
 		const char *command = "af_cmdline equalizer ";
-		command = "af_eq_set_bands ";
 		tellmp( command + Helper::equalizerListToString(values) );
 	} else {
 		restartPlay();

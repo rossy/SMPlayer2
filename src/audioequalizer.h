@@ -40,14 +40,10 @@ public:
 
 signals:
 	void visibilityChanged();
-	void applyClicked(AudioEqualizerList new_values);
 
 public slots:
 	void reset();
 	void setDefaults();
-
-protected slots:
-	void applyButtonClicked();
 
 protected:
 	virtual void hideEvent( QHideEvent * );
@@ -58,7 +54,6 @@ protected:
 	virtual void changeEvent ( QEvent * event ) ;
 
 protected:
-	QPushButton * apply_button;
 	QPushButton * reset_button;
 	QPushButton * set_default_button;
 };
