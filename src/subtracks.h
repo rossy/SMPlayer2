@@ -100,7 +100,7 @@ public:
 	SubData findItem( SubData::Type t, int ID );
 
 	int findLang(QString expr);
-	int selectOne(QString preferred_lang, int default_sub=0);
+	int selectOne(QString preferred_lang, int default_sub=0, bool prefer_external=false);
 
 	//! Parses a line from mplayer output with subtitle info
 	ParseResult parse(QString text);

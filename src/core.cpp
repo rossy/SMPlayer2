@@ -3744,7 +3744,7 @@ void Core::initSubtitleTrack(const SubTracks & subs) {
 			changeSubtitle( MediaSettings::SubNone );
 		} else {
 			//Select first subtitle
-			int sub = mdat.subs.selectOne( pref->subtitle_lang, pref->initial_subtitle_track-1 );
+                        int sub = mdat.subs.selectOne( pref->subtitle_lang, pref->initial_subtitle_track-1, pref->prefer_external );
 			changeSubtitle( sub );
 		}
 	} else {

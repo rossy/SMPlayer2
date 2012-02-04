@@ -85,7 +85,7 @@ int SubTracks::findLang(QString expr) {
 
 // Return first subtitle or the user preferred (if found)
 // or none if there's no subtitles
-int SubTracks::selectOne(QString preferred_lang, int default_sub) {
+int SubTracks::selectOne(QString preferred_lang, int default_sub, bool prefer_external) {
 	int sub = MediaSettings::SubNone; 
 
 	if (numItems() > 0) {
@@ -98,6 +98,18 @@ int SubTracks::selectOne(QString preferred_lang, int default_sub) {
 		if (!preferred_lang.isEmpty()) {
 			int res = findLang( preferred_lang );
 			if (res != -1) sub = res;
+		}
+
+		if (prefer_external && sub == 0) {
+			// Check if external subtitle file exist
+			// and select first external subtitle.
+			for (int i = 0; i < numItems(); ++i) {
+				SubData s = subs.at(i);
+				if (s.filename() != "") {
+					sub = i;
+					break;
+				}
+			}
 		}
 	}
 	return sub;

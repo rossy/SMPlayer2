@@ -179,6 +179,7 @@ void Preferences::reset() {
 	font_autoscale = 1;
 	subfuzziness = 1;
 	autoload_sub = true;
+	prefer_external = false;
 
 	use_ass_subtitles = true;
 	ass_line_spacing = 0;
@@ -559,6 +560,7 @@ void Preferences::save() {
 	set->setValue("font_autoscale", font_autoscale);
 	set->setValue("subfuzziness", subfuzziness);
 	set->setValue("autoload_sub", autoload_sub);
+	set->setValue("prefer_external", prefer_external);
 
 	set->setValue("use_ass_subtitles", use_ass_subtitles);
 	set->setValue("ass_line_spacing", ass_line_spacing);
@@ -943,6 +945,7 @@ void Preferences::load() {
 	font_autoscale = set->value("font_autoscale", font_autoscale).toInt();
 	subfuzziness = set->value("subfuzziness", subfuzziness).toInt();
 	autoload_sub = set->value("autoload_sub", autoload_sub).toBool();
+	prefer_external = set->value("prefer_external", prefer_external).toBool();
 
 	use_ass_subtitles = set->value("use_ass_subtitles", use_ass_subtitles).toBool();
 	ass_line_spacing = set->value("ass_line_spacing", ass_line_spacing).toInt();
