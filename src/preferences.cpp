@@ -251,7 +251,7 @@ void Preferences::reset() {
 
 	use_pausing_keep_force = true;
 
-	use_correct_pts = Enabled;
+	use_correct_pts = Detect;
 
 	actions_to_run = "";
 
