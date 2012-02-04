@@ -141,7 +141,7 @@ void Preferences::reset() {
 	vcd_initial_title = 2; // Most VCD's start at title #2
 
 #if DVDNAV_SUPPORT
-	use_dvdnav = false;
+	use_dvdnav = true;
 #endif
 
 
