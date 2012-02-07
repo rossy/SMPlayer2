@@ -1415,7 +1415,7 @@ void Core::startMplayer( QString file, double seek ) {
 
 	if (!pref->use_mplayer_window) {
 		proc->addArgument("-wid");
-		proc->addArgument( QString::number( (int) mplayerwindow->videoLayer()->winId() ) );
+		proc->addArgument( QString::number( (int64_t) mplayerwindow->videoLayer()->winId() ) );
 
 #if USE_COLORKEY
 		#ifdef Q_OS_WIN
