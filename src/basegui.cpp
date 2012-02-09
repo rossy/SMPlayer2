@@ -842,10 +842,6 @@ void BaseGui::createActions() {
              this, SLOT(showLog()) );
 
 	// Menu Help
-	showFAQAct = new MyAction( this, "faq" );
-	connect( showFAQAct, SIGNAL(triggered()),
-             this, SLOT(helpFAQ()) );
-
 	showCLOptionsAct = new MyAction( this, "cl_options" );
 	connect( showCLOptionsAct, SIGNAL(triggered()),
              this, SLOT(helpCLOptions()) );
@@ -1636,7 +1632,6 @@ void BaseGui::retranslateStrings() {
 	showLogSmplayerAct->change( "SMPlayer2" );
 
 	// Menu Help
-	showFAQAct->change( Images::icon("faq"), tr("&FAQ") );
 	showCLOptionsAct->change( Images::icon("cl_help"), tr("&Command line options") );
 	aboutQtAct->change( QPixmap(":/icons-png/qt.png"), tr("About &Qt") );
 	aboutThisAct->change( Images::icon("logo_small"), tr("About &SMPlayer2") );
@@ -2512,7 +2507,6 @@ void BaseGui::createMenus() {
 	*/
 
 	// HELP MENU
-	helpMenu->addAction(showFAQAct);
 	helpMenu->addAction(showCLOptionsAct);
 	helpMenu->addSeparator();
 	helpMenu->addAction(aboutQtAct);
@@ -3717,12 +3711,6 @@ void BaseGui::loadAudioFile() {
         tr("All files") +" (*.*)" );
 
 	if (!s.isEmpty()) core->loadAudioFile(s);
-}
-
-void BaseGui::helpFAQ() {
-	QUrl url = QUrl::fromLocalFile(Paths::doc("faq.html", pref->language));
-	qDebug("BaseGui::helpFAQ: file to open %s", url.toString().toUtf8().data());
-	QDesktopServices::openUrl( url );
 }
 
 void BaseGui::helpCLOptions() {
