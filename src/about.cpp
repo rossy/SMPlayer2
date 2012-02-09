@@ -42,8 +42,8 @@ About::About(QWidget * parent, Qt::WindowFlags f)
 	license_icon->setPixmap( Images::icon("license" ) );
 
 	info->setText( 
-		"<b>SMPlayer2</b> &copy; 2011 Martin Herkt &lt;lachs0r@srsfckn.biz&gt;<br>"
-		"based on SMPlayer &copy; 2006-2010 Ricardo Villalba &lt;rvm@escomposlinux.org&gt;<br>"
+		"<b>SMPlayer2</b> &copy; 2012 Martin Herkt &lt;lachs0r@srsfckn.biz&gt;<br>"
+		"based on SMPlayer &copy; 2006-2010 Ricardo Villalba &lt;rvm@users.sourceforge.net&gt;<br>"
 		"<b>" + tr("Version: %1").arg(SMPLAYER2_VERSION) + "</b><br>" +
         tr("Using Qt %1 (compiled with Qt %2)").arg(qVersion()).arg(QT_VERSION_STR) + "<br><br>" +
 		tr("Visit our web for updates:") +"<br>"+ 
@@ -63,11 +63,15 @@ About::About(QWidget * parent, Qt::WindowFlags f)
 
 	contributions->setText(
         tr("SMPlayer2 logo by %1").arg("Charles Barcza &lt;kbarcza@blackpanther.hu&gt;") + "<br><br>" +
-		tr("The following people have contributed with patches "
-		   "(see the changelog for details):") +
+		tr("The following people have contributed on GitHub:") +
 		"<pre>" +
         QString(
+		"James Ross-Gowan\n"
 		"Martin Herkt <lachs0r@srsfckn.biz>\n"
+		"Mike Lothain\n\n"
+		"GitHub users:\n"
+		"fightingdreamer\n"
+		"Nikoli\n"
 		).replace("<", "&lt;").replace(">", "&gt;") + 
 		"</pre>" +
 		tr("If there's any omission, please report.")
@@ -152,7 +156,9 @@ QString About::getTranslators() {
 			<< "Waxman <waxman.pt@gmail.com>"
 			<< QString::fromUtf8("Sérgio Marques <smarquespt@gmail.com>") ) +
 		trad(tr("Greek"), "my80s <wamy80s@gmail.com>") +
-		trad(tr("Finnish"), "peeaivo <peeaivo@gmail.com>") +
+		trad(tr("Finnish"), QStringList()
+			<< "peeaivo <peeaivo@gmail.com>"
+			<< "Lasse Liehu <lasse.liehu@gmail.com>") +
 		trad(tr("Korean"), "Heesu Yoon <imsu30@gmail.com>") +
 		trad(tr("Macedonian"), "Marko Doda <mark0d0da@gmail.com>") +
 		trad(tr("Basque"), "Piarres Beobide <pi@beobide.net>") +
