@@ -850,10 +850,6 @@ void BaseGui::createActions() {
 	connect( showCLOptionsAct, SIGNAL(triggered()),
              this, SLOT(helpCLOptions()) );
 
-	showTipsAct = new MyAction( this, "tips" );
-	connect( showTipsAct, SIGNAL(triggered()),
-             this, SLOT(helpTips()) );
-
 	aboutQtAct = new MyAction( this, "about_qt" );
 	connect( aboutQtAct, SIGNAL(triggered()),
              this, SLOT(helpAboutQt()) );
@@ -1642,7 +1638,6 @@ void BaseGui::retranslateStrings() {
 	// Menu Help
 	showFAQAct->change( Images::icon("faq"), tr("&FAQ") );
 	showCLOptionsAct->change( Images::icon("cl_help"), tr("&Command line options") );
-	showTipsAct->change( Images::icon("tips"), tr("&Tips") );
 	aboutQtAct->change( QPixmap(":/icons-png/qt.png"), tr("About &Qt") );
 	aboutThisAct->change( Images::icon("logo_small"), tr("About &SMPlayer2") );
 
@@ -2519,7 +2514,6 @@ void BaseGui::createMenus() {
 	// HELP MENU
 	helpMenu->addAction(showFAQAct);
 	helpMenu->addAction(showCLOptionsAct);
-	helpMenu->addAction(showTipsAct);
 	helpMenu->addSeparator();
 	helpMenu->addAction(aboutQtAct);
 	helpMenu->addAction(aboutThisAct);
@@ -3738,10 +3732,6 @@ void BaseGui::helpCLOptions() {
 	clhelp_window->setWindowTitle( tr("SMPlayer2 command line options") );
 	clhelp_window->setHtml(CLHelp::help(true));
 	clhelp_window->show();
-}
-
-void BaseGui::helpTips() {
-	QDesktopServices::openUrl( QUrl("http://smplayer2.berlios.de/forum/viewforum.php?f=12") );
 }
 
 void BaseGui::helpAbout() {
