@@ -190,7 +190,6 @@ set(smplayer2_FORMS
 	about.ui
 	errordialog.ui
 	timedialog.ui
-	filechooser.ui
 	findsubtitles/findsubtitleswindow.ui
 	findsubtitles/findsubtitlesconfigdialog.ui
 	videopreview/videopreviewconfigdialog.ui
