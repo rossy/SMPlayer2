@@ -96,7 +96,7 @@ void Preferences::reset() {
 #endif
 
 #ifndef Q_OS_WIN
-	vdpau.ffh264vdpau = true;
+	vdpau.ffh264vdpau = false;
 	vdpau.ffmpeg12vdpau = true;
 	vdpau.ffwmv3vdpau = true;
 	vdpau.ffvc1vdpau = true;
