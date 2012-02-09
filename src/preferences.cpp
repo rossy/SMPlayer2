@@ -96,7 +96,12 @@ void Preferences::reset() {
 #endif
 
 #ifndef Q_OS_WIN
-	disable_video_filters_with_vdpau = true;
+	vdpau.ffh264vdpau = false;
+	vdpau.ffmpeg12vdpau = true;
+	vdpau.ffwmv3vdpau = true;
+	vdpau.ffvc1vdpau = true;
+	vdpau.ffodivxvdpau = false;
+	vdpau.disable_video_filters = true;
 #endif
 
 	use_soft_vol = true;
@@ -256,6 +261,8 @@ void Preferences::reset() {
 
 	actions_to_run = "";
 
+	show_tag_in_window_title = true;
+
 
     /* *********
        GUI stuff
@@ -314,8 +321,6 @@ void Preferences::reset() {
 	default_font = "";
 
 	pause_when_hidden = false;
-
-	show_tag_in_title = true;
 
 	allow_video_movement = false;
 
@@ -469,7 +474,12 @@ void Preferences::save() {
 #endif
 
 #ifndef Q_OS_WIN
-	set->setValue("disable_video_filters_with_vdpau", disable_video_filters_with_vdpau);
+	set->setValue("vdpau_ffh264vdpau", vdpau.ffh264vdpau);
+	set->setValue("vdpau_ffmpeg12vdpau", vdpau.ffmpeg12vdpau);
+	set->setValue("vdpau_ffwmv3vdpau", vdpau.ffwmv3vdpau);
+	set->setValue("vdpau_ffvc1vdpau", vdpau.ffvc1vdpau);
+	set->setValue("vdpau_ffodivxvdpau", vdpau.ffodivxvdpau);
+	set->setValue("vdpau_disable_video_filters", vdpau.disable_video_filters);
 #endif
 
 	set->setValue("use_soft_vol", use_soft_vol);
@@ -633,6 +643,8 @@ void Preferences::save() {
 
 	set->setValue("actions_to_run", actions_to_run);
 
+	set->setValue("show_tag_in_window_title", show_tag_in_window_title);
+
 	set->endGroup(); // advanced
 
 
@@ -686,8 +698,6 @@ void Preferences::save() {
 	set->setValue("default_font", default_font);
 
 	set->setValue("pause_when_hidden", pause_when_hidden);
-
-	set->setValue("show_tag_in_title", show_tag_in_title);
 
 	set->setValue("allow_video_movement", allow_video_movement);
 
@@ -854,7 +864,12 @@ void Preferences::load() {
 #endif
 
 #ifndef Q_OS_WIN
-	disable_video_filters_with_vdpau = set->value("disable_video_filters_with_vdpau", disable_video_filters_with_vdpau).toBool();
+	vdpau.ffh264vdpau = set->value("vdpau_ffh264vdpau", vdpau.ffh264vdpau).toBool();
+	vdpau.ffmpeg12vdpau = set->value("vdpau_ffmpeg12vdpau", vdpau.ffmpeg12vdpau).toBool();
+	vdpau.ffwmv3vdpau = set->value("vdpau_ffwmv3vdpau", vdpau.ffwmv3vdpau).toBool();
+	vdpau.ffvc1vdpau = set->value("vdpau_ffvc1vdpau", vdpau.ffvc1vdpau).toBool();
+	vdpau.ffodivxvdpau = set->value("vdpau_ffodivxvdpau", vdpau.ffodivxvdpau).toBool();
+	vdpau.disable_video_filters = set->value("vdpau_disable_video_filters", vdpau.disable_video_filters).toBool();
 #endif
 
 	use_soft_vol = set->value("use_soft_vol", use_soft_vol).toBool();
@@ -1022,6 +1037,8 @@ void Preferences::load() {
 
 	actions_to_run = set->value("actions_to_run", actions_to_run).toString();
 
+	show_tag_in_window_title = set->value("show_tag_in_window_title", show_tag_in_window_title).toBool();
+
 	set->endGroup(); // advanced
 
 
@@ -1076,8 +1093,6 @@ void Preferences::load() {
 	default_font = set->value("default_font", default_font).toString();
 
 	pause_when_hidden = set->value("pause_when_hidden", pause_when_hidden).toBool();
-
-	show_tag_in_title = set->value("show_tag_in_title", show_tag_in_title).toBool();
 
 	allow_video_movement = set->value("allow_video_movement", allow_video_movement).toBool();
 

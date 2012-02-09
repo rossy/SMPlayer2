@@ -87,8 +87,8 @@ QString CLHelp::help(bool html) {
                         "[-send-action %3] [-actions %4] "
                         "[-close-at-end] [-no-close-at-end] [-fullscreen] [-no-fullscreen] "
                         "[-sub %5] [-pos x y] [-size %6 %7] "
-                        "[-add-to-playlist] [-help|--help|-h|-?] "
-                        "[[-playlist] %8] [[-playlist] %8]...")
+                        "[-add-to-playlist] [-disable-server] [-help|--help|-h|-?] "
+                        "[%8] [%8]...")
                         .arg(app_name)
                         .arg(QObject::tr("directory"))
                         .arg(QObject::tr("action_name"))
@@ -169,13 +169,14 @@ QString CLHelp::help(bool html) {
         "this option will be ignored and the "
         "files will be opened in a new instance."), html );
 
+	s += formatHelp( "-disable-server", QObject::tr(
+		"Disables the server used to communicate with other instances. "
+		"This disables too the possibility to use a single instance."), html );
+
 	s += formatHelp( QObject::tr("media"), QObject::tr(
-		"'media' is any kind of file that SMPlayer2 can open. It can "
+		"'media' is any kind of file that SMPlayer can open. It can "
         "be a local file, a DVD (e.g. dvd://1), an Internet stream "
-        "(e.g. mms://....) or a local playlist in format m3u or pls. "
-        "If the -playlist option is used, that means that SMPlayer2 "
-        "will pass the -playlist option to mplayer2, so mplayer2 will "
-        "handle the playlist, not SMPlayer2."), html );
+        "(e.g. mms://....) or a local playlist in format m3u or pls."), html );
 
 	if (html) s += "</table>";
 

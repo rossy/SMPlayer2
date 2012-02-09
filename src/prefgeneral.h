@@ -99,9 +99,6 @@ protected:
 	void setPauseWhenHidden(bool b);
 	bool pauseWhenHidden();
 
-	void setShowTagInTitle(bool b);
-	bool showTagInTitle();
-
 	// Tab video and audio
 	void setEq2(bool b);
 	bool eq2();
@@ -118,11 +115,6 @@ protected:
 #else
 	void setDisableScreensaver(bool b);
 	bool disableScreensaver();
-#endif
-
-#ifndef Q_OS_WIN
-	void setDisableFiltersWithVdpau(bool b);
-	bool disableFiltersWithVdpau();
 #endif
 
 	void setBlackbordersOnFullscreen(bool b);
@@ -189,6 +181,10 @@ protected slots:
 	void vo_combo_changed(int);
 	void ao_combo_changed(int);
 
+#ifndef Q_OS_WIN
+	void on_vdpau_button_clicked();
+#endif
+
 protected:
 	virtual void retranslateStrings();
 	void updateDriverCombos();
@@ -209,6 +205,11 @@ protected:
 
 private:
 	bool filesettings_method_changed;
+
+#ifndef Q_OS_WIN
+	struct Preferences::VDPAU_settings vdpau;
+#endif
+
 };
 
 #endif

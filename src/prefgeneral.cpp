@@ -23,6 +23,7 @@
 #include "images.h"
 #include "mediasettings.h"
 #include "paths.h"
+#include "vdpauproperties.h"
 
 #if USE_ALSA_DEVICES || USE_DSOUND_DEVICES
 #include "deviceinfo.h"
@@ -60,7 +61,7 @@ PrefGeneral::PrefGeneral(QWidget * parent, Qt::WindowFlags f)
 #endif
 
 #ifdef Q_OS_WIN
-	vdpau_filters_check->hide();
+	vdpau_button->hide();
 #endif
 
 	// Channels combo
@@ -86,7 +87,7 @@ QString PrefGeneral::sectionName() {
 }
 
 QPixmap PrefGeneral::sectionIcon() {
-	return Images::icon("pref_general");
+	return Images::icon("pref_general", 22);
 }
 
 void PrefGeneral::retranslateStrings() {
@@ -170,7 +171,6 @@ void PrefGeneral::setData(Preferences * pref) {
 	setSubtitleTrack( pref->initial_subtitle_track );
 	setCloseOnFinish( pref->close_on_finish );
 	setPauseWhenHidden( pref->pause_when_hidden );
-	setShowTagInTitle( pref->show_tag_in_title );
 
 	setEq2( pref->use_soft_video_eq );
 	setUseAudioEqualizer( pref->use_audio_equalizer );
@@ -197,7 +197,7 @@ void PrefGeneral::setData(Preferences * pref) {
 #endif
 
 #ifndef Q_OS_WIN
-	setDisableFiltersWithVdpau( pref->disable_video_filters_with_vdpau );
+	vdpau = pref->vdpau;
 #endif
 
 	setAudioChannels( pref->initial_audio_channels );
@@ -250,7 +250,6 @@ void PrefGeneral::getData(Preferences * pref) {
 
 	pref->close_on_finish = closeOnFinish();
 	pref->pause_when_hidden = pauseWhenHidden();
-	TEST_AND_SET(pref->show_tag_in_title, showTagInTitle());
 
 	TEST_AND_SET(pref->use_soft_video_eq, eq2());
 	TEST_AND_SET(pref->use_soft_vol, softVol());
@@ -280,7 +279,7 @@ void PrefGeneral::getData(Preferences * pref) {
 #endif
 
 #ifndef Q_OS_WIN
-	TEST_AND_SET(pref->disable_video_filters_with_vdpau, disableFiltersWithVdpau());
+	pref->vdpau = vdpau;
 #endif
 
 	pref->initial_audio_channels = audioChannels();
@@ -324,8 +323,6 @@ void PrefGeneral::updateDriverCombos() {
 		}
 		else
 #endif // USE_XV_ADAPTORS
-		if (vo == "vdpau")
-			vo_combo->addItem( "vdpau (" + tr("hardware decoding") + ")", "vdpau_hwdec");
 #endif
 		if (vo == "x11") vo_combo->addItem( "x11 (" + tr("slow") + ")", vo);
 		else
@@ -527,14 +524,6 @@ bool PrefGeneral::pauseWhenHidden() {
 	return pause_if_hidden_check->isChecked();
 }
 
-void PrefGeneral::setShowTagInTitle(bool b) {
-	show_tag_in_title_check->setChecked(b);
-}
-
-bool PrefGeneral::showTagInTitle() {
-	return show_tag_in_title_check->isChecked();
-}
-
 
 void PrefGeneral::setEq2(bool b) {
 	eq2_check->setChecked(b);
@@ -734,16 +723,6 @@ bool PrefGeneral::disableScreensaver() {
 }
 #endif
 
-#ifndef Q_OS_WIN
-void PrefGeneral::setDisableFiltersWithVdpau(bool b) {
-	vdpau_filters_check->setChecked(b);
-}
-
-bool PrefGeneral::disableFiltersWithVdpau() {
-	return vdpau_filters_check->isChecked();
-}
-#endif
-
 void PrefGeneral::setBlackbordersOnFullscreen(bool b) {
 	blackborders_on_fs_check->setChecked(b);
 }
@@ -773,6 +752,11 @@ void PrefGeneral::vo_combo_changed(int idx) {
 	bool visible = (vo_combo->itemData(idx).toString() == "user_defined");
 	vo_user_defined_edit->setShown(visible);
 	vo_user_defined_edit->setFocus();
+
+#ifndef Q_OS_WIN
+	bool vdpau_button_visible = (vo_combo->itemData(idx).toString() == "vdpau");
+	vdpau_button->setShown(vdpau_button_visible);
+#endif
 }
 
 void PrefGeneral::ao_combo_changed(int idx) {
@@ -781,6 +765,32 @@ void PrefGeneral::ao_combo_changed(int idx) {
 	ao_user_defined_edit->setShown(visible);
 	ao_user_defined_edit->setFocus();
 }
+
+#ifndef Q_OS_WIN
+void PrefGeneral::on_vdpau_button_clicked() {
+	qDebug("PrefGeneral::on_vdpau_button_clicked");
+
+	VDPAUProperties d(this);
+
+	d.setffh264vdpau(vdpau.ffh264vdpau);
+	d.setffmpeg12vdpau(vdpau.ffmpeg12vdpau);
+	d.setffwmv3vdpau(vdpau.ffwmv3vdpau);
+	d.setffvc1vdpau(vdpau.ffvc1vdpau);
+	d.setffodivxvdpau(vdpau.ffodivxvdpau);
+
+	d.setDisableFilters(vdpau.disable_video_filters);
+
+	if (d.exec() == QDialog::Accepted) {
+		vdpau.ffh264vdpau = d.ffh264vdpau();
+		vdpau.ffmpeg12vdpau = d.ffmpeg12vdpau();
+		vdpau.ffwmv3vdpau = d.ffwmv3vdpau();
+		vdpau.ffvc1vdpau = d.ffvc1vdpau();
+		vdpau.ffodivxvdpau = d.ffodivxvdpau();
+
+		vdpau.disable_video_filters = d.disableFilters();
+	}
+}
+#endif
 
 void PrefGeneral::createHelp() {
 	clearHelp();
@@ -831,10 +841,6 @@ void PrefGeneral::createHelp() {
            "main window is hidden. When the window is restored, playback "
            "will be resumed.") );
 
-	setWhatsThis(show_tag_in_title_check, tr("Show tag info in window title"),
-		tr("If this option is enabled, information from tags will be "
-           "shown in  window title.") );
-
 	// Video tab
 	addSectionTitle(tr("Video"));
 
@@ -848,9 +854,11 @@ void PrefGeneral::createHelp() {
 		);
 
 #ifndef Q_OS_WIN
+	/*
 	setWhatsThis(vdpau_filters_check, tr("Disable video filters when using vdpau"),
 		tr("Usually video filters won't work when using vdpau as video output "
            "driver, so it's wise to keep this option checked.") );
+	*/
 #endif
 
 	setWhatsThis(postprocessing_check, tr("Enable postprocessing by default"),

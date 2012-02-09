@@ -97,7 +97,14 @@ public:
 #endif
 
 #ifndef Q_OS_WIN
-	bool disable_video_filters_with_vdpau;
+	struct VDPAU_settings {
+		bool ffh264vdpau;
+		bool ffmpeg12vdpau;
+		bool ffwmv3vdpau;
+		bool ffvc1vdpau;
+		bool ffodivxvdpau;
+		bool disable_video_filters;
+	} vdpau;
 #endif
 
 	// Audio
@@ -263,6 +270,9 @@ public:
 
 	QString actions_to_run; //!< List of actions to run every time a video loads.
 
+	//! Show file tag in window title
+	bool show_tag_in_window_title;
+
 
 	/* *********
 	   GUI stuff
@@ -323,9 +333,6 @@ public:
 
 	//!< Pause the current file when the main window is not visible
 	bool pause_when_hidden; 
-
-	//!< Show tag info in window title
-	bool show_tag_in_title; 
 
 	//!< Allow frre movement of the video window
 	bool allow_video_movement;

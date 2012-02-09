@@ -24,6 +24,14 @@
 
 class QToolBar;
 
+#if QT_VERSION < 0x040600
+#define OLD_ANIMATION
+#endif
+
+#ifndef OLD_ANIMATION
+class QPropertyAnimation;
+#endif
+
 class FloatingWidget : public QWidget
 {
 	Q_OBJECT
@@ -58,13 +66,17 @@ protected:
 	QToolBar * tb;
 
 private slots:
+#ifdef OLD_ANIMATION
 	void animate();
+#endif
 	void checkUnderMouse();
 
 private:
 	// Animation variables
 	bool _animated;
+#ifdef OLD_ANIMATION
 	QTimer * animation_timer;
+#endif
 	int final_y;
 	int current_y;
 	Movement current_movement;
@@ -73,6 +85,11 @@ private:
 	QTimer auto_hide_timer;
 
 	int _margin;
+
+#ifndef OLD_ANIMATION
+	QPropertyAnimation * animation;
+#endif
+
 };
 
 #endif

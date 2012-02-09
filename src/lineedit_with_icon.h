@@ -1,5 +1,5 @@
-/*  smplayer2, GUI front-end for mplayer2.
-    Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
+/*  smplayer, GUI front-end for mplayer.
+    Copyright (C) 2006-2012 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,37 +16,30 @@
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#include "urlhistory.h"
+#ifndef LINEEDIT_WITH_ICON_H
+#define LINEEDIT_WITH_ICON_H
 
-URLHistory::URLHistory() : Recents() 
+#include <QLineEdit>
+
+class QToolButton;
+
+class LineEditWithIcon : public QLineEdit
 {
-	setMaxItems(50);
-}
+    Q_OBJECT
 
-URLHistory::~URLHistory() {
-}
+public:
+    LineEditWithIcon(QWidget *parent = 0);
 
-void URLHistory::addUrl(QString url) {
-	qDebug("Recents::addItem: '%s'", url.toUtf8().data());
+	void setIcon(const QPixmap & pixmap);
 
-	// Delete duplicates
-	QStringList::iterator iterator = l.begin();
-	while (iterator != l.end()) {
-		QString s = (*iterator);
-		if (s == url) 
-			iterator = l.erase(iterator);
-		else
-			iterator++;
-	}
+protected:
+    void resizeEvent(QResizeEvent *);
+	virtual void changeEvent(QEvent *);
+	virtual void setupButton();
 
-	// Add new item to list
-	l.prepend(url);
+protected:
+    QToolButton *button;
+};
 
-	if (l.count() > max_items) l.removeLast();
-}
-
-QString URLHistory::url(int n) {
-	QString s = l[n];
-	return s;
-}
+#endif
 

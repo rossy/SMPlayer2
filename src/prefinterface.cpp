@@ -29,6 +29,8 @@
 #include <QStyleFactory>
 #include <QFontDialog>
 
+#define SINGLE_INSTANCE_TAB 2
+
 PrefInterface::PrefInterface(QWidget * parent, Qt::WindowFlags f)
 	: PrefWidget(parent, f )
 {
@@ -83,7 +85,7 @@ QString PrefInterface::sectionName() {
 }
 
 QPixmap PrefInterface::sectionIcon() {
-    return Images::icon("pref_gui");
+    return Images::icon("pref_gui", 22);
 }
 
 void PrefInterface::createLanguageCombo() {
@@ -182,6 +184,8 @@ void PrefInterface::setData(Preferences * pref) {
 
 	setDefaultFont(pref->default_font);
 
+	setHideVideoOnAudioFiles(pref->hide_video_window_on_audio_files);
+
 #if STYLE_SWITCHING
 	setStyle( pref->style );
 #endif
@@ -243,6 +247,8 @@ void PrefInterface::getData(Preferences * pref) {
 	pref->update_while_seeking = updateWhileDragging();
 
 	pref->default_font = defaultFont();
+
+	pref->hide_video_window_on_audio_files = hideVideoOnAudioFiles();
 
 #if STYLE_SWITCHING
     if ( pref->style != style() ) {
@@ -363,6 +369,14 @@ bool PrefInterface::useAutoPort() {
 	return automatic_port_button->isChecked();
 }
 
+void PrefInterface::setSingleInstanceTabEnabled(bool b) {
+	tabWidget->setTabEnabled(SINGLE_INSTANCE_TAB, b);
+}
+
+bool PrefInterface::singleInstanceTabEnabled() {
+	return tabWidget->isTabEnabled(SINGLE_INSTANCE_TAB);
+}
+
 void PrefInterface::setRecentsMaxItems(int n) {
 	recents_max_items_spin->setValue(n);
 }
@@ -444,6 +458,14 @@ void PrefInterface::changeInstanceImages() {
 		instances_icon->setPixmap( Images::icon("instance2") );
 }
 
+void PrefInterface::setHideVideoOnAudioFiles(bool b) {
+	hide_video_window_on_audio_check->setChecked(b);
+}
+
+bool PrefInterface::hideVideoOnAudioFiles() {
+	return hide_video_window_on_audio_check->isChecked();
+}
+
 // Floating tab
 void PrefInterface::setFloatingAnimated(bool b) {
 	floating_animated_check->setChecked(b);
@@ -499,6 +521,9 @@ void PrefInterface::createHelp() {
 	setWhatsThis(save_size_check, tr("Remember position and size"),
         tr("If you check this option, the position and size of the main "
            "window will be saved and restored when you run SMPlayer2 again.") );
+
+	setWhatsThis(hide_video_window_on_audio_check, tr("Hide video window when playing audio files"),
+        tr("If this option is enabled the video window will be hidden when playing audio files.") );
 
 	setWhatsThis(recents_max_items_spin, tr("Recent files"),
         tr("Select the maximum number of items that will be shown in the "

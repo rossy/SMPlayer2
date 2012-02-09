@@ -43,10 +43,12 @@
 #include <QToolButton>
 #include <QMenuBar>
 
+#define TOOLBAR_VERSION 1
+
 using namespace Global;
 
-DefaultGui::DefaultGui( QWidget * parent, Qt::WindowFlags flags )
-	: BaseGuiPlus( parent, flags )
+DefaultGui::DefaultGui( bool use_server, QWidget * parent, Qt::WindowFlags flags )
+	: BaseGuiPlus( use_server, parent, flags )
 {
 	createStatusBar();
 
@@ -544,7 +546,11 @@ void DefaultGui::showFloatingControl(QPoint /*p*/) {
 	qDebug("DefaultGui::showFloatingControl");
 
 #if CONTROLWIDGET_OVER_VIDEO
-	floating_control->setAnimated( pref->floating_control_animated );
+	if ((pref->compact_mode) && (!pref->fullscreen)) {
+		floating_control->setAnimated( false );
+	} else {
+		floating_control->setAnimated( pref->floating_control_animated );
+	}
 	floating_control->setMargin(pref->floating_control_margin);
 #ifndef Q_OS_WIN
 	floating_control->setBypassWindowManager(pref->bypass_window_manager);
@@ -640,6 +646,7 @@ void DefaultGui::saveConfig() {
 	set->setValue("controlwidget", ToolbarEditor::save(controlwidget) );
 	set->setValue("controlwidget_mini", ToolbarEditor::save(controlwidget_mini) );
 	set->setValue("floating_control", ToolbarEditor::save(floating_control->toolbar()) );
+	set->setValue("toolbar1_version", TOOLBAR_VERSION);
 	set->endGroup();
 #endif
 
@@ -681,7 +688,7 @@ void DefaultGui::loadConfig() {
 #if USE_CONFIGURABLE_TOOLBARS
 	QList<QAction *> actions_list = findChildren<QAction *>();
 	QStringList toolbar1_actions;
-	toolbar1_actions << "open_file" << "open_dvd" << "open_url" << "separator" << "compact" << "fullscreen"
+	toolbar1_actions << "open_file" << "open_dvd" << "open_url" << "favorites_menu" << "separator" << "compact" << "fullscreen"
                      << "separator" << "screenshot" << "separator" << "show_file_properties" << "show_playlist" 
                      << "show_preferences" << "separator" << "play_prev" << "play_next";
 
@@ -728,7 +735,13 @@ void DefaultGui::loadConfig() {
 	floatingcontrol_actions << "separator" << "fullscreen" << "mute" << "volumeslider_action" << "separator" << "timelabel_action";
 
 	set->beginGroup( "actions" );
-	ToolbarEditor::load(toolbar1, set->value("toolbar1", toolbar1_actions).toStringList(), actions_list );
+	int toolbar_version = set->value("toolbar1_version", 0).toInt();
+	if (toolbar_version >= TOOLBAR_VERSION) {
+		ToolbarEditor::load(toolbar1, set->value("toolbar1", toolbar1_actions).toStringList(), actions_list );
+	} else {
+		qDebug("DefaultGui::loadConfig: toolbar too old, loading default one");
+		ToolbarEditor::load(toolbar1, toolbar1_actions, actions_list );
+	}
 	ToolbarEditor::load(controlwidget, set->value("controlwidget", controlwidget_actions).toStringList(), actions_list );
 	ToolbarEditor::load(controlwidget_mini, set->value("controlwidget_mini", controlwidget_mini_actions).toStringList(), actions_list );
 	ToolbarEditor::load(floating_control->toolbar(), set->value("floating_control", floatingcontrol_actions).toStringList(), actions_list );

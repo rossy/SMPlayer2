@@ -47,6 +47,9 @@ public:
 	bool styleChanged() { return style_changed; };
 	bool serverPortChanged() { return port_changed; };
 
+	void setSingleInstanceTabEnabled(bool b);
+	bool singleInstanceTabEnabled();
+
 protected:
 	virtual void createHelp();
 	void createLanguageCombo();
@@ -101,6 +104,9 @@ protected:
 
 	void setDefaultFont(QString font_desc);
 	QString defaultFont();
+
+	void setHideVideoOnAudioFiles(bool b);
+	bool hideVideoOnAudioFiles();
 
 	// Floating tab
 	void setFloatingAnimated(bool b);

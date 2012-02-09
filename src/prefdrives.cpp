@@ -68,7 +68,7 @@ QString PrefDrives::sectionName() {
 }
 
 QPixmap PrefDrives::sectionIcon() {
-    return Images::icon("pref_devices");
+    return Images::icon("pref_devices", 22);
 }
 
 

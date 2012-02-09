@@ -20,9 +20,6 @@
 #include <QFileInfo>
 #include <cmath>
 
-#include "preferences.h"
-#include "global.h"
-using namespace Global;
 
 MediaData::MediaData() {
 	reset();
@@ -87,8 +84,8 @@ void MediaData::reset() {
 	audio_codec="";
 }
 
-QString MediaData::displayName() {
-	if (pref->show_tag_in_title) {
+QString MediaData::displayName(bool show_tag) {
+	if (show_tag) {
 		if (!clip_name.isEmpty()) return clip_name;
 		else
 		if (!stream_title.isEmpty()) return stream_title;

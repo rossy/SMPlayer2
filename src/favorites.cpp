@@ -19,20 +19,19 @@
 #include "favorites.h"
 #include "favoriteeditor.h"
 
-#include <QMenu>
 #include <QAction>
 #include <QSettings>
 #include <QFile>
 #include <QTextStream>
 #include <QInputDialog>
+#include <QFileInfo>
 
-//#define FIRST_MENU_ENTRY 3
-#define FIRST_MENU_ENTRY 2
+//#define FIRST_MENU_ENTRY 4
+#define FIRST_MENU_ENTRY 3
 
-Favorites::Favorites(QString filename, QWidget * parent) : QObject(parent)
+Favorites::Favorites(QString filename, QWidget * parent) : QMenu(parent)
 {
 	_filename = filename;
-	_menu = 0;
 
 	parent_widget = parent;
 
@@ -51,49 +50,91 @@ Favorites::Favorites(QString filename, QWidget * parent) : QObject(parent)
 	previous_act = new QAction(this);
 	connect(previous_act, SIGNAL(triggered()), this, SLOT(previous()));
 
+	add_current_act = new QAction( "Add current media", this);
+	add_current_act->setEnabled(false);
+	connect(add_current_act, SIGNAL(triggered()), SLOT(addCurrentPlaying()));
+
+	retranslateStrings();
+
 	load();
+
+	connect( this, SIGNAL(triggered(QAction *)),
+             this, SLOT(triggered_slot(QAction *)) );
+
+	addAction(edit_act);
+	addAction(add_current_act);
+	//addAction(jump_act);
+	addSeparator();
+
+	populateMenu();
+
 }
 
 Favorites::~Favorites() {
 	save();
-	if (_menu != 0) delete _menu;
+	delete_children();
 }
 
-QMenu * Favorites::menu() {
-	if (_menu == 0) createMenu();
-	return _menu;
+void Favorites::delete_children() {
+	for (int n=0; n < child.count(); n++) {
+		if (child[n]) delete child[n];
+		child[n] = 0;
+	}
+	child.clear();
 }
 
-void Favorites::createMenu() {
-	_menu = new QMenu(parent_widget);
-	connect( _menu, SIGNAL(triggered(QAction *)),
-             this, SLOT(triggered_slot(QAction *)) );
+void Favorites::retranslateStrings() {
+	edit_act->setText( tr("&Edit...") );
+	jump_act->setText( tr("&Jump...") );
+	next_act->setText( tr("&Next") );
+	previous_act->setText( tr("&Previous") );
+	add_current_act->setText( tr("&Add current media") );
+}
 
-	_menu->addAction(edit_act);
-	//_menu->addAction(jump_act);
-	_menu->addSeparator();
-
-	populateMenu();
+Favorites * Favorites::createNewObject(QString filename, QWidget * parent) {
+	return new Favorites(filename, parent);
 }
 
 void Favorites::populateMenu() {
 	for (int n = 0; n < f_list.count(); n++) {
 		QString i = QString::number(n+1);
 		QString name = QString("%1 - " + f_list[n].name() ).arg( i.insert( i.size()-1, '&' ), 3, ' ' );
-		QAction * a = _menu->addAction( name );
-		a->setData( f_list[n].file() );
-		a->setIcon( QIcon( f_list[n].icon() ) );
-		a->setStatusTip( f_list[n].file() );
+		if (f_list[n].isSubentry()) {
+			Favorites * new_fav = createNewObject(f_list[n].file(), parent_widget);
+			new_fav->getCurrentMedia(received_file_playing, received_title);
+			connect(this, SIGNAL(sendCurrentMedia(const QString &, const QString &)), 
+                    new_fav, SLOT(getCurrentMedia(const QString &, const QString &)));
+			/*
+			new_fav->editAct()->setText( editAct()->text() );
+			new_fav->jumpAct()->setText( jumpAct()->text() );
+			new_fav->nextAct()->setText( nextAct()->text() );
+			new_fav->previousAct()->setText( previousAct()->text() );
+			new_fav->addCurrentAct()->setText( addCurrentAct()->text() );
+			*/
+
+			child.push_back(new_fav);
+			
+			QAction * a = addMenu( new_fav );
+			a->setText( name );
+			a->setIcon( QIcon( f_list[n].icon() ) );
+		} else {
+			QAction * a = addAction( name );
+			a->setData( f_list[n].file() );
+			a->setIcon( QIcon( f_list[n].icon() ) );
+			a->setStatusTip( f_list[n].file() );
+		}
 	}
 }
 
 void Favorites::updateMenu() {
 	// Remove all except the first 2 items
-	while (_menu->actions().count() > FIRST_MENU_ENTRY) {
-		QAction * a = _menu->actions()[FIRST_MENU_ENTRY];
-		_menu->removeAction( a );
+	while (actions().count() > FIRST_MENU_ENTRY) {
+		QAction * a = actions()[FIRST_MENU_ENTRY];
+		removeAction( a );
 		a->deleteLater();
 	}
+
+	delete_children();
 
 	populateMenu();
 	markCurrent();
@@ -109,12 +150,12 @@ void Favorites::triggered_slot(QAction * action) {
 }
 
 void Favorites::markCurrent() {
-	for (int n = FIRST_MENU_ENTRY; n < _menu->actions().count(); n++) {
-		QAction * a = _menu->actions()[n];
+	for (int n = FIRST_MENU_ENTRY; n < actions().count(); n++) {
+		QAction * a = actions()[n];
 		QString file = a->data().toString();
 		QFont f = a->font();
 
-		if (file == current_file) {
+		if ((!file.isEmpty()) && (file == current_file)) {
 			f.setBold(true);
 			a->setFont( f );
 		} else {
@@ -135,12 +176,17 @@ void Favorites::next() {
 	qDebug("Favorites::next");
 
 	int current = findFile(current_file);
-	//if (current < 0) current = 0;
 
-	current++;
-	if (current >= f_list.count()) current = 0;
+	int i = current;
+	if (current < 0) current = 0;
 
-	QAction * a = _menu->actions()[current+FIRST_MENU_ENTRY]; // Skip "edit" and separator
+	do {
+		i++;
+		if (i == current) break;
+		if (i >= f_list.count()) i = 0;
+	} while (f_list[i].isSubentry());
+
+	QAction * a = actions()[i+FIRST_MENU_ENTRY]; // Skip "edit" and separator
 	if (a != 0) {
 		a->trigger();
 	}
@@ -150,14 +196,45 @@ void Favorites::previous() {
 	qDebug("Favorites::previous");
 
 	int current = findFile(current_file);
-	//if (current < 0) current = 0;
 
-	current--;
-	if (current < 0) current = f_list.count()-1;
+	int i = current;
+	if (current < 0) current = 0;
 
-	QAction * a = _menu->actions()[current+FIRST_MENU_ENTRY]; // Skip "edit" and separator
+	do {
+		i--;
+		if (i == current) break;
+		if (i < 0) i = f_list.count()-1;
+	} while (f_list[i].isSubentry());
+
+	QAction * a = actions()[i+FIRST_MENU_ENTRY]; // Skip "edit" and separator
 	if (a != 0) {
 		a->trigger();
+	}
+}
+
+void Favorites::getCurrentMedia(const QString & filename, const QString & title) {
+	qDebug("Favorites::getCurrentMedia: '%s', '%s'", filename.toUtf8().constData(), title.toUtf8().constData());
+
+	if (!filename.isEmpty()) {
+		received_file_playing = filename;
+		received_title = title;
+
+		emit sendCurrentMedia(filename, title);
+
+		add_current_act->setEnabled(true);
+	}
+}
+
+void Favorites::addCurrentPlaying() {
+	if (received_file_playing.isEmpty()) {
+		qDebug("Favorites::addCurrentPlaying: received file is empty, doing nothing");
+	} else {
+		Favorite fav;
+		fav.setName(received_title);
+		fav.setFile(received_file_playing);
+		f_list.append(fav);
+		save();
+		updateMenu();
 	}
 }
 
@@ -173,7 +250,8 @@ void Favorites::save() {
 		for (int n = 0; n < f_list.count(); n++) {
 			stream << "#EXTINF:0,";
 			stream << f_list[n].name() << ",";
-			stream << f_list[n].icon() << "\n";
+			stream << f_list[n].icon() << ",";
+			stream << f_list[n].isSubentry() << "\n";
 			stream << f_list[n].file() << "\n";
 		}
         f.close();
@@ -184,7 +262,8 @@ void Favorites::load() {
 	qDebug("Favorites::load");
 
 	QRegExp m3u_id("^#EXTM3U|^#M3U");
-	QRegExp info("^#EXTINF:(.*),(.*),(.*)");
+	QRegExp info1("^#EXTINF:(.*),(.*),(.*)");
+	QRegExp info2("^#EXTINF:(.*),(.*),(.*),(.*)");
 
     QFile f( _filename );
     if ( f.open( QIODevice::ReadOnly ) ) {
@@ -199,15 +278,25 @@ void Favorites::load() {
         QString line;
         while ( !stream.atEnd() ) {
             line = stream.readLine(); // line of text excluding '\n'
+			//qDebug("info2.indexIn: %d", info2.indexIn(line));
+			//qDebug("info1.indexIn: %d", info1.indexIn(line));
             //qDebug( " * line: '%s'", line.toUtf8().data() );
 			if (m3u_id.indexIn(line)!=-1) {
 				//#EXTM3U
 				// Ignore line
 			}
 			else
-			if (info.indexIn(line) != -1) {
-				fav.setName( info.cap(2) );
-				fav.setIcon( info.cap(3) );
+			if (info2.indexIn(line) != -1) {
+				fav.setName( info2.cap(2) );
+				fav.setIcon( info2.cap(3) );
+				fav.setSubentry( info2.cap(4).toInt() == 1 );
+			} 
+			else
+			// Compatibility with old files
+			if (info1.indexIn(line) != -1) {
+				fav.setName( info1.cap(2) );
+				fav.setIcon( info1.cap(3) );
+				fav.setSubentry( false );
 			} 
 			else
 			if (line.startsWith("#")) {
@@ -223,6 +312,7 @@ void Favorites::load() {
 				fav.setName("");
 				fav.setFile("");
 				fav.setIcon("");
+				fav.setSubentry(false);
 			}
         }
         f.close();
@@ -235,9 +325,11 @@ void Favorites::edit() {
 	FavoriteEditor e(parent_widget);
 
 	e.setData(f_list);
+	e.setStorePath( QFileInfo(_filename).absolutePath() );
 
 	if (e.exec() == QDialog::Accepted) {
 		f_list = e.data();
+		save();
 		updateMenu();
 		/*
 		for (int n = 0; n < f_list.count(); n++) {
@@ -257,6 +349,16 @@ void Favorites::jump() {
 	if (ok) {
 		last_item = item;
 		item--;
-		_menu->actions()[item+FIRST_MENU_ENTRY]->trigger();
+		actions()[item+FIRST_MENU_ENTRY]->trigger();
 	}
 }
+
+// Language change stuff
+void Favorites::changeEvent(QEvent *e) {
+	if (e->type() == QEvent::LanguageChange) {
+		retranslateStrings();
+	} else {
+		QWidget::changeEvent(e);
+	}
+}
+

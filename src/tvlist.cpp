@@ -37,6 +37,10 @@ TVList::TVList(bool check_channels_conf, Services services, QString filename, QW
 TVList::~TVList() {
 }
 
+Favorites * TVList::createNewObject(QString filename, QWidget * parent) {
+	return new TVList(false, TV, filename, parent);
+}
+
 #ifndef Q_OS_WIN
 void TVList::parse_channels_conf(Services services) {
 	qDebug("TVList::parse_channels_conf");
@@ -90,6 +94,7 @@ void TVList::edit() {
 	e.setDialogIcon( Images::icon("open_tv") );
 
 	e.setData(f_list);
+	e.setStorePath( QFileInfo(_filename).absolutePath() );
 
 	if (e.exec() == QDialog::Accepted) {
 		f_list = e.data();

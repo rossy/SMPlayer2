@@ -30,16 +30,8 @@ public:
 	InputURL( QWidget* parent = 0, Qt::WindowFlags f = 0 );
 	~InputURL();
 
-	void setURL(QString url, bool is_playlist);
+	void setURL(QString url);
 	QString url();
-
-	void setPlaylist(bool b);
-	bool isPlaylist();
-
-protected slots:
-	void indexChanged(int);
-	void textChanged(const QString &);
-	void playlistChanged(int);
 };
 
 #endif

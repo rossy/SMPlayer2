@@ -14,6 +14,7 @@
         <file>icons-png/copy.png</file>
         <file>icons-png/delete.png</file>
         <file>icons-png/down.png</file>
+        <file>icons-png/open_disc.png</file>
         <file>icons-png/dvd.png</file>
         <file>icons-png/dvd_drive.png</file>
         <file>icons-png/dvd_hd.png</file>
@@ -89,7 +90,6 @@
         <file>icons-png/license.png</file>
         <file>icons-png/faq.png</file>
         <file>icons-png/qt.png</file>
-        <file>icons-png/tips.png</file>
         <file>icons-png/instance1.png</file>
         <file>icons-png/instance2.png</file>
         <file>icons-png/equalizer.png</file>
@@ -114,8 +114,14 @@
         <file>icons-png/open_tv.png</file>
         <file>icons-png/open_radio.png</file>
         <file>icons-png/favorite.png</file>
+        <file>icons-png/open_favorites.png</file>
         <file>icons-png/a_marker.png</file>
         <file>icons-png/b_marker.png</file>
+        <file>icons-png/bookmark_add.png</file>
+        <file>icons-png/bookmark_folder.png</file>
+        <file>icons-png/trash.png</file>
+        <file>icons-png/clear_left.png</file>
+        <file>icons-png/folder_open.png</file>
         <file>mpcgui/mpc_toolbar.png</file>
         <file>mpcgui/mpc_mono.png</file>
         <file>mpcgui/mpc_stereo.png</file>

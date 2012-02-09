@@ -1,5 +1,5 @@
-/*  smplayer2, GUI front-end for mplayer2.
-    Copyright (C) 2006-2010 Ricardo Villalba <rvm@escomposlinux.org>
+/*  smplayer, GUI front-end for mplayer.
+    Copyright (C) 2006-2011 Ricardo Villalba <rvm@escomposlinux.org>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,37 +16,38 @@
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef _TVLIST_H_
-#define _TVLIST_H_
+#ifndef _VDPAUPROPERTIES_H_
+#define _VDPAUPROPERTIES_H_
 
-#include "favorites.h"
+#include "ui_vdpauproperties.h"
 
-class QWidget;
+#include <QDialog>
 
-class TVList : public Favorites
+class VDPAUProperties : public QDialog, public Ui::VDPAUProperties
 {
 	Q_OBJECT
 
 public:
-	enum Service { TV = 1, Radio = 2, Data = 4 };
-	Q_DECLARE_FLAGS(Services, Service)
+	VDPAUProperties( QWidget * parent = 0, Qt::WindowFlags f = 0 );
+	~VDPAUProperties();
 
-	TVList(bool check_channels_conf, Services services, QString filename, QWidget * parent = 0);
-	~TVList();
+	void setffh264vdpau(bool b);
+	void setffmpeg12vdpau(bool b);
+	void setffwmv3vdpau(bool b);
+	void setffvc1vdpau(bool b);
+	void setffodivxvdpau(bool b);
 
-#ifndef Q_OS_WIN
-protected:
-	void parse_channels_conf(Services services);
-#endif
+	void setDisableFilters(bool b);
 
-protected:
-	virtual Favorites * createNewObject(QString filename, QWidget * parent);
+	bool ffh264vdpau();
+	bool ffmpeg12vdpau();
+	bool ffwmv3vdpau();
+	bool ffvc1vdpau();
+	bool ffodivxvdpau();
 
-protected slots:
-	virtual void edit();
+	bool disableFilters();
+
+	//virtual QSize sizeHint () const;
 };
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(TVList::Services)
-
 #endif
-

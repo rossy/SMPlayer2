@@ -49,7 +49,10 @@ set(smplayer2_SOURCES
 	shortcutgetter.cpp
 	actionseditor.cpp
 	filechooser.cpp
+	vdpauproperties.cpp
 	preferencesdialog.cpp
+	lineedit_with_icon.cpp
+	mylineedit.cpp
 	mycombobox.cpp
 	tristatecombo.cpp
 	languages.cpp
@@ -119,6 +122,7 @@ set(smplayer2_HEADERS
 	favoriteeditor.h
 	favorites.h
 	filechooser.h
+	vdpauproperties.h
 	findsubtitles/findsubtitlesconfigdialog.h
 	findsubtitles/findsubtitleswindow.h
 	findsubtitles/simplehttp.h
@@ -144,6 +148,8 @@ set(smplayer2_HEADERS
 	prefadvanced.h
 	prefdrives.h
 	preferencesdialog.h
+	lineedit_with_icon.h
+	mylineedit.h
 	prefgeneral.h
 	prefinput.h
 	prefinterface.h
@@ -171,6 +177,7 @@ set(smplayer2_FORMS
 	eqslider.ui
 	seekwidget.ui
 	inputurl.ui
+	vdpauproperties.ui
 	preferencesdialog.ui
 	prefgeneral.ui
 	prefdrives.ui
@@ -185,7 +192,6 @@ set(smplayer2_FORMS
 	about.ui
 	errordialog.ui
 	timedialog.ui
-	filechooser.ui
 	findsubtitles/findsubtitleswindow.ui
 	findsubtitles/findsubtitlesconfigdialog.ui
 	videopreview/videopreviewconfigdialog.ui

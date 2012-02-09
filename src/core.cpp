@@ -196,6 +196,8 @@ Core::Core( MplayerWindow *mpw, QWidget* parent )
 	connect( this, SIGNAL(stateChanged(Core::State)), 
 	         this, SLOT(watchState(Core::State)) );
 
+	connect( this, SIGNAL(mediaInfoChanged()), this, SLOT(sendMediaInfo()) );
+
 	connect( proc, SIGNAL(error(QProcess::ProcessError)), 
              this, SIGNAL(mplayerFailed(QProcess::ProcessError)) );
 
@@ -785,7 +787,7 @@ void Core::initPlaying(int seek) {
 
 	/* updateWidgets(); */
 
-	mplayerwindow->showLogo(FALSE);
+	mplayerwindow->hideLogo();
 
 	if (proc->isRunning()) {
 		stopMplayer();
@@ -1095,7 +1097,7 @@ void Core::screenshot() {
 	if ( (!pref->screenshot_directory.isEmpty()) && 
          (QFileInfo(pref->screenshot_directory).isDir()) ) 
 	{
-		tellmp( pausing_prefix() + " screenshot 0");
+		tellmp("screenshot 0");
 		qDebug("Core::screenshot: taken screenshot");
 	} else {
 		qDebug("Core::screenshot: error: directory for screenshots not valid");
@@ -1218,9 +1220,21 @@ void Core::startMplayer( QString file, double seek ) {
 		if (dvd_title > 0) file += QString::number(dvd_title);
 	}
 
-	// URL
-	bool url_is_playlist = file.endsWith(IS_PLAYLIST_TAG);
-	if (url_is_playlist) file = file.remove( QRegExp(IS_PLAYLIST_TAG_RX) );
+	// Check URL playlist
+	bool url_is_playlist = false;
+	if (file.endsWith("|playlist")) {
+		url_is_playlist = true;
+		file = file.remove("|playlist");
+	} else {
+		QUrl url(file);
+		qDebug("Core::startMplayer: checking if stream is a playlist");
+		qDebug("Core::startMplayer: url path: '%s'", url.path().toUtf8().constData());
+
+		QRegExp rx("\\.ram$|\\.asx$|\\.m3u$|\\.pls$", Qt::CaseInsensitive);
+		url_is_playlist = (rx.indexIn(url.path()) != -1);
+	}
+	qDebug("Core::startMplayer: url_is_playlist: %d", url_is_playlist);
+
 
 	bool screenshot_enabled = ( (pref->use_screenshot) && 
                                 (!pref->screenshot_directory.isEmpty()) && 
@@ -1270,6 +1284,23 @@ void Core::startMplayer( QString file, double seek ) {
 		proc->addArgument("-vc");
 		proc->addArgument(mset.forced_video_codec);
 	}
+#ifndef Q_OS_WIN
+	else {
+		/* if (pref->vo.startsWith("x11")) { */ // My card doesn't support vdpau, I use x11 to test
+		if (pref->vo.startsWith("vdpau")) {
+			QString c;
+			if (pref->vdpau.ffh264vdpau) c += "ffh264vdpau,";
+			if (pref->vdpau.ffmpeg12vdpau) c += "ffmpeg12vdpau,";
+			if (pref->vdpau.ffwmv3vdpau) c += "ffwmv3vdpau,";
+			if (pref->vdpau.ffvc1vdpau) c += "ffvc1vdpau,";
+			if (pref->vdpau.ffodivxvdpau) c += "ffodivxvdpau,";
+			if (!c.isEmpty()) {
+				proc->addArgument("-vc");
+				proc->addArgument(c);
+			}
+		}
+	}
+#endif
 
 	if (pref->use_hwac3) {
 		proc->addArgument("-afm");
@@ -1313,13 +1344,7 @@ void Core::startMplayer( QString file, double seek ) {
 
 	if (!pref->vo.isEmpty()) {
 		proc->addArgument( "-vo");
-		if (pref->vo == "vdpau_hwdec") {
-			proc->addArgument("vdpau");
-			proc->addArgument("-vc");
-			proc->addArgument("ffh264vdpau,ffmpeg12vdpau,ffwmv3vdpau,ffvc1vdpau,");
-		} else {
-			proc->addArgument( pref->vo );
-		}
+		proc->addArgument( pref->vo );
 	}
 
 #if USE_ADAPTER
@@ -1756,8 +1781,8 @@ void Core::startMplayer( QString file, double seek ) {
 	bool force_noslices = false;
 
 #ifndef Q_OS_WIN
-	if ((pref->disable_video_filters_with_vdpau) && (pref->vo.startsWith("vdpau"))) {
-		qDebug("Core::startMplayer: vdpau doesn't allow any video filter. All have been removed.");
+	if ((pref->vdpau.disable_video_filters) && (pref->vo.startsWith("vdpau"))) {
+		qDebug("Core::startMplayer: using vdpau, video filters are ignored");
 		goto end_video_filters;
 	}
 #endif
@@ -2390,7 +2415,7 @@ void Core::setBrightness(int value) {
 	if (value < -100) value = -100;
 
 	if (value != mset.brightness) {
-		tellmp(pausing_prefix() + " brightness " + QString::number(value) + " 1");
+		tellmp("brightness " + QString::number(value) + " 1");
 		mset.brightness = value;
 		displayMessage( tr("Brightness: %1").arg(value) );
 		emit videoEqualizerNeedsUpdate();
@@ -2405,7 +2430,7 @@ void Core::setContrast(int value) {
 	if (value < -100) value = -100;
 
 	if (value != mset.contrast) {
-		tellmp(pausing_prefix() + " contrast " + QString::number(value) + " 1");
+		tellmp("contrast " + QString::number(value) + " 1");
 		mset.contrast = value;
 		displayMessage( tr("Contrast: %1").arg(value) );
 		emit videoEqualizerNeedsUpdate();
@@ -2419,7 +2444,7 @@ void Core::setGamma(int value) {
 	if (value < -100) value = -100;
 
 	if (value != mset.gamma) {
-		tellmp(pausing_prefix() + " gamma " + QString::number(value) + " 1");
+		tellmp("gamma " + QString::number(value) + " 1");
 		mset.gamma= value;
 		displayMessage( tr("Gamma: %1").arg(value) );
 		emit videoEqualizerNeedsUpdate();
@@ -2433,7 +2458,7 @@ void Core::setHue(int value) {
 	if (value < -100) value = -100;
 
 	if (value != mset.hue) {
-		tellmp(pausing_prefix() + " hue " + QString::number(value) + " 1");
+		tellmp("hue " + QString::number(value) + " 1");
 		mset.hue = value;
 		displayMessage( tr("Hue: %1").arg(value) );
 		emit videoEqualizerNeedsUpdate();
@@ -2447,7 +2472,7 @@ void Core::setSaturation(int value) {
 	if (value < -100) value = -100;
 
 	if (value != mset.saturation) {
-		tellmp(pausing_prefix() + " saturation " + QString::number(value) + " 1");
+		tellmp("saturation " + QString::number(value) + " 1");
 		mset.saturation = value;
 		displayMessage( tr("Saturation: %1").arg(value) );
 		emit videoEqualizerNeedsUpdate();
@@ -2593,7 +2618,7 @@ void Core::mute(bool b) {
 	qDebug("Core::mute");
 
 	int v = (b ? 1 : 0);
-	tellmp( pausing_prefix() + " mute " + QString::number(v) );
+	tellmp("mute " + QString::number(v) );
 
 	if (pref->global_volume) {
 		pref->mute = b;
@@ -2619,7 +2644,7 @@ void Core::decVolume() {
 void Core::setSubDelay(int delay) {
 	qDebug("Core::setSubDelay: %d", delay);
 	mset.sub_delay = delay;
-	tellmp( pausing_prefix() + " sub_delay " + QString::number( (double) mset.sub_delay/1000 ) +" 1");
+	tellmp("sub_delay " + QString::number( (double) mset.sub_delay/1000 ) +" 1");
 	displayMessage( tr("Subtitle delay: %1 ms").arg(delay) );
 }
 
@@ -2636,7 +2661,7 @@ void Core::decSubDelay() {
 void Core::setAudioDelay(int delay) {
 	qDebug("Core::setAudioDelay: %d", delay);
 	mset.audio_delay = delay;
-	tellmp( pausing_prefix() + " audio_delay " + QString::number( (double) mset.audio_delay/1000 ) +" 1");
+	tellmp("audio_delay " + QString::number( (double) mset.audio_delay/1000 ) +" 1");
 	displayMessage( tr("Audio delay: %1 ms").arg(delay) );
 }
 
@@ -3228,7 +3253,7 @@ void Core::changeOSD(int v) {
 	qDebug("Core::changeOSD: %d", v);
 
 	pref->osd = v;
-	tellmp( pausing_prefix() + " osd " + QString::number( pref->osd ) );
+	tellmp("osd " + QString::number( pref->osd ) );
 	updateWidgets();
 }
 
@@ -3522,7 +3547,7 @@ void Core::displayScreenshotName(QString filename) {
 	//QString text = tr("Screenshot saved as %1").arg(filename);
 	QString text = QString("Screenshot saved as %1").arg(filename);
 
-	displayTextOnOSD(text, 3000, 1, "pausing_keep_force");
+	displayTextOnOSD(text, 3000, 1, "");
 
 	emit showMessage(text);
 }
@@ -3597,6 +3622,11 @@ void Core::streamTitleAndUrlChanged(QString title, QString url) {
 	mdat.stream_title = title;
 	mdat.stream_url = url;
 	emit mediaInfoChanged();
+}
+
+void Core::sendMediaInfo() {
+	qDebug("Core::sendMediaInfo");
+	emit mediaPlaying(mdat.filename, mdat.displayName(pref->show_tag_in_window_title));
 }
 
 //!  Called when the state changes
@@ -3794,7 +3824,7 @@ void Core::durationChanged(double length) {
 
 void Core::askForInfo() {
 	if ((state() == Playing) && (mdat.filename.startsWith("dvdnav:"))) {
-		tellmp( pausing_prefix() + " get_property length");
+		tellmp("get_property length");
 	}
 }
 
@@ -3818,17 +3848,6 @@ void Core::dvdTitleIsMovie() {
 
 }
 #endif
-
-QString Core::pausing_prefix() {
-	qDebug("Core::pausing_prefix");
-
-	if (pref->use_pausing_keep_force)
-	{
-		return "pausing_keep_force";
-	} else {
-		return "pausing_keep";
-	}
-}
 
 void Core::updateChapter(int chapter) {
 	qDebug("Core::updateChapter");
