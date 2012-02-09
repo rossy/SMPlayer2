@@ -103,8 +103,8 @@
              </widget>
             </item>
             <item>
-             <widget class="QCheckBox" name="hide_video_window_on_audio_check" >
-              <property name="text" >
+             <widget class="QCheckBox" name="hide_video_window_on_audio_check">
+              <property name="text">
                <string>&amp;Hide video window when playing audio files</string>
               </property>
              </widget>
@@ -800,8 +800,6 @@
   <tabstop>default_font_edit</tabstop>
   <tabstop>changeFontButton</tabstop>
   <tabstop>timeslider_behaviour_combo</tabstop>
-  <tabstop>absolute_seeking_button</tabstop>
-  <tabstop>relative_seeking_button</tabstop>
   <tabstop>single_instance_check</tabstop>
   <tabstop>automatic_port_button</tabstop>
   <tabstop>manual_port_button</tabstop>
