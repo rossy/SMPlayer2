@@ -324,8 +324,6 @@ void PrefGeneral::updateDriverCombos() {
 		}
 		else
 #endif // USE_XV_ADAPTORS
-		if (vo == "vdpau")
-			vo_combo->addItem( "vdpau (" + tr("hardware decoding") + ")", "vdpau_hwdec");
 #endif
 		if (vo == "x11") vo_combo->addItem( "x11 (" + tr("slow") + ")", vo);
 		else
