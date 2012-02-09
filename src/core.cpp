@@ -1097,7 +1097,7 @@ void Core::screenshot() {
 	if ( (!pref->screenshot_directory.isEmpty()) && 
          (QFileInfo(pref->screenshot_directory).isDir()) ) 
 	{
-		tellmp( pausing_prefix() + " screenshot 0");
+		tellmp("screenshot 0");
 		qDebug("Core::screenshot: taken screenshot");
 	} else {
 		qDebug("Core::screenshot: error: directory for screenshots not valid");
@@ -2410,7 +2410,7 @@ void Core::setBrightness(int value) {
 	if (value < -100) value = -100;
 
 	if (value != mset.brightness) {
-		tellmp(pausing_prefix() + " brightness " + QString::number(value) + " 1");
+		tellmp("brightness " + QString::number(value) + " 1");
 		mset.brightness = value;
 		displayMessage( tr("Brightness: %1").arg(value) );
 		emit videoEqualizerNeedsUpdate();
@@ -2425,7 +2425,7 @@ void Core::setContrast(int value) {
 	if (value < -100) value = -100;
 
 	if (value != mset.contrast) {
-		tellmp(pausing_prefix() + " contrast " + QString::number(value) + " 1");
+		tellmp("contrast " + QString::number(value) + " 1");
 		mset.contrast = value;
 		displayMessage( tr("Contrast: %1").arg(value) );
 		emit videoEqualizerNeedsUpdate();
@@ -2439,7 +2439,7 @@ void Core::setGamma(int value) {
 	if (value < -100) value = -100;
 
 	if (value != mset.gamma) {
-		tellmp(pausing_prefix() + " gamma " + QString::number(value) + " 1");
+		tellmp("gamma " + QString::number(value) + " 1");
 		mset.gamma= value;
 		displayMessage( tr("Gamma: %1").arg(value) );
 		emit videoEqualizerNeedsUpdate();
@@ -2453,7 +2453,7 @@ void Core::setHue(int value) {
 	if (value < -100) value = -100;
 
 	if (value != mset.hue) {
-		tellmp(pausing_prefix() + " hue " + QString::number(value) + " 1");
+		tellmp("hue " + QString::number(value) + " 1");
 		mset.hue = value;
 		displayMessage( tr("Hue: %1").arg(value) );
 		emit videoEqualizerNeedsUpdate();
@@ -2467,7 +2467,7 @@ void Core::setSaturation(int value) {
 	if (value < -100) value = -100;
 
 	if (value != mset.saturation) {
-		tellmp(pausing_prefix() + " saturation " + QString::number(value) + " 1");
+		tellmp("saturation " + QString::number(value) + " 1");
 		mset.saturation = value;
 		displayMessage( tr("Saturation: %1").arg(value) );
 		emit videoEqualizerNeedsUpdate();
@@ -2613,7 +2613,7 @@ void Core::mute(bool b) {
 	qDebug("Core::mute");
 
 	int v = (b ? 1 : 0);
-	tellmp( pausing_prefix() + " mute " + QString::number(v) );
+	tellmp("mute " + QString::number(v) );
 
 	if (pref->global_volume) {
 		pref->mute = b;
@@ -2639,7 +2639,7 @@ void Core::decVolume() {
 void Core::setSubDelay(int delay) {
 	qDebug("Core::setSubDelay: %d", delay);
 	mset.sub_delay = delay;
-	tellmp( pausing_prefix() + " sub_delay " + QString::number( (double) mset.sub_delay/1000 ) +" 1");
+	tellmp("sub_delay " + QString::number( (double) mset.sub_delay/1000 ) +" 1");
 	displayMessage( tr("Subtitle delay: %1 ms").arg(delay) );
 }
 
@@ -2656,7 +2656,7 @@ void Core::decSubDelay() {
 void Core::setAudioDelay(int delay) {
 	qDebug("Core::setAudioDelay: %d", delay);
 	mset.audio_delay = delay;
-	tellmp( pausing_prefix() + " audio_delay " + QString::number( (double) mset.audio_delay/1000 ) +" 1");
+	tellmp("audio_delay " + QString::number( (double) mset.audio_delay/1000 ) +" 1");
 	displayMessage( tr("Audio delay: %1 ms").arg(delay) );
 }
 
@@ -3248,7 +3248,7 @@ void Core::changeOSD(int v) {
 	qDebug("Core::changeOSD: %d", v);
 
 	pref->osd = v;
-	tellmp( pausing_prefix() + " osd " + QString::number( pref->osd ) );
+	tellmp("osd " + QString::number( pref->osd ) );
 	updateWidgets();
 }
 
@@ -3542,7 +3542,7 @@ void Core::displayScreenshotName(QString filename) {
 	//QString text = tr("Screenshot saved as %1").arg(filename);
 	QString text = QString("Screenshot saved as %1").arg(filename);
 
-	displayTextOnOSD(text, 3000, 1, "pausing_keep_force");
+	displayTextOnOSD(text, 3000, 1, "");
 
 	emit showMessage(text);
 }
@@ -3819,7 +3819,7 @@ void Core::durationChanged(double length) {
 
 void Core::askForInfo() {
 	if ((state() == Playing) && (mdat.filename.startsWith("dvdnav:"))) {
-		tellmp( pausing_prefix() + " get_property length");
+		tellmp("get_property length");
 	}
 }
 
@@ -3843,17 +3843,6 @@ void Core::dvdTitleIsMovie() {
 
 }
 #endif
-
-QString Core::pausing_prefix() {
-	qDebug("Core::pausing_prefix");
-
-	if (pref->use_pausing_keep_force)
-	{
-		return "pausing_keep_force";
-	} else {
-		return "pausing_keep";
-	}
-}
 
 void Core::updateChapter(int chapter) {
 	qDebug("Core::updateChapter");
