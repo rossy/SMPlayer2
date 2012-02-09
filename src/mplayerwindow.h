@@ -106,6 +106,10 @@ public:
 	bool repaintBackground() { return repaint_background; };
 #endif
 
+#if USE_COLORKEY
+	void setColorKey(QColor c);
+#endif
+
 public slots:
 	//! Should be called when a file has started. 
     /*! It's needed to know if the background has to be cleared or not. */
@@ -119,6 +123,9 @@ protected:
 #endif
 
 private:
+#if USE_COLORKEY
+	QColor colorKey;
+#endif
 #if REPAINT_BACKGROUND_OPTION
 	bool repaint_background;
 #endif
