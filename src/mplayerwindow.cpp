@@ -152,7 +152,10 @@ void Screen::playingStopped() {
 /* ---------------------------------------------------------------------- */
 
 MplayerLayer::MplayerLayer(QWidget* parent, Qt::WindowFlags f) 
-	: Screen(parent, f) 
+	: Screen(parent, f)
+#if USE_COLORKEY
+		, colorKey(0, 0, 0)
+#endif
 {
 #if REPAINT_BACKGROUND_OPTION
 	repaint_background = true;
@@ -178,8 +181,20 @@ void MplayerLayer::paintEvent( QPaintEvent * e ) {
 }
 #endif
 
+#if USE_COLORKEY
+void MplayerLayer::setColorKey(QColor c) {
+	colorKey = c;
+	if (playing)
+		ColorUtils::setBackgroundColor( this, colorKey );
+}
+#endif
+
 void MplayerLayer::playingStarted() {
 	qDebug("MplayerLayer::playingStarted");
+	
+#if USE_COLORKEY
+	ColorUtils::setBackgroundColor( this, colorKey );
+#endif
 	repaint();
 	playing = true;
 
@@ -189,6 +204,10 @@ void MplayerLayer::playingStarted() {
 void MplayerLayer::playingStopped() {
 	qDebug("MplayerLayer::playingStopped");
 	playing = false;
+	
+#if USE_COLORKEY
+	ColorUtils::setBackgroundColor( this, QColor(0, 0, 0) );
+#endif
 	repaint();
 
 	Screen::playingStopped();
@@ -207,6 +226,7 @@ MplayerWindow::MplayerWindow(QWidget* parent, Qt::WindowFlags f)
 	ColorUtils::setBackgroundColor( this, QColor(0,0,0) );
 
 	mplayerlayer = new MplayerLayer( this );
+	ColorUtils::setBackgroundColor( mplayerlayer, QColor(0, 0, 0) );
 	mplayerlayer->setAutoFillBackground(TRUE);
 
 	logo = new QLabel( mplayerlayer );
@@ -216,12 +236,15 @@ MplayerWindow::MplayerWindow(QWidget* parent, Qt::WindowFlags f)
 #else
 	logo->setAttribute(Qt::WA_PaintOnScreen); // Fixes the problem if compiled with Qt < 4.4
 #endif
+	logo->setScaledContents(true);
+	logo->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 	ColorUtils::setBackgroundColor( logo, QColor(0,0,0) );
 
 	QVBoxLayout * mplayerlayerLayout = new QVBoxLayout( mplayerlayer );
 	mplayerlayerLayout->addWidget( logo, 0, Qt::AlignHCenter | Qt::AlignVCenter );
-
-    aspect = (double) 4 / 3;
+	mplayerlayerLayout->setContentsMargins(0, 0, 0, 0);
+	
+	aspect = (double) 4 / 3;
 	monitoraspect = 0;
 
 	setSizePolicy( QSizePolicy::Expanding , QSizePolicy::Expanding );
@@ -239,19 +262,32 @@ MplayerWindow::~MplayerWindow() {
 
 #if USE_COLORKEY
 void MplayerWindow::setColorKey( QColor c ) {
-	ColorUtils::setBackgroundColor( mplayerlayer, c );
+	mplayerlayer->setColorKey(c);
 }
 #endif
 
 void MplayerWindow::retranslateStrings() {
 	//qDebug("MplayerWindow::retranslateStrings");
 #ifndef MINILIB
-	logo->setPixmap( Images::icon("background") );
+	QPixmap pm = Images::icon("background");
+	logo->setPixmap( pm );
+	if (logo->isVisible())
+	{
+		aspect = double(pm.width()) / double(pm.height());
+		updateVideoWindow();
+	}
 #endif
 }
 
 void MplayerWindow::setLogoVisible( bool b) {
+	const QPixmap* pm;
+	
 	logo->setVisible(b);
+	if (b && (pm = logo->pixmap()))
+	{
+		aspect = double(pm->width()) / double(pm->height());
+		updateVideoWindow();
+	}
 }
 
 /*
