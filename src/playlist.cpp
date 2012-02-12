@@ -159,7 +159,9 @@ void Playlist::createTable() {
 	listView->horizontalHeader()->setResizeMode(COL_TIME, QHeaderView::ResizeToContents);
 	listView->horizontalHeader()->setResizeMode(COL_PLAY, QHeaderView::Fixed);
 
-	listView->verticalHeader()->setDefaultSectionSize(listView->verticalHeader()->minimumSectionSize());
+	listView->verticalHeader()->setDefaultSectionSize(
+		qMax(listView->verticalHeader()->minimumSectionSize(),
+			 listView->iconSize().height()));
 	
 	listView->verticalHeader()->setResizeMode(QHeaderView::Fixed);
 

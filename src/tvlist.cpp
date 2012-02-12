@@ -91,7 +91,7 @@ void TVList::edit() {
 
 	e.setWindowTitle( tr("Channel editor") );
 	e.setCaption( tr("TV/Radio list") );
-	e.setDialogIcon( Images::icon("open_tv") );
+	e.setDialogIcon( Images::icon("tv") );
 
 	e.setData(f_list);
 	e.setStorePath( QFileInfo(_filename).absolutePath() );
