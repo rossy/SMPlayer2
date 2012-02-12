@@ -85,7 +85,7 @@ QString PrefInterface::sectionName() {
 }
 
 QPixmap PrefInterface::sectionIcon() {
-    return Images::icon("pref_gui", 22);
+    return Images::icon("pref_gui");
 }
 
 void PrefInterface::createLanguageCombo() {
