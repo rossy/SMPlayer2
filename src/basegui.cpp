@@ -1851,8 +1851,9 @@ void BaseGui::retranslateStrings() {
 
 	chapters_menu->menuAction()->setText( tr("&Chapter") );
 	chapters_menu->menuAction()->setIcon( Images::icon("chapter") );
-	
+
 	editions_menu->menuAction()->setText( tr("&Edition") );
+	editions_menu->menuAction()->setIcon( Images::icon("edition") );
 
 	angles_menu->menuAction()->setText( tr("&Angle") );
 	angles_menu->menuAction()->setIcon( Images::icon("angle") );
