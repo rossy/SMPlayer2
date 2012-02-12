@@ -17,6 +17,7 @@
 */
 
 #include "floatingwidget.h"
+#include "images.h"
 #include <QToolBar>
 #include <QTimer>
 #include <QHBoxLayout>
@@ -36,6 +37,7 @@ FloatingWidget::FloatingWidget( QWidget * parent )
 	setSizePolicy( QSizePolicy::Preferred, QSizePolicy::Minimum );
 
 	tb = new QToolBar;
+	tb->setIconSize( Images::icon("play").size() );
 	tb->setSizePolicy( QSizePolicy::Minimum, QSizePolicy::Minimum );
 
 	QHBoxLayout *layout = new QHBoxLayout;

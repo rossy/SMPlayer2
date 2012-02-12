@@ -70,8 +70,8 @@ DefaultGui::DefaultGui( bool use_server, QWidget * parent, Qt::WindowFlags flags
 
 	createActions();
 	createMainToolBars();
-    createControlWidget();
-    createControlWidgetMini();
+	createControlWidget();
+	createControlWidgetMini();
 	createFloatingControl();
 	createMenus();
 
@@ -180,6 +180,7 @@ QMenu * DefaultGui::createPopupMenu() {
 void DefaultGui::createMainToolBars() {
 	toolbar1 = new QToolBar( this );
 	toolbar1->setObjectName("toolbar1");
+	toolbar1->setIconSize( Images::icon("open").size() );
 	//toolbar1->setMovable(false);
 	addToolBar(Qt::TopToolBarArea, toolbar1);
 #if !USE_CONFIGURABLE_TOOLBARS
@@ -206,6 +207,7 @@ void DefaultGui::createMainToolBars() {
 
 	toolbar2 = new QToolBar( this );
 	toolbar2->setObjectName("toolbar2");
+	toolbar2->setIconSize(toolbar1->iconSize());
 	//toolbar2->setMovable(false);
 	addToolBar(Qt::TopToolBarArea, toolbar2);
 
@@ -239,6 +241,7 @@ void DefaultGui::createControlWidgetMini() {
 
 	controlwidget_mini = new QToolBar( this );
 	controlwidget_mini->setObjectName("controlwidget_mini");
+	controlwidget_mini->setIconSize( Images::icon("play").size() );
 	//controlwidget_mini->setResizeEnabled(false);
 	controlwidget_mini->setMovable(false);
 	//addDockWindow(controlwidget_mini, Qt::DockBottom );
@@ -270,6 +273,7 @@ void DefaultGui::createControlWidget() {
 
 	controlwidget = new QToolBar( this );
 	controlwidget->setObjectName("controlwidget");
+	controlwidget->setIconSize( Images::icon("play").size() );
 	//controlwidget->setResizeEnabled(false);
 	controlwidget->setMovable(false);
 	//addDockWindow(controlwidget, Qt::DockBottom );

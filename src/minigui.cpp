@@ -25,6 +25,7 @@
 #include "helper.h"
 #include "toolbareditor.h"
 #include "desktopinfo.h"
+#include "images.h"
 
 #include <QToolBar>
 #include <QStatusBar>
@@ -79,6 +80,7 @@ void MiniGui::createActions() {
 void MiniGui::createControlWidget() {
 	controlwidget = new QToolBar( this );
 	controlwidget->setObjectName("controlwidget");
+	controlwidget->setIconSize( Images::icon("play").size() );
 	controlwidget->setMovable(true);
 	controlwidget->setAllowedAreas(Qt::TopToolBarArea | Qt::BottomToolBarArea);
 	addToolBar(Qt::BottomToolBarArea, controlwidget);

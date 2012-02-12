@@ -150,14 +150,18 @@ void Playlist::createTable() {
 	listView->setContextMenuPolicy( Qt::CustomContextMenu );
 	listView->setShowGrid(false);
 	listView->setSortingEnabled(false);
-	//listView->setAlternatingRowColors(true);
+	listView->setAlternatingRowColors(true);
+	listView->setIconSize( Images::icon("play").size() );
+	listView->horizontalHeader()->setMinimumSectionSize(listView->iconSize().width());
+
 	listView->horizontalHeader()->setResizeMode(QHeaderView::Interactive);
 	listView->horizontalHeader()->setResizeMode(COL_NAME, QHeaderView::Stretch);
-	/*
 	listView->horizontalHeader()->setResizeMode(COL_TIME, QHeaderView::ResizeToContents);
-	listView->horizontalHeader()->setResizeMode(COL_PLAY, QHeaderView::ResizeToContents);
-	*/
-	listView->setIconSize( Images::icon("ok").size() );
+	listView->horizontalHeader()->setResizeMode(COL_PLAY, QHeaderView::Fixed);
+
+	listView->verticalHeader()->setDefaultSectionSize(listView->verticalHeader()->minimumSectionSize());
+	
+	listView->verticalHeader()->setResizeMode(QHeaderView::Fixed);
 
 #if DRAG_ITEMS
 	listView->setSelectionMode(QAbstractItemView::SingleSelection);
@@ -227,6 +231,7 @@ void Playlist::createActions() {
 
 void Playlist::createToolbar() {
 	toolbar = new QToolBar(this);
+	toolbar->setIconSize( Images::icon("open").size() );
 	toolbar->setSizePolicy( QSizePolicy::Minimum, QSizePolicy::Minimum );
 
 	toolbar->addAction(openAct);
